@@ -5,15 +5,25 @@
         <el-dialog v-model="visible">
             <h1>欢迎使用 Element!!!</h1>
         </el-dialog>
+        <group>
+          <cell title="title" value="value"></cell>
+        </group>
     </div>
 </template>
     
 <script>
+
+import { Group, Cell } from 'vux'
+
 export default {
     data() {
         return {
             visible: false
         }
+    },
+    components: {
+        Group,
+        Cell
     }
 }
 </script>
