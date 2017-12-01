@@ -1,19 +1,13 @@
 <template>
-    <div>
-        <h1>Hello, {{ msg }}!！！</h1>
+    <div id="app">
         <router-view></router-view> <!-- 路由引入的组件将在这里被渲染 -->
     </div>
 </template>
      
-<script>
-export default {
-    data() {
-        return {
-            msg: 'Vue'
-        }
-    }
-}
-</script>
     
 <style>
+*{
+    margin:0;
+    padding: 0;
+}
 </style>
