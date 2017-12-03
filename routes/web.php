@@ -36,3 +36,4 @@ Route::get('/file/upload','FileController@upload');
 Route::post('/check','Auth\LoginController@check');
 Route::get('/captcha/get','Auth\LoginController@get_captcha');
 Route::post('/logout','Auth\LoginController@logout');
+Route::any('/wechat','WechatController@serve');
