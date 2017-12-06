@@ -43,9 +43,12 @@ class WechatController extends Controller
                 }
             }
         });
-        
+        $ch = curl_init();
+        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, FALSE); // https请求 不验证证书和hosts  
+        curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, FALSE);  
+        $this->add_menu();
         Log::info('return response.');
-         return $app->server->serve();
+        return $app->server->serve();
     }
 
     public function add_menu(){
