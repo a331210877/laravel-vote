@@ -10,10 +10,6 @@ use Storage;
 class IndexController extends Controller
 {
     public function index(){
-        echo "dasikhdias";
-    }
-
-    public function getUserMessage(Request $request){
         if (isset($_GET['code'])){
             echo $_GET['code'];
         }else{

@@ -8,5 +8,4 @@ Route::group(['middleware'=>'wechat.oauth'],function(){
 
     Route::get('/home/index','Home\IndexController@index');
 
-    Route::get('/home/getUserMessage','Home\IndexController@getUserMessage');
 });
