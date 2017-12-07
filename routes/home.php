@@ -6,6 +6,7 @@ Route::group(['middleware'=>'wechat.oauth'],function(){
 
     // Route::post('/home/index','Home\IndexController@index');
 
-    Route::get('/home/index','Home\IndexController@getMessage');
+    Route::get('/home/index','Home\IndexController@index');
 
+    Route::get('/home/getUserMessage','Home\IndexController@getUserMessage');
 });
