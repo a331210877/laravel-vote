@@ -12,7 +12,7 @@ class IndexController extends Controller
 {
     public function index(){
         if (isset($_GET['code'])){
-            session(['site'=>$_GET['code']]);
+            session(['open_id'=>$_GET['code']]);
         }else{
             echo "NO CODE";
         }
