@@ -8,6 +8,11 @@ export default new VueRouter({
     saveScrollPosition: true,
     routes: [
         {
+            path: '/index', 
+            name: '天降正义',
+            component: resolve =>void(require(['../components/Admin/User.vue'], resolve)), name: '用户管理',
+        },
+        {
             path: '/admin', 
             name: '用户管理',
             iconCls: 'el-icon-message',//图标样式class

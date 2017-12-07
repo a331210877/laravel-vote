@@ -1,6 +1,7 @@
 <?php
 
 Route::group(['middleware'=>'login.check'],function(){
+    
     //video
     Route::post('/admin/index/addPlayer','Admin\VideoController@addPlayer');
 
@@ -17,4 +18,5 @@ Route::group(['middleware'=>'login.check'],function(){
     Route::post('/admin/disableUser','Admin\UserController@disableUser');
     
     Route::post('/admin/enableUser','Admin\UserController@enableUser');
+
 });

@@ -63,4 +63,8 @@ class WechatController extends Controller
        ];
        $menu->add($buttons);
     }
+
+    public function phpinfo(){
+        phpinfo();
+    }
 }

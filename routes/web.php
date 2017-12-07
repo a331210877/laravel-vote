@@ -38,3 +38,4 @@ Route::get('/captcha/get','Auth\LoginController@get_captcha');
 Route::post('/logout','Auth\LoginController@logout');
 Route::any('/wechat','WechatController@serve');
 Route::any('/addMenu','WechatController@add_menu');
+Route::get('/phpinfo','WechatController@phpinfo');

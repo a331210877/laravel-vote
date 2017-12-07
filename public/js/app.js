@@ -693,7 +693,7 @@ module.exports = {
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process, global, setImmediate) {/*!
- * Vue.js v2.5.9
+ * Vue.js v2.5.4
  * (c) 2014-2017 Evan You
  * Released under the MIT License.
  */
@@ -1411,9 +1411,9 @@ var VNode = function VNode (
   this.elm = elm;
   this.ns = undefined;
   this.context = context;
-  this.fnContext = undefined;
-  this.fnOptions = undefined;
-  this.fnScopeId = undefined;
+  this.functionalContext = undefined;
+  this.functionalOptions = undefined;
+  this.functionalScopeId = undefined;
   this.key = data && data.key;
   this.componentOptions = componentOptions;
   this.componentInstance = undefined;
@@ -1472,9 +1472,6 @@ function cloneVNode (vnode, deep) {
   cloned.isStatic = vnode.isStatic;
   cloned.key = vnode.key;
   cloned.isComment = vnode.isComment;
-  cloned.fnContext = vnode.fnContext;
-  cloned.fnOptions = vnode.fnOptions;
-  cloned.fnScopeId = vnode.fnScopeId;
   cloned.isCloned = true;
   if (deep) {
     if (vnode.children) {
@@ -2630,7 +2627,7 @@ function traverse (val) {
 function _traverse (val, seen) {
   var i, keys;
   var isA = Array.isArray(val);
-  if ((!isA && !isObject(val)) || Object.isFrozen(val)) {
+  if ((!isA && !isObject(val)) || !Object.isExtensible(val)) {
     return
   }
   if (val.__ob__) {
@@ -3221,7 +3218,7 @@ function resolveSlots (
     }
     // named slots should only be respected if the vnode was rendered in the
     // same context.
-    if ((child.context === context || child.fnContext === context) &&
+    if ((child.context === context || child.functionalContext === context) &&
       data && data.slot != null
     ) {
       var name = child.data.slot;
@@ -3441,10 +3438,7 @@ function mountComponent (
     };
   }
 
-  // we set this to vm._watcher inside the watcher's constructor
-  // since the watcher's initial patch may call $forceUpdate (e.g. inside child
-  // component's mounted hook), which relies on vm._watcher being already defined
-  new Watcher(vm, updateComponent, noop, null, true /* isRenderWatcher */);
+  vm._watcher = new Watcher(vm, updateComponent, noop);
   hydrating = false;
 
   // manually mounted instance, call mounted on self
@@ -3731,13 +3725,9 @@ var Watcher = function Watcher (
   vm,
   expOrFn,
   cb,
-  options,
-  isRenderWatcher
+  options
 ) {
   this.vm = vm;
-  if (isRenderWatcher) {
-    vm._watcher = this;
-  }
   vm._watchers.push(this);
   // options
   if (options) {
@@ -4648,8 +4638,8 @@ function FunctionalRenderContext (
     this._c = function (a, b, c, d) {
       var vnode = createElement(contextVm, a, b, c, d, needNormalization);
       if (vnode) {
-        vnode.fnScopeId = options._scopeId;
-        vnode.fnContext = parent;
+        vnode.functionalScopeId = options._scopeId;
+        vnode.functionalContext = parent;
       }
       return vnode
     };
@@ -4690,8 +4680,8 @@ function createFunctionalComponent (
   var vnode = options.render.call(null, renderContext._c, renderContext);
 
   if (vnode instanceof VNode) {
-    vnode.fnContext = contextVm;
-    vnode.fnOptions = options;
+    vnode.functionalContext = contextVm;
+    vnode.functionalOptions = options;
     if (data.slot) {
       (vnode.data || (vnode.data = {})).slot = data.slot;
     }
@@ -5062,7 +5052,6 @@ function applyNS (vnode, ns, force) {
 
 function initRender (vm) {
   vm._vnode = null; // the root of the child tree
-  vm._staticTrees = null; // v-once cached trees
   var options = vm.$options;
   var parentVnode = vm.$vnode = options._parentVnode; // the placeholder node in parent tree
   var renderContext = parentVnode && parentVnode.context;
@@ -5526,7 +5515,7 @@ function pruneCacheEntry (
   current
 ) {
   var cached$$1 = cache[key];
-  if (cached$$1 && (!current || cached$$1.tag !== current.tag)) {
+  if (cached$$1 && cached$$1 !== current) {
     cached$$1.componentInstance.$destroy();
   }
   cache[key] = null;
@@ -5568,27 +5557,21 @@ var KeepAlive = {
   },
 
   render: function render () {
-    var slot = this.$slots.default;
-    var vnode = getFirstComponentChild(slot);
+    var vnode = getFirstComponentChild(this.$slots.default);
     var componentOptions = vnode && vnode.componentOptions;
     if (componentOptions) {
       // check pattern
       var name = getComponentName(componentOptions);
-      var ref = this;
-      var include = ref.include;
-      var exclude = ref.exclude;
-      if (
-        // not included
-        (include && (!name || !matches(include, name))) ||
-        // excluded
-        (exclude && name && matches(exclude, name))
-      ) {
+      if (name && (
+        (this.exclude && matches(this.exclude, name)) ||
+        (this.include && !matches(this.include, name))
+      )) {
         return vnode
       }
 
-      var ref$1 = this;
-      var cache = ref$1.cache;
-      var keys = ref$1.keys;
+      var ref = this;
+      var cache = ref.cache;
+      var keys = ref.keys;
       var key = vnode.key == null
         // same constructor may get registered as different local components
         // so cid alone is not enough (#3269)
@@ -5610,7 +5593,7 @@ var KeepAlive = {
 
       vnode.data.keepAlive = true;
     }
-    return vnode || (slot && slot[0])
+    return vnode
   }
 };
 
@@ -5677,7 +5660,7 @@ Object.defineProperty(Vue$3.prototype, '$ssrContext', {
   }
 });
 
-Vue$3.version = '2.5.9';
+Vue$3.version = '2.5.4';
 
 /*  */
 
@@ -6276,7 +6259,7 @@ function createPatchFunction (backend) {
   // of going through the normal attribute patching process.
   function setScope (vnode) {
     var i;
-    if (isDef(i = vnode.fnScopeId)) {
+    if (isDef(i = vnode.functionalScopeId)) {
       nodeOps.setAttribute(vnode.elm, i, '');
     } else {
       var ancestor = vnode;
@@ -6290,7 +6273,7 @@ function createPatchFunction (backend) {
     // for slot content they should also get the scopeId from the host instance.
     if (isDef(i = activeInstance) &&
       i !== vnode.context &&
-      i !== vnode.fnContext &&
+      i !== vnode.functionalContext &&
       isDef(i = i.$options._scopeId)
     ) {
       nodeOps.setAttribute(vnode.elm, i, '');
@@ -6880,7 +6863,7 @@ function updateAttrs (oldVnode, vnode) {
   // #4391: in IE9, setting type can reset value for input[type=radio]
   // #6666: IE/Edge forces progress value down to 1 before setting a max
   /* istanbul ignore if */
-  if ((isIE || isEdge) && attrs.value !== oldAttrs.value) {
+  if ((isIE9 || isEdge) && attrs.value !== oldAttrs.value) {
     setAttr(elm, 'value', attrs.value);
   }
   for (key in oldAttrs) {
@@ -6920,23 +6903,6 @@ function setAttr (el, key, value) {
     if (isFalsyAttrValue(value)) {
       el.removeAttribute(key);
     } else {
-      // #7138: IE10 & 11 fires input event when setting placeholder on
-      // <textarea>... block the first input event and remove the blocker
-      // immediately.
-      /* istanbul ignore if */
-      if (
-        isIE && !isIE9 &&
-        el.tagName === 'TEXTAREA' &&
-        key === 'placeholder' && !el.__ieph
-      ) {
-        var blocker = function (e) {
-          e.stopImmediatePropagation();
-          el.removeEventListener('input', blocker);
-        };
-        el.addEventListener('input', blocker);
-        // $flow-disable-line
-        el.__ieph = true; /* IE placeholder patched */
-      }
       el.setAttribute(key, value);
     }
   }
@@ -7508,19 +7474,6 @@ function genDefaultModel (
   modifiers
 ) {
   var type = el.attrsMap.type;
-
-  // warn if v-bind:value conflicts with v-model
-  if (process.env.NODE_ENV !== 'production') {
-    var value$1 = el.attrsMap['v-bind:value'] || el.attrsMap[':value'];
-    if (value$1) {
-      var binding = el.attrsMap['v-bind:value'] ? 'v-bind:value' : ':value';
-      warn$1(
-        binding + "=\"" + value$1 + "\" conflicts with v-model on the same element " +
-        'because the latter already expands to a value binding internally'
-      );
-    }
-  }
-
   var ref = modifiers || {};
   var lazy = ref.lazy;
   var number = ref.number;
@@ -9551,8 +9504,7 @@ function parseHTML (html, options) {
 var onRE = /^@|^v-on:/;
 var dirRE = /^v-|^@|^:/;
 var forAliasRE = /(.*?)\s+(?:in|of)\s+(.*)/;
-var forIteratorRE = /\((\{[^}]*\}|[^,{]*),([^,]*)(?:,([^,]*))?\)/;
-var stripParensRE = /^\(|\)$/g;
+var forIteratorRE = /\((\{[^}]*\}|[^,]*),([^,]*)(?:,([^,]*))?\)/;
 
 var argRE = /:(.*)$/;
 var bindRE = /^:|^v-bind:/;
@@ -9893,7 +9845,7 @@ function processFor (el) {
         el.iterator2 = iteratorMatch[3].trim();
       }
     } else {
-      el.alias = alias.replace(stripParensRE, '');
+      el.alias = alias;
     }
   }
 }
@@ -9989,15 +9941,6 @@ function processSlot (el) {
       }
       el.slotScope = slotScope || getAndRemoveAttr(el, 'slot-scope');
     } else if ((slotScope = getAndRemoveAttr(el, 'slot-scope'))) {
-      /* istanbul ignore if */
-      if (process.env.NODE_ENV !== 'production' && el.attrsMap['v-for']) {
-        warn$2(
-          "Ambiguous combined usage of slot-scope and v-for on <" + (el.tag) + "> " +
-          "(v-for takes higher priority). Use a wrapper <template> for the " +
-          "scoped slot to make it clearer.",
-          true
-        );
-      }
       el.slotScope = slotScope;
     }
     var slotTarget = getBindingAttr(el, 'slot');
@@ -11038,6 +10981,9 @@ var unaryOperatorsRE = new RegExp('\\b' + (
   'delete,typeof,void'
 ).split(',').join('\\s*\\([^\\)]*\\)|\\b') + '\\s*\\([^\\)]*\\)');
 
+// check valid identifier for v-for
+var identRE = /[A-Za-z_$][\w$]*/;
+
 // strip strings in expressions
 var stripStringRE = /'(?:[^'\\]|\\.)*'|"(?:[^"\\]|\\.)*"|`(?:[^`\\]|\\.)*\$\{|\}(?:[^`\\]|\\.)*`|`(?:[^`\\]|\\.)*`/g;
 
@@ -11095,18 +11041,9 @@ function checkFor (node, text, errors) {
   checkIdentifier(node.iterator2, 'v-for iterator', text, errors);
 }
 
-function checkIdentifier (
-  ident,
-  type,
-  text,
-  errors
-) {
-  if (typeof ident === 'string') {
-    try {
-      new Function(("var " + ident + "=_"));
-    } catch (e) {
-      errors.push(("invalid " + type + " \"" + ident + "\" in expression: " + (text.trim())));
-    }
+function checkIdentifier (ident, type, text, errors) {
+  if (typeof ident === 'string' && !identRE.test(ident)) {
+    errors.push(("invalid " + type + " \"" + ident + "\" in expression: " + (text.trim())));
   }
 }
 
@@ -28029,9 +27966,9 @@ window._ = __webpack_require__(180);
  */
 
 try {
-  window.$ = window.jQuery = __webpack_require__(49);
+    window.$ = window.jQuery = __webpack_require__(49);
 
-  __webpack_require__(125);
+    __webpack_require__(125);
 } catch (e) {}
 
 /**
@@ -28044,8 +27981,8 @@ window.axios = __webpack_require__(77);
 
 // window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 window.axios.defaults.headers.common = {
-  'X-CSRF-TOKEN': document.querySelector('meta[name="X-CSRF-TOKEN"]').content,
-  'X-Requested-With': 'XMLHttpRequest'
+    'X-CSRF-TOKEN': document.querySelector('meta[name="X-CSRF-TOKEN"]').content,
+    'X-Requested-With': 'XMLHttpRequest'
 };
 /**
  * Next we will register the CSRF Token as a common header with Axios so that
@@ -28056,9 +27993,9 @@ window.axios.defaults.headers.common = {
 var token = document.head.querySelector('meta[name="csrf-token"]');
 
 if (token) {
-  window.axios.defaults.headers.common['X-CSRF-TOKEN'] = token.content;
+    window.axios.defaults.headers.common['X-CSRF-TOKEN'] = token.content;
 } else {
-  console.error('CSRF token not found: https://laravel.com/docs/csrf#csrf-x-csrf-token');
+    console.error('CSRF token not found: https://laravel.com/docs/csrf#csrf-x-csrf-token');
 }
 
 /**
@@ -28105,18 +28042,25 @@ var _Base4 = _interopRequireDefault(_Base3);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 _vue2.default.use(_vueRouter2.default);
 
 exports.default = new _vueRouter2.default({
     saveScrollPosition: true,
-    routes: [{
+    routes: [_defineProperty({
+        path: '/index',
+        name: '天降正义',
+        component: function component(resolve) {
+            return void __webpack_require__.e/* require */(6).then(function() { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(201)]; (resolve.apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this)).catch(__webpack_require__.oe);
+        } }, 'name', '用户管理'), {
         path: '/admin',
         name: '用户管理',
         iconCls: 'el-icon-message', //图标样式class
         component: _Base2.default,
         leaf: true, //只有一个节点
         children: [{ path: '/admin/user', component: function component(resolve) {
-                return void __webpack_require__.e/* require */(1).then(function() { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(201)]; (resolve.apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this)).catch(__webpack_require__.oe);
+                return void __webpack_require__.e/* require */(6/* duplicate */).then(function() { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(201)]; (resolve.apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this)).catch(__webpack_require__.oe);
             }, name: '用户管理' }]
     }, {
         path: '/admin',
@@ -28125,7 +28069,7 @@ exports.default = new _vueRouter2.default({
         component: _Base2.default,
         leaf: true, //只有一个节点
         children: [{ path: '/admin/video', component: function component(resolve) {
-                return void __webpack_require__.e/* require */(0).then(function() { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(202)]; (resolve.apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this)).catch(__webpack_require__.oe);
+                return void __webpack_require__.e/* require */(7).then(function() { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(202)]; (resolve.apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this)).catch(__webpack_require__.oe);
             }, name: '视频管理' }]
     }, {
         path: '/admin',
@@ -28134,7 +28078,7 @@ exports.default = new _vueRouter2.default({
         component: _Base2.default,
         leaf: true, //只有一个节点
         children: [{ path: '/admin/page', component: function component(resolve) {
-                return void __webpack_require__.e/* require */(3).then(function() { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(199)]; (resolve.apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this)).catch(__webpack_require__.oe);
+                return void __webpack_require__.e/* require */(9).then(function() { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(199)]; (resolve.apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this)).catch(__webpack_require__.oe);
             }, name: '页面管理' }]
     }, {
         path: '/admin',
@@ -28143,7 +28087,7 @@ exports.default = new _vueRouter2.default({
         component: _Base2.default,
         leaf: true, //只有一个节点
         children: [{ path: '/admin/carousel', component: function component(resolve) {
-                return void __webpack_require__.e/* require */(4).then(function() { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(198)]; (resolve.apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this)).catch(__webpack_require__.oe);
+                return void __webpack_require__.e/* require */(10).then(function() { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(198)]; (resolve.apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this)).catch(__webpack_require__.oe);
             }, name: '轮播管理' }]
     }, {
         path: '/admin',
@@ -28152,7 +28096,7 @@ exports.default = new _vueRouter2.default({
         component: _Base2.default,
         leaf: true, //只有一个节点
         children: [{ path: '/admin/sponsor', component: function component(resolve) {
-                return void __webpack_require__.e/* require */(2).then(function() { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(200)]; (resolve.apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this)).catch(__webpack_require__.oe);
+                return void __webpack_require__.e/* require */(8).then(function() { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(200)]; (resolve.apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this)).catch(__webpack_require__.oe);
             }, name: '赞助管理' }]
     }]
 });
@@ -31599,7 +31543,7 @@ exports.push([module.i, "@charset \"UTF-8\";.el-breadcrumb:after,.el-breadcrumb:
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(16)();
-exports.push([module.i, "\n*{\n    margin:0;\n    padding: 0;\n}\n", ""]);
+exports.push([module.i, "\n*{\r\n    margin:0;\r\n    padding: 0;\n}\r\n", ""]);
 
 /***/ }),
 /* 157 */
@@ -33285,7 +33229,7 @@ module.exports =
 	};
 
 	module.exports = {
-	  version: '1.4.12',
+	  version: '1.4.10',
 	  locale: _locale2.default.use,
 	  i18n: _locale2.default.i18n,
 	  install: install,
@@ -33675,17 +33619,6 @@ module.exports =
 
 	          this.$parent.internalCurrentPage = this.$parent.getValidCurrentPage(target.value);
 	          this.oldValue = null;
-	          this.resetValueIfNeed(target);
-	        },
-	        resetValueIfNeed: function resetValueIfNeed(target) {
-	          var num = parseInt(target.value, 10);
-	          if (!isNaN(num)) {
-	            if (num < 1) {
-	              target.value = 1;
-	            } else {
-	              this.reassignMaxValue(target);
-	            }
-	          }
 	        },
 	        reassignMaxValue: function reassignMaxValue(target) {
 	          if (+target.value > this.$parent.internalPageCount) {
@@ -39089,7 +39022,7 @@ module.exports =
 	          return item.tagName === 'INPUT';
 	        })[0];
 	        var tags = _this7.$refs.tags;
-	        input.style.height = _this7.selected.length === 0 ? (sizeMap[_this7.size] || 36) + 'px' : Math.max(tags ? tags.clientHeight + 6 : 0, sizeMap[_this7.size] || 36) + 'px';
+	        input.style.height = _this7.selected.length === 0 ? sizeMap[_this7.size] + 'px' : Math.max(tags ? tags.clientHeight + 6 : 0, sizeMap[_this7.size] || 36) + 'px';
 	        if (_this7.visible && _this7.emptyText !== false) {
 	          _this7.broadcast('ElSelectDropdown', 'updatePopper');
 	        }
@@ -40495,6 +40428,7 @@ module.exports =
 	//
 	//
 	//
+	//
 
 	exports.default = {
 	  name: 'ElTable',
@@ -40638,6 +40572,14 @@ module.exports =
 	          _this2.layout.setMaxHeight(_this2.maxHeight);
 	        } else if (_this2.shouldUpdateHeight) {
 	          _this2.layout.updateHeight();
+	        }
+	        if (_this2.$el) {
+	          _this2.isHidden = _this2.$el.clientWidth === 0;
+	          if (_this2.isHidden && _this2.layout.bodyWidth) {
+	            setTimeout(function () {
+	              return _this2.doLayout();
+	            });
+	          }
 	        }
 	      });
 	    }
@@ -40794,6 +40736,7 @@ module.exports =
 	    return {
 	      store: store,
 	      layout: layout,
+	      isHidden: false,
 	      renderExpanded: null,
 	      resizeProxyVisible: false
 	    };
@@ -43071,6 +43014,7 @@ module.exports =
 	      'el-table--fit': _vm.fit,
 	      'el-table--striped': _vm.stripe,
 	      'el-table--border': _vm.border,
+	      'el-table--hidden': _vm.isHidden,
 	      'el-table--fluid-height': _vm.maxHeight,
 	      'el-table--enable-row-hover': !_vm.store.states.isComplex,
 	        'el-table--enable-row-transition': (_vm.store.states.data || []).length !== 0 && (_vm.store.states.data || []).length < 100
@@ -63744,7 +63688,7 @@ module.exports =
 	          return item.tagName === 'INPUT';
 	        })[0];
 	        var tags = _this7.$refs.tags;
-	        input.style.height = _this7.selected.length === 0 ? (sizeMap[_this7.size] || 36) + 'px' : Math.max(tags ? tags.clientHeight + 6 : 0, sizeMap[_this7.size] || 36) + 'px';
+	        input.style.height = _this7.selected.length === 0 ? sizeMap[_this7.size] + 'px' : Math.max(tags ? tags.clientHeight + 6 : 0, sizeMap[_this7.size] || 36) + 'px';
 	        if (_this7.visible && _this7.emptyText !== false) {
 	          _this7.broadcast('ElSelectDropdown', 'updatePopper');
 	        }
@@ -84110,8 +84054,8 @@ if(content.locals) module.exports = content.locals;
 if(false) {
 	// When the styles change, update the <style> tags
 	if(!content.locals) {
-		module.hot.accept("!!../../../css-loader/index.js!./index.css", function() {
-			var newContent = require("!!../../../css-loader/index.js!./index.css");
+		module.hot.accept("!!../../../_css-loader@0.14.5@css-loader/index.js!./index.css", function() {
+			var newContent = require("!!../../../_css-loader@0.14.5@css-loader/index.js!./index.css");
 			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 			update(newContent);
 		});
@@ -84194,7 +84138,7 @@ module.exports.render._withStripped = true
 if (false) {
   module.hot.accept()
   if (module.hot.data) {
-     require("vue-hot-reload-api").rerender("data-v-148b7c46", module.exports)
+     require("vue-loader/node_modules/vue-hot-reload-api").rerender("data-v-148b7c46", module.exports)
   }
 }
 
@@ -84330,7 +84274,7 @@ module.exports.render._withStripped = true
 if (false) {
   module.hot.accept()
   if (module.hot.data) {
-     require("vue-hot-reload-api").rerender("data-v-22204eef", module.exports)
+     require("vue-loader/node_modules/vue-hot-reload-api").rerender("data-v-22204eef", module.exports)
   }
 }
 
@@ -84466,7 +84410,7 @@ module.exports.render._withStripped = true
 if (false) {
   module.hot.accept()
   if (module.hot.data) {
-     require("vue-hot-reload-api").rerender("data-v-3c626c53", module.exports)
+     require("vue-loader/node_modules/vue-hot-reload-api").rerender("data-v-3c626c53", module.exports)
   }
 }
 
@@ -87113,13 +87057,13 @@ var content = __webpack_require__(156);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(27)("4e3f7fcd", content, false);
+var update = __webpack_require__(27)("0d5d72d6", content, false);
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
  if(!content.locals) {
-   module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"id\":\"data-v-148b7c46\",\"scoped\":false,\"hasInlineConfig\":true}!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./App.vue", function() {
-     var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"id\":\"data-v-148b7c46\",\"scoped\":false,\"hasInlineConfig\":true}!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./App.vue");
+   module.hot.accept("!!../../../node_modules/_css-loader@0.14.5@css-loader/index.js!../../../node_modules/_vue-loader@11.3.4@vue-loader/lib/style-compiler/index.js?{\"id\":\"data-v-148b7c46\",\"scoped\":false,\"hasInlineConfig\":true}!../../../node_modules/_vux-loader@1.1.26@vux-loader/src/style-loader.js!../../../node_modules/_vue-loader@11.3.4@vue-loader/lib/selector.js?type=styles&index=0!./App.vue", function() {
+     var newContent = require("!!../../../node_modules/_css-loader@0.14.5@css-loader/index.js!../../../node_modules/_vue-loader@11.3.4@vue-loader/lib/style-compiler/index.js?{\"id\":\"data-v-148b7c46\",\"scoped\":false,\"hasInlineConfig\":true}!../../../node_modules/_vux-loader@1.1.26@vux-loader/src/style-loader.js!../../../node_modules/_vue-loader@11.3.4@vue-loader/lib/selector.js?type=styles&index=0!./App.vue");
      if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
      update(newContent);
    });
@@ -87139,13 +87083,13 @@ var content = __webpack_require__(157);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(27)("07f7e0f3", content, false);
+var update = __webpack_require__(27)("614b42e8", content, false);
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
  if(!content.locals) {
-   module.hot.accept("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"id\":\"data-v-22204eef\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../../node_modules/sass-loader/lib/loader.js!../../../../../node_modules/vux-loader/src/style-loader.js!../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Base.vue", function() {
-     var newContent = require("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"id\":\"data-v-22204eef\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../../node_modules/sass-loader/lib/loader.js!../../../../../node_modules/vux-loader/src/style-loader.js!../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Base.vue");
+   module.hot.accept("!!../../../../../node_modules/_css-loader@0.14.5@css-loader/index.js!../../../../../node_modules/_vue-loader@11.3.4@vue-loader/lib/style-compiler/index.js?{\"id\":\"data-v-22204eef\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../../node_modules/_sass-loader@5.0.1@sass-loader/lib/loader.js!../../../../../node_modules/_vux-loader@1.1.26@vux-loader/src/style-loader.js!../../../../../node_modules/_vue-loader@11.3.4@vue-loader/lib/selector.js?type=styles&index=0!./Base.vue", function() {
+     var newContent = require("!!../../../../../node_modules/_css-loader@0.14.5@css-loader/index.js!../../../../../node_modules/_vue-loader@11.3.4@vue-loader/lib/style-compiler/index.js?{\"id\":\"data-v-22204eef\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../../node_modules/_sass-loader@5.0.1@sass-loader/lib/loader.js!../../../../../node_modules/_vux-loader@1.1.26@vux-loader/src/style-loader.js!../../../../../node_modules/_vue-loader@11.3.4@vue-loader/lib/selector.js?type=styles&index=0!./Base.vue");
      if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
      update(newContent);
    });
@@ -87165,13 +87109,13 @@ var content = __webpack_require__(158);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(27)("d59ff70c", content, false);
+var update = __webpack_require__(27)("a75a6636", content, false);
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
  if(!content.locals) {
-   module.hot.accept("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"id\":\"data-v-3c626c53\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../../node_modules/sass-loader/lib/loader.js!../../../../../node_modules/vux-loader/src/style-loader.js!../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Base.vue", function() {
-     var newContent = require("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"id\":\"data-v-3c626c53\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../../node_modules/sass-loader/lib/loader.js!../../../../../node_modules/vux-loader/src/style-loader.js!../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Base.vue");
+   module.hot.accept("!!../../../../../node_modules/_css-loader@0.14.5@css-loader/index.js!../../../../../node_modules/_vue-loader@11.3.4@vue-loader/lib/style-compiler/index.js?{\"id\":\"data-v-3c626c53\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../../node_modules/_sass-loader@5.0.1@sass-loader/lib/loader.js!../../../../../node_modules/_vux-loader@1.1.26@vux-loader/src/style-loader.js!../../../../../node_modules/_vue-loader@11.3.4@vue-loader/lib/selector.js?type=styles&index=0!./Base.vue", function() {
+     var newContent = require("!!../../../../../node_modules/_css-loader@0.14.5@css-loader/index.js!../../../../../node_modules/_vue-loader@11.3.4@vue-loader/lib/style-compiler/index.js?{\"id\":\"data-v-3c626c53\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../../node_modules/_sass-loader@5.0.1@sass-loader/lib/loader.js!../../../../../node_modules/_vux-loader@1.1.26@vux-loader/src/style-loader.js!../../../../../node_modules/_vue-loader@11.3.4@vue-loader/lib/selector.js?type=styles&index=0!./Base.vue");
      if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
      update(newContent);
    });
@@ -87231,13 +87175,13 @@ var Component = __webpack_require__(26)(
   /* cssModules */
   null
 )
-Component.options.__file = "/var/www/vote/resources/assets/js/App.vue"
+Component.options.__file = "E:\\Apache24\\htdocs\\vote\\resources\\assets\\js\\App.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] App.vue: functional components are not supported with templates, they should use render functions.")}
 
 /* hot reload */
 if (false) {(function () {
-  var hotAPI = require("vue-hot-reload-api")
+  var hotAPI = require("vue-loader/node_modules/vue-hot-reload-api")
   hotAPI.install(require("vue"), false)
   if (!hotAPI.compatible) return
   module.hot.accept()
@@ -87269,13 +87213,13 @@ var Component = __webpack_require__(26)(
   /* cssModules */
   null
 )
-Component.options.__file = "/var/www/vote/resources/assets/js/components/Admin/Base.vue"
+Component.options.__file = "E:\\Apache24\\htdocs\\vote\\resources\\assets\\js\\components\\Admin\\Base.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] Base.vue: functional components are not supported with templates, they should use render functions.")}
 
 /* hot reload */
 if (false) {(function () {
-  var hotAPI = require("vue-hot-reload-api")
+  var hotAPI = require("vue-loader/node_modules/vue-hot-reload-api")
   hotAPI.install(require("vue"), false)
   if (!hotAPI.compatible) return
   module.hot.accept()
@@ -87307,13 +87251,13 @@ var Component = __webpack_require__(26)(
   /* cssModules */
   null
 )
-Component.options.__file = "/var/www/vote/resources/assets/js/components/Home/Base.vue"
+Component.options.__file = "E:\\Apache24\\htdocs\\vote\\resources\\assets\\js\\components\\Home\\Base.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] Base.vue: functional components are not supported with templates, they should use render functions.")}
 
 /* hot reload */
 if (false) {(function () {
-  var hotAPI = require("vue-hot-reload-api")
+  var hotAPI = require("vue-loader/node_modules/vue-hot-reload-api")
   hotAPI.install(require("vue"), false)
   if (!hotAPI.compatible) return
   module.hot.accept()
