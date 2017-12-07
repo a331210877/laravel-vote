@@ -11,8 +11,10 @@ use Session;
 class IndexController extends Controller
 {
     public function index(Request $request){
-        if (isset($_GET['code'])){
-            session(['open_id'=>$_GET['code']]);
+        if (isset($request->code)){
+
+            // session(['open_id'=>$request->code]);
+            echo session('open_id');
         }else{
             echo "NO CODE";
         }
