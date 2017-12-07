@@ -10,7 +10,7 @@ use Session;
 
 class IndexController extends Controller
 {
-    public function index(){
+    public function index(Request $request){
         if (isset($_GET['code'])){
             session(['open_id'=>$_GET['code']]);
         }else{
