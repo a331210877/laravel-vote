@@ -16,4 +16,12 @@ class IndexController extends Controller
             echo "NO CODE";
         }
     }
+
+    public function getUserMessage(Request $request){
+        if (isset($_GET['code'])){
+            echo $_GET['code'];
+        }else{
+            echo "NO CODE";
+        }
+    }
 }
