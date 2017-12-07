@@ -58,7 +58,7 @@ class WechatController extends Controller
            [
                "type"=>"view",
                "name"=>"进入课堂",
-               "url"=>"http://vote.mrwangqi.com",
+               "url"=>"http://vote.mrwangqi.com/home/index",
            ],
        ];
        $menu->add($buttons);
