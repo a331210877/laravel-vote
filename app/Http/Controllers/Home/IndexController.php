@@ -12,9 +12,7 @@ class IndexController extends Controller
 {
     public function index(Request $request){
         if (isset($request->code)){
-
-            // session(['open_id'=>$request->code]);
-            echo session('open_id');
+            session(['open_id'=>$request->code]);
         }else{
             echo "NO CODE";
         }
