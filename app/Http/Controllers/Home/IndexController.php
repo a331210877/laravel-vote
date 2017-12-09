@@ -16,6 +16,6 @@ class IndexController extends Controller
         // dump($app);
         // $user = $app->oauth->user();
         // dump($request->session);
-        // dump(session('open_id'));
+        dump(session('open_id'));
     }
 }
