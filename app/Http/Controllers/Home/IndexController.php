@@ -15,7 +15,7 @@ class IndexController extends Controller
         //     session(['open_id'=>$request->code]);
         //     echo session('open_id');
         // }else{
-            dump("doihqwjaohejroahwjohnioawhnolda");
+            dump(session('open_id'));
         // }
     }
 }
