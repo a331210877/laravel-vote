@@ -12,7 +12,7 @@ class IndexController extends Controller
 {
     public function index(Request $request){
         // $app = app('wechat');//从项目实例中得到一个oauth应用实例
-        dump($request);
+        dump($request->app);
         // dump($app);
         // $user = $app->oauth->user();
         // dump($request->session);
