@@ -11,11 +11,12 @@ use Session;
 class IndexController extends Controller
 {
     public function index(Request $request){
-        // if (isset($request->code)){
-        //     session(['open_id'=>$request->code]);
-        //     echo session('open_id');
-        // }else{
-            dump(session('user'));
-        // }
+        $app = app('wechat');//从项目实例中得到一个oauth应用实例
+        $oauth = $app->oauth;//得到joomla当前用户
+        $user= $oauth->user;
+        dump($app);
+        dump($oauth);
+        dump($user);
+        dump(session('open_id'));
     }
 }
