@@ -11,6 +11,7 @@ use Session;
 class IndexController extends Controller
 {
     public function index(Request $request){
+        dump(session('user'));
         dump(session('open_id'));
     }
 }
