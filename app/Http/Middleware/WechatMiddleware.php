@@ -21,7 +21,7 @@ class WechatMiddleware
             session(['open_id'=>$request->code]);
             dump($request->code);
             dump($request);
-            $response = $app->oauth->scopes(['snsapi_userinfo'])->setRequest($request)->redirect();
+            return $response = $app->oauth->scopes(['snsapi_userinfo'])->setRequest($request)->redirect();
             // dump($app);
         }else{//已登录状态，重定向到joomla首页
             return $next($request);
