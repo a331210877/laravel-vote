@@ -1,6 +1,6 @@
 <?php
 
-Route::group(['middleware'=>'wechat.oauth'],function(){
+Route::group(['middleware' => ['web', 'wechat.oauth']],function(){
 
     // Route::post('/home/vote','Home\IndexController@vote');
 
