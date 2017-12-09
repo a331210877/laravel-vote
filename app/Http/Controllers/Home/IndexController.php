@@ -15,7 +15,9 @@ class IndexController extends Controller
         //     session(['open_id'=>$request->code]);
         //     echo session('open_id');
         // }else{
-            dump(session('open_id'));
+            $app = app('wechat');
+            $user = $app->oauth->user();
+            dump($user);
         // }
     }
 }
