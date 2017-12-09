@@ -19,7 +19,10 @@ class WechatMiddleware
         $oauth = $app->oauth;//得到joomla当前用户
         if (empty(session('open_id'))) {//未登录，引导用户到微信服务器授权
             session(['open_id'=>$request->code]);
-            return $response = $app->oauth->scopes(['snsapi_userinfo'])->setRequest($request)->redirect();
+            $response = $app->oauth->scopes(['snsapi_userinfo'])->setRequest($request);
+            $user=$app->oauth->user();
+            session(['user'=>$user]);
+            return $response;
         }else{//已登录状态，重定向到joomla首页
             return $next($request);
         }
