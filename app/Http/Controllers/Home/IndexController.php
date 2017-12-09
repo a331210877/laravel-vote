@@ -11,7 +11,6 @@ use Session;
 class IndexController extends Controller
 {
     public function index(Request $request){
-        // dump(session('wechat.oauth_user'));
-        dump("edqwilohjeiojqwoejioqwjioejioqw");
+        dump(session('wechat.oauth_user'));
     }
 }
