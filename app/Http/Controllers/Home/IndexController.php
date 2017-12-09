@@ -15,8 +15,7 @@ class IndexController extends Controller
         //     session(['open_id'=>$request->code]);
         //     echo session('open_id');
         // }else{
-            $user = $request->app->oauth->user();
-            dump($user);
+            dump(session('user'));
         // }
     }
 }
