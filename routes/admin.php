@@ -1,7 +1,7 @@
 <?php
 
 Route::group(['middleware'=>'login.check'],function(){
-    
+
     //video
     Route::post('/admin/index/addPlayer','Admin\VideoController@addPlayer');
 

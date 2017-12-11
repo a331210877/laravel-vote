@@ -13,9 +13,6 @@
 require 'admin.php';
 require 'home.php';
 
-// Route::get('/', function () {
-//     return view('index');
-// });
 Route::get('/', function () {
     return view('login');
 });
@@ -23,13 +20,6 @@ Route::get('/', function () {
 Route::get('/login', function () {
     return view('login');
 });
-
-Route::group(['middleware' => 'login.check'],function (){
-    Route::get('/', function () {
-        return view('index');
-    });
-});
-
 
 Route::post('/file/upload','FileController@upload');
 Route::get('/file/upload','FileController@upload');
@@ -39,3 +29,19 @@ Route::post('/logout','Auth\LoginController@logout');
 Route::any('/wechat','WechatController@serve');
 Route::any('/addMenu','WechatController@add_menu');
 Route::get('/phpinfo','WechatController@phpinfo');
+
+// Route::get('/', function () {
+//     return view('home');
+// });
+
+Route::group(['middleware' => ['web', 'wechat.oauth']],function(){
+    Route::get('/home', function () {
+        return view('home');
+    });
+});
+
+Route::group(['middleware' => 'login.check'],function (){
+    Route::get('/', function () {
+        return view('admin');
+    });
+});

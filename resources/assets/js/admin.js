@@ -16,13 +16,13 @@ window.Vue = require('vue');
  */
 
 //Vue.component('example', require('./components/Example.vue'));
-import App from './App.vue'; 
+import App from './Admin.vue'; 
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-default/index.css';
 
 Vue.use(ElementUI);
 
-import router from './router/index.js';
+import router from './router/admin.js';
 
 const app = new Vue({
     el: '#app',
