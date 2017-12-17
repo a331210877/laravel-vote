@@ -13,7 +13,17 @@ export default new VueRouter({
             component: HomeBase,
             leaf: true,//只有一个节点
             children: [
-                { path: '/home/index', component: resolve =>void(require(['../components/Home/Index.vue'], resolve)), name: '赞助管理'},
+                { path: '/home/index', component: resolve =>void(require(['../components/Home/Index.vue'], resolve)), name: '用户管理'},
+            ]
+        },
+        {
+            path: '/home', 
+            name: '投票',
+            iconCls: 'el-icon-message',//图标样式class
+            component: HomeBase,
+            leaf: true,//只有一个节点
+            children: [
+                { path: '/home/page/:id',name:'page',component: resolve =>void(require(['../components/Home/Page.vue'], resolve)), name: '用户管理'},
             ]
         }
     ],

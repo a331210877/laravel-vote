@@ -10,3 +10,8 @@ module.exports = vuxLoader.merge(webpackConfig, {
   options: {},
   plugins: [{ name: 'vux-ui' }]
 })
+module.exports.plugins = (module.exports.plugins || []).concat([
+  new plugins.CopyWebpackPlugin([
+      {from: 'resources/assets/img', to: 'images'},
+  ]),
+]);

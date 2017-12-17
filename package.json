@@ -23,7 +23,7 @@
   },
   "dependencies": {
     "loader": "^2.1.1",
-    "vux": "^2.5.7",
+    "vux": "^2.7.4",
     "vux-loader": "^1.1.5"
   }
 }
