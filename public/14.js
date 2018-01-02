@@ -1,21 +1,21 @@
 webpackJsonp([14],{
 
-/***/ 199:
+/***/ 367:
 /***/ (function(module, exports, __webpack_require__) {
 
-var Component = __webpack_require__(26)(
+var Component = __webpack_require__(16)(
   /* script */
-  __webpack_require__(205),
+  __webpack_require__(373),
   /* template */
-  __webpack_require__(218),
+  __webpack_require__(381),
   /* scopeId */
   null,
   /* cssModules */
   null
 )
-Component.options.__file = "E:\\Apache24\\htdocs\\vote\\resources\\assets\\js\\components\\Admin\\Carousel.vue"
+Component.options.__file = "E:\\Apache24\\htdocs\\vote\\resources\\assets\\js\\components\\Home\\Me.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
-if (Component.options.functional) {console.error("[vue-loader] Carousel.vue: functional components are not supported with templates, they should use render functions.")}
+if (Component.options.functional) {console.error("[vue-loader] Me.vue: functional components are not supported with templates, they should use render functions.")}
 
 /* hot reload */
 if (false) {(function () {
@@ -24,9 +24,9 @@ if (false) {(function () {
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-5e7256fe", Component.options)
+    hotAPI.createRecord("data-v-70b38a1a", Component.options)
   } else {
-    hotAPI.reload("data-v-5e7256fe", Component.options)
+    hotAPI.reload("data-v-70b38a1a", Component.options)
   }
 })()}
 
@@ -35,7 +35,7 @@ module.exports = Component.exports
 
 /***/ }),
 
-/***/ 205:
+/***/ 373:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -44,168 +44,67 @@ module.exports = Component.exports
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
+
+var _index = __webpack_require__(243);
+
+var _index2 = _interopRequireDefault(_index);
+
+var _index3 = __webpack_require__(242);
+
+var _index4 = _interopRequireDefault(_index3);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 exports.default = {
+  components: {
+    Group: _index2.default,
+    Cell: _index4.default
+  },
   data: function data() {
-    return {
-      tableData3: [{
-        date: '2016-05-03',
-        name: '王小虎',
-        address: '上海市普陀区金沙江路 1518 弄'
-      }, {
-        date: '2016-05-02',
-        name: '王小虎',
-        address: '上海市普陀区金沙江路 1518 弄'
-      }, {
-        date: '2016-05-04',
-        name: '王小虎',
-        address: '上海市普陀区金沙江路 1518 弄'
-      }, {
-        date: '2016-05-01',
-        name: '王小虎',
-        address: '上海市普陀区金沙江路 1518 弄'
-      }, {
-        date: '2016-05-08',
-        name: '王小虎',
-        address: '上海市普陀区金沙江路 1518 弄'
-      }, {
-        date: '2016-05-06',
-        name: '王小虎',
-        address: '上海市普陀区金沙江路 1518 弄'
-      }, {
-        date: '2016-05-07',
-        name: '王小虎',
-        address: '上海市普陀区金沙江路 1518 弄'
-      }],
-      multipleSelection: []
-    };
+    return {};
   },
 
-
   methods: {
-    toggleSelection: function toggleSelection(rows) {
+    getInfo: function getInfo() {
       var _this = this;
 
-      if (rows) {
-        rows.forEach(function (row) {
-          _this.$refs.multipleTable.toggleRowSelection(row);
-        });
-      } else {
-        this.$refs.multipleTable.clearSelection();
-      }
-    },
-    handleSelectionChange: function handleSelectionChange(val) {
-      this.multipleSelection = val;
+      axios.post('/home/getUserInfo').then(function (res) {}).catch(function (err) {
+        _this.$vux.toast.text('网络异常!', 'top');
+      });
     }
+  },
+  mounted: function mounted() {
+    this.getInfo();
   }
 };
 
 /***/ }),
 
-/***/ 218:
+/***/ 381:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', [_c('el-table', {
-    ref: "multipleTable",
-    staticStyle: {
-      "width": "100%"
-    },
+  return _c('div', [_c('group', {
     attrs: {
-      "data": _vm.tableData3,
-      "border": "",
-      "tooltip-effect": "dark"
-    },
-    on: {
-      "selection-change": _vm.handleSelectionChange
+      "title": "个人信息"
     }
-  }, [_c('el-table-column', {
+  }, [_c('cell', {
     attrs: {
-      "type": "selection",
-      "width": "55"
+      "title": "添加选手",
+      "link": "/home/addPlayer"
     }
-  }), _vm._v(" "), _c('el-table-column', {
+  }), _vm._v(" "), _c('cell', {
     attrs: {
-      "label": "日期",
-      "width": "120"
-    },
-    scopedSlots: _vm._u([{
-      key: "default",
-      fn: function(scope) {
-        return [_vm._v(_vm._s(scope.row.date))]
-      }
-    }])
-  }), _vm._v(" "), _c('el-table-column', {
-    attrs: {
-      "prop": "name",
-      "label": "姓名",
-      "width": "120"
+      "title": "添加投票",
+      "link": "/home/addPage"
     }
-  }), _vm._v(" "), _c('el-table-column', {
-    attrs: {
-      "prop": "address",
-      "label": "地址",
-      "show-overflow-tooltip": ""
-    }
-  })], 1), _vm._v(" "), _c('div', {
-    staticStyle: {
-      "margin-top": "20px"
-    }
-  }, [_c('el-button', {
-    on: {
-      "click": function($event) {
-        _vm.toggleSelection([_vm.tableData3[1], _vm.tableData3[2]])
-      }
-    }
-  }, [_vm._v("切换第二、第三行的选中状态")]), _vm._v(" "), _c('el-button', {
-    on: {
-      "click": function($event) {
-        _vm.toggleSelection()
-      }
-    }
-  }, [_vm._v("取消选择")])], 1)], 1)
+  })], 1)], 1)
 },staticRenderFns: []}
 module.exports.render._withStripped = true
 if (false) {
   module.hot.accept()
   if (module.hot.data) {
-     require("vue-loader/node_modules/vue-hot-reload-api").rerender("data-v-5e7256fe", module.exports)
+     require("vue-loader/node_modules/vue-hot-reload-api").rerender("data-v-70b38a1a", module.exports)
   }
 }
 

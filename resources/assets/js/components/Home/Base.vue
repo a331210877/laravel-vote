@@ -7,12 +7,12 @@
 		</section>
 		<div style="line-height:40px;"></div>
 		<tabbar on-index-change="itemChange()" style="position: fixed;">
-			<tabbar-item selected>
+			<tabbar-item selected link="/home/index">
 				<img slot="icon" src="images/home.png">
 				<img slot="icon-active" src="images/home_fill.png">
 				<span slot="label">首页</span>
 			</tabbar-item>
-			<tabbar-item show-dot  icon-active="images/me_fill.png">
+			<tabbar-item show-dot  icon-active="images/me_fill.png" link="/home/me">
 				<img slot="icon" src="images/me.png">
 				<img slot="icon-active" src="images/me_fill.png">
 				<span slot="label">我</span>

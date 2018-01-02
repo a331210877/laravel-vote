@@ -13,10 +13,6 @@
 require 'admin.php';
 require 'home.php';
 
-// Route::get('/', function () {
-//     return view('login');
-// });
-
 Route::get('/login', function () {
     return view('login');
 });
@@ -31,7 +27,11 @@ Route::any('/addMenu','WechatController@add_menu');
 Route::get('/phpinfo','WechatController@phpinfo');
 
 Route::get('/', function () {
-    return view('home');
+   if(session('user')){ 
+       return view('admin');
+   }else{
+       return view('home');
+   }
 });
 
 // Route::group(['middleware' => ['web', 'wechat.oauth']],function(){

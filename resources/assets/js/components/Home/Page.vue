@@ -48,7 +48,9 @@
         mounted: function() {
             var vue=this;
             this.$nextTick(function () {
-                axios.post('/home/page', {})
+                axios.post('/home/page', {
+                    'id' : this.$route.params.id
+                })
                 .then(function (response) {
                     vue.videoList=response.data;
                 })
@@ -135,13 +137,13 @@
         display: inline-block;
         color: black;
         position: absolute;
-        left: 88px;
-        top: 37px;
+        left: 87px;
+        top: 46px;
     }
     .ticket{
         position: absolute;
-        left: 145px;
-        top: 58px;
+        left: 245px;
+        top: 20px;
         color: #5e5e5e;
     }
     .vote{

@@ -25,6 +25,36 @@ export default new VueRouter({
             children: [
                 { path: '/home/page/:id',name:'page',component: resolve =>void(require(['../components/Home/Page.vue'], resolve)), name: '用户管理'},
             ]
-        }
+        },
+        {
+            path: '/home', 
+            name: '投票',
+            iconCls: 'el-icon-message',//图标样式class
+            component: HomeBase,
+            leaf: true,//只有一个节点
+            children: [
+                { path: '/home/me',name:'me',component: resolve =>void(require(['../components/Home/Me.vue'], resolve))},
+            ]
+        },
+        {
+            path: '/home', 
+            name: '投票',
+            iconCls: 'el-icon-message',//图标样式class
+            component: HomeBase,
+            leaf: true,//只有一个节点
+            children: [
+                { path: '/home/addPlayer',name:'addPlayer',component: resolve =>void(require(['../components/Home/AddPlayer.vue'], resolve))},
+            ]
+        },
+        {
+            path: '/home', 
+            name: '投票',
+            iconCls: 'el-icon-message',//图标样式class
+            component: HomeBase,
+            leaf: true,//只有一个节点
+            children: [
+                { path: '/home/addPage',name:'addPage',component: resolve =>void(require(['../components/Home/AddPage.vue'], resolve))},
+            ]
+        },
     ],
 });

@@ -20,4 +20,10 @@ class IndexController extends Controller
         $select_row=DB::table('page')->where('status',0)->get();
         return responseToJson(1,"查询成功",$select_row);
     }
+
+    public function getUserInfo(){
+        $select_row=session('wechat.oauth_user');
+        return responseToJson(1,"查询成功",$select_row);
+    }
+
 }
