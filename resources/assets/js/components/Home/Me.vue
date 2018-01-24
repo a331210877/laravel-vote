@@ -4,6 +4,7 @@
       <cell title="添加选手" link="/addPlayer"></cell>
       <cell title="添加投票" link="/addPage"></cell>
     </group>
+    { userInfo }
   </div>
 </template>
 
@@ -19,15 +20,21 @@ import { Group , Cell } from 'vux'
         },
         data(){
             return {
-            
+                userInfo : "",
             }
         },
         methods:{
             getInfo: function(){
-                axios.post('/home/getUserInfo').then(res => {
-                }).catch(err => {
-                    this.$vux.toast.text('网络异常!', 'top')
+                axios.post('/home/getUserInfo', {
                 })
+                .then(function (response) {
+                   console.log(response.data.res);
+                   vue.userInfo=response.data.res;
+                   vue.total=response.data.userCount;
+                })
+                .catch(function (response) {
+                    this.$vux.toast.text('网络异常!', 'top')
+                });
             },
         },
         mounted() {

@@ -61,15 +61,19 @@ exports.default = {
     Cell: _index4.default
   },
   data: function data() {
-    return {};
+    return {
+      userInfo: ""
+    };
   },
 
   methods: {
     getInfo: function getInfo() {
-      var _this = this;
-
-      axios.post('/home/getUserInfo').then(function (res) {}).catch(function (err) {
-        _this.$vux.toast.text('网络异常!', 'top');
+      axios.post('/home/getUserInfo', {}).then(function (response) {
+        console.log(response.data.res);
+        vue.userInfo = response.data.res;
+        vue.total = response.data.userCount;
+      }).catch(function (response) {
+        this.$vux.toast.text('网络异常!', 'top');
       });
     }
   },
@@ -98,7 +102,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       "title": "添加投票",
       "link": "/addPage"
     }
-  })], 1)], 1)
+  })], 1), _vm._v("\n  { userInfo }\n")], 1)
 },staticRenderFns: []}
 module.exports.render._withStripped = true
 if (false) {
