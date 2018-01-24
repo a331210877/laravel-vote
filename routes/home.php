@@ -1,5 +1,5 @@
 <?php
-Route::group(['middleware' => ['web', 'wechat.oauth']],function(){
+// Route::group(['middleware' => ['web', 'wechat.oauth']],function(){
 
     // Route::post('/home/index','Home\IndexController@index');
 
@@ -15,4 +15,4 @@ Route::group(['middleware' => ['web', 'wechat.oauth']],function(){
 
     Route::post('/home/addPlayer','Home\VideoController@addPlayer');
 
-});
+// });
