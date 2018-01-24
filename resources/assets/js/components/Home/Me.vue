@@ -19,7 +19,7 @@ import { Group , Cell } from 'vux'
         },
         data(){
             return {
-             
+            
             }
         },
         methods:{
