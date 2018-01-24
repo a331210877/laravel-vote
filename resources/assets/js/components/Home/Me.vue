@@ -1,8 +1,8 @@
 <template>
   <div>
     <group title="个人信息">
-      <cell title="添加选手" link="/home/addPlayer"></cell>
-      <cell title="添加投票" link="/home/addPage"></cell>
+      <cell title="添加选手" link="/addPlayer"></cell>
+      <cell title="添加投票" link="/addPage"></cell>
     </group>
   </div>
 </template>

@@ -7,33 +7,33 @@ export default new VueRouter({
     saveScrollPosition: true,
     routes: [
         {
-            path: '/admin', 
+            path: '/', 
             name: '用户管理',
             iconCls: 'el-icon-message',//图标样式class
             component: AdminBase,
             leaf: true,//只有一个节点
             children: [
-                { path: '/admin/user', component: resolve =>void(require(['../components/Admin/User.vue'], resolve)), name: '用户管理'},
+                { path: '/user', component: resolve =>void(require(['../components/Admin/User.vue'], resolve)), name: '用户管理'},
             ]
         },
         {
-            path: '/admin', 
+            path: '/', 
             name: '视频管理',
             iconCls: 'el-icon-message',//图标样式class
             component: AdminBase,
             leaf: true,//只有一个节点
             children: [
-                { path: '/admin/video', component: resolve =>void(require(['../components/Admin/Video.vue'], resolve)), name: '视频管理'},
+                { path: '/video', component: resolve =>void(require(['../components/Admin/Video.vue'], resolve)), name: '视频管理'},
             ]
         },
         {
-            path: '/admin', 
+            path: '/', 
             name: '页面管理',
             iconCls: 'el-icon-message',//图标样式class
             component: AdminBase,
             leaf: true,//只有一个节点
             children: [
-                { path: '/admin/page', component: resolve =>void(require(['../components/Admin/Page.vue'], resolve)), name: '页面管理'},
+                { path: '/page', component: resolve =>void(require(['../components/Admin/Page.vue'], resolve)), name: '页面管理'},
             ]
         },
         {
@@ -47,13 +47,13 @@ export default new VueRouter({
             ]
         },
         {
-            path: '/admin', 
+            path: '/', 
             name: '赞助管理',
             iconCls: 'el-icon-message',//图标样式class
             component: AdminBase,
             leaf: true,//只有一个节点
             children: [
-                { path: '/admin/sponsor', component: resolve =>void(require(['../components/Admin/Sponsor.vue'], resolve)), name: '赞助管理'},
+                { path: '/sponsor', component: resolve =>void(require(['../components/Admin/Sponsor.vue'], resolve)), name: '赞助管理'},
             ]
         },
     ],

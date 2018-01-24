@@ -17,7 +17,7 @@ class IndexController extends Controller
     }
 
     public function getPage(){
-        $select_row=DB::table('page')->where('status',0)->get();
+        $select_row=DB::table('page')->join('user','page.user_id','=','user.id')->where('page.status',0)->get();
         return responseToJson(1,"查询成功",$select_row);
     }
 

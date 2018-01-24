@@ -26,13 +26,15 @@ Route::any('/wechat','WechatController@serve');
 Route::any('/addMenu','WechatController@add_menu');
 Route::get('/phpinfo','WechatController@phpinfo');
 
-Route::get('/', function () {
-   if(session('user')){ 
-       return view('admin');
-   }else{
-       return view('home');
-   }
+
+Route::get('/home',function(){
+    return view('home');
 });
+Route::get('/admin',function(){
+    return view('admin');
+});
+
+
 
 // Route::group(['middleware' => ['web', 'wechat.oauth']],function(){
 //     Route::get('/home', function () {

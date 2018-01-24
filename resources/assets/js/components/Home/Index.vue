@@ -58,7 +58,7 @@
                     'title' : response.data.result[i].title,
                     'list' : [{
                       'label' : "发起人",
-                      'value' : response.data.result[i].user_id
+                      'value' : response.data.result[i].name
                     },{
                       'label' : "开始时间",
                       'value' : getLocalTime(response.data.result[i].start_time)
@@ -88,7 +88,7 @@
         })
       },
       showPage ($id) {
-        this.$router.push("/home/page/"+$id);
+        this.$router.push("/page/"+$id);
       }
     },
     mounted: function() {
