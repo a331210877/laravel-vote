@@ -5,7 +5,7 @@ Route::group(['middleware' => ['web', 'wechat.oauth']],function(){
     Route::get('/user', function () {
         $user = session('wechat.oauth_user'); // 拿到授权用户资料
 
-        return redirect()->route('home#/index');
+        return redirect()->to('/home#/index');
     });
     
     Route::post('/home/getCarousel','Home\IndexController@getCarousel');
