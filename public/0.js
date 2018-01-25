@@ -1645,10 +1645,7 @@ exports.default = {
       this.$router.push("/page/" + $id);
     }
   },
-  mounted: function mounted() {
-    this.getCarouse();
-    this.getPage();
-  },
+  mounted: function mounted() {},
   components: {
     Swiper: _swiper2.default,
     SwiperItem: _swiperItem2.default,
