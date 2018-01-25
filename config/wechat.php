@@ -18,7 +18,7 @@ return [
      */
     'app_id'  => env('WECHAT_APPID', 'wx02390212ddfcf8d1'),         // AppID
     'secret'  => env('WECHAT_SECRET', 'c7654ab75b41c309aee1b3051b9ee7eb'),     // AppSecret
-    'token'   => env('WECHAT_TOKEN', 'wangq'),          // Token
+    'token'   => env('WECHAT_TOKEN', 'wangqi'),          // Token
     'aes_key' => env('WECHAT_AES_KEY', 'OHbuoVHQMtl9BQ3shu3cK3PMwzZhxtHUd7QTUB1d1ex'),                    // EncodingAESKey
 
     /**
@@ -76,7 +76,7 @@ return [
     'oauth' => [
         'only_wechat_browser' => false,
         'scopes'   => array_map('trim', explode(',', env('WECHAT_OAUTH_SCOPES', 'snsapi_userinfo'))),
-        'callback' => env('WECHAT_OAUTH_CALLBACK', '/home#/index'),
+        'callback' => env('WECHAT_OAUTH_CALLBACK', 'vote.mrwangqi.com/home#/index'),
     ],
 
     /*

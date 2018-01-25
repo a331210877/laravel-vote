@@ -17,7 +17,7 @@
             return new Date(parseInt(nS) * 1000).toLocaleString().replace(/年|月/g, "-").replace(/日/g, " ");      
         } 
     </script>
-    <script src="//vjs.zencdn.net/5.1/video.min.js"></script>
+    <!-- <script src="//vjs.zencdn.net/5.1/video.min.js"></script> -->
     <script src="{{ mix('js/home.js') }}"></script>
 </body>
 </html>

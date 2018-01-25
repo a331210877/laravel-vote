@@ -73,7 +73,7 @@ exports.default = {
         vue.userInfo = response.data.res;
         vue.total = response.data.userCount;
       }).catch(function (response) {
-        this.$vux.toast.text('网络异常!', 'top');
+        console.log(response);
       });
     }
   },
