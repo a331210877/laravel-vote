@@ -92,8 +92,8 @@
       }
     },
     mounted: function() {
-      // this.getCarouse();
-      // this.getPage();
+      this.getCarouse();
+      this.getPage();
     },
     components: {
       Swiper,

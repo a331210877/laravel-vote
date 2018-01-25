@@ -25,12 +25,12 @@ import { Group , Cell } from 'vux'
         },
         methods:{
             getInfo: function(){
+                var vue=this;
                 axios.post('/home/getUserInfo', {
                 })
                 .then(function (response) {
-                   console.log(response.data.res);
-                   vue.userInfo=response.data.res;
-                   vue.total=response.data.userCount;
+                   console.log(response.data.result);
+                   vue.userInfo=response.data.result;
                 })
                 .catch(function (response) {
                    console.log(response);
@@ -38,7 +38,7 @@ import { Group , Cell } from 'vux'
             },
         },
         mounted() {
-            //this.getInfo();
+            this.getInfo();
         }
     }
 </script>

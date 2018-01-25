@@ -22,8 +22,8 @@ class IndexController extends Controller
     }
 
     public function getUserInfo(){
-        $select_row=session('wechat.oauth_user');
-        return responseToJson(1,"查询成功",$select_row);
+        $user = session('wechat.oauth_user'); // 拿到授权用户资料
+        return responseToJson(1,"查询成功",$user->original);
     }
 
 }
