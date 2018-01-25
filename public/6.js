@@ -102,7 +102,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       "title": "添加投票",
       "link": "/addPage"
     }
-  })], 1), _vm._v("\n  { userInfo }\n")], 1)
+  })], 1), _vm._v("\n  " + _vm._s(_vm.userInfo) + "\n")], 1)
 },staticRenderFns: []}
 module.exports.render._withStripped = true
 if (false) {

@@ -4,7 +4,7 @@
       <cell title="添加选手" link="/addPlayer"></cell>
       <cell title="添加投票" link="/addPage"></cell>
     </group>
-    { userInfo }
+    {{ userInfo }}
   </div>
 </template>
 
