@@ -38,7 +38,7 @@ import { Group , Cell } from 'vux'
             },
         },
         mounted() {
-            this.getInfo();
+            //this.getInfo();
         }
     }
 </script>

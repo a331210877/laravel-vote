@@ -77,9 +77,7 @@ exports.default = {
       });
     }
   },
-  mounted: function mounted() {
-    this.getInfo();
-  }
+  mounted: function mounted() {}
 };
 
 /***/ }),
