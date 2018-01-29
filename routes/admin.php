@@ -1,4 +1,9 @@
 <?php
+
+    Route::get('/admin/wblogin','Admin\LoginController@login'); //獲取accessToken
+
+    Route::any('/wblogin/callback','Admin\LoginController@callback');   //回調路由
+
     Route::group(['middleware'=>'login.check'],function(){
         //video
         Route::post('/admin/index/addPlayer','Admin\VideoController@addPlayer');

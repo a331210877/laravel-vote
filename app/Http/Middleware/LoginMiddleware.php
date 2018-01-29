@@ -1,7 +1,6 @@
 <?php
 
 namespace App\Http\Middleware;
-
 use Closure;
 
 class LoginMiddleware
@@ -15,10 +14,10 @@ class LoginMiddleware
      */
     public function handle($request, Closure $next)
     {
-        if(get_session_user_id()){
+        if(get_session_admin()){
             return $next($request);
         } else {
-            return redirect('/login');
+            return responseToJson(1,'error','未登錄');
         }
     }
 }

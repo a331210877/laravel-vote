@@ -55,7 +55,7 @@ class LoginController extends Controller
                 $result = Login::check_login($user);
                 if($result){
                     if($password == $result->password){
-                        session(['user' => $result]);
+                        session(['admin' => $result]);
                         return responseToJson(0,'success','登录成功');
                     }else{
                         return responseToJson(1,'error','密码错误');
@@ -87,7 +87,7 @@ class LoginController extends Controller
      */
     public function logout(Request $request)
     {
-        $result = $request->session()->flush();
+        $result = $request->session("admin")->flush();
         return responseToJson(0,'success','退出成功');
     }
 }

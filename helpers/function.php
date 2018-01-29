@@ -10,14 +10,14 @@ function responseToJson($code = 0 ,$msg = '', $result = null)
 }
 
 //返回session_id
-function get_session_user_id()
+function get_session_admin_id()
 {
-    $user = session('user');
-    return $user ? $user->id : 0;
+    $admin = session('admin');
+    return $admin ? $admin->id : 0;
 }
 
-function get_session_user()
+function get_session_admin()
 {
-    $user = session('user');
-    return $user ? $user : 0;
+    $admin = session('admin');
+    return $admin ? $admin : 0;
 }

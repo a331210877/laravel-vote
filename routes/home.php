@@ -5,7 +5,7 @@ Route::group(['middleware' => ['web', 'wechat.oauth']],function(){
     Route::get('/user', function () {
         $user = session('wechat.oauth_user'); // 拿到授权用户资料
 
-        return redirect()->to('/home#/index');
+        return redirect()->to('/home#/index'); //這時候已經拿到用戶資料了，跳轉到想要的路由
     });
     
     Route::post('/home/getCarousel','Home\IndexController@getCarousel');
@@ -19,5 +19,5 @@ Route::group(['middleware' => ['web', 'wechat.oauth']],function(){
     Route::post('/home/getUserInfo','Home\IndexController@getUserInfo');
 
     Route::post('/home/addPlayer','Home\VideoController@addPlayer');
-
+   
 });

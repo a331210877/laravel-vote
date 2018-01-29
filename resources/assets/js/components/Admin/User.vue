@@ -146,7 +146,9 @@ import Axios from 'axios'
                   'pageSize': $pageSize
                 })
                 .then(function (response) {
-                   console.log(response.data.res);
+                   if(response.data.code==1){
+                     window.location.href = '/login';
+                   }
                    vue.tableData=response.data.res;
                    vue.total=response.data.userCount;
                 })

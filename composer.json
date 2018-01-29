@@ -27,7 +27,8 @@
             "App\\": "app/"
         },
         "files": [
-            "helpers/function.php"
+            "helpers/function.php",
+            "app/Libs/wbsdk/wbsdk.php"
         ]
     },
     "autoload-dev": {

@@ -101,8 +101,8 @@
 		methods: {
           //添加视频封面图添加框消失
           handleSuccessVideoImg(response, file, fileList){
-            this.addForm.videoImg = file.name;
-            $("#uploadVideoImg>div").fadeOut();
+            this.addForm.videoImg = response;
+            $("#uploadVideoImg>div").fadeOut(); 
           },
           //删除视频显示添加框
           handleRemoveVideo(file, fileList) {
@@ -146,7 +146,7 @@
           },
           //添加头像成功添加框消失
           handleSuccessImage(response, file, fileList){
-            this.addForm.image = file.name;
+            this.addForm.image = response;
             $("#uploadImage>div").fadeOut();
           },
           //删除视频封面图显示添加框

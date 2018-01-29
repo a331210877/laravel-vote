@@ -32,7 +32,7 @@ class FileController extends Controller
                 $filename = date('Y-m-d-H-i-s') . '-' . uniqid() . '.' . $ext;
                 // 使用我们新建的uploads本地存储空间（目录）
                 $bool = Storage::disk($savePath)->put($filename, file_get_contents($realPath));
-                var_dump($type);
+                return $filename;
             }
         }
     }

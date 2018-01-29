@@ -86,7 +86,7 @@ exports.default = {
 
   methods: {
     handleSuccessVideoImg: function handleSuccessVideoImg(response, file, fileList) {
-      this.addForm.videoImg = file.name;
+      this.addForm.videoImg = response;
       $("#uploadVideoImg>div").fadeOut();
     },
     handleRemoveVideo: function handleRemoveVideo(file, fileList) {
@@ -125,7 +125,7 @@ exports.default = {
       $("#uploadImage>div").fadeIn();
     },
     handleSuccessImage: function handleSuccessImage(response, file, fileList) {
-      this.addForm.image = file.name;
+      this.addForm.image = response;
       $("#uploadImage>div").fadeOut();
     },
     handleRemoveVideoImg: function handleRemoveVideoImg(file, fileList) {
