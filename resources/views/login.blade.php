@@ -285,7 +285,7 @@
                     dataType: "json",
                     success:function (res) {
                         if(res.code == 0){
-                            window.location.href = '/#/admin/user'
+                            window.location.href = '/admin#/user'
                         }else if(res.code == 1){    //密码错误
                             $('.remind-pwd').html('密码错误')
                         }else if(res.code == 2){    //该用户不存在

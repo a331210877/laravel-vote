@@ -4,7 +4,7 @@
 
 目前还处于开发阶段。
 
-<a href="http://vote.mrwangqi.com/admin#/user">后台演示地址</a>
+<a href="http://vote.mrwangqi.com/login">后台演示地址</a> 测试账号 admin 密码123456
 
 <a href="http://vote.mrwangqi.com/home#/user">前台演示地址（手机端）</a>
 
