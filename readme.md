@@ -4,11 +4,11 @@
 
 目前还处于开发阶段。
 
-<a href="https://vote.mrwangqi.com/admin#/user">后台演示地址</a>
+<a href="http://vote.mrwangqi.com/admin#/user">后台演示地址</a>
 
-<a href="https://vote.mrwangqi.com/home#/user">前台演示地址（手机端）</a>
+<a href="http://vote.mrwangqi.com/home#/user">前台演示地址（手机端）</a>
 
-<a href="https://vote.mrwangqi.com/home#/user">（暂无PC端）</a>
+<a href="http://vote.mrwangqi.com/home#/user">（暂无PC端）</a>
 
 前台演示地址（手机端）基于微信开发的，微信扫码测试公众号查看效果
 
