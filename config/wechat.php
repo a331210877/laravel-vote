@@ -40,6 +40,7 @@ return [
     /*
      * 路由配置
      */
+<<<<<<< HEAD
     'route' => [
         /*
          * 开放平台第三方平台路由配置
@@ -53,6 +54,12 @@ return [
         //     ],
         // ],
     ],
+=======
+    'app_id'  => env('WECHAT_APPID', ''),         // AppID
+    'secret'  => env('WECHAT_SECRET', ''),     // AppSecret
+    'token'   => env('WECHAT_TOKEN', ''),          // Token
+    'aes_key' => env('WECHAT_AES_KEY', ''),                    // EncodingAESKey
+>>>>>>> 021354443224a99f9e3b7fc8ff5ff3a15109939d
 
     /*
      * 公众号
