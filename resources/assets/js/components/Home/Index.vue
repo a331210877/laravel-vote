@@ -45,10 +45,11 @@
             });
         })
       },
-      getPage() {
+      getPage(searchValue) {
         var vue=this;
         this.$nextTick(function () {
             axios.post('/home/getPage', {
+               'search' : searchValue
             })
             .then(function (response) {
                 var list=[];
@@ -58,7 +59,7 @@
                     'title' : response.data.result[i].title,
                     'list' : [{
                       'label' : "发起人",
-                      'value' : response.data.result[i].name
+                      'value' : response.data.result[i].nick_name
                     },{
                       'label' : "开始时间",
                       'value' : getLocalTime(response.data.result[i].start_time)
@@ -80,12 +81,7 @@
         this.$refs.search.setFocus()
       },
       onSubmit () {
-        this.$refs.search.setBlur()
-        this.$vux.toast.show({
-          type: 'text',
-          position: 'top',
-          text: 'on submit'
-        })
+        this.getPage(this.searchValue);
       },
       showPage ($id) {
         this.$router.push("/page/"+$id);
@@ -93,7 +89,7 @@
     },
     mounted: function() {
       this.getCarouse();
-      this.getPage();
+      this.getPage(this.searchValue);
     },
     components: {
       Swiper,

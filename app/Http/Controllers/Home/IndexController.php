@@ -16,14 +16,18 @@ class IndexController extends Controller
         return responseToJson(1,"查询成功",$select_row);
     }
 
-    public function getPage(){
-        $select_row=DB::table('page')->join('user','page.user_id','=','user.id')->where('page.status',0)->get();
+    public function getPage(Request $request){
+        $search=$request->input('search');
+        $select_row=DB::table('page')
+        ->join('user','page.open_id','=','user.open_id')
+        ->where('page.status',0)
+        ->where('title','like','%'.$search.'%')->get();
         return responseToJson(1,"查询成功",$select_row);
     }
 
     public function getUserInfo(){
         $user = session('wechat.oauth_user'); // 拿到授权用户资料
-        return responseToJson(1,"查询成功",$user->original);
+        return responseToJson(1,"查询成功",$user);
     }
 
 }

@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use DB;
 use Illuminate\Http\Request;
 use Storage;
+use App\Models\Home\Player;
 
 class VideoController extends Controller
 {
@@ -24,5 +25,10 @@ class VideoController extends Controller
             $res['code']= 0;
         }
         return response()->json($res);
+    }
+
+    public function getPlayer(Request $request){
+        $result= Player::getPlayer('player');
+        return $result;
     }
 }

@@ -10,20 +10,27 @@
             label="编号">
             </el-table-column>
             <el-table-column
-            prop="head_Portrait"
             label="头像"
             >
             <template scope="scope">
-              <span class="el-dropdown-link userinfo-inner"><img src="/images/scpoe.row.head_Portrait" /></span>
+              <span class="el-dropdown-link userinfo-inner"><img :src="scope.row.headimgurl" style="width:45px;margin-top:5px;"/></span>
             </template>
             </el-table-column>
             <el-table-column
-            prop="phone"
-            label="手机号">
+            prop="nick_name"
+            label="国家">
             </el-table-column>
             <el-table-column
-            prop="name"
-            label="昵称">
+            prop="country"
+            label="国家">
+            </el-table-column>
+            <el-table-column
+            prop="province"
+            label="省份">
+            </el-table-column>
+             <el-table-column
+            prop="city"
+            label="省份">
             </el-table-column>
             <el-table-column prop="edit" label="操作">
             <template scope="scope">

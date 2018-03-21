@@ -9,9 +9,7 @@ export default new VueRouter({
         {
             path: '/', 
             name: '投票',
-            iconCls: 'el-icon-message',//图标样式class
             component: HomeBase,
-            leaf: true,//只有一个节点
             children: [
                 { path: '/index', component: resolve =>void(require(['../components/Home/Index.vue'], resolve)), name: '用户管理'},
             ]
@@ -19,9 +17,7 @@ export default new VueRouter({
         {
             path: '/', 
             name: '投票',
-            iconCls: 'el-icon-message',//图标样式class
             component: HomeBase,
-            leaf: true,//只有一个节点
             children: [
                 { path: '/page/:id',name:'page',component: resolve =>void(require(['../components/Home/Page.vue'], resolve)), name: '用户管理'},
             ]
@@ -29,31 +25,25 @@ export default new VueRouter({
         {
             path: '/', 
             name: '投票',
-            iconCls: 'el-icon-message',//图标样式class
             component: HomeBase,
-            leaf: true,//只有一个节点
             children: [
                 { path: '/me',name:'me',component: resolve =>void(require(['../components/Home/Me.vue'], resolve))},
             ]
         },
         {
-            path: '/', 
+            path: '/me', 
             name: '投票',
-            iconCls: 'el-icon-message',//图标样式class
             component: HomeBase,
-            leaf: true,//只有一个节点
             children: [
-                { path: '/addPlayer',name:'addPlayer',component: resolve =>void(require(['../components/Home/AddPlayer.vue'], resolve))},
+                { path: '/myPlayer',name:'myPlayer',component: resolve =>void(require(['../components/Home/MyPlayer.vue'], resolve))},
             ]
         },
         {
-            path: '/', 
+            path: '/me', 
             name: '投票',
-            iconCls: 'el-icon-message',//图标样式class
             component: HomeBase,
-            leaf: true,//只有一个节点
             children: [
-                { path: '/addPage',name:'addPage',component: resolve =>void(require(['../components/Home/AddPage.vue'], resolve))},
+                { path: '/myPage',name:'myPage',component: resolve =>void(require(['../components/Home/MyPage.vue'], resolve))},
             ]
         },
     ],

@@ -18,7 +18,7 @@ window.Vue = require('vue');
 //Vue.component('example', require('./components/Example.vue'));
 import App from './Home.vue'; 
 import ElementUI from 'element-ui';
-import 'element-ui/lib/theme-default/index.css';
+import 'element-ui/lib/theme-chalk/index.css';
 
 Vue.use(ElementUI);
 

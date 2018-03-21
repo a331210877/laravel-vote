@@ -17,7 +17,7 @@
 			<aside :class="collapsed?'menu-collapsed':'menu-expanded'">
 				<!--导航菜单-->
 				<el-menu :default-active="$route.path" class="el-menu-vertical-demo" @open="handleopen" @close="handleclose" @select="handleselect"
-					 unique-opened router v-show="!collapsed">
+					 unique-opened router v-show="!collapsed" background-color="#545c64" text-color="#fff" active-text-color="#ffd04b">
 					<template v-for="(item,index) in $router.options.routes" v-if="!item.hidden">
 						<el-submenu :index="index+''" v-if="!item.leaf">
 							<template slot="title"><i :class="item.iconCls"></i>{{item.name}}</template>
@@ -127,7 +127,7 @@
 </script>
 
 <style scoped lang="scss">
-	$color-primary: #2173d0;
+	$color-primary: #2e3133;
 	 
 	.container {
 		position: absolute;
@@ -138,7 +138,6 @@
 			height: 60px;
 			line-height: 60px;
 			background-color: $color-primary;
-            background-image: url("/images/nav.jpg");
 			.userinfo {
 				text-align: right;
 				padding-right: 35px;

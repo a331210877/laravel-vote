@@ -13,17 +13,18 @@ class WechatController extends Controller
      */
     public function serve()
     {
-        $wechat = app('wechat');
-        $wechat->server->setMessageHandler(function($message){
+        Log::info('request arrived.'); # 注意：Log 为 Laravel 组件，所以它记的日志去 Laravel 日志看，而不是 EasyWeChat 日志
+
+        $app = app('wechat.official_account');
+        $app->server->push(function($message){
             return "欢迎关注 overtrue！";
         });
-
         $this->add_menu();
-        return $wechat->server->serve();
+        return $app->server->serve();
     }
 
     public function add_menu(){
-       $app = app('wechat');
+       $app = app('wechat.official_account');;
        $menu = $app->menu;
        $buttons = [
            [
@@ -32,7 +33,7 @@ class WechatController extends Controller
                "url"=>"http://vote.mrwangqi.com/user",
            ],
        ];
-       $menu->add($buttons);
+       $menu->create($buttons);
     }
 
     public function phpinfo(){

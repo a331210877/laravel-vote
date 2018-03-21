@@ -1,7 +1,7 @@
 {
   "private": true,
   "scripts": {
-     "dev": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "dev": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
     "watch": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --watch --progress --hide-modules --config=./webpack.config.js",
     "watch-poll": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --watch --watch-poll --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
     "hot": "cross-env NODE_ENV=development node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
@@ -12,7 +12,6 @@
     "babel-plugin-transform-object-rest-spread": "^6.23.0",
     "bootstrap-sass": "^3.3.7",
     "cross-env": "^3.2.3",
-    "element-ui": "^1.2.8",
     "es6-promise": "^4.1.0",
     "jquery": "^3.1.1",
     "laravel-mix": "^0.8.3",
@@ -22,8 +21,10 @@
     "vue-router": "^2.4.0"
   },
   "dependencies": {
+    "element-ui": "^2.2.2",
     "loader": "^2.1.1",
     "vux": "^2.7.4",
-    "vux-loader": "^1.1.5"
+    "vux-loader": "^1.1.5",
+    "vux-uploader": "^0.1.9"
   }
 }

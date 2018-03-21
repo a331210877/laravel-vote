@@ -1,0 +1,161 @@
+
+Webpack is watching the files…
+
+ WARNING  Compiled with 8 warnings21:12:18
+
+ warning  in ./resources/assets/js/components/Admin/User.vue
+
+(Emitted value instead of an instance of Error) the "scope" attribute for scoped slots have been deprecated and replaced by "slot-scope" since 2.5. The new "slot-scope" attribute can also be used on plain elements in addition to <template> to denote scoped slots.
+
+ @ ./resources/assets/js/components/Admin/User.vue 9:2-411
+ @ ./resources/assets/js/router/admin.js
+ @ ./resources/assets/js/admin.js
+ @ multi ./resources/assets/js/admin.js ./resources/assets/sass/app.scss
+
+ warning  in ./resources/assets/js/components/Admin/User.vue
+
+(Emitted value instead of an instance of Error) the "scope" attribute for scoped slots have been deprecated and replaced by "slot-scope" since 2.5. The new "slot-scope" attribute can also be used on plain elements in addition to <template> to denote scoped slots.
+
+ @ ./resources/assets/js/components/Admin/User.vue 9:2-411
+ @ ./resources/assets/js/router/admin.js
+ @ ./resources/assets/js/admin.js
+ @ multi ./resources/assets/js/admin.js ./resources/assets/sass/app.scss
+
+ warning  in ./resources/assets/js/components/Admin/Page.vue
+
+(Emitted value instead of an instance of Error) the "scope" attribute for scoped slots have been deprecated and replaced by "slot-scope" since 2.5. The new "slot-scope" attribute can also be used on plain elements in addition to <template> to denote scoped slots.
+
+ @ ./resources/assets/js/components/Admin/Page.vue 5:2-411
+ @ ./resources/assets/js/router/admin.js
+ @ ./resources/assets/js/admin.js
+ @ multi ./resources/assets/js/admin.js ./resources/assets/sass/app.scss
+
+ warning  in ./resources/assets/js/components/Admin/Page.vue
+
+(Emitted value instead of an instance of Error) the "scope" attribute for scoped slots have been deprecated and replaced by "slot-scope" since 2.5. The new "slot-scope" attribute can also be used on plain elements in addition to <template> to denote scoped slots.
+
+ @ ./resources/assets/js/components/Admin/Page.vue 5:2-411
+ @ ./resources/assets/js/router/admin.js
+ @ ./resources/assets/js/admin.js
+ @ multi ./resources/assets/js/admin.js ./resources/assets/sass/app.scss
+
+ warning  in ./resources/assets/js/components/Admin/Page.vue
+
+(Emitted value instead of an instance of Error) the "scope" attribute for scoped slots have been deprecated and replaced by "slot-scope" since 2.5. The new "slot-scope" attribute can also be used on plain elements in addition to <template> to denote scoped slots.
+
+ @ ./resources/assets/js/components/Admin/Page.vue 5:2-411
+ @ ./resources/assets/js/router/admin.js
+ @ ./resources/assets/js/admin.js
+ @ multi ./resources/assets/js/admin.js ./resources/assets/sass/app.scss
+
+ warning  in ./resources/assets/js/components/Admin/Video.vue
+
+(Emitted value instead of an instance of Error) the "scope" attribute for scoped slots have been deprecated and replaced by "slot-scope" since 2.5. The new "slot-scope" attribute can also be used on plain elements in addition to <template> to denote scoped slots.
+
+ @ ./resources/assets/js/components/Admin/Video.vue 9:2-412
+ @ ./resources/assets/js/router/admin.js
+ @ ./resources/assets/js/admin.js
+ @ multi ./resources/assets/js/admin.js ./resources/assets/sass/app.scss
+
+ warning  in ./resources/assets/js/components/Admin/Carousel.vue
+
+(Emitted value instead of an instance of Error) the "scope" attribute for scoped slots have been deprecated and replaced by "slot-scope" since 2.5. The new "slot-scope" attribute can also be used on plain elements in addition to <template> to denote scoped slots.
+
+ @ ./resources/assets/js/components/Admin/Carousel.vue 5:2-415
+ @ ./resources/assets/js/router/admin.js
+ @ ./resources/assets/js/admin.js
+ @ multi ./resources/assets/js/admin.js ./resources/assets/sass/app.scss
+
+ warning  in ./resources/assets/js/components/Admin/Sponsor.vue
+
+(Emitted value instead of an instance of Error) the "scope" attribute for scoped slots have been deprecated and replaced by "slot-scope" since 2.5. The new "slot-scope" attribute can also be used on plain elements in addition to <template> to denote scoped slots.
+
+ @ ./resources/assets/js/components/Admin/Sponsor.vue 5:2-414
+ @ ./resources/assets/js/router/admin.js
+ @ ./resources/assets/js/admin.js
+ @ multi ./resources/assets/js/admin.js ./resources/assets/sass/app.scss
+
+                                                                    Asset       Size  Chunks                    Chunk Names
+                                                                     6.js    2.87 kB       6  [emitted]         
+  fonts/glyphicons-halflings-regular.eot?f4769f9bdb7466be65088239c12046d1    20.1 kB          [emitted]         
+  fonts/glyphicons-halflings-regular.ttf?e18bbf611f2a2e43afc071aa2f4e1512    45.4 kB          [emitted]         
+ fonts/glyphicons-halflings-regular.woff?fa2772327f55d8198301fdb8bcfc8158    23.4 kB          [emitted]         
+fonts/glyphicons-halflings-regular.woff2?448c34a56d699c29117adc64c43affeb      18 kB          [emitted]         
+                 fonts/element-icons.ttf?b02bdc1b846fd65473922f5f62832108    13.2 kB          [emitted]         
+                fonts/element-icons.woff?d2f69a92faa6fe990d2e613c358be705       8 kB          [emitted]         
+                                                                     0.js     106 kB       0  [emitted]         
+                                                                     1.js     125 kB       1  [emitted]         
+                                                                     2.js    11.6 kB       2  [emitted]         
+                                                                     3.js    3.84 kB       3  [emitted]         
+                                                                     4.js    21.3 kB       4  [emitted]         
+                                                                     5.js      10 kB       5  [emitted]         
+  fonts/glyphicons-halflings-regular.svg?89889688147bd7575d6327160d64e760     109 kB          [emitted]         
+                                                                     7.js    4.38 kB       7  [emitted]         
+                                                                     8.js    4.55 kB       8  [emitted]         
+                                                                     9.js    4.39 kB       9  [emitted]         
+                                                              /js/home.js    2.57 MB      10  [emitted]  [big]  /js/home
+                                                             /js/admin.js    2.52 MB      11  [emitted]  [big]  /js/admin
+                                                             /css/app.css     686 kB      11  [emitted]  [big]  /js/admin
+                                                        mix-manifest.json  102 bytes          [emitted]         
+                                                       images/me_fill.png  693 bytes          [emitted]         
+                                                     images/home_fill.png  792 bytes          [emitted]         
+                                                          images/home.png  765 bytes          [emitted]         
+                                                            images/me.png  882 bytes          [emitted]         
+                                                           images/nav.jpg    37.6 kB          [emitted]         
+                                                           images/top.jpg    27.6 kB          [emitted]         
+
+WARNING in ./~/_vue-loader@11.3.4@vue-loader/lib/template-compiler?{"id":"data-v-78da26e9"}!./~/_vux-loader@1.1.28@vux-loader/src/before-template-compiler-loader.js!./~/_vux-loader@1.1.28@vux-loader/src/template-loader.js!./~/_vue-loader@11.3.4@vue-loader/lib/selector.js?type=template&index=0!./resources/assets/js/components/Admin/User.vue
+(Emitted value instead of an instance of Error) the "scope" attribute for scoped slots have been deprecated and replaced by "slot-scope" since 2.5. The new "slot-scope" attribute can also be used on plain elements in addition to <template> to denote scoped slots.
+ @ ./resources/assets/js/components/Admin/User.vue 9:2-411
+ @ ./resources/assets/js/router/admin.js
+ @ ./resources/assets/js/admin.js
+ @ multi ./resources/assets/js/admin.js ./resources/assets/sass/app.scss
+
+WARNING in ./~/_vue-loader@11.3.4@vue-loader/lib/template-compiler?{"id":"data-v-78da26e9"}!./~/_vux-loader@1.1.28@vux-loader/src/before-template-compiler-loader.js!./~/_vux-loader@1.1.28@vux-loader/src/template-loader.js!./~/_vue-loader@11.3.4@vue-loader/lib/selector.js?type=template&index=0!./resources/assets/js/components/Admin/User.vue
+(Emitted value instead of an instance of Error) the "scope" attribute for scoped slots have been deprecated and replaced by "slot-scope" since 2.5. The new "slot-scope" attribute can also be used on plain elements in addition to <template> to denote scoped slots.
+ @ ./resources/assets/js/components/Admin/User.vue 9:2-411
+ @ ./resources/assets/js/router/admin.js
+ @ ./resources/assets/js/admin.js
+ @ multi ./resources/assets/js/admin.js ./resources/assets/sass/app.scss
+
+WARNING in ./~/_vue-loader@11.3.4@vue-loader/lib/template-compiler?{"id":"data-v-8812c8a6"}!./~/_vux-loader@1.1.28@vux-loader/src/before-template-compiler-loader.js!./~/_vux-loader@1.1.28@vux-loader/src/template-loader.js!./~/_vue-loader@11.3.4@vue-loader/lib/selector.js?type=template&index=0!./resources/assets/js/components/Admin/Page.vue
+(Emitted value instead of an instance of Error) the "scope" attribute for scoped slots have been deprecated and replaced by "slot-scope" since 2.5. The new "slot-scope" attribute can also be used on plain elements in addition to <template> to denote scoped slots.
+ @ ./resources/assets/js/components/Admin/Page.vue 5:2-411
+ @ ./resources/assets/js/router/admin.js
+ @ ./resources/assets/js/admin.js
+ @ multi ./resources/assets/js/admin.js ./resources/assets/sass/app.scss
+
+WARNING in ./~/_vue-loader@11.3.4@vue-loader/lib/template-compiler?{"id":"data-v-8812c8a6"}!./~/_vux-loader@1.1.28@vux-loader/src/before-template-compiler-loader.js!./~/_vux-loader@1.1.28@vux-loader/src/template-loader.js!./~/_vue-loader@11.3.4@vue-loader/lib/selector.js?type=template&index=0!./resources/assets/js/components/Admin/Page.vue
+(Emitted value instead of an instance of Error) the "scope" attribute for scoped slots have been deprecated and replaced by "slot-scope" since 2.5. The new "slot-scope" attribute can also be used on plain elements in addition to <template> to denote scoped slots.
+ @ ./resources/assets/js/components/Admin/Page.vue 5:2-411
+ @ ./resources/assets/js/router/admin.js
+ @ ./resources/assets/js/admin.js
+ @ multi ./resources/assets/js/admin.js ./resources/assets/sass/app.scss
+
+WARNING in ./~/_vue-loader@11.3.4@vue-loader/lib/template-compiler?{"id":"data-v-8812c8a6"}!./~/_vux-loader@1.1.28@vux-loader/src/before-template-compiler-loader.js!./~/_vux-loader@1.1.28@vux-loader/src/template-loader.js!./~/_vue-loader@11.3.4@vue-loader/lib/selector.js?type=template&index=0!./resources/assets/js/components/Admin/Page.vue
+(Emitted value instead of an instance of Error) the "scope" attribute for scoped slots have been deprecated and replaced by "slot-scope" since 2.5. The new "slot-scope" attribute can also be used on plain elements in addition to <template> to denote scoped slots.
+ @ ./resources/assets/js/components/Admin/Page.vue 5:2-411
+ @ ./resources/assets/js/router/admin.js
+ @ ./resources/assets/js/admin.js
+ @ multi ./resources/assets/js/admin.js ./resources/assets/sass/app.scss
+
+WARNING in ./~/_vue-loader@11.3.4@vue-loader/lib/template-compiler?{"id":"data-v-3f7d2766"}!./~/_vux-loader@1.1.28@vux-loader/src/before-template-compiler-loader.js!./~/_vux-loader@1.1.28@vux-loader/src/template-loader.js!./~/_vue-loader@11.3.4@vue-loader/lib/selector.js?type=template&index=0!./resources/assets/js/components/Admin/Video.vue
+(Emitted value instead of an instance of Error) the "scope" attribute for scoped slots have been deprecated and replaced by "slot-scope" since 2.5. The new "slot-scope" attribute can also be used on plain elements in addition to <template> to denote scoped slots.
+ @ ./resources/assets/js/components/Admin/Video.vue 9:2-412
+ @ ./resources/assets/js/router/admin.js
+ @ ./resources/assets/js/admin.js
+ @ multi ./resources/assets/js/admin.js ./resources/assets/sass/app.scss
+
+WARNING in ./~/_vue-loader@11.3.4@vue-loader/lib/template-compiler?{"id":"data-v-5e7256fe"}!./~/_vux-loader@1.1.28@vux-loader/src/before-template-compiler-loader.js!./~/_vux-loader@1.1.28@vux-loader/src/template-loader.js!./~/_vue-loader@11.3.4@vue-loader/lib/selector.js?type=template&index=0!./resources/assets/js/components/Admin/Carousel.vue
+(Emitted value instead of an instance of Error) the "scope" attribute for scoped slots have been deprecated and replaced by "slot-scope" since 2.5. The new "slot-scope" attribute can also be used on plain elements in addition to <template> to denote scoped slots.
+ @ ./resources/assets/js/components/Admin/Carousel.vue 5:2-415
+ @ ./resources/assets/js/router/admin.js
+ @ ./resources/assets/js/admin.js
+ @ multi ./resources/assets/js/admin.js ./resources/assets/sass/app.scss
+
+WARNING in ./~/_vue-loader@11.3.4@vue-loader/lib/template-compiler?{"id":"data-v-0cf27cec"}!./~/_vux-loader@1.1.28@vux-loader/src/before-template-compiler-loader.js!./~/_vux-loader@1.1.28@vux-loader/src/template-loader.js!./~/_vue-loader@11.3.4@vue-loader/lib/selector.js?type=template&index=0!./resources/assets/js/components/Admin/Sponsor.vue
+(Emitted value instead of an instance of Error) the "scope" attribute for scoped slots have been deprecated and replaced by "slot-scope" since 2.5. The new "slot-scope" attribute can also be used on plain elements in addition to <template> to denote scoped slots.
+ @ ./resources/assets/js/components/Admin/Sponsor.vue 5:2-414
+ @ ./resources/assets/js/router/admin.js
+ @ ./resources/assets/js/admin.js
+ @ multi ./resources/assets/js/admin.js ./resources/assets/sass/app.scss

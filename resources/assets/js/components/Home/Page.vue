@@ -138,7 +138,7 @@
         color: black;
         position: absolute;
         left: 87px;
-        top: 46px;
+        top: 55px;
     }
     .ticket{
         position: absolute;
