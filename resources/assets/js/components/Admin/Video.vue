@@ -34,7 +34,36 @@
     },
 
     methods: {
-     
+      getVideo: function($id,$row){
+          var vue=this;
+            this.$confirm('确定启用吗?', '提示', {
+              type: 'warning'
+                }).then(() => {    
+                  this.$nextTick(function () {
+                    axios.post('admin/enableUser', {
+                      'id': $id,
+                    })
+                    .then(function (response) {
+                      if(response.data.code==1){
+                            vue.$message({
+                                type:"success",
+                                message: response.data.msg,
+                            });
+                            $row.status=0;
+                        }else{
+                            vue.$message.error(response.data.msg);
+                        }
+                    })
+                    .catch(function (response) {
+                        console.log(response);
+                    });
+                  })
+                }).catch(() => {
+            });   
+        },
+    },
+    mounted: function(){
+       this.getVideo(1,10);
     }
   }
 </script>

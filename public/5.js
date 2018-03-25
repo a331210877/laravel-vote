@@ -84,7 +84,37 @@ exports.default = {
   },
 
 
-  methods: {}
+  methods: {
+    getVideo: function getVideo($id, $row) {
+      var _this = this;
+
+      var vue = this;
+      this.$confirm('确定启用吗?', '提示', {
+        type: 'warning'
+      }).then(function () {
+        _this.$nextTick(function () {
+          axios.post('admin/enableUser', {
+            'id': $id
+          }).then(function (response) {
+            if (response.data.code == 1) {
+              vue.$message({
+                type: "success",
+                message: response.data.msg
+              });
+              $row.status = 0;
+            } else {
+              vue.$message.error(response.data.msg);
+            }
+          }).catch(function (response) {
+            console.log(response);
+          });
+        });
+      }).catch(function () {});
+    }
+  },
+  mounted: function mounted() {
+    this.getVideo(1, 10);
+  }
 };
 
 /***/ }),

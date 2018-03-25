@@ -33,17 +33,4 @@ Route::get('/home',function(){
 Route::get('/admin',function(){
     return view('admin');
 });
-
-
-
-// Route::group(['middleware' => ['web', 'wechat.oauth']],function(){
-//     Route::get('/home', function () {
-//         return view('home');
-//     });
-// });
-
-// Route::group(['middleware' => 'login.check'],function (){
-//     Route::get('/', function () {
-//         return view('admin');
-//     });
-// });
+Route::get('/test','TestController@index');
