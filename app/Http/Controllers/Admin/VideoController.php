@@ -14,10 +14,16 @@ class VideoController extends Controller
     {
         $select_rows = DB::table('player')
         ->join('user','user.id','=','player.user_id')
-        ->select('player.id','player.name','player.ticket','player.videoImg','player.video','user.name as userName','player.status')
-        ->get();
-
-        return response()->json($select_rows);
+        ->select('player.id','player.name','player.ticket','player.videoImg','player.video','player.image','user.nick_name as userName','player.status')
+        ->get()->toArray();
+        foreach($select_rows as $k => $v) {
+        	$v->image="/storage/app/uploads/images/".$v->image;
+        	$v->videoImg="/storage/app/uploads/videoImg/".$v->videoImg;
+        	$v->video="/storage/app/uploads/video/".$v->video;
+        	$v->isLoading=false;
+        	$v->disabled=true;
+        }
+        return responseToJson(1,"查询成功",$select_rows);
     }
 
     //禁用选手

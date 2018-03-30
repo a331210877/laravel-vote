@@ -1,22 +1,24 @@
 <template>
   <div>
     <el-row>
-      <el-col class="videolist" :span="4" v-for="(o, index) in 7" :key="o" :offset="index % 5 ==0 ? 0 : 1">
+      <el-col class="videolist" :span="4" v-for="(o, index) in videoList" :offset="index % 5 ==0 ? 0 : 1">
         <el-card :body-style="{ padding: '0px' }">
           <video
                 id="my-player"
                 class="video-js"
                 controls
                 preload="auto"
-                poster="http://element.eleme.io/static/hamburger.50e4091.png"
+                :poster="o.videoImg"
                 data-setup='{}'>
-              <source src="/storage/app/uploads/video/2DC7014ECE4E573C6EF8D41496C515BB.mp4" type="video/mp4"></source>
+              <source :src="o.video" type="video/mp4"></source>
           </video>
           <div style="padding: 14px;">
-            <span>好吃的汉堡</span>
+            <span>{{ o.name }}</span>
             <div class="bottom clearfix">
-              <time class="time">时间</time>
-              <el-button type="text" class="button">操作按钮</el-button>
+              <time class="time">{{ o.userName }}</time>
+              <!-- <el-button type="text" class="button">操作按钮</el-button> -->
+              <el-button class="button" v-if="o.status==0" type="danger" size="mini" @click="handleChange(scope.$index, scope.row)">禁用</el-button>
+              <el-button class="button" v-else-if="o==1" type="success" size="mini" @click="handleChange(scope.$index, scope.row)">启用</el-button>
             </div>
           </div>
         </el-card>
@@ -29,12 +31,13 @@
   export default {
     data() {
       return {
-        currentDate: new Date()
+        currentDate: new Date(),
+        videoList: []
       }
     },
 
     methods: {
-      getVideo: function($id,$row){
+      disVideo: function($id,$row){
           var vue=this;
             this.$confirm('确定启用吗?', '提示', {
               type: 'warning'
@@ -56,11 +59,27 @@
                     })
                     .catch(function (response) {
                         console.log(response);
-                    });
-                  })
-                }).catch(() => {
-            });   
-        },
+                  });
+                })
+              }).catch(() => {
+          });   
+      },
+      getVideo: function(){
+          var vue=this;
+          axios.post('/admin/getVideo', {
+          })
+          .then(function (response) {
+            if(response.data.code==1){
+                vue.videoList=response.data.result;
+                console.log(vue.videoList);
+              }else{
+                  vue.$message.error(response.data.msg);
+              }
+          })
+          .catch(function (response) {
+              console.log(response);
+        });
+      }
     },
     mounted: function(){
        this.getVideo(1,10);
@@ -105,6 +124,10 @@
       width: 100%;
       height: 123px;
       margin-top: -20px;
+  }
+  .button{
+    padding:5px;
+    margin-top: -3px;
   }
 </style>
   

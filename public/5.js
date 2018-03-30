@@ -1,25 +1,25 @@
 webpackJsonp([5],{
 
-/***/ 268:
+/***/ 270:
 /***/ (function(module, exports, __webpack_require__) {
 
 
 /* styles */
-__webpack_require__(364)
+__webpack_require__(369)
 
 var Component = __webpack_require__(16)(
   /* script */
-  __webpack_require__(324),
+  __webpack_require__(326),
   /* template */
-  __webpack_require__(349),
+  __webpack_require__(356),
   /* scopeId */
   null,
   /* cssModules */
   null
 )
-Component.options.__file = "E:\\Apache24\\htdocs\\vote\\resources\\assets\\js\\components\\Admin\\Video.vue"
+Component.options.__file = "E:\\Apache24\\htdocs\\vote\\resources\\assets\\js\\components\\Home\\Me.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
-if (Component.options.functional) {console.error("[vue-loader] Video.vue: functional components are not supported with templates, they should use render functions.")}
+if (Component.options.functional) {console.error("[vue-loader] Me.vue: functional components are not supported with templates, they should use render functions.")}
 
 /* hot reload */
 if (false) {(function () {
@@ -28,9 +28,9 @@ if (false) {(function () {
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-3f7d2766", Component.options)
+    hotAPI.createRecord("data-v-70b38a1a", Component.options)
   } else {
-    hotAPI.reload("data-v-3f7d2766", Component.options)
+    hotAPI.reload("data-v-70b38a1a", Component.options)
   }
 })()}
 
@@ -39,7 +39,7 @@ module.exports = Component.exports
 
 /***/ }),
 
-/***/ 324:
+/***/ 326:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -48,160 +48,135 @@ module.exports = Component.exports
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
+
+var _index = __webpack_require__(210);
+
+var _index2 = _interopRequireDefault(_index);
+
+var _index3 = __webpack_require__(211);
+
+var _index4 = _interopRequireDefault(_index3);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 exports.default = {
+  components: {
+    Group: _index2.default,
+    Cell: _index4.default
+  },
   data: function data() {
     return {
-      currentDate: new Date()
+      userInfo: ""
     };
   },
 
-
   methods: {
-    getVideo: function getVideo($id, $row) {
-      var _this = this;
-
+    getInfo: function getInfo() {
       var vue = this;
-      this.$confirm('确定启用吗?', '提示', {
-        type: 'warning'
-      }).then(function () {
-        _this.$nextTick(function () {
-          axios.post('admin/enableUser', {
-            'id': $id
-          }).then(function (response) {
-            if (response.data.code == 1) {
-              vue.$message({
-                type: "success",
-                message: response.data.msg
-              });
-              $row.status = 0;
-            } else {
-              vue.$message.error(response.data.msg);
-            }
-          }).catch(function (response) {
-            console.log(response);
-          });
-        });
-      }).catch(function () {});
+      axios.post('/home/getUserInfo', {}).then(function (response) {
+        vue.userInfo = response.data.result.default;
+      }).catch(function (response) {
+        console.log(response);
+      });
     }
   },
   mounted: function mounted() {
-    this.getVideo(1, 10);
+    this.getInfo();
   }
 };
 
 /***/ }),
 
-/***/ 333:
+/***/ 338:
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(15)();
-exports.push([module.i, "\n.time {\n  font-size: 13px;\n  color: #999;\n}\n.bottom {\n  margin-top: 13px;\n  line-height: 12px;\n}\n.button {\n  padding: 0;\n  float: right;\n}\n.image {\n  width: 100%;\n  display: block;\n}\n.clearfix:before,\n.clearfix:after {\n    display: table;\n    content: \"\";\n}\n.clearfix:after {\n    clear: both\n}\n.videolist{\n    margin-top:20px !important;\n}\n#my-player{\n    width: 100%;\n    height: 123px;\n    margin-top: -20px;\n}\n", ""]);
+exports.push([module.i, "\n#headimgurl{\n    width: 65px;\n}\n.weui-cell{\n    line-height: 30px;\n}\n", ""]);
 
 /***/ }),
 
-/***/ 349:
+/***/ 356:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', [_c('el-row', _vm._l((7), function(o, index) {
-    return _c('el-col', {
-      key: o,
-      staticClass: "videolist",
-      attrs: {
-        "span": 4,
-        "offset": index % 5 == 0 ? 0 : 1
-      }
-    }, [_c('el-card', {
-      attrs: {
-        "body-style": {
-          padding: '0px'
-        }
-      }
-    }, [_c('video', {
-      staticClass: "video-js",
-      attrs: {
-        "id": "my-player",
-        "controls": "",
-        "preload": "auto",
-        "poster": "http://element.eleme.io/static/hamburger.50e4091.png",
-        "data-setup": "{}"
-      }
-    }, [_c('source', {
-      attrs: {
-        "src": "/storage/app/uploads/video/2DC7014ECE4E573C6EF8D41496C515BB.mp4",
-        "type": "video/mp4"
-      }
-    })]), _vm._v(" "), _c('div', {
-      staticStyle: {
-        "padding": "14px"
-      }
-    }, [_c('span', [_vm._v("好吃的汉堡")]), _vm._v(" "), _c('div', {
-      staticClass: "bottom clearfix"
-    }, [_c('time', {
-      staticClass: "time"
-    }, [_vm._v("时间")]), _vm._v(" "), _c('el-button', {
-      staticClass: "button",
-      attrs: {
-        "type": "text"
-      }
-    }, [_vm._v("操作按钮")])], 1)])])], 1)
-  }))], 1)
+  return _c('div', [_c('group', {
+    attrs: {
+      "title": "个人信息"
+    }
+  }, [_c('cell', {
+    attrs: {
+      "title": "头像",
+      "value": _vm.userInfo.avatar
+    }
+  }, [_c('img', {
+    attrs: {
+      "src": _vm.userInfo.avatar,
+      "alt": "",
+      "id": "headimgurl"
+    }
+  })]), _vm._v(" "), _c('cell', {
+    attrs: {
+      "title": "昵称",
+      "value": _vm.userInfo.nickname
+    }
+  }), _vm._v(" "), _c('cell', {
+    attrs: {
+      "title": "国家",
+      "value": "中国"
+    }
+  }), _vm._v(" "), _c('cell', {
+    attrs: {
+      "title": "省份",
+      "value": "河南省"
+    }
+  }), _vm._v(" "), _c('cell', {
+    attrs: {
+      "title": "城市",
+      "value": "巩义市"
+    }
+  })], 1), _vm._v(" "), _c('br'), _vm._v(" "), _c('group', {
+    attrs: {
+      "title": "数据中心"
+    }
+  }, [_c('cell', {
+    attrs: {
+      "title": "查看选手",
+      "link": "/me/myPlayer"
+    }
+  }), _vm._v(" "), _c('cell', {
+    attrs: {
+      "title": "查看投票",
+      "link": "/me/myPage"
+    }
+  })], 1)], 1)
 },staticRenderFns: []}
 module.exports.render._withStripped = true
 if (false) {
   module.hot.accept()
   if (module.hot.data) {
-     require("vue-loader/node_modules/vue-hot-reload-api").rerender("data-v-3f7d2766", module.exports)
+     require("vue-loader/node_modules/vue-hot-reload-api").rerender("data-v-70b38a1a", module.exports)
   }
 }
 
 /***/ }),
 
-/***/ 364:
+/***/ 369:
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(333);
+var content = __webpack_require__(338);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(19)("65609202", content, false);
+var update = __webpack_require__(19)("287ef6c0", content, false);
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
  if(!content.locals) {
-   module.hot.accept("!!../../../../../node_modules/_css-loader@0.14.5@css-loader/index.js!../../../../../node_modules/_vue-loader@11.3.4@vue-loader/lib/style-compiler/index.js?{\"id\":\"data-v-3f7d2766\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../../node_modules/_vux-loader@1.2.1@vux-loader/src/style-loader.js!../../../../../node_modules/_vue-loader@11.3.4@vue-loader/lib/selector.js?type=styles&index=0!./Video.vue", function() {
-     var newContent = require("!!../../../../../node_modules/_css-loader@0.14.5@css-loader/index.js!../../../../../node_modules/_vue-loader@11.3.4@vue-loader/lib/style-compiler/index.js?{\"id\":\"data-v-3f7d2766\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../../node_modules/_vux-loader@1.2.1@vux-loader/src/style-loader.js!../../../../../node_modules/_vue-loader@11.3.4@vue-loader/lib/selector.js?type=styles&index=0!./Video.vue");
+   module.hot.accept("!!../../../../../node_modules/_css-loader@0.14.5@css-loader/index.js!../../../../../node_modules/_vue-loader@11.3.4@vue-loader/lib/style-compiler/index.js?{\"id\":\"data-v-70b38a1a\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../../node_modules/_vux-loader@1.2.1@vux-loader/src/style-loader.js!../../../../../node_modules/_vue-loader@11.3.4@vue-loader/lib/selector.js?type=styles&index=0!./Me.vue", function() {
+     var newContent = require("!!../../../../../node_modules/_css-loader@0.14.5@css-loader/index.js!../../../../../node_modules/_vue-loader@11.3.4@vue-loader/lib/style-compiler/index.js?{\"id\":\"data-v-70b38a1a\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../../node_modules/_vux-loader@1.2.1@vux-loader/src/style-loader.js!../../../../../node_modules/_vue-loader@11.3.4@vue-loader/lib/selector.js?type=styles&index=0!./Me.vue");
      if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
      update(newContent);
    });

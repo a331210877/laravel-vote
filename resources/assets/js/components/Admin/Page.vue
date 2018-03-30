@@ -41,6 +41,7 @@
 </template>
 
 <script>
+  import { XButton } from 'vux'
   export default {
     data() {
       return {
@@ -69,7 +70,14 @@
       },
       handleDelete(index, row) {
         console.log(index, row);
-      }
-    }
+      },
+    },
+    mounted: function() {
+      this.getCarouse();
+      this.getPage(this.searchValue);
+    },
+    components: {
+      XButton,
+    },
   }
 </script>

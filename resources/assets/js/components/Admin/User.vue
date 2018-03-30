@@ -37,7 +37,7 @@
               <el-button v-if="scope.row.status==0" type="danger" size="mini" @click="handleChange(scope.$index, scope.row)">禁用</el-button>
               <el-button v-else-if="scope.row.status==1" type="success" size="mini" @click="handleChange(scope.$index, scope.row)">启用</el-button>
             </template>
-          </el-table-column>
+            </el-table-column>
       </el-table>
       <!--批量删除 与 分页-->
         <el-col :span="24" class="toolbar" style="margin-top:2%;">

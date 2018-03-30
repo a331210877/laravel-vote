@@ -82,12 +82,9 @@
 			},
 			//判断登录
 			loginCheck: function(){
-			  // this.axios.post('').then((res) => {
-				//   console.log(res.data)
-				// //   if(res.data.code == 1){
-				// // 	  console.log('123123')
-				// //   }
-			  // })
+			  axios.post('/islogin').then((res) => {
+				  console.log(res.data)
+			  })
 			},			
 			//退出登录
 			logout: function () {

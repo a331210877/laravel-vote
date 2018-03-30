@@ -28,16 +28,16 @@ class UserController extends Controller
     public function disableUser(Request $request)
     {
         $id=$request->input('id');
-        $result= DB::table('user')->where('id',$id)->increment('status');
+
+        $result= DB::table('user')->where('id',$id)->update(['status'=>1]);
+        
         if($result){
             $res['msg']="禁用成功";
             $res['code']= 1;
             $res['res']=$result;
-            // return responseToJson(1,'删除成功',$result);
         }else{
             $res['msg']="禁用失败,请重试";
             $res['code']= 0;
-            // return responseToJson(0,'删除失败',$result);
         }
         return response()->json($res);
     }
@@ -45,16 +45,14 @@ class UserController extends Controller
     //解封
     public function enableUser(Request $request){
         $id=$request->input('id');
-        $result= DB::table('user')->where('id',$id)->decrement('status');
+        $result= DB::table('user')->where('id',$id)->update(['status'=>0]);
         if($result){
             $res['msg']="启用成功";
             $res['code']= 1;
             $res['res']=$result;
-            // return responseToJson(1,'删除成功',$result);
         }else{
             $res['msg']="启用失败,请重试";
             $res['code']= 0;
-            // return responseToJson(0,'删除失败',$result);
         }
         return response()->json($res);
     }

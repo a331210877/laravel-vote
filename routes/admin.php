@@ -4,6 +4,8 @@
 
     Route::any('/wblogin/callback','Admin\LoginController@callback');   //回調路由
 
+    Route::post('/islogin','Admin\LoginController@isLogin');
+
     Route::group(['middleware'=>'login.check'],function(){
         //video
         Route::post('/admin/index/addPlayer','Admin\VideoController@addPlayer');
