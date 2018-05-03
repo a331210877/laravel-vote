@@ -24,6 +24,17 @@
         </el-card>
       </el-col>
     </el-row>
+    <div class="block">
+          <el-pagination
+          @size-change="handleSizeChange"
+          @current-change="handleCurrentChange"
+          :current-page="currentPage"
+          :page-sizes="[10, 20, 30, 40]"
+          :page-size="pageSize"
+          layout="total, sizes, prev, pager, next, jumper"
+          :total="total">
+          </el-pagination>
+    </div>
   </div>
 </template>
 
@@ -128,6 +139,10 @@
   .button{
     padding:5px;
     margin-top: -3px;
+  }
+  .block{
+    padding-top: 10px;
+    text-align: center;
   }
 </style>
   

@@ -111,14 +111,13 @@
 			}
 		},
 		mounted() {
-			this.loginCheck()
+			// this.loginCheck();
 			var user = sessionStorage.getItem('user');
 			if (user) {
 				user = JSON.parse(user);
 				this.sysUserName = user.name || '';
 				this.sysUserAvatar = user.avatar || '';
 			}
-
 		}
 	}
 </script>

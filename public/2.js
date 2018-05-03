@@ -5,13 +5,13 @@ webpackJsonp([2],{
 
 
 /* styles */
-__webpack_require__(368)
+__webpack_require__(369)
 
 var Component = __webpack_require__(16)(
   /* script */
   __webpack_require__(327),
   /* template */
-  __webpack_require__(355),
+  __webpack_require__(356),
   /* scopeId */
   null,
   /* cssModules */
@@ -477,7 +477,7 @@ exports.push([module.i, "\n.weui-form-preview__btn_primary{\n  color:#FF9900 !im
 
 /***/ }),
 
-/***/ 355:
+/***/ 356:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -519,7 +519,7 @@ if (false) {
 
 /***/ }),
 
-/***/ 368:
+/***/ 369:
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag

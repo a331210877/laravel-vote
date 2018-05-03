@@ -24,5 +24,9 @@
         
         Route::post('/admin/enableUser','Admin\UserController@enableUser');
         
+        //page
+        Route::post('/admin/getPage','Admin\PageController@getPage');
+
+        Route::post('/admin/delPage','Admin\PageController@delPage');
     });
 

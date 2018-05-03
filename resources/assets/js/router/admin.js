@@ -9,7 +9,7 @@ export default new VueRouter({
         {
             path: '/', 
             name: '用户管理',
-            iconCls: 'el-icon-message',//图标样式class
+            iconCls: 'el-icon-service',//图标样式class
             component: AdminBase,
             leaf: true,//只有一个节点
             children: [
@@ -19,7 +19,7 @@ export default new VueRouter({
         {
             path: '/', 
             name: '视频管理',
-            iconCls: 'el-icon-message',//图标样式class
+            iconCls: 'el-icon-view',//图标样式class
             component: AdminBase,
             leaf: true,//只有一个节点
             children: [
@@ -29,7 +29,7 @@ export default new VueRouter({
         {
             path: '/', 
             name: '页面管理',
-            iconCls: 'el-icon-message',//图标样式class
+            iconCls: 'el-icon-document',//图标样式class
             component: AdminBase,
             leaf: true,//只有一个节点
             children: [
@@ -39,7 +39,7 @@ export default new VueRouter({
         {
             path: '/admin', 
             name: '轮播管理',
-            iconCls: 'el-icon-message',//图标样式class
+            iconCls: 'el-icon-picture',//图标样式class
             component: AdminBase,
             leaf: true,//只有一个节点
             children: [
@@ -49,7 +49,7 @@ export default new VueRouter({
         {
             path: '/', 
             name: '赞助管理',
-            iconCls: 'el-icon-message',//图标样式class
+            iconCls: 'el-icon-more',//图标样式class
             component: AdminBase,
             leaf: true,//只有一个节点
             children: [

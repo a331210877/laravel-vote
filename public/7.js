@@ -5,13 +5,13 @@ webpackJsonp([7],{
 
 
 /* styles */
-__webpack_require__(370)
+__webpack_require__(371)
 
 var Component = __webpack_require__(16)(
   /* script */
   __webpack_require__(323),
   /* template */
-  __webpack_require__(357),
+  __webpack_require__(358),
   /* scopeId */
   "data-v-78da26e9",
   /* cssModules */
@@ -221,6 +221,15 @@ exports.default = {
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /***/ }),
 
@@ -232,11 +241,35 @@ exports.push([module.i, "\n.block[data-v-78da26e9]{\r\n  padding-top: 10px;\r\n 
 
 /***/ }),
 
-/***/ 357:
+/***/ 358:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', [_c('el-table', {
+  return _c('div', [_c('el-form', {
+    staticStyle: {
+      "margin-top": "15px"
+    },
+    attrs: {
+      "inline": true
+    }
+  }, [_c('el-form-item', [_c('el-input', {
+    attrs: {
+      "placeholder": "请输入....."
+    }
+  })], 1), _vm._v(" "), _c('el-form-item', [_c('el-button', {
+    attrs: {
+      "type": "primary",
+      "icon": "search"
+    }
+  }, [_vm._v("查询")])], 1), _vm._v(" "), _c('el-form-item', {
+    staticStyle: {
+      "float": "right"
+    }
+  }, [_c('el-button', {
+    attrs: {
+      "type": "primary"
+    }
+  }, [_vm._v("导出")])], 1)], 1), _vm._v(" "), _c('el-table', {
     staticStyle: {
       "width": "100%"
     },
@@ -328,33 +361,13 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
         }, [_vm._v("启用")]) : _vm._e()]
       }
     }])
-  })], 1), _vm._v(" "), _c('el-col', {
-    staticClass: "toolbar",
-    staticStyle: {
-      "margin-top": "2%"
-    },
-    attrs: {
-      "span": 24
-    }
-  }, [_c('el-button', {
-    attrs: {
-      "type": "danger",
-      "disabled": this.sels.length === 0
-    },
-    on: {
-      "click": function($event) {
-        if (!('button' in $event) && _vm._k($event.keyCode, "navite", undefined, $event.key, undefined)) { return null; }
-        return _vm.deleteSome($event)
-      }
-    }
-  }, [_vm._v("批量删除")]), _vm._v(" "), _c('el-pagination', {
-    staticStyle: {
-      "float": "right"
-    },
+  })], 1), _vm._v(" "), _c('div', {
+    staticClass: "block"
+  }, [_c('el-pagination', {
     attrs: {
       "current-page": _vm.currentPage,
-      "page-sizes": [10, 20, 30, 50],
-      "page-size": 10,
+      "page-sizes": [10, 20, 30, 40],
+      "page-size": _vm.pageSize,
       "layout": "total, sizes, prev, pager, next, jumper",
       "total": _vm.total
     },
@@ -374,7 +387,7 @@ if (false) {
 
 /***/ }),
 
-/***/ 370:
+/***/ 371:
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag

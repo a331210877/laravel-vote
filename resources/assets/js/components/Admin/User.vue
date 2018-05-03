@@ -1,6 +1,17 @@
 <template>
     <div >
-		<el-table :data="tableData" stripe style="width: 100%"  @selection-change="selsChange">
+    <el-form :inline="true" style="margin-top:15px;">
+        <el-form-item>
+            <el-input  placeholder="请输入....."></el-input>
+        </el-form-item>
+        <el-form-item>
+            <el-button type="primary" icon="search">查询</el-button>
+        </el-form-item>
+        <el-form-item style="float:right">
+            <el-button type="primary">导出</el-button>
+        </el-form-item>
+    </el-form>
+		<el-table :data="tableData" stripe style="width: 100%" @selection-change="selsChange">
             <el-table-column 
             type="selection"
             width="55">
@@ -40,19 +51,17 @@
             </el-table-column>
       </el-table>
       <!--批量删除 与 分页-->
-        <el-col :span="24" class="toolbar" style="margin-top:2%;">
-          <el-button type="danger" :disabled="this.sels.length===0" @click.navite="deleteSome">批量删除</el-button>
-          <el-pagination
-            style="float:right;"
+         <div class="block">
+            <el-pagination
             @size-change="handleSizeChange"
             @current-change="handleCurrentChange"
             :current-page="currentPage"
-            :page-sizes="[10, 20, 30, 50]"
-            :page-size="10"
+            :page-sizes="[10, 20, 30, 40]"
+            :page-size="pageSize"
             layout="total, sizes, prev, pager, next, jumper"
             :total="total">
-          </el-pagination>
-        </el-col>
+            </el-pagination>
+        </div>
     </div>
 </template>
 

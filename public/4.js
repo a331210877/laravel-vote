@@ -5,13 +5,13 @@ webpackJsonp([4],{
 
 
 /* styles */
-__webpack_require__(367)
+__webpack_require__(368)
 
 var Component = __webpack_require__(16)(
   /* script */
   __webpack_require__(328),
   /* template */
-  __webpack_require__(353),
+  __webpack_require__(354),
   /* scopeId */
   null,
   /* cssModules */
@@ -95,7 +95,7 @@ exports.push([module.i, "\n.player {\r\n    position: relative;\r\n    float: le
 
 /***/ }),
 
-/***/ 353:
+/***/ 354:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -144,7 +144,7 @@ if (false) {
 
 /***/ }),
 
-/***/ 367:
+/***/ 368:
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag

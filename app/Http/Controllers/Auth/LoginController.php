@@ -49,7 +49,7 @@ class LoginController extends Controller
         $user = $request->user;
         $captcha = $request->captcha;
         if($request->isMethod('post')){
-            if (session('captcha') == $captcha) {
+            // if (session('captcha') == $captcha) {
                 //用户输入验证码正确
                 $password = md5($request->password);
                 $result = Login::check_login($user);
@@ -63,10 +63,10 @@ class LoginController extends Controller
                 }else{
                     return responseToJson(2,'error','该用户不存在');
                 }
-            } else {
-                //用户输入验证码错误
-                return responseToJson(3, $captcha, session('captcha'));
-            }
+            // } else {
+            //     //用户输入验证码错误
+            //     return responseToJson(3, $captcha, session('captcha'));
+            // }
         }
     }
 

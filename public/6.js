@@ -5,13 +5,13 @@ webpackJsonp([6],{
 
 
 /* styles */
-__webpack_require__(364)
+__webpack_require__(365)
 
 var Component = __webpack_require__(16)(
   /* script */
   __webpack_require__(324),
   /* template */
-  __webpack_require__(349),
+  __webpack_require__(350),
   /* scopeId */
   null,
   /* cssModules */
@@ -48,6 +48,17 @@ module.exports = Component.exports
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -139,11 +150,11 @@ exports.default = {
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(15)();
-exports.push([module.i, "\n.time {\n  font-size: 13px;\n  color: #999;\n}\n.bottom {\n  margin-top: 13px;\n  line-height: 12px;\n}\n.button {\n  padding: 0;\n  float: right;\n}\n.image {\n  width: 100%;\n  display: block;\n}\n.clearfix:before,\n.clearfix:after {\n    display: table;\n    content: \"\";\n}\n.clearfix:after {\n    clear: both\n}\n.videolist{\n    margin-top:20px !important;\n}\n#my-player{\n    width: 100%;\n    height: 123px;\n    margin-top: -20px;\n}\n.button{\n  padding:5px;\n  margin-top: -3px;\n}\n", ""]);
+exports.push([module.i, "\n.time {\n  font-size: 13px;\n  color: #999;\n}\n.bottom {\n  margin-top: 13px;\n  line-height: 12px;\n}\n.button {\n  padding: 0;\n  float: right;\n}\n.image {\n  width: 100%;\n  display: block;\n}\n.clearfix:before,\n.clearfix:after {\n    display: table;\n    content: \"\";\n}\n.clearfix:after {\n    clear: both\n}\n.videolist{\n    margin-top:20px !important;\n}\n#my-player{\n    width: 100%;\n    height: 123px;\n    margin-top: -20px;\n}\n.button{\n  padding:5px;\n  margin-top: -3px;\n}\n.block{\n  padding-top: 10px;\n  text-align: center;\n}\n", ""]);
 
 /***/ }),
 
-/***/ 349:
+/***/ 350:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -205,7 +216,21 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
         }
       }
     }, [_vm._v("启用")]) : _vm._e()], 1)])])], 1)
-  }))], 1)
+  })), _vm._v(" "), _c('div', {
+    staticClass: "block"
+  }, [_c('el-pagination', {
+    attrs: {
+      "current-page": _vm.currentPage,
+      "page-sizes": [10, 20, 30, 40],
+      "page-size": _vm.pageSize,
+      "layout": "total, sizes, prev, pager, next, jumper",
+      "total": _vm.total
+    },
+    on: {
+      "size-change": _vm.handleSizeChange,
+      "current-change": _vm.handleCurrentChange
+    }
+  })], 1)], 1)
 },staticRenderFns: []}
 module.exports.render._withStripped = true
 if (false) {
@@ -217,7 +242,7 @@ if (false) {
 
 /***/ }),
 
-/***/ 364:
+/***/ 365:
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag

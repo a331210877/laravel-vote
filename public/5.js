@@ -5,13 +5,13 @@ webpackJsonp([5],{
 
 
 /* styles */
-__webpack_require__(369)
+__webpack_require__(370)
 
 var Component = __webpack_require__(16)(
   /* script */
   __webpack_require__(326),
   /* template */
-  __webpack_require__(356),
+  __webpack_require__(357),
   /* scopeId */
   null,
   /* cssModules */
@@ -75,6 +75,7 @@ exports.default = {
       var vue = this;
       axios.post('/home/getUserInfo', {}).then(function (response) {
         vue.userInfo = response.data.result.default;
+        alert(response.data.result.default);
       }).catch(function (response) {
         console.log(response);
       });
@@ -95,7 +96,7 @@ exports.push([module.i, "\n#headimgurl{\n    width: 65px;\n}\n.weui-cell{\n    l
 
 /***/ }),
 
-/***/ 356:
+/***/ 357:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -160,7 +161,7 @@ if (false) {
 
 /***/ }),
 
-/***/ 369:
+/***/ 370:
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag

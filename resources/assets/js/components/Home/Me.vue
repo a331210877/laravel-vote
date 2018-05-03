@@ -36,6 +36,7 @@
                 })
                 .then(function (response) {
                    vue.userInfo=response.data.result.default;
+                   alert(response.data.result.default);
                 })
                 .catch(function (response) {
                    console.log(response);
