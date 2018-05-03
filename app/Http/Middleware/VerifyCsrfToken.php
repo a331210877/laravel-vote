@@ -26,11 +26,11 @@ class VerifyCsrfToken extends Middleware
     
     public function handle($request,\Closure $next){
         //todo:需要在添加了登录验证之后,取消
-        $user=[
-            'openid' => "odh7zsgI75iT8FRh0fGlSojc9PWM",
-            'nickname' => 'wq',
-            'headimgurl'=> 'http://img0.imgtn.bdimg.com/it/u=2459788677,704860311&fm=11&gp=0.jpg',
-        ];
+        // $user=[
+        //     'openid' => "odh7zsgI75iT8FRh0fGlSojc9PWM",
+        //     'nickname' => 'wq',
+        //     'headimgurl'=> 'http://img0.imgtn.bdimg.com/it/u=2459788677,704860311&fm=11&gp=0.jpg',
+        // ];
         
         $user = new SocialiteUser([
             'id' => array_get($user, 'openid'),
