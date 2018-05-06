@@ -36,8 +36,7 @@
                 })
                 .then(function (response) {
                    vue.userInfo=response.data.result.default;
-                   alert(response.data.result.default.original[0]);
-                   alert(response.data.result.default.email);
+                   alert(response.data.result.default.original.country);
                 })
                 .catch(function (response) {
                    console.log(response);
