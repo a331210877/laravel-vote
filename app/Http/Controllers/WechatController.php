@@ -29,7 +29,7 @@ class WechatController extends Controller
        $buttons = [
            [
                "type"=>"view",
-               "name"=>"进入课堂",
+               "name"=>"进入课堂2",
                "url"=>"http://vote.mrwangqi.com/user",
            ],
        ];

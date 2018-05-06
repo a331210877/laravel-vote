@@ -32,16 +32,16 @@ class VerifyCsrfToken extends Middleware
         //     'headimgurl'=> 'http://img0.imgtn.bdimg.com/it/u=2459788677,704860311&fm=11&gp=0.jpg',
         // ];
         
-        $user = new SocialiteUser([
-            'id' => array_get($user, 'openid'),
-            'name' => array_get($user, 'nickname'),
-            'nickname' => array_get($user, 'nickname'),
-            'avatar' => array_get($user, 'headimgurl'),
-            'email' => null,
-            'original' => [],
-            'provider' => 'WeChat',
-        ]);
-        session(['wechat.oauth_user.default' => $user]);
+        // $user = new SocialiteUser([
+        //     'id' => array_get($user, 'openid'),
+        //     'name' => array_get($user, 'nickname'),
+        //     'nickname' => array_get($user, 'nickname'),
+        //     'avatar' => array_get($user, 'headimgurl'),
+        //     'email' => null,
+        //     'original' => [],
+        //     'provider' => 'WeChat',
+        // ]);
+        // session(['wechat.oauth_user.default' => $user]);
 
         if($request->method() == 'POST')
         {
