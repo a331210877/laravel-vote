@@ -4,7 +4,6 @@ Route::group(['middleware' => ['web', 'wechat.oauth']],function(){
     // Route::post('/home/index','Home\IndexController@index');
     Route::get('/user', function () {
         $user = session('wechat.oauth_user'); // 拿到授权用户资料
-
         return redirect()->to('/home#/index'); //這時候已經拿到用戶資料了，跳轉到想要的路由
     });
     
