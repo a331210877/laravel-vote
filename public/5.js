@@ -75,7 +75,6 @@ exports.default = {
       var vue = this;
       axios.post('/home/getUserInfo', {}).then(function (response) {
         vue.userInfo = response.data.result.default;
-        alert(response.data.result.default.original.country);
       }).catch(function (response) {
         console.log(response);
       });
@@ -123,17 +122,17 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
   }), _vm._v(" "), _c('cell', {
     attrs: {
       "title": "国家",
-      "value": "中国"
+      "value": _vm.userInfo.original.country
     }
   }), _vm._v(" "), _c('cell', {
     attrs: {
       "title": "省份",
-      "value": "河南省"
+      "value": _vm.userInfo.original.province
     }
   }), _vm._v(" "), _c('cell', {
     attrs: {
       "title": "城市",
-      "value": "巩义市"
+      "value": _vm.userInfo.original.city
     }
   })], 1), _vm._v(" "), _c('br'), _vm._v(" "), _c('group', {
     attrs: {

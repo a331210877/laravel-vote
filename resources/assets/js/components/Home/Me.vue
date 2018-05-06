@@ -3,9 +3,9 @@
     <group title="个人信息">
       <cell title="头像" :value="userInfo.avatar"> <img :src="userInfo.avatar" alt="" id="headimgurl"></cell>
       <cell title="昵称" :value="userInfo.nickname"></cell>
-      <cell title="国家" value="中国"></cell>
-      <cell title="省份" value="河南省"></cell>
-      <cell title="城市" value="巩义市"></cell>
+      <cell title="国家" :value="userInfo.original.country"></cell>
+      <cell title="省份" :value="userInfo.original.province"></cell>
+      <cell title="城市" :value="userInfo.original.city"></cell>
     </group>
     <br>
 
@@ -36,7 +36,6 @@
                 })
                 .then(function (response) {
                    vue.userInfo=response.data.result.default;
-                   alert(response.data.result.default.original.country);
                 })
                 .catch(function (response) {
                    console.log(response);
