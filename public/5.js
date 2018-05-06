@@ -75,7 +75,9 @@ exports.default = {
       var vue = this;
       axios.post('/home/getUserInfo', {}).then(function (response) {
         vue.userInfo = response.data.result.default;
-        alert(response.data.result.default.country);
+        alert(response.data.result.default.provider);
+        alert(response.data.result.default.original);email;
+        alert(response.data.result.default.email);
       }).catch(function (response) {
         console.log(response);
       });
