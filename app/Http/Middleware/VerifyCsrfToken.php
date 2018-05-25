@@ -34,7 +34,7 @@ class VerifyCsrfToken extends Middleware
                 'country' => '中国啊',
                 'province' => '河南啊',
                 'city' => '郑州啊',
-            ]
+            ],
         ];
         
         $user = new SocialiteUser([
@@ -43,7 +43,7 @@ class VerifyCsrfToken extends Middleware
             'nickname' => array_get($user, 'nickname'),
             'avatar' => array_get($user, 'headimgurl'),
             'email' => null,
-            'original' => [],
+            'original' => array_get($user, 'original'),
             'provider' => 'WeChat',
         ]);
         session(['wechat.oauth_user.default' => $user]);

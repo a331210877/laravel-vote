@@ -17,7 +17,7 @@ class LoginMiddleware
         if(get_session_admin()){
             return $next($request);
         } else {
-            return responseToJson(1,'error','未登錄');
+            return responseToJson(2,'login','未登錄');
         }
     }
 }

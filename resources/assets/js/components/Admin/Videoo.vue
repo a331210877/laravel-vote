@@ -26,7 +26,7 @@
           <el-table-column sortable prop="ticket" label="票数"></el-table-column>
           <el-table-column sortable prop="userName" label="用户"></el-table-column>
           <el-table-column prop="edit" label="操作">
-            <template scope="scope">
+            <template slot-scope="scope">
               <el-button v-if="scope.row.status==0" type="danger" size="mini" @click="handleChange(scope.$index, scope.row)">禁用</el-button>
               <el-button v-else-if="scope.row.status==1" type="success" size="mini" @click="handleChange(scope.$index, scope.row)">启用</el-button>
               <el-button type="success" size="mini" icon="view" @click="cjks;"></el-button>

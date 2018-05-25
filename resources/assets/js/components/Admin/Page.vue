@@ -2,44 +2,42 @@
     <div>
       <el-form :inline="true" style="margin-top:15px;">
         <el-form-item>
-            <el-input  placeholder="请输入....."></el-input>
+            <el-input  placeholder="请输入活动名称" v-model="search"></el-input>
         </el-form-item>
         <el-form-item>
-            <el-button type="primary" icon="search">查询</el-button>
+            <el-button type="primary" icon="search" @click="searchPage()">查询</el-button>
         </el-form-item>
         <el-form-item style="float:right">
-            <el-button type="primary">导出</el-button>
+            <el-button type="primary" @click="exportPage()">导出</el-button>
         </el-form-item>
       </el-form>
       <el-table
-          :data="videoList"
+          :data="pageList"
           style="width: 100%">
+          <el-table-column 
+            type="selection"
+            width="55">
+          </el-table-column>
           <el-table-column
             label="编号"
-            width="180">
-            <template scope="scope">
-              <el-icon name="time"></el-icon>
-              <span style="margin-left: 10px">{{ scope.row.id }}</span>
-            </template>
+            prop="id"
+            >
           </el-table-column>
           <el-table-column
             label="发起人"
-            width="180"  prop="nick_name">
+            prop="nick_name">
           </el-table-column>
-            <el-table-column label="标题" prop="title" width="180">
+            <el-table-column label="标题" prop="title">
             
           </el-table-column>
-            <el-table-column label="开始时间" prop="start_time" width="180">
+            <el-table-column label="开始时间" prop="start_time">
             
           </el-table-column>
-            <el-table-column label="结束时间" prop="end_time" width="180">
+            <el-table-column label="结束时间" prop="end_time">
             
           </el-table-column>
           <el-table-column label="操作">
-            <template scope="scope">
-              <!-- <el-button
-                size="small"
-                @click="handleEdit(scope.$index, scope.row)">编辑</el-button> -->
+            <template slot-scope="scope">
               <el-button
                 size="small"
                 type="danger"
@@ -66,11 +64,14 @@
 </template>
 
 <script>
-  import { XButton } from 'vux'
   export default {
     data() {
       return {
-        videoList: []
+        pageList: [],
+        currentPage: 1,
+        pageSize: 10,
+        total:0,
+        search:""    
       }
     },
     methods: {
@@ -84,12 +85,20 @@
               id : row.id
             })
             .then(function (response) {
-              for(var i=0;i<response.data.result.length;i++){
-                response.data.result[i].end_time=getLocalTime(response.data.result[i].end_time);
-                response.data.result[i].start_time=getLocalTime(response.data.result[i].start_time);
+              if(response.data.code==1){
+                vue.$message({
+                    type:"success",
+                    message: response.data.msg,
+                });
+                vue.pageList.splice(index,1);
+                vue.total--;
+              }else{
+                vue.$message({
+                    type:"error",
+                    message: response.data.msg,
+                });
               }
-              vue.videoList=response.data.result;
-              console.log(response.data);
+              
             })
             .catch(function (response) {
                 console.log(response);
@@ -98,12 +107,33 @@
         }).catch(() => {
         });   
       },
+      searchPage(){
+        var vue=this;
+        axios.post('admin/searchPage',{
+          'search':vue.search
+        }).then(function(response){
+          console.log(response.data);
+          vue.pageList=response.data.result.result;
+          vue.total=response.data.result.count;
+        });
+      },
+      exportPage(){
+        window.location.href="/admin/exportPage";
+      },
       handleDelete(index, row) {
         console.log(index, row);
       },
       seePage(index,row){
         window.open(window.location.origin+"/home#/page/"+row.id);
-      }
+      },
+      handleSizeChange(val) {
+          console.log(`每页 ${val} 条`);
+          this.getUser(this.currentPage,val); 
+      },
+      handleCurrentChange(val) {
+        console.log(`当前页: ${val}`);
+        this.getUser(val,this.pageSize); 
+      },
     },
     mounted: function() {
       var vue=this; 
@@ -111,19 +141,17 @@
         axios.post('/admin/getPage', {
         })
         .then(function (response) {
-          for(var i=0;i<response.data.result.length;i++){
-            response.data.result[i].end_time=getLocalTime(response.data.result[i].end_time);
-            response.data.result[i].start_time=getLocalTime(response.data.result[i].start_time);
+          for(var i=0;i<response.data.result.result.length;i++){
+            response.data.result.result[i].end_time=getLocalTime(response.data.result.result[i].end_time);
+            response.data.result.result[i].start_time=getLocalTime(response.data.result.result[i].start_time);
           }
-            vue.videoList=response.data.result;
+            vue.pageList=response.data.result.result;
+            vue.total=response.data.result.count;
         })
         .catch(function (response) {
             console.log(response);
         });
       })
-    },
-    components: {
-      XButton,
     },
   }
 </script>

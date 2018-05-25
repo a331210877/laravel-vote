@@ -1,17 +1,17 @@
 webpackJsonp([6],{
 
-/***/ 268:
+/***/ 270:
 /***/ (function(module, exports, __webpack_require__) {
 
 
 /* styles */
-__webpack_require__(365)
+__webpack_require__(375)
 
 var Component = __webpack_require__(16)(
   /* script */
-  __webpack_require__(324),
+  __webpack_require__(328),
   /* template */
-  __webpack_require__(350),
+  __webpack_require__(358),
   /* scopeId */
   null,
   /* cssModules */
@@ -39,7 +39,7 @@ module.exports = Component.exports
 
 /***/ }),
 
-/***/ 324:
+/***/ 328:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -88,18 +88,75 @@ Object.defineProperty(exports, "__esModule", {
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 exports.default = {
   data: function data() {
     return {
       currentDate: new Date(),
-      videoList: []
+      videoList: [],
+      currentPage: 1,
+      pageSize: 10,
+      total: 0,
+      search: ""
     };
   },
 
 
   methods: {
-    disVideo: function disVideo($id, $row) {
+    handleChange: function handleChange(row) {
+      if (row.status == 0) {
+        this.disVideo(row);
+      } else {
+        this.enableUser(row);
+      }
+    },
+    handleSizeChange: function handleSizeChange(val) {
+      console.log("\u6BCF\u9875 " + val + " \u6761");
+      this.getUser(this.currentPage, val);
+    },
+    handleCurrentChange: function handleCurrentChange(val) {
+      console.log("\u5F53\u524D\u9875: " + val);
+      this.getUser(val, this.pageSize);
+    },
+
+    //复选框选择变化事件
+    selsChange: function selsChange(sels) {
+      this.sels = sels;
+    },
+    exportPlayer: function exportPlayer() {
+      window.location.href = "/admin/exportPlayer";
+    },
+    searchVideo: function searchVideo() {
+      var vue = this;
+      axios.post('admin/searchVideo', {
+        'search': vue.search
+      }).then(function (response) {
+        if (response.data.code == 1) {
+          vue.$message({
+            type: "success",
+            message: response.data.msg
+          });
+          vue.videoList = response.data.result.result;
+          vue.count = response.data.result.count;
+        } else {
+          vue.$message.error(response.data.msg);
+        }
+      }).catch(function (response) {
+        console.log(response);
+      });
+    },
+    enableUser: function enableUser($row) {
       var _this = this;
 
       var vue = this;
@@ -107,8 +164,8 @@ exports.default = {
         type: 'warning'
       }).then(function () {
         _this.$nextTick(function () {
-          axios.post('admin/enableUser', {
-            'id': $id
+          axios.post('admin/enableVideo', {
+            'id': $row.id
           }).then(function (response) {
             if (response.data.code == 1) {
               vue.$message({
@@ -125,14 +182,41 @@ exports.default = {
         });
       }).catch(function () {});
     },
+
+    disVideo: function disVideo($row) {
+      var _this2 = this;
+
+      var vue = this;
+      this.$confirm('确定禁用吗?', '提示', {
+        type: 'warning'
+      }).then(function () {
+        _this2.$nextTick(function () {
+          axios.post('admin/disableVideo', {
+            'id': $row.id
+          }).then(function (response) {
+            if (response.data.code == 1) {
+              vue.$message({
+                type: "success",
+                message: response.data.msg
+              });
+              $row.status = 1;
+            } else {
+              vue.$message.error(response.data.msg);
+            }
+          }).catch(function (response) {
+            console.log(response);
+          });
+        });
+      }).catch(function () {});
+    },
     getVideo: function getVideo() {
       var vue = this;
       axios.post('/admin/getVideo', {}).then(function (response) {
         if (response.data.code == 1) {
-          vue.videoList = response.data.result;
-          console.log(vue.videoList);
+          vue.videoList = response.data.result.select_rows;
+          vue.total = response.data.result.count;
         } else {
-          vue.$message.error(response.data.msg);
+          window.location.href = '/login';
         }
       }).catch(function (response) {
         console.log(response);
@@ -146,7 +230,7 @@ exports.default = {
 
 /***/ }),
 
-/***/ 333:
+/***/ 338:
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(15)();
@@ -154,12 +238,55 @@ exports.push([module.i, "\n.time {\n  font-size: 13px;\n  color: #999;\n}\n.bott
 
 /***/ }),
 
-/***/ 350:
+/***/ 358:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', [_c('el-row', _vm._l((_vm.videoList), function(o, index) {
+  return _c('div', [_c('el-form', {
+    staticStyle: {
+      "margin-top": "15px",
+      "border-bottom": "1px solid #f9f9f9"
+    },
+    attrs: {
+      "inline": true
+    }
+  }, [_c('el-form-item', [_c('el-input', {
+    attrs: {
+      "placeholder": "请输入选手名称"
+    },
+    model: {
+      value: (_vm.search),
+      callback: function($$v) {
+        _vm.search = $$v
+      },
+      expression: "search"
+    }
+  })], 1), _vm._v(" "), _c('el-form-item', [_c('el-button', {
+    attrs: {
+      "type": "primary",
+      "icon": "search"
+    },
+    on: {
+      "click": function($event) {
+        _vm.searchVideo()
+      }
+    }
+  }, [_vm._v("查询")])], 1), _vm._v(" "), _c('el-form-item', {
+    staticStyle: {
+      "float": "right"
+    }
+  }, [_c('el-button', {
+    attrs: {
+      "type": "primary"
+    },
+    on: {
+      "click": function($event) {
+        _vm.exportPlayer()
+      }
+    }
+  }, [_vm._v("导出")])], 1)], 1), _vm._v(" "), _c('el-row', _vm._l((_vm.videoList), function(o, index) {
     return _c('el-col', {
+      key: index,
       staticClass: "videolist",
       attrs: {
         "span": 4,
@@ -201,10 +328,10 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       },
       on: {
         "click": function($event) {
-          _vm.handleChange(_vm.scope.$index, _vm.scope.row)
+          _vm.handleChange(o)
         }
       }
-    }, [_vm._v("禁用")]) : (o == 1) ? _c('el-button', {
+    }, [_vm._v("禁用")]) : (o.status == 1) ? _c('el-button', {
       staticClass: "button",
       attrs: {
         "type": "success",
@@ -212,7 +339,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       },
       on: {
         "click": function($event) {
-          _vm.handleChange(_vm.scope.$index, _vm.scope.row)
+          _vm.handleChange(o)
         }
       }
     }, [_vm._v("启用")]) : _vm._e()], 1)])])], 1)
@@ -242,23 +369,23 @@ if (false) {
 
 /***/ }),
 
-/***/ 365:
+/***/ 375:
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(333);
+var content = __webpack_require__(338);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(19)("65609202", content, false);
+var update = __webpack_require__(21)("230ccd07", content, false);
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
  if(!content.locals) {
-   module.hot.accept("!!../../../../../node_modules/_css-loader@0.14.5@css-loader/index.js!../../../../../node_modules/_vue-loader@11.3.4@vue-loader/lib/style-compiler/index.js?{\"id\":\"data-v-3f7d2766\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../../node_modules/_vux-loader@1.2.1@vux-loader/src/style-loader.js!../../../../../node_modules/_vue-loader@11.3.4@vue-loader/lib/selector.js?type=styles&index=0!./Video.vue", function() {
-     var newContent = require("!!../../../../../node_modules/_css-loader@0.14.5@css-loader/index.js!../../../../../node_modules/_vue-loader@11.3.4@vue-loader/lib/style-compiler/index.js?{\"id\":\"data-v-3f7d2766\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../../node_modules/_vux-loader@1.2.1@vux-loader/src/style-loader.js!../../../../../node_modules/_vue-loader@11.3.4@vue-loader/lib/selector.js?type=styles&index=0!./Video.vue");
+   module.hot.accept("!!../../../../../node_modules/_css-loader@0.14.5@css-loader/index.js!../../../../../node_modules/_vue-loader@11.3.4@vue-loader/lib/style-compiler/index.js?{\"id\":\"data-v-3f7d2766\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../../node_modules/_vux-loader@1.2.9@vux-loader/src/style-loader.js!../../../../../node_modules/_vue-loader@11.3.4@vue-loader/lib/selector.js?type=styles&index=0!./Video.vue", function() {
+     var newContent = require("!!../../../../../node_modules/_css-loader@0.14.5@css-loader/index.js!../../../../../node_modules/_vue-loader@11.3.4@vue-loader/lib/style-compiler/index.js?{\"id\":\"data-v-3f7d2766\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../../node_modules/_vux-loader@1.2.9@vux-loader/src/style-loader.js!../../../../../node_modules/_vue-loader@11.3.4@vue-loader/lib/selector.js?type=styles&index=0!./Video.vue");
      if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
      update(newContent);
    });

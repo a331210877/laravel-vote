@@ -6,7 +6,8 @@ use App\Http\Controllers\Controller;
 use DB;
 use Illuminate\Http\Request;
 use Storage;
-
+use App\Models\Admin\Video;
+use Excel;
 class VideoController extends Controller
 {
     //获取所有选手信息
@@ -23,7 +24,15 @@ class VideoController extends Controller
         	$v->isLoading=false;
         	$v->disabled=true;
         }
-        return responseToJson(1,"查询成功",$select_rows);
+        $count=DB::table('player')
+        ->join('user','user.id','=','player.user_id')
+        ->select('player.id','player.name','player.ticket','player.videoImg','player.video','player.image','user.nick_name as userName','player.status')
+        ->count();
+        $result=[
+            'select_rows'=>$select_rows,
+            'count'=>$count
+        ];
+        return responseToJson(1,"查询成功",$result);
     }
 
     //禁用选手
@@ -88,4 +97,39 @@ class VideoController extends Controller
         return response()->json($res);
     }
 
+    public function searchPlayer(Request $request){
+        $search=$request->search;
+        $result=Video::searchPlayer($search);
+        if($result){
+            return responseToJson(1,'查询成功',$result);
+        }
+        return responseToJson(1,'查询失败，请重试',$result);
+    }
+
+    public function exportPlayer(){
+        $select_row= DB::table('player')->get();
+        $cellData=[['编号','姓名','头像','票数','视频封面','视频文件名','所属页面','上传用户','是否删除']];
+        foreach($select_row as $v){
+            $data[0]=$v->id;
+            $data[1]=$v->name;
+            $data[2]=$v->image;
+            $data[3]=$v->ticket;
+            $data[4]=$v->videoImg;
+            $data[5]=$v->video;
+            $data[6]=$v->page_id;
+            $data[7]=$v->user_id;
+            $data[8]=$v->status;
+            $cellData[]=$data;
+        }
+        $fw='A1:G'.count($cellData);
+        Excel::create('选手信息',function($excel) use ($cellData,$fw){
+            $f=$fw;
+            $excel->sheet('选手信息', function($sheet) use ($cellData,$f){
+                $sheet->rows($cellData);
+                $sheet->cells($f,function($cells) {
+                    $cells->setAlignment('left');
+                });
+            });
+        })->export('xlsx');
+    }
 }

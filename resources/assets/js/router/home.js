@@ -46,5 +46,13 @@ export default new VueRouter({
                 { path: '/myPage',name:'myPage',component: resolve =>void(require(['../components/Home/MyPage.vue'], resolve))},
             ]
         },
+        {
+            path: '/add', 
+            name: '添加选手',
+            component: HomeBase,
+            children: [
+                { path: '/addPlayer',name:'addPlayer',component: resolve =>void(require(['../components/Home/addPlayer.vue'], resolve))},
+            ]
+        },
     ],
 });

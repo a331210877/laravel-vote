@@ -2,13 +2,13 @@
     <div >
     <el-form :inline="true" style="margin-top:15px;">
         <el-form-item>
-            <el-input  placeholder="请输入....."></el-input>
+            <el-input  placeholder="请输入用户名称" v-model="search"></el-input>
         </el-form-item>
         <el-form-item>
-            <el-button type="primary" icon="search">查询</el-button>
+            <el-button type="primary" icon="search" @click="searchUser()">查询</el-button>
         </el-form-item>
         <el-form-item style="float:right">
-            <el-button type="primary">导出</el-button>
+            <el-button type="primary" @click="exportUser()">导出</el-button>
         </el-form-item>
     </el-form>
 		<el-table :data="tableData" stripe style="width: 100%" @selection-change="selsChange">
@@ -23,7 +23,7 @@
             <el-table-column
             label="头像"
             >
-            <template scope="scope">
+            <template slot-scope="scope">
               <span class="el-dropdown-link userinfo-inner"><img :src="scope.row.headimgurl" style="width:45px;margin-top:5px;"/></span>
             </template>
             </el-table-column>
@@ -44,7 +44,7 @@
             label="省份">
             </el-table-column>
             <el-table-column prop="edit" label="操作">
-            <template scope="scope">
+            <template slot-scope="scope">
               <el-button v-if="scope.row.status==0" type="danger" size="mini" @click="handleChange(scope.$index, scope.row)">禁用</el-button>
               <el-button v-else-if="scope.row.status==1" type="success" size="mini" @click="handleChange(scope.$index, scope.row)">启用</el-button>
             </template>
@@ -75,6 +75,7 @@ import Axios from 'axios'
         pageSize: 10,
         total:0,
         sels: [],
+        search:'',
       }
     },
      methods: {
@@ -99,6 +100,18 @@ import Axios from 'axios'
         //复选框选择变化事件
         selsChange: function (sels) {
           this.sels = sels;
+        },
+        searchUser:function(){
+          var vue=this;
+          axios.post('admin/searchUser',{
+            'search':vue.search
+          }).then(function(response){
+             vue.total=response.data.result.count;
+             vue.tableData=response.data.result.res;
+          })
+        },
+        exportUser(){
+          window.location.href="/admin/exportUser";
         },
         enableUser: function($id,$row){
           var vue=this;
@@ -163,10 +176,11 @@ import Axios from 'axios'
                 })
                 .then(function (response) {
                    if(response.data.code==1){
-                     window.location.href = '/login';
+                      vue.tableData=response.data.result.result;
+                      vue.total=response.data.result.count;
+                   }else{
+                      window.location.href = '/login';
                    }
-                   vue.tableData=response.data.res;
-                   vue.total=response.data.userCount;
                 })
                 .catch(function (response) {
                     console.log(response);

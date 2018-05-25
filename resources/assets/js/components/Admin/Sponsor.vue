@@ -14,7 +14,7 @@
         <el-table-column
         label="日期"
         width="120">
-        <template scope="scope">{{ scope.row.date }}</template>
+        <template slot-scope="scope">{{ scope.row.date }}</template>
         </el-table-column>
         <el-table-column
         prop="name"

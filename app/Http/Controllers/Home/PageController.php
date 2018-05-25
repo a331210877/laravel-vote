@@ -18,14 +18,24 @@ class PageController extends Controller
 		])
 		->get()
 		->toarray();
+
+		$page=DB::table('page')->where([
+			'status' => 0,
+			'id' => $id
+		])->first();
+		$page->figure="/storage/app/uploads/images/".$page->figure;
         foreach($select_rows as $k => $v) {
         	$v->image="/storage/app/uploads/images/".$v->image;
         	$v->videoImg="/storage/app/uploads/videoImg/".$v->videoImg;
         	$v->video="/storage/app/uploads/video/".$v->video;
         	$v->isLoading=false;
         	$v->disabled=true;
-        }
-        return response()->json($select_rows);
+		}
+
+		return  response()->json([
+            'select_row' => $select_rows,
+            'page' => $page
+		]);
 	}
 	public function vote(Request $request){
 		$id=$request->input('id');

@@ -3,15 +3,19 @@
     <group title="个人信息">
       <cell title="头像" :value="userInfo.avatar"> <img :src="userInfo.avatar" alt="" id="headimgurl"></cell>
       <cell title="昵称" :value="userInfo.nickname"></cell>
-      <cell title="国家" :value="userInfo.original.country"></cell>
-      <cell title="省份" :value="userInfo.original.province"></cell>
-      <cell title="城市" :value="userInfo.original.city"></cell>
+      <cell title="国家" :value="original.country"></cell>
+      <cell title="省份" :value="original.province"></cell>
+      <cell title="城市" :value="original.city"></cell>
     </group>
-    <br>
+
+    <group title="添加">
+      <cell title="添加视频" link="/myPlayer"></cell>
+      <cell title="发布投票" link="/myPage"></cell>
+    </group>
 
     <group title="数据中心">
-      <cell title="查看选手" link="/me/myPlayer"></cell>
-      <cell title="查看投票" link="/me/myPage"></cell>
+      <cell title="查看选手" link="/myPlayer"></cell>
+      <cell title="查看投票" link="/myPage"></cell>
     </group>
   </div>
 </template>
@@ -27,6 +31,7 @@
         data(){
             return {
                 userInfo : "",
+                original : "",
             }
         },
         methods:{
@@ -36,6 +41,7 @@
                 })
                 .then(function (response) {
                    vue.userInfo=response.data.result.default;
+                   vue.original=response.data.result.default.original
                 })
                 .catch(function (response) {
                    console.log(response);

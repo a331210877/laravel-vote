@@ -1,17 +1,17 @@
 webpackJsonp([7],{
 
-/***/ 267:
+/***/ 269:
 /***/ (function(module, exports, __webpack_require__) {
 
 
 /* styles */
-__webpack_require__(371)
+__webpack_require__(382)
 
 var Component = __webpack_require__(16)(
   /* script */
-  __webpack_require__(323),
+  __webpack_require__(327),
   /* template */
-  __webpack_require__(358),
+  __webpack_require__(366),
   /* scopeId */
   "data-v-78da26e9",
   /* cssModules */
@@ -39,7 +39,7 @@ module.exports = Component.exports
 
 /***/ }),
 
-/***/ 323:
+/***/ 327:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -49,7 +49,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _axios = __webpack_require__(80);
+var _axios = __webpack_require__(81);
 
 var _axios2 = _interopRequireDefault(_axios);
 
@@ -62,7 +62,8 @@ exports.default = {
       currentPage: 1,
       pageSize: 10,
       total: 0,
-      sels: []
+      sels: [],
+      search: ''
     };
   },
 
@@ -90,6 +91,19 @@ exports.default = {
     selsChange: function selsChange(sels) {
       this.sels = sels;
     },
+    searchUser: function searchUser() {
+      var vue = this;
+      axios.post('admin/searchUser', {
+        'search': vue.search
+      }).then(function (response) {
+        vue.total = response.data.result.count;
+        vue.tableData = response.data.result.res;
+      });
+    },
+    exportUser: function exportUser() {
+      window.location.href = "/admin/exportUser";
+    },
+
     enableUser: function enableUser($id, $row) {
       var _this = this;
 
@@ -150,10 +164,11 @@ exports.default = {
           'pageSize': $pageSize
         }).then(function (response) {
           if (response.data.code == 1) {
+            vue.tableData = response.data.result.result;
+            vue.total = response.data.result.count;
+          } else {
             window.location.href = '/login';
           }
-          vue.tableData = response.data.res;
-          vue.total = response.data.userCount;
         }).catch(function (response) {
           console.log(response);
         });
@@ -233,7 +248,7 @@ exports.default = {
 
 /***/ }),
 
-/***/ 339:
+/***/ 345:
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(15)();
@@ -241,7 +256,7 @@ exports.push([module.i, "\n.block[data-v-78da26e9]{\r\n  padding-top: 10px;\r\n 
 
 /***/ }),
 
-/***/ 358:
+/***/ 366:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -254,12 +269,24 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     }
   }, [_c('el-form-item', [_c('el-input', {
     attrs: {
-      "placeholder": "请输入....."
+      "placeholder": "请输入用户名称"
+    },
+    model: {
+      value: (_vm.search),
+      callback: function($$v) {
+        _vm.search = $$v
+      },
+      expression: "search"
     }
   })], 1), _vm._v(" "), _c('el-form-item', [_c('el-button', {
     attrs: {
       "type": "primary",
       "icon": "search"
+    },
+    on: {
+      "click": function($event) {
+        _vm.searchUser()
+      }
     }
   }, [_vm._v("查询")])], 1), _vm._v(" "), _c('el-form-item', {
     staticStyle: {
@@ -268,6 +295,11 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
   }, [_c('el-button', {
     attrs: {
       "type": "primary"
+    },
+    on: {
+      "click": function($event) {
+        _vm.exportUser()
+      }
     }
   }, [_vm._v("导出")])], 1)], 1), _vm._v(" "), _c('el-table', {
     staticStyle: {
@@ -387,23 +419,23 @@ if (false) {
 
 /***/ }),
 
-/***/ 371:
+/***/ 382:
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(339);
+var content = __webpack_require__(345);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(19)("0a0ad713", content, false);
+var update = __webpack_require__(21)("0ccee00b", content, false);
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
  if(!content.locals) {
-   module.hot.accept("!!../../../../../node_modules/_css-loader@0.14.5@css-loader/index.js!../../../../../node_modules/_vue-loader@11.3.4@vue-loader/lib/style-compiler/index.js?{\"id\":\"data-v-78da26e9\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../../node_modules/_vux-loader@1.2.1@vux-loader/src/style-loader.js!../../../../../node_modules/_vue-loader@11.3.4@vue-loader/lib/selector.js?type=styles&index=0!./User.vue", function() {
-     var newContent = require("!!../../../../../node_modules/_css-loader@0.14.5@css-loader/index.js!../../../../../node_modules/_vue-loader@11.3.4@vue-loader/lib/style-compiler/index.js?{\"id\":\"data-v-78da26e9\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../../node_modules/_vux-loader@1.2.1@vux-loader/src/style-loader.js!../../../../../node_modules/_vue-loader@11.3.4@vue-loader/lib/selector.js?type=styles&index=0!./User.vue");
+   module.hot.accept("!!../../../../../node_modules/_css-loader@0.14.5@css-loader/index.js!../../../../../node_modules/_vue-loader@11.3.4@vue-loader/lib/style-compiler/index.js?{\"id\":\"data-v-78da26e9\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../../node_modules/_vux-loader@1.2.9@vux-loader/src/style-loader.js!../../../../../node_modules/_vue-loader@11.3.4@vue-loader/lib/selector.js?type=styles&index=0!./User.vue", function() {
+     var newContent = require("!!../../../../../node_modules/_css-loader@0.14.5@css-loader/index.js!../../../../../node_modules/_vue-loader@11.3.4@vue-loader/lib/style-compiler/index.js?{\"id\":\"data-v-78da26e9\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../../node_modules/_vux-loader@1.2.9@vux-loader/src/style-loader.js!../../../../../node_modules/_vue-loader@11.3.4@vue-loader/lib/selector.js?type=styles&index=0!./User.vue");
      if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
      update(newContent);
    });

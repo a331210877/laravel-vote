@@ -92,7 +92,7 @@
             </p>
            <p class="remind remind-pwd"></p>
             <div style="clear: both"></div>
-            <div style="width: 100%;height: 40px;">
+            <div style="width: 100%;height: 40px;display:none;">
                 <input style="width: 125px;" type="text" name="captcha" class="captcha" placeholder="请输入验证码"id="captcha" required>
                 <a id="code_A"><img src="{{url('captcha/get')}}" onclick="this.src='{{url('captcha/get')}}?'+Math.random();" id="Captcha_img"></a>
             </div>
@@ -263,6 +263,7 @@
             $('.remind-captcha').html('')
         }
     });
+    var errCount=0;
     function submitForm() {
         var user = $("#name").val();
         var password = $("#password").val();
@@ -271,7 +272,7 @@
             $('.remind-user').html('用户名不能为空')
         }else if(password == ''){
             $('.remind-pwd').html('密码不能为空')
-        }else if(captcha == ''){
+        }else if(captcha == ''&&errCount>=3){
             $('.remind-captcha').html('验证码不能为空')
         }else{
             $.ajax(
@@ -281,18 +282,24 @@
                         "user": user,
                         "password": password,
                         "captcha": captcha,
+                        "errCount":errCount,
                         },
                     dataType: "json",
                     success:function (res) {
                         if(res.code == 0){
                             window.location.href = '/admin#/user'
                         }else if(res.code == 1){    //密码错误
-                            $('.remind-pwd').html('密码错误')
+                            $('.remind-pwd').html('密码错误');
+                            errCount++;
                         }else if(res.code == 2){    //该用户不存在
-                            $('.remind-user').html('用户名不存在')
+                            $('.remind-user').html('用户名不存在');
+                            errCount++;
                         }else {     //验证码错误
                             $("#Captcha_img").attr("src",'{{url('captcha/get')}}?'+Math.random());
                             $('.remind-captcha').html('验证码错误')
+                        }
+                        if(errCount>=3){
+                            $("#captcha").css("display","block");
                         }
                     },
                     error:function (response) {

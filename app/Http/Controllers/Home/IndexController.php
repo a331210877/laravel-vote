@@ -12,7 +12,7 @@ class IndexController extends Controller
 {
     // dump(session('wechat.oauth_user'));
     public function getCarousel(){
-        $select_row=DB::table('carousel')->where('status',0)->get();
+        $select_row=DB::table('carousel')->where('status',0)->orderBy('top','desc')->get();
         return responseToJson(1,"查询成功",$select_row);
     }
 
