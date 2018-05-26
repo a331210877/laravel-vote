@@ -51,7 +51,7 @@ export default new VueRouter({
             name: '添加选手',
             component: HomeBase,
             children: [
-                { path: '/addPlayer',name:'addPlayer',component: resolve =>void(require(['../components/Home/addPlayer.vue'], resolve))},
+                { path: '/addPlayer',name:'addPlayer',component: resolve =>void(require(['../components/Home/AddPlayer2.vue'], resolve))},
             ]
         },
     ],

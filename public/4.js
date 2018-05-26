@@ -1,45 +1,83 @@
 webpackJsonp([4],{
 
-/***/ 274:
+/***/ 276:
 /***/ (function(module, exports, __webpack_require__) {
 
-
-/* styles */
-__webpack_require__(378)
-
-var Component = __webpack_require__(16)(
-  /* script */
-  __webpack_require__(332),
-  /* template */
-  __webpack_require__(361),
-  /* scopeId */
-  null,
-  /* cssModules */
-  null
-)
-Component.options.__file = "E:\\Apache24\\htdocs\\vote\\resources\\assets\\js\\components\\Home\\MyPlayer.vue"
-if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
-if (Component.options.functional) {console.error("[vue-loader] MyPlayer.vue: functional components are not supported with templates, they should use render functions.")}
-
-/* hot reload */
-if (false) {(function () {
-  var hotAPI = require("vue-loader/node_modules/vue-hot-reload-api")
+var __vue_script__, __vue_template__
+var __vue_styles__ = {}
+__webpack_require__(390)
+__vue_script__ = __webpack_require__(392)
+if (Object.keys(__vue_script__).some(function (key) { return key !== "default" && key !== "__esModule" })) {
+  console.warn("[vue-loader] resources\\assets\\js\\components\\Home\\MyPlayer.vue: named exports in *.vue files are ignored.")}
+__vue_template__ = __webpack_require__(393)
+module.exports = __vue_script__ || {}
+if (module.exports.__esModule) module.exports = module.exports.default
+var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
+if (__vue_template__) {
+__vue_options__.template = __vue_template__
+}
+if (!__vue_options__.computed) __vue_options__.computed = {}
+Object.keys(__vue_styles__).forEach(function (key) {
+var module = __vue_styles__[key]
+__vue_options__.computed[key] = function () { return module }
+})
+if (false) {(function () {  module.hot.accept()
+  var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), false)
   if (!hotAPI.compatible) return
-  module.hot.accept()
+  var id = "_v-405be945/MyPlayer.vue"
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-59d4762f", Component.options)
+    hotAPI.createRecord(id, module.exports)
   } else {
-    hotAPI.reload("data-v-59d4762f", Component.options)
+    hotAPI.update(id, module.exports, __vue_template__)
   }
 })()}
 
-module.exports = Component.exports
+/***/ }),
+
+/***/ 390:
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(391);
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var update = __webpack_require__(20)("f24860ee", content, false);
+// Hot Module Replacement
+if(false) {
+ // When the styles change, update the <style> tags
+ if(!content.locals) {
+   module.hot.accept("!!../../../../../node_modules/_css-loader@0.23.1@css-loader/index.js!../../../../../node_modules/_vue-loader@8.7.1@vue-loader/lib/style-rewriter.js!../../../../../node_modules/_vux-loader@1.2.9@vux-loader/src/style-loader.js!../../../../../node_modules/_vue-loader@8.7.1@vue-loader/lib/selector.js?type=style&index=0!./MyPlayer.vue", function() {
+     var newContent = require("!!../../../../../node_modules/_css-loader@0.23.1@css-loader/index.js!../../../../../node_modules/_vue-loader@8.7.1@vue-loader/lib/style-rewriter.js!../../../../../node_modules/_vux-loader@1.2.9@vux-loader/src/style-loader.js!../../../../../node_modules/_vue-loader@8.7.1@vue-loader/lib/selector.js?type=style&index=0!./MyPlayer.vue");
+     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+     update(newContent);
+   });
+ }
+ // When the module is disposed, remove the <style> tags
+ module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+
+/***/ 391:
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(15)();
+// imports
+
+
+// module
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\r\n.player {\r\n    position: relative;\r\n    float: left;\r\n    padding: 20px 10px;\r\n    width:100%;\r\n    box-sizing: border-box;\r\n}\r\n.player>img{\r\n    height:60px;\r\n    width: 60px;\r\n}\r\n.player:before {\r\n    content: \" \";\r\n    position: absolute;\r\n    right: 0;\r\n    top: 0;\r\n    width: 1px;\r\n    bottom: 0;\r\n    border-right: 1px solid #D9D9D9;\r\n    color: #D9D9D9;\r\n    transform-origin: 100% 0;\r\n    transform: scaleX(0.5);\r\n}\r\n.player:after {\r\n    content: \" \";\r\n    position: absolute;\r\n    left: 0;\r\n    bottom: 0;\r\n    right: 0;\r\n    height: 1px;\r\n    border-bottom: 1px solid #D9D9D9;\r\n    color: #D9D9D9;\r\n    transform-origin: 0 100%;\r\n    transform: scaleY(0.5);\r\n}\r\n.id{\r\n    color: #5e5e5e;\r\n    vertical-align: top;\r\n    position: absolute;\r\n    left: 88px;\r\n}\r\n.name{\r\n    display: inline-block;\r\n    color: black;\r\n    position: absolute;\r\n    left: 87px;\r\n    top: 55px;\r\n}\r\n.ticket{\r\n    position: absolute;\r\n    left: 245px;\r\n    top: 20px;\r\n    color: #5e5e5e;\r\n}\r\n.vote{\r\n    margin-top: 5px;\r\n}\r\n.grid-center {\r\n    display: block;\r\n    text-align: center;\r\n    color: #666;\r\n}\r\n#my-player{\r\n    width: 100%;\r\n    height: 164px;\r\n    margin-top: 5px;\r\n}\r\n", ""]);
+
+// exports
 
 
 /***/ }),
 
-/***/ 332:
+/***/ 392:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -49,11 +87,11 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _index = __webpack_require__(212);
+var _index = __webpack_require__(207);
 
 var _index2 = _interopRequireDefault(_index);
 
-var _index3 = __webpack_require__(213);
+var _index3 = __webpack_require__(208);
 
 var _index4 = _interopRequireDefault(_index3);
 
@@ -87,87 +125,10 @@ exports.default = {
 
 /***/ }),
 
-/***/ 341:
-/***/ (function(module, exports, __webpack_require__) {
+/***/ 393:
+/***/ (function(module, exports) {
 
-exports = module.exports = __webpack_require__(15)();
-exports.push([module.i, "\n.player {\r\n    position: relative;\r\n    float: left;\r\n    padding: 20px 10px;\r\n    width:100%;\r\n    box-sizing: border-box;\n}\n.player>img{\r\n    height:60px;\r\n    width: 60px;\n}\n.player:before {\r\n    content: \" \";\r\n    position: absolute;\r\n    right: 0;\r\n    top: 0;\r\n    width: 1px;\r\n    bottom: 0;\r\n    border-right: 1px solid #D9D9D9;\r\n    color: #D9D9D9;\r\n    transform-origin: 100% 0;\r\n    transform: scaleX(0.5);\n}\n.player:after {\r\n    content: \" \";\r\n    position: absolute;\r\n    left: 0;\r\n    bottom: 0;\r\n    right: 0;\r\n    height: 1px;\r\n    border-bottom: 1px solid #D9D9D9;\r\n    color: #D9D9D9;\r\n    transform-origin: 0 100%;\r\n    transform: scaleY(0.5);\n}\n.id{\r\n    color: #5e5e5e;\r\n    vertical-align: top;\r\n    position: absolute;\r\n    left: 88px;\n}\n.name{\r\n    display: inline-block;\r\n    color: black;\r\n    position: absolute;\r\n    left: 87px;\r\n    top: 55px;\n}\n.ticket{\r\n    position: absolute;\r\n    left: 245px;\r\n    top: 20px;\r\n    color: #5e5e5e;\n}\n.vote{\r\n    margin-top: 5px;\n}\n.grid-center {\r\n    display: block;\r\n    text-align: center;\r\n    color: #666;\n}\n#my-player{\r\n    width: 100%;\r\n    height: 164px;\r\n    margin-top: 5px;\n}\r\n", ""]);
-
-/***/ }),
-
-/***/ 361:
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', [_c('group', {
-    attrs: {
-      "title": "我添加的所有选手"
-    }
-  }, _vm._l((_vm.playList), function(v) {
-    return _c('div', {
-      staticClass: "player"
-    }, [_c('img', {
-      attrs: {
-        "src": v.image,
-        "alt": ""
-      }
-    }), _vm._v(" "), _c('span', {
-      staticClass: "id"
-    }, [_vm._v("编号：" + _vm._s(v.id))]), _vm._v(" "), _c('h4', {
-      staticClass: "name"
-    }, [_vm._v(_vm._s(v.name))]), _vm._v(" "), _c('span', {
-      staticClass: "ticket"
-    }, [_c('strong', [_vm._v(_vm._s(v.ticket))]), _vm._v("票")]), _vm._v(" "), _c('video', {
-      staticClass: "video-js",
-      attrs: {
-        "id": "my-player",
-        "controls": "",
-        "preload": "auto",
-        "poster": v.videoImg,
-        "data-setup": "{}"
-      }
-    }, [_c('source', {
-      attrs: {
-        "src": v.video,
-        "type": "video/mp4"
-      }
-    })])])
-  }))], 1)
-},staticRenderFns: []}
-module.exports.render._withStripped = true
-if (false) {
-  module.hot.accept()
-  if (module.hot.data) {
-     require("vue-loader/node_modules/vue-hot-reload-api").rerender("data-v-59d4762f", module.exports)
-  }
-}
-
-/***/ }),
-
-/***/ 378:
-/***/ (function(module, exports, __webpack_require__) {
-
-// style-loader: Adds some css to the DOM by adding a <style> tag
-
-// load the styles
-var content = __webpack_require__(341);
-if(typeof content === 'string') content = [[module.i, content, '']];
-if(content.locals) module.exports = content.locals;
-// add the styles to the DOM
-var update = __webpack_require__(21)("8c1ebe72", content, false);
-// Hot Module Replacement
-if(false) {
- // When the styles change, update the <style> tags
- if(!content.locals) {
-   module.hot.accept("!!../../../../../node_modules/_css-loader@0.14.5@css-loader/index.js!../../../../../node_modules/_vue-loader@11.3.4@vue-loader/lib/style-compiler/index.js?{\"id\":\"data-v-59d4762f\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../../node_modules/_vux-loader@1.2.9@vux-loader/src/style-loader.js!../../../../../node_modules/_vue-loader@11.3.4@vue-loader/lib/selector.js?type=styles&index=0!./MyPlayer.vue", function() {
-     var newContent = require("!!../../../../../node_modules/_css-loader@0.14.5@css-loader/index.js!../../../../../node_modules/_vue-loader@11.3.4@vue-loader/lib/style-compiler/index.js?{\"id\":\"data-v-59d4762f\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../../node_modules/_vux-loader@1.2.9@vux-loader/src/style-loader.js!../../../../../node_modules/_vue-loader@11.3.4@vue-loader/lib/selector.js?type=styles&index=0!./MyPlayer.vue");
-     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-     update(newContent);
-   });
- }
- // When the module is disposed, remove the <style> tags
- module.hot.dispose(function() { update(); });
-}
+module.exports = "\n<div>\n  <group title=\"我添加的所有选手\">\n      <div class=\"player\" v-for=\"v in playList\">\n          <img :src=\"v.image\" alt=\"\">\n          <span class=\"id\">编号：{{ v.id }}</span>\n          <h4 class=\"name\">{{ v.name }}</h4>\n          <span class=\"ticket\"><strong>{{ v.ticket }}</strong>票</span>  \n          <video\n              id=\"my-player\"\n              class=\"video-js\"\n              controls\n              preload=\"auto\"\n              :poster=\"v.videoImg\"\n              data-setup='{}'>\n            <source :src=\"v.video\" type=\"video/mp4\"></source>\n          </video>      \n      </div>\n  </group>\n</div>\n";
 
 /***/ })
 

@@ -69,7 +69,7 @@ return [
             'driver' => 'local',
 
             // 文件将上传到storage/app/uploads目录
-            'root' => storage_path('app/uploads/video'),
+            'root' => storage_path('app/public/uploads/video'),
 
             // 文件将上传到public/uploads目录 如果需要浏览器直接访问 请设置成这个
             //'root' => public_path('uploads'),
@@ -80,10 +80,10 @@ return [
             'driver' => 'local',
 
             // 文件将上传到storage/app/uploads目录
-            'root' => storage_path('app/uploads/images'),
+            'root' => storage_path('app/public/uploads/images'),
 
             // 文件将上传到public/uploads目录 如果需要浏览器直接访问 请设置成这个
-            //'root' => public_path('uploads'),
+            // 'root' => public_path('app/uploads/images'),
         ],
 
         'uploads/videoImg' => [
@@ -91,7 +91,7 @@ return [
             'driver' => 'local',
 
             // 文件将上传到storage/app/uploads目录
-            'root' => storage_path('app/uploads/videoImg'),
+            'root' => storage_path('app/public/uploads/videoImg'),
 
             // 文件将上传到public/uploads目录 如果需要浏览器直接访问 请设置成这个
             //'root' => public_path('uploads'),

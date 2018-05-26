@@ -1,6 +1,6 @@
 <template>
 	<div>
-        <group title="添加选手">
+        <group title="添加选手" style="margin-bottom:20px;">
 
         </group>
 		<el-form :model="addForm" label-width="80px" :rules="addFormRules" ref="addForm">
@@ -37,7 +37,7 @@
                   <div slot="tip" class="el-upload__tip">只能上传视频文件，且不超过50M</div>
                 </el-upload>
             </el-form-item>
-            <el-form-item label="视频封面" prop="videoImg">
+            <el-form-item label="封面" prop="videoImg">
                 <el-upload
                   id="uploadVideoImg"
                   action="/file/upload"
@@ -53,7 +53,7 @@
                 </el-upload>
             </el-form-item>
           </el-form>
-        <div slot="footer" class="dialog-footer">
+        <div slot="footer" class="dialog-footer" style="text-align:center;">
             <el-button @click.native="addFormVisible = false">取消</el-button>
             <el-button type="primary" @click.native="addSubmit('addForm')">提交</el-button>
         </div>
@@ -224,6 +224,16 @@
 	}
 </script>
 
-<style>
-
+<style scope>
+.el-input__inner{
+  width:90%;
+}
+.el-form{
+  border-bottom: 1px solid #e3dbdb;
+  margin-bottom: 22px;
+}
+.el-form-item__label{
+  font-size:16px;
+  color:black;
+}
 </style>

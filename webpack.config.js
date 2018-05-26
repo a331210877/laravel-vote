@@ -15,3 +15,21 @@ module.exports.plugins = (module.exports.plugins || []).concat([
       {from: 'resources/assets/img', to: 'images'},
   ]),
 ]);
+module: {
+  rules: [
+    {
+      test: /\.vue$/,
+      loader: 'vue-loader',
+      options: {
+        loaders: {
+          scss: 'vue-style-loader!css-loader!sass-loader' // <style lang="scss">
+        }
+      }
+    },
+    {
+      test: /\.js$/,
+      exclude: /(node_modules|bower_components)/,
+      loader: 'babel-loader'
+    }
+  ]
+}

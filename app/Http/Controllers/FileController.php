@@ -32,7 +32,17 @@ class FileController extends Controller
                 $filename = date('Y-m-d-H-i-s') . '-' . uniqid() . '.' . $ext;
                 // 使用我们新建的uploads本地存储空间（目录）
                 $bool = Storage::disk($savePath)->put($filename, file_get_contents($realPath));
-                return $filename;
+
+                $full_path='storage/'.$savePath.'/'.$filename;
+                
+                $res=[
+                    'result' => 0,
+                    'message' => '上传成功',
+                    'data'=>(object)[
+                        'url'=>$full_path
+                    ]
+                ];
+                return response()->json($res);
             }
         }
     }

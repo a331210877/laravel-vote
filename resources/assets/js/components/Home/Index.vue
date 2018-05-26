@@ -4,11 +4,10 @@
         <search
           :results="results"
           v-model="searchValue"
-          @on-submit="onSubmit"
-          :autoFixed="false"
+          @on-submit="onSubmit()"
           ref="search">
         </search>
-        <div v-for="page in list" style="padding-bottom:35px;background:rgba(239, 239, 244, 0.3);">
+        <div v-for="(page,index) in list" :key="index" style="padding-bottom:35px;background:rgba(239, 239, 244, 0.3);">
           <form-preview header-label="活动" :header-value="page.title" :body-items="page.list"></form-preview>
           <x-button :gradients="['#FF5E3A', '#FF9500']" @click.native="showPage(page.page_id)">查看</x-button>
         </div>
