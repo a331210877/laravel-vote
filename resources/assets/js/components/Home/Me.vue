@@ -9,8 +9,8 @@
     </group>
 
     <group title="添加">
-      <cell title="添加视频" link="/myPlayer"></cell>
-      <cell title="发布投票" link="/myPage"></cell>
+      <cell title="添加视频" link="/addPlayer"></cell>
+      <cell title="发起投票" link="/addPage"></cell>
     </group>
 
     <group title="数据中心">

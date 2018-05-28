@@ -8,7 +8,7 @@
     <meta name="X-CSRF-TOKEN" content="{{csrf_token()}}">
     <link href="//vjs.zencdn.net/5.19/video-js.min.css" rel="stylesheet">
     <link href="/images/vote.ico" rel="shortcut icon">
-    <title>天降正义投票系统</title>
+    <title>王琦投票系统</title>
 </head>
 <body>
     <div id="app"></div>

@@ -33,6 +33,11 @@ class Carousel extends Model
         return responseToJson(0,"查询失败请重试");
     }
 
+    public static function updateCarousel($carousel,$id){
+        $updateRes=DB::table('carousel')->where('id',$id)->update($carousel);
+        return $updateRes;
+    }
+
     public static function delCarousel($id){
         $delRes=DB::table('carousel')->where('id',$id)->update(['status'=>1]);
         return $delRes;
@@ -44,8 +49,9 @@ class Carousel extends Model
     }
 
     public static function getTop($id){
-        $top=DB::table('carousel')->where('id',$id)->select('top')->first();
-        return $top;
+        $top=DB::table('carousel')->where('id',$id)->select('top')->pluck('top');
+        if($top) return $top['0'];
+        return false;
     }
 
     public static function getOneCarousel($id){
@@ -53,18 +59,24 @@ class Carousel extends Model
         return $carousel;
     }
 
-    public static function incTop($id){
-        $res=DB::table('carousel')->where('id',$id)->increment('top');
-        return $res;
-    }
-
-    public static function decTop($top){
-        $res=DB::table('carousel')->where('top',$top)->decrement('top');
-        return $res;
-    }
-
     public static function addCarousel($carousel){
         $addRes=DB::table('carousel')->insertGetId($carousel);
         return $addRes;
+    }
+
+    public static function carouselCount(){
+        $count=DB::table('carousel')->count();
+        return $count;
+    }
+
+    public static function getId($top){
+        $id=DB::table('carousel')->where('top',$top)->pluck('id');
+        if($id) return $id['0'];
+        return false;
+    } 
+
+    public static function getGTMin($top){
+        $max=DB::table('carousel')->where('status',0)->where('top','>',$top)->min('top');
+        return $max;
     }
 }

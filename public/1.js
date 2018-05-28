@@ -5,11 +5,11 @@ webpackJsonp([1],{
 
 var __vue_script__, __vue_template__
 var __vue_styles__ = {}
-__webpack_require__(349)
-__vue_script__ = __webpack_require__(351)
+__webpack_require__(353)
+__vue_script__ = __webpack_require__(355)
 if (Object.keys(__vue_script__).some(function (key) { return key !== "default" && key !== "__esModule" })) {
   console.warn("[vue-loader] resources\\assets\\js\\components\\Home\\Index.vue: named exports in *.vue files are ignored.")}
-__vue_template__ = __webpack_require__(369)
+__vue_template__ = __webpack_require__(372)
 module.exports = __vue_script__ || {}
 if (module.exports.__esModule) module.exports = module.exports.default
 var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -35,16 +35,35 @@ if (false) {(function () {  module.hot.accept()
 
 /***/ }),
 
-/***/ 284:
+/***/ 285:
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = { "default": __webpack_require__(286), __esModule: true };
+
+/***/ }),
+
+/***/ 286:
+/***/ (function(module, exports, __webpack_require__) {
+
+var core = __webpack_require__(16);
+var $JSON = core.JSON || (core.JSON = { stringify: JSON.stringify });
+module.exports = function stringify(it) { // eslint-disable-line no-unused-vars
+  return $JSON.stringify.apply($JSON, arguments);
+};
+
+
+/***/ }),
+
+/***/ 287:
 /***/ (function(module, exports, __webpack_require__) {
 
 var __vue_script__, __vue_template__
 var __vue_styles__ = {}
-__webpack_require__(285)
-__vue_script__ = __webpack_require__(287)
+__webpack_require__(288)
+__vue_script__ = __webpack_require__(290)
 if (Object.keys(__vue_script__).some(function (key) { return key !== "default" && key !== "__esModule" })) {
   console.warn("[vue-loader] node_modules\\_vux@2.9.1@vux\\src\\components\\x-button\\index.vue: named exports in *.vue files are ignored.")}
-__vue_template__ = __webpack_require__(288)
+__vue_template__ = __webpack_require__(291)
 module.exports = __vue_script__ || {}
 if (module.exports.__esModule) module.exports = module.exports.default
 var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -70,13 +89,13 @@ if (false) {(function () {  module.hot.accept()
 
 /***/ }),
 
-/***/ 285:
+/***/ 288:
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(286);
+var content = __webpack_require__(289);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
@@ -97,7 +116,7 @@ if(false) {
 
 /***/ }),
 
-/***/ 286:
+/***/ 289:
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(15)();
@@ -112,7 +131,7 @@ exports.push([module.i, "/**\n* actionsheet\n*/\n/**\n* en: primary type text co
 
 /***/ }),
 
-/***/ 287:
+/***/ 290:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -198,7 +217,7 @@ exports.default = {
 
 /***/ }),
 
-/***/ 288:
+/***/ 291:
 /***/ (function(module, exports) {
 
 module.exports = "\n<button\n  :style=\"buttonStyle\"\n  class=\"weui-btn\"\n  :class=\"classes\"\n  :disabled=\"disabled\"\n  :type=\"actionType\"\n  @click=\"onClick\">\n  <i class=\"weui-loading\" v-if=\"showLoading\"></i>\n  <slot>{{ text }}</slot>\n</button>\n";
@@ -208,32 +227,128 @@ module.exports = "\n<button\n  :style=\"buttonStyle\"\n  class=\"weui-btn\"\n  :
 /***/ 292:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = { "default": __webpack_require__(293), __esModule: true };
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = {
+  created: function created() {
+    this.uuid = Math.random().toString(36).substring(3, 8);
+  }
+};
 
 /***/ }),
 
-/***/ 293:
+/***/ 305:
 /***/ (function(module, exports, __webpack_require__) {
 
-var core = __webpack_require__(16);
-var $JSON = core.JSON || (core.JSON = { stringify: JSON.stringify });
-module.exports = function stringify(it) { // eslint-disable-line no-unused-vars
-  return $JSON.stringify.apply($JSON, arguments);
+"use strict";
+/*
+object-assign
+(c) Sindre Sorhus
+@license MIT
+*/
+
+
+/* eslint-disable no-unused-vars */
+var getOwnPropertySymbols = Object.getOwnPropertySymbols;
+var hasOwnProperty = Object.prototype.hasOwnProperty;
+var propIsEnumerable = Object.prototype.propertyIsEnumerable;
+
+function toObject(val) {
+	if (val === null || val === undefined) {
+		throw new TypeError('Object.assign cannot be called with null or undefined');
+	}
+
+	return Object(val);
+}
+
+function shouldUseNative() {
+	try {
+		if (!Object.assign) {
+			return false;
+		}
+
+		// Detect buggy property enumeration order in older V8 versions.
+
+		// https://bugs.chromium.org/p/v8/issues/detail?id=4118
+		var test1 = new String('abc');  // eslint-disable-line no-new-wrappers
+		test1[5] = 'de';
+		if (Object.getOwnPropertyNames(test1)[0] === '5') {
+			return false;
+		}
+
+		// https://bugs.chromium.org/p/v8/issues/detail?id=3056
+		var test2 = {};
+		for (var i = 0; i < 10; i++) {
+			test2['_' + String.fromCharCode(i)] = i;
+		}
+		var order2 = Object.getOwnPropertyNames(test2).map(function (n) {
+			return test2[n];
+		});
+		if (order2.join('') !== '0123456789') {
+			return false;
+		}
+
+		// https://bugs.chromium.org/p/v8/issues/detail?id=3056
+		var test3 = {};
+		'abcdefghijklmnopqrst'.split('').forEach(function (letter) {
+			test3[letter] = letter;
+		});
+		if (Object.keys(Object.assign({}, test3)).join('') !==
+				'abcdefghijklmnopqrst') {
+			return false;
+		}
+
+		return true;
+	} catch (err) {
+		// We don't expect any of the above to throw, but better to be safe.
+		return false;
+	}
+}
+
+module.exports = shouldUseNative() ? Object.assign : function (target, source) {
+	var from;
+	var to = toObject(target);
+	var symbols;
+
+	for (var s = 1; s < arguments.length; s++) {
+		from = Object(arguments[s]);
+
+		for (var key in from) {
+			if (hasOwnProperty.call(from, key)) {
+				to[key] = from[key];
+			}
+		}
+
+		if (getOwnPropertySymbols) {
+			symbols = getOwnPropertySymbols(from);
+			for (var i = 0; i < symbols.length; i++) {
+				if (propIsEnumerable.call(from, symbols[i])) {
+					to[symbols[i]] = from[symbols[i]];
+				}
+			}
+		}
+	}
+
+	return to;
 };
 
 
 /***/ }),
 
-/***/ 294:
+/***/ 306:
 /***/ (function(module, exports, __webpack_require__) {
 
 var __vue_script__, __vue_template__
 var __vue_styles__ = {}
-__webpack_require__(295)
-__vue_script__ = __webpack_require__(297)
+__webpack_require__(307)
+__vue_script__ = __webpack_require__(309)
 if (Object.keys(__vue_script__).some(function (key) { return key !== "default" && key !== "__esModule" })) {
   console.warn("[vue-loader] node_modules\\_vux@2.9.1@vux\\src\\components\\group-title\\index.vue: named exports in *.vue files are ignored.")}
-__vue_template__ = __webpack_require__(298)
+__vue_template__ = __webpack_require__(310)
 module.exports = __vue_script__ || {}
 if (module.exports.__esModule) module.exports = module.exports.default
 var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -259,13 +374,13 @@ if (false) {(function () {  module.hot.accept()
 
 /***/ }),
 
-/***/ 295:
+/***/ 307:
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(296);
+var content = __webpack_require__(308);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
@@ -286,7 +401,7 @@ if(false) {
 
 /***/ }),
 
-/***/ 296:
+/***/ 308:
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(15)();
@@ -301,7 +416,7 @@ exports.push([module.i, "/**\n* actionsheet\n*/\n/**\n* en: primary type text co
 
 /***/ }),
 
-/***/ 297:
+/***/ 309:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -330,23 +445,23 @@ exports.default = {
 
 /***/ }),
 
-/***/ 298:
+/***/ 310:
 /***/ (function(module, exports) {
 
 module.exports = "\n<div class=\"weui-cells__title\">\n  <slot></slot>\n</div>\n";
 
 /***/ }),
 
-/***/ 299:
+/***/ 311:
 /***/ (function(module, exports, __webpack_require__) {
 
 var __vue_script__, __vue_template__
 var __vue_styles__ = {}
-__webpack_require__(300)
-__vue_script__ = __webpack_require__(302)
+__webpack_require__(312)
+__vue_script__ = __webpack_require__(314)
 if (Object.keys(__vue_script__).some(function (key) { return key !== "default" && key !== "__esModule" })) {
   console.warn("[vue-loader] node_modules\\_vux@2.9.1@vux\\src\\components\\search\\index.vue: named exports in *.vue files are ignored.")}
-__vue_template__ = __webpack_require__(304)
+__vue_template__ = __webpack_require__(315)
 module.exports = __vue_script__ || {}
 if (module.exports.__esModule) module.exports = module.exports.default
 var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -372,13 +487,13 @@ if (false) {(function () {  module.hot.accept()
 
 /***/ }),
 
-/***/ 300:
+/***/ 312:
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(301);
+var content = __webpack_require__(313);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
@@ -399,7 +514,7 @@ if(false) {
 
 /***/ }),
 
-/***/ 301:
+/***/ 313:
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(15)();
@@ -414,7 +529,7 @@ exports.push([module.i, "@font-face {\n  font-weight: normal;\n  font-style: nor
 
 /***/ }),
 
-/***/ 302:
+/***/ 314:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -424,7 +539,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _uuid = __webpack_require__(303);
+var _uuid = __webpack_require__(292);
 
 var _uuid2 = _interopRequireDefault(_uuid);
 
@@ -701,40 +816,23 @@ exports.default = {
 
 /***/ }),
 
-/***/ 303:
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = {
-  created: function created() {
-    this.uuid = Math.random().toString(36).substring(3, 8);
-  }
-};
-
-/***/ }),
-
-/***/ 304:
+/***/ 315:
 /***/ (function(module, exports) {
 
 module.exports = "\n<div\n  class=\"vux-search-box\"\n  :class=\"{ 'vux-search-fixed':isFixed }\"\n  :style=\"{ top: isFixed ? top : '', position: fixPosition }\">\n  <div\n    class=\"weui-search-bar\"\n    :class=\"{'weui-search-bar_focusing': !isCancel || currentValue}\">\n    <slot name=\"left\"></slot>\n    <form class=\"weui-search-bar__form\" @submit.prevent=\"$emit('on-submit', value)\" action=\".\">\n      <label\n        :for=\"`search_input_${uuid}`\"\n        class=\"vux-search-mask\"\n        @click=\"touch\"\n        v-show=\"!isFixed && autoFixed\"></label>\n      <div class=\"weui-search-bar__box\">\n        <i class=\"weui-icon-search\"></i>\n        <input\n          v-model=\"currentValue\"\n          ref=\"input\"\n          type=\"search\"\n          autocomplete=\"off\"\n          class=\"weui-search-bar__input\"\n          :id=\"`search_input_${uuid}`\"\n          :placeholder=\"placeholder\"\n          :required=\"required\"\n          @focus=\"onFocus\"\n          @blur=\"onBlur\"\n          @compositionstart=\"onComposition($event, 'start')\"\n          @compositionend=\"onComposition($event, 'end')\"\n          @input=\"onComposition($event, 'input')\"/>\n        <a\n          href=\"javascript:\"\n          class=\"weui-icon-clear\"\n          @click=\"clear\"\n          v-show=\"currentValue\"></a>\n      </div>\n      <label\n        :for=\"`search_input_${uuid}`\"\n        class=\"weui-search-bar__label\"\n        v-show=\"!isFocus && !value\">\n        <i class=\"weui-icon-search\"></i>\n        <span>{{ placeholder || '搜索' }}</span>\n      </label>\n    </form>\n    <a\n      href=\"javascript:\"\n      class=\"weui-search-bar__cancel-btn\"\n      @click=\"cancel\">{{ cancelText || '取消' }}\n    </a>\n    <slot name=\"right\"></slot>\n  </div>\n  <div class=\"weui-cells vux-search_show\" v-show=\"isFixed\">\n    <slot></slot>\n    <div\n      class=\"weui-cell weui-cell_access\"\n      v-for=\"item in results\"\n      @click=\"handleResultClick(item)\">\n      <div class=\"weui-cell__bd weui-cell_primary\">\n        <p>{{item.title}}</p>\n      </div>\n    </div>\n  </div>\n</div>\n";
 
 /***/ }),
 
-/***/ 305:
+/***/ 316:
 /***/ (function(module, exports, __webpack_require__) {
 
 var __vue_script__, __vue_template__
 var __vue_styles__ = {}
-__webpack_require__(306)
-__vue_script__ = __webpack_require__(308)
+__webpack_require__(317)
+__vue_script__ = __webpack_require__(319)
 if (Object.keys(__vue_script__).some(function (key) { return key !== "default" && key !== "__esModule" })) {
   console.warn("[vue-loader] node_modules\\_vux@2.9.1@vux\\src\\components\\form-preview\\index.vue: named exports in *.vue files are ignored.")}
-__vue_template__ = __webpack_require__(309)
+__vue_template__ = __webpack_require__(320)
 module.exports = __vue_script__ || {}
 if (module.exports.__esModule) module.exports = module.exports.default
 var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -760,13 +858,13 @@ if (false) {(function () {  module.hot.accept()
 
 /***/ }),
 
-/***/ 306:
+/***/ 317:
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(307);
+var content = __webpack_require__(318);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
@@ -787,7 +885,7 @@ if(false) {
 
 /***/ }),
 
-/***/ 307:
+/***/ 318:
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(15)();
@@ -802,7 +900,7 @@ exports.push([module.i, "/**\n* actionsheet\n*/\n/**\n* en: primary type text co
 
 /***/ }),
 
-/***/ 308:
+/***/ 319:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -856,20 +954,20 @@ exports.default = {
 
 /***/ }),
 
-/***/ 309:
+/***/ 320:
 /***/ (function(module, exports) {
 
 module.exports = "\n<div class=\"vux-form-preview weui-form-preview\">\n  <div class=\"weui-form-preview__hd\">\n    <label class=\"weui-form-preview__label\" v-html=\"headerLabel\"></label>\n    <em class=\"weui-form-preview__value\" v-html=\"headerValue || '&nbsp;'\"></em>\n  </div>\n  <div class=\"weui-form-preview__bd\">\n    <div class=\"weui-form-preview__item\" v-for=\"item in bodyItems\">\n      <label class=\"weui-form-preview__label\">{{item.label}}</label>\n      <span class=\"weui-form-preview__value\">{{item.value}}</span>\n    </div>\n  </div>\n  <div class=\"weui-form-preview__ft\">\n    <a class=\"weui-form-preview__btn\" :class=\"{'weui-form-preview__btn_default': button.style==='default', 'weui-form-preview__btn_primary': button.style === 'primary'}\" href=\"javascript:\" v-for=\"button in footerButtons\" @click=\"onButtonClick(button.onButtonClick, button.link)\">{{button.text}}</a>\n  </div>\n</div>\n";
 
 /***/ }),
 
-/***/ 349:
+/***/ 353:
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(350);
+var content = __webpack_require__(354);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
@@ -890,7 +988,7 @@ if(false) {
 
 /***/ }),
 
-/***/ 350:
+/***/ 354:
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(15)();
@@ -905,7 +1003,7 @@ exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\
 
 /***/ }),
 
-/***/ 351:
+/***/ 355:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -915,31 +1013,31 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _swiper = __webpack_require__(352);
+var _swiper = __webpack_require__(356);
 
 var _swiper2 = _interopRequireDefault(_swiper);
 
-var _index = __webpack_require__(294);
+var _index = __webpack_require__(306);
 
 var _index2 = _interopRequireDefault(_index);
 
-var _swiperItem = __webpack_require__(361);
+var _swiperItem = __webpack_require__(364);
 
 var _swiperItem2 = _interopRequireDefault(_swiperItem);
 
-var _index3 = __webpack_require__(284);
+var _index3 = __webpack_require__(287);
 
 var _index4 = _interopRequireDefault(_index3);
 
-var _index5 = __webpack_require__(364);
+var _index5 = __webpack_require__(367);
 
 var _index6 = _interopRequireDefault(_index5);
 
-var _index7 = __webpack_require__(299);
+var _index7 = __webpack_require__(311);
 
 var _index8 = _interopRequireDefault(_index7);
 
-var _index9 = __webpack_require__(305);
+var _index9 = __webpack_require__(316);
 
 var _index10 = _interopRequireDefault(_index9);
 
@@ -1029,16 +1127,16 @@ exports.default = {
 
 /***/ }),
 
-/***/ 352:
+/***/ 356:
 /***/ (function(module, exports, __webpack_require__) {
 
 var __vue_script__, __vue_template__
 var __vue_styles__ = {}
-__webpack_require__(353)
-__vue_script__ = __webpack_require__(355)
+__webpack_require__(357)
+__vue_script__ = __webpack_require__(359)
 if (Object.keys(__vue_script__).some(function (key) { return key !== "default" && key !== "__esModule" })) {
   console.warn("[vue-loader] node_modules\\_vux@2.9.1@vux\\src\\components\\swiper\\swiper.vue: named exports in *.vue files are ignored.")}
-__vue_template__ = __webpack_require__(360)
+__vue_template__ = __webpack_require__(363)
 module.exports = __vue_script__ || {}
 if (module.exports.__esModule) module.exports = module.exports.default
 var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -1064,13 +1162,13 @@ if (false) {(function () {  module.hot.accept()
 
 /***/ }),
 
-/***/ 353:
+/***/ 357:
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(354);
+var content = __webpack_require__(358);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
@@ -1091,7 +1189,7 @@ if(false) {
 
 /***/ }),
 
-/***/ 354:
+/***/ 358:
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(15)();
@@ -1106,7 +1204,7 @@ exports.push([module.i, "/**\n* actionsheet\n*/\n/**\n* en: primary type text co
 
 /***/ }),
 
-/***/ 355:
+/***/ 359:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1116,11 +1214,11 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _stringify = __webpack_require__(292);
+var _stringify = __webpack_require__(285);
 
 var _stringify2 = _interopRequireDefault(_stringify);
 
-var _swiper = __webpack_require__(356);
+var _swiper = __webpack_require__(360);
 
 var _swiper2 = _interopRequireDefault(_swiper);
 
@@ -1449,7 +1547,7 @@ exports.default = {
 
 /***/ }),
 
-/***/ 356:
+/***/ 360:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1459,15 +1557,15 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _classCallCheck2 = __webpack_require__(357);
+var _classCallCheck2 = __webpack_require__(361);
 
 var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
 
-var _createClass2 = __webpack_require__(358);
+var _createClass2 = __webpack_require__(362);
 
 var _createClass3 = _interopRequireDefault(_createClass2);
 
-var _objectAssign = __webpack_require__(359);
+var _objectAssign = __webpack_require__(305);
 
 var _objectAssign2 = _interopRequireDefault(_objectAssign);
 
@@ -1843,7 +1941,7 @@ exports.default = Swiper;
 
 /***/ }),
 
-/***/ 357:
+/***/ 361:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1859,7 +1957,7 @@ exports.default = function (instance, Constructor) {
 
 /***/ }),
 
-/***/ 358:
+/***/ 362:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1867,7 +1965,7 @@ exports.default = function (instance, Constructor) {
 
 exports.__esModule = true;
 
-var _defineProperty = __webpack_require__(209);
+var _defineProperty = __webpack_require__(210);
 
 var _defineProperty2 = _interopRequireDefault(_defineProperty);
 
@@ -1893,120 +1991,22 @@ exports.default = function () {
 
 /***/ }),
 
-/***/ 359:
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/*
-object-assign
-(c) Sindre Sorhus
-@license MIT
-*/
-
-
-/* eslint-disable no-unused-vars */
-var getOwnPropertySymbols = Object.getOwnPropertySymbols;
-var hasOwnProperty = Object.prototype.hasOwnProperty;
-var propIsEnumerable = Object.prototype.propertyIsEnumerable;
-
-function toObject(val) {
-	if (val === null || val === undefined) {
-		throw new TypeError('Object.assign cannot be called with null or undefined');
-	}
-
-	return Object(val);
-}
-
-function shouldUseNative() {
-	try {
-		if (!Object.assign) {
-			return false;
-		}
-
-		// Detect buggy property enumeration order in older V8 versions.
-
-		// https://bugs.chromium.org/p/v8/issues/detail?id=4118
-		var test1 = new String('abc');  // eslint-disable-line no-new-wrappers
-		test1[5] = 'de';
-		if (Object.getOwnPropertyNames(test1)[0] === '5') {
-			return false;
-		}
-
-		// https://bugs.chromium.org/p/v8/issues/detail?id=3056
-		var test2 = {};
-		for (var i = 0; i < 10; i++) {
-			test2['_' + String.fromCharCode(i)] = i;
-		}
-		var order2 = Object.getOwnPropertyNames(test2).map(function (n) {
-			return test2[n];
-		});
-		if (order2.join('') !== '0123456789') {
-			return false;
-		}
-
-		// https://bugs.chromium.org/p/v8/issues/detail?id=3056
-		var test3 = {};
-		'abcdefghijklmnopqrst'.split('').forEach(function (letter) {
-			test3[letter] = letter;
-		});
-		if (Object.keys(Object.assign({}, test3)).join('') !==
-				'abcdefghijklmnopqrst') {
-			return false;
-		}
-
-		return true;
-	} catch (err) {
-		// We don't expect any of the above to throw, but better to be safe.
-		return false;
-	}
-}
-
-module.exports = shouldUseNative() ? Object.assign : function (target, source) {
-	var from;
-	var to = toObject(target);
-	var symbols;
-
-	for (var s = 1; s < arguments.length; s++) {
-		from = Object(arguments[s]);
-
-		for (var key in from) {
-			if (hasOwnProperty.call(from, key)) {
-				to[key] = from[key];
-			}
-		}
-
-		if (getOwnPropertySymbols) {
-			symbols = getOwnPropertySymbols(from);
-			for (var i = 0; i < symbols.length; i++) {
-				if (propIsEnumerable.call(from, symbols[i])) {
-					to[symbols[i]] = from[symbols[i]];
-				}
-			}
-		}
-	}
-
-	return to;
-};
-
-
-/***/ }),
-
-/***/ 360:
+/***/ 363:
 /***/ (function(module, exports) {
 
 module.exports = "\n<div class=\"vux-slider\">\n  <div class=\"vux-swiper\" :style=\"{height: xheight}\">\n    <slot></slot>\n\n    <div\n    class=\"vux-swiper-item\"\n    v-for=\"(item, index) in list\"\n    @click=\"clickListItem(item)\"\n    :data-index=\"index\">\n      <a href=\"javascript:\">\n        <div class=\"vux-img\" :style=\"{backgroundImage: buildBackgroundUrl(item)}\"></div>\n        <p class=\"vux-swiper-desc\" v-if=\"showDescMask\">{{ item.title }}</p>\n      </a>\n    </div>\n\n    <div\n    v-if=\"listTwoLoopItem.length > 0\"\n    class=\"vux-swiper-item vux-swiper-item-clone\"\n    v-for=\"(item, index) in listTwoLoopItem\"\n    @click=\"clickListItem(item)\"\n    :data-index=\"index\">\n      <a href=\"javascript:\">\n        <div class=\"vux-img\" :style=\"{backgroundImage: buildBackgroundUrl(item)}\"></div>\n        <p class=\"vux-swiper-desc\" v-if=\"showDescMask\">{{ item.title }}</p>\n      </a>\n    </div>\n\n  </div>\n  <div :class=\"[dotsClass, 'vux-indicator', `vux-indicator-${dotsPosition}`]\" v-show=\"showDots\">\n    <a href=\"javascript:\" v-for=\"key in length\">\n      <i class=\"vux-icon-dot\" :class=\"{'active': key - 1 === current}\"></i>\n    </a>\n  </div>\n</div>\n";
 
 /***/ }),
 
-/***/ 361:
+/***/ 364:
 /***/ (function(module, exports, __webpack_require__) {
 
 var __vue_script__, __vue_template__
 var __vue_styles__ = {}
-__vue_script__ = __webpack_require__(362)
+__vue_script__ = __webpack_require__(365)
 if (Object.keys(__vue_script__).some(function (key) { return key !== "default" && key !== "__esModule" })) {
   console.warn("[vue-loader] node_modules\\_vux@2.9.1@vux\\src\\components\\swiper\\swiper-item.vue: named exports in *.vue files are ignored.")}
-__vue_template__ = __webpack_require__(363)
+__vue_template__ = __webpack_require__(366)
 module.exports = __vue_script__ || {}
 if (module.exports.__esModule) module.exports = module.exports.default
 var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -2032,7 +2032,7 @@ if (false) {(function () {  module.hot.accept()
 
 /***/ }),
 
-/***/ 362:
+/***/ 365:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2066,23 +2066,23 @@ exports.default = {
 
 /***/ }),
 
-/***/ 363:
+/***/ 366:
 /***/ (function(module, exports) {
 
 module.exports = "\n<div class=\"vux-swiper-item\"><slot></slot></div>\n";
 
 /***/ }),
 
-/***/ 364:
+/***/ 367:
 /***/ (function(module, exports, __webpack_require__) {
 
 var __vue_script__, __vue_template__
 var __vue_styles__ = {}
-__webpack_require__(365)
-__vue_script__ = __webpack_require__(367)
+__webpack_require__(368)
+__vue_script__ = __webpack_require__(370)
 if (Object.keys(__vue_script__).some(function (key) { return key !== "default" && key !== "__esModule" })) {
   console.warn("[vue-loader] node_modules\\_vux@2.9.1@vux\\src\\components\\divider\\index.vue: named exports in *.vue files are ignored.")}
-__vue_template__ = __webpack_require__(368)
+__vue_template__ = __webpack_require__(371)
 module.exports = __vue_script__ || {}
 if (module.exports.__esModule) module.exports = module.exports.default
 var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -2108,13 +2108,13 @@ if (false) {(function () {  module.hot.accept()
 
 /***/ }),
 
-/***/ 365:
+/***/ 368:
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(366);
+var content = __webpack_require__(369);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
@@ -2135,7 +2135,7 @@ if(false) {
 
 /***/ }),
 
-/***/ 366:
+/***/ 369:
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(15)();
@@ -2150,7 +2150,7 @@ exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n.vux-divider {\n  display: ta
 
 /***/ }),
 
-/***/ 367:
+/***/ 370:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2205,14 +2205,14 @@ exports.default = {
 
 /***/ }),
 
-/***/ 368:
+/***/ 371:
 /***/ (function(module, exports) {
 
 module.exports = "\n<p class=\"vux-divider\">\n  <slot></slot>\n</p>\n";
 
 /***/ }),
 
-/***/ 369:
+/***/ 372:
 /***/ (function(module, exports) {
 
 module.exports = "\n<div>\n    <swiper loop auto :list=\"carouselList\" :index=\"curCarouseIndex\" @on-index-change=\"carouselChange\"></swiper>\n    <search\n      :results=\"results\"\n      v-model=\"searchValue\"\n      @on-submit=\"onSubmit()\"\n      ref=\"search\">\n    </search>\n    <div v-for=\"(page,index) in list\" :key=\"index\" style=\"padding-bottom:35px;background:rgba(239, 239, 244, 0.3);\">\n      <form-preview header-label=\"活动\" :header-value=\"page.title\" :body-items=\"page.list\"></form-preview>\n      <x-button :gradients=\"['#FF5E3A', '#FF9500']\" @click.native=\"showPage(page.page_id)\">查看</x-button>\n    </div>\n</div>\n";

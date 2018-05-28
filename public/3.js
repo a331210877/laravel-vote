@@ -5,11 +5,11 @@ webpackJsonp([3],{
 
 var __vue_script__, __vue_template__
 var __vue_styles__ = {}
-__webpack_require__(394)
-__vue_script__ = __webpack_require__(396)
+__webpack_require__(397)
+__vue_script__ = __webpack_require__(399)
 if (Object.keys(__vue_script__).some(function (key) { return key !== "default" && key !== "__esModule" })) {
   console.warn("[vue-loader] resources\\assets\\js\\components\\Home\\MyPage.vue: named exports in *.vue files are ignored.")}
-__vue_template__ = __webpack_require__(397)
+__vue_template__ = __webpack_require__(400)
 module.exports = __vue_script__ || {}
 if (module.exports.__esModule) module.exports = module.exports.default
 var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -35,16 +35,16 @@ if (false) {(function () {  module.hot.accept()
 
 /***/ }),
 
-/***/ 284:
+/***/ 287:
 /***/ (function(module, exports, __webpack_require__) {
 
 var __vue_script__, __vue_template__
 var __vue_styles__ = {}
-__webpack_require__(285)
-__vue_script__ = __webpack_require__(287)
+__webpack_require__(288)
+__vue_script__ = __webpack_require__(290)
 if (Object.keys(__vue_script__).some(function (key) { return key !== "default" && key !== "__esModule" })) {
   console.warn("[vue-loader] node_modules\\_vux@2.9.1@vux\\src\\components\\x-button\\index.vue: named exports in *.vue files are ignored.")}
-__vue_template__ = __webpack_require__(288)
+__vue_template__ = __webpack_require__(291)
 module.exports = __vue_script__ || {}
 if (module.exports.__esModule) module.exports = module.exports.default
 var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -70,13 +70,13 @@ if (false) {(function () {  module.hot.accept()
 
 /***/ }),
 
-/***/ 285:
+/***/ 288:
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(286);
+var content = __webpack_require__(289);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
@@ -97,7 +97,7 @@ if(false) {
 
 /***/ }),
 
-/***/ 286:
+/***/ 289:
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(15)();
@@ -112,7 +112,7 @@ exports.push([module.i, "/**\n* actionsheet\n*/\n/**\n* en: primary type text co
 
 /***/ }),
 
-/***/ 287:
+/***/ 290:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -198,23 +198,23 @@ exports.default = {
 
 /***/ }),
 
-/***/ 288:
+/***/ 291:
 /***/ (function(module, exports) {
 
 module.exports = "\n<button\n  :style=\"buttonStyle\"\n  class=\"weui-btn\"\n  :class=\"classes\"\n  :disabled=\"disabled\"\n  :type=\"actionType\"\n  @click=\"onClick\">\n  <i class=\"weui-loading\" v-if=\"showLoading\"></i>\n  <slot>{{ text }}</slot>\n</button>\n";
 
 /***/ }),
 
-/***/ 305:
+/***/ 316:
 /***/ (function(module, exports, __webpack_require__) {
 
 var __vue_script__, __vue_template__
 var __vue_styles__ = {}
-__webpack_require__(306)
-__vue_script__ = __webpack_require__(308)
+__webpack_require__(317)
+__vue_script__ = __webpack_require__(319)
 if (Object.keys(__vue_script__).some(function (key) { return key !== "default" && key !== "__esModule" })) {
   console.warn("[vue-loader] node_modules\\_vux@2.9.1@vux\\src\\components\\form-preview\\index.vue: named exports in *.vue files are ignored.")}
-__vue_template__ = __webpack_require__(309)
+__vue_template__ = __webpack_require__(320)
 module.exports = __vue_script__ || {}
 if (module.exports.__esModule) module.exports = module.exports.default
 var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -240,13 +240,13 @@ if (false) {(function () {  module.hot.accept()
 
 /***/ }),
 
-/***/ 306:
+/***/ 317:
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(307);
+var content = __webpack_require__(318);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
@@ -267,7 +267,7 @@ if(false) {
 
 /***/ }),
 
-/***/ 307:
+/***/ 318:
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(15)();
@@ -282,7 +282,7 @@ exports.push([module.i, "/**\n* actionsheet\n*/\n/**\n* en: primary type text co
 
 /***/ }),
 
-/***/ 308:
+/***/ 319:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -336,20 +336,20 @@ exports.default = {
 
 /***/ }),
 
-/***/ 309:
+/***/ 320:
 /***/ (function(module, exports) {
 
 module.exports = "\n<div class=\"vux-form-preview weui-form-preview\">\n  <div class=\"weui-form-preview__hd\">\n    <label class=\"weui-form-preview__label\" v-html=\"headerLabel\"></label>\n    <em class=\"weui-form-preview__value\" v-html=\"headerValue || '&nbsp;'\"></em>\n  </div>\n  <div class=\"weui-form-preview__bd\">\n    <div class=\"weui-form-preview__item\" v-for=\"item in bodyItems\">\n      <label class=\"weui-form-preview__label\">{{item.label}}</label>\n      <span class=\"weui-form-preview__value\">{{item.value}}</span>\n    </div>\n  </div>\n  <div class=\"weui-form-preview__ft\">\n    <a class=\"weui-form-preview__btn\" :class=\"{'weui-form-preview__btn_default': button.style==='default', 'weui-form-preview__btn_primary': button.style === 'primary'}\" href=\"javascript:\" v-for=\"button in footerButtons\" @click=\"onButtonClick(button.onButtonClick, button.link)\">{{button.text}}</a>\n  </div>\n</div>\n";
 
 /***/ }),
 
-/***/ 394:
+/***/ 397:
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(395);
+var content = __webpack_require__(398);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
@@ -370,7 +370,7 @@ if(false) {
 
 /***/ }),
 
-/***/ 395:
+/***/ 398:
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(15)();
@@ -385,7 +385,7 @@ exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\
 
 /***/ }),
 
-/***/ 396:
+/***/ 399:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -395,11 +395,11 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _index = __webpack_require__(305);
+var _index = __webpack_require__(316);
 
 var _index2 = _interopRequireDefault(_index);
 
-var _index3 = __webpack_require__(284);
+var _index3 = __webpack_require__(287);
 
 var _index4 = _interopRequireDefault(_index3);
 
@@ -463,7 +463,7 @@ exports.default = {
 
 /***/ }),
 
-/***/ 397:
+/***/ 400:
 /***/ (function(module, exports) {
 
 module.exports = "\n<div>\n\t<group title=\"我发起的所有投票\">\n\t\t<div v-for=\"page in list\" style=\"padding-bottom:35px;background:rgba(239, 239, 244, 0.3);\">\n\t\t<form-preview header-label=\"活动\" :header-value=\"page.title\" :body-items=\"page.list\"></form-preview>\n\t\t<x-button :gradients=\"['#FF5E3A', '#FF9500']\" @click.native=\"showPage(page.page_id)\">查看</x-button>\n\t\t</div>\n\t</group>\n</div>\n";

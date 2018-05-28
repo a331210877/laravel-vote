@@ -32,35 +32,59 @@ class CarouselController extends Controller
         $id=$request->id;
         $index=$request->index;
         $top=Carousel::getTop($id);
-        $returnId=$top->top;
-        $top->top++;
-        $decRes=Carousel::decTop($top->top);
-        if($decRes){
-            $incRes=Carousel::incTop($id);
-            if($incRes){
-                $carousel="";
-                if($index==0){
-                    $carousel=Carousel::getOneCarousel($returnId);
+        if($top){
+            $top2=Carousel::getGTMin($top);
+            if($top2){
+                $id2=Carousel::getId($top2);
+                if($id2){
+                    $updateTop1=Carousel::updateTop($id,$top2);
+                    $updateTop2=Carousel::updateTop($id2,$top);
+                    if($updateTop1&&$updateTop2){
+                        $carousel="";
+                        if($index==0){
+                            $carousel=Carousel::getOneCarousel($returnId);
+                        }
+                        return responseToJson(1,'上移成功');
+                    }
+                    return responseToJson(1,'上移成功');
                 }
-                return responseToJson(1,'上移成功',$carousel);
+                return responseToJson(0,'上移失败');
             }
-            return responseToJson(1,'上移成功2222');
+            return responseToJson(0,'上移失败');
         }
         return responseToJson(0,'上移失败');
     }
 
-    public function addCarousel(Request $request){
+    public function updateCarousel(Request $request){
         $carousel=$request->carousel;
+        $id=$carousel['id'];
         $carousel=[
             'img'=>$carousel['img'],
             'title'=>$carousel['title'],
             'url'=>$carousel['url'],
         ];
+        $updateRes=Carousel::updateCarousel($carousel,$id);
+        if($updateRes){
+            return responseToJson(1,'修改成功',$updateRes);
+        }
+        return responseToJson(0,'修改失败',$updateRes);
+    }
+
+    public function addCarousel(Request $request){
+        $carousel=$request->carousel;
+        $count=Carousel::carouselCount();
+        $count++;
+        $carousel=[
+            "img"=>$carousel['img'],
+            "title"=>$carousel['title'],
+            "url"=>$carousel['url'],
+            "top"=>$count
+        ];
         $addRes=Carousel::addCarousel($carousel);
         if($addRes){
-            return responseToJson(1,'添加成功',$addRes);
+            return responseToJson(1,'添加成功',$count);
         }
-        return responseToJson(0,$msg.'失败，请重试');
+        return responseToJson(0,$msg.'失败，请重试',$count);
     }
 
     public function exportCarousel(){
@@ -84,5 +108,10 @@ class CarouselController extends Controller
                 });
             });
         })->export('xlsx');
+    }
+
+    public function test(Request $request){
+        $top=$request->top;
+        return Carousel::getSecondMax($top);
     }
 }

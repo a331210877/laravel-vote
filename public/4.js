@@ -1,15 +1,15 @@
 webpackJsonp([4],{
 
-/***/ 276:
+/***/ 278:
 /***/ (function(module, exports, __webpack_require__) {
 
 var __vue_script__, __vue_template__
 var __vue_styles__ = {}
-__webpack_require__(390)
-__vue_script__ = __webpack_require__(392)
+__webpack_require__(401)
+__vue_script__ = __webpack_require__(403)
 if (Object.keys(__vue_script__).some(function (key) { return key !== "default" && key !== "__esModule" })) {
-  console.warn("[vue-loader] resources\\assets\\js\\components\\Home\\MyPlayer.vue: named exports in *.vue files are ignored.")}
-__vue_template__ = __webpack_require__(393)
+  console.warn("[vue-loader] resources\\assets\\js\\components\\Home\\AddPlayer2.vue: named exports in *.vue files are ignored.")}
+__vue_template__ = __webpack_require__(404)
 module.exports = __vue_script__ || {}
 if (module.exports.__esModule) module.exports = module.exports.default
 var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -25,7 +25,7 @@ if (false) {(function () {  module.hot.accept()
   var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), false)
   if (!hotAPI.compatible) return
-  var id = "_v-405be945/MyPlayer.vue"
+  var id = "_v-398e55a8/AddPlayer2.vue"
   if (!module.hot.data) {
     hotAPI.createRecord(id, module.exports)
   } else {
@@ -35,23 +35,42 @@ if (false) {(function () {  module.hot.accept()
 
 /***/ }),
 
-/***/ 390:
+/***/ 285:
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = { "default": __webpack_require__(286), __esModule: true };
+
+/***/ }),
+
+/***/ 286:
+/***/ (function(module, exports, __webpack_require__) {
+
+var core = __webpack_require__(16);
+var $JSON = core.JSON || (core.JSON = { stringify: JSON.stringify });
+module.exports = function stringify(it) { // eslint-disable-line no-unused-vars
+  return $JSON.stringify.apply($JSON, arguments);
+};
+
+
+/***/ }),
+
+/***/ 401:
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(391);
+var content = __webpack_require__(402);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(20)("f24860ee", content, false);
+var update = __webpack_require__(20)("a0d9c6f4", content, false);
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
  if(!content.locals) {
-   module.hot.accept("!!../../../../../node_modules/_css-loader@0.23.1@css-loader/index.js!../../../../../node_modules/_vue-loader@8.7.1@vue-loader/lib/style-rewriter.js!../../../../../node_modules/_vux-loader@1.2.9@vux-loader/src/style-loader.js!../../../../../node_modules/_vue-loader@8.7.1@vue-loader/lib/selector.js?type=style&index=0!./MyPlayer.vue", function() {
-     var newContent = require("!!../../../../../node_modules/_css-loader@0.23.1@css-loader/index.js!../../../../../node_modules/_vue-loader@8.7.1@vue-loader/lib/style-rewriter.js!../../../../../node_modules/_vux-loader@1.2.9@vux-loader/src/style-loader.js!../../../../../node_modules/_vue-loader@8.7.1@vue-loader/lib/selector.js?type=style&index=0!./MyPlayer.vue");
+   module.hot.accept("!!../../../../../node_modules/_css-loader@0.23.1@css-loader/index.js!../../../../../node_modules/_vue-loader@8.7.1@vue-loader/lib/style-rewriter.js!../../../../../node_modules/_vux-loader@1.2.9@vux-loader/src/style-loader.js!../../../../../node_modules/_vue-loader@8.7.1@vue-loader/lib/selector.js?type=style&index=0!./AddPlayer2.vue", function() {
+     var newContent = require("!!../../../../../node_modules/_css-loader@0.23.1@css-loader/index.js!../../../../../node_modules/_vue-loader@8.7.1@vue-loader/lib/style-rewriter.js!../../../../../node_modules/_vux-loader@1.2.9@vux-loader/src/style-loader.js!../../../../../node_modules/_vue-loader@8.7.1@vue-loader/lib/selector.js?type=style&index=0!./AddPlayer2.vue");
      if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
      update(newContent);
    });
@@ -62,7 +81,7 @@ if(false) {
 
 /***/ }),
 
-/***/ 391:
+/***/ 402:
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(15)();
@@ -70,22 +89,26 @@ exports = module.exports = __webpack_require__(15)();
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\r\n.player {\r\n    position: relative;\r\n    float: left;\r\n    padding: 20px 10px;\r\n    width:100%;\r\n    box-sizing: border-box;\r\n}\r\n.player>img{\r\n    height:60px;\r\n    width: 60px;\r\n}\r\n.player:before {\r\n    content: \" \";\r\n    position: absolute;\r\n    right: 0;\r\n    top: 0;\r\n    width: 1px;\r\n    bottom: 0;\r\n    border-right: 1px solid #D9D9D9;\r\n    color: #D9D9D9;\r\n    transform-origin: 100% 0;\r\n    transform: scaleX(0.5);\r\n}\r\n.player:after {\r\n    content: \" \";\r\n    position: absolute;\r\n    left: 0;\r\n    bottom: 0;\r\n    right: 0;\r\n    height: 1px;\r\n    border-bottom: 1px solid #D9D9D9;\r\n    color: #D9D9D9;\r\n    transform-origin: 0 100%;\r\n    transform: scaleY(0.5);\r\n}\r\n.id{\r\n    color: #5e5e5e;\r\n    vertical-align: top;\r\n    position: absolute;\r\n    left: 88px;\r\n}\r\n.name{\r\n    display: inline-block;\r\n    color: black;\r\n    position: absolute;\r\n    left: 87px;\r\n    top: 55px;\r\n}\r\n.ticket{\r\n    position: absolute;\r\n    left: 245px;\r\n    top: 20px;\r\n    color: #5e5e5e;\r\n}\r\n.vote{\r\n    margin-top: 5px;\r\n}\r\n.grid-center {\r\n    display: block;\r\n    text-align: center;\r\n    color: #666;\r\n}\r\n#my-player{\r\n    width: 100%;\r\n    height: 164px;\r\n    margin-top: 5px;\r\n}\r\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\r\n.el-input__inner{\r\n  width:90%;\r\n}\r\n.el-form{\r\n  border-bottom: 1px solid #e3dbdb;\r\n  margin-bottom: 22px;\r\n}\r\n.el-form-item__label{\r\n  font-size:18px;\r\n  color:black;\r\n}\r\n", ""]);
 
 // exports
 
 
 /***/ }),
 
-/***/ 392:
+/***/ 403:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-
+/* WEBPACK VAR INJECTION */(function($) {
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+
+var _stringify = __webpack_require__(285);
+
+var _stringify2 = _interopRequireDefault(_stringify);
 
 var _index = __webpack_require__(207);
 
@@ -98,37 +121,151 @@ var _index4 = _interopRequireDefault(_index3);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 exports.default = {
-  components: {
-    Group: _index2.default,
-    Cell: _index4.default
-  },
   data: function data() {
     return {
-      playList: []
+      addVideoDisabled: false,
+      addForm: {
+        id: '',
+        name: '',
+        image: '',
+        video: '',
+        videoImg: '',
+        ticket: 0
+      },
+      addFormRules: {
+        name: [{ required: true, message: '请输入选手名称', trigger: 'blur' }, { min: 2, max: 7, message: '长度在 2 到 7 个字符', trigger: 'blur' }],
+        stage_id: [{ required: true, message: '请选择所属期数', trigger: 'change' }],
+        image: [{ required: true, message: '请选手头像', trigger: 'change' }],
+        video: [{ required: true, message: '请上传视频', trigger: 'change' }],
+        videoImg: [{ required: true, message: '请上传视频封面图', trigger: 'change' }]
+      },
+      header: {
+        'X-CSRF-TOKEN': document.querySelector('meta[name="X-CSRF-TOKEN"]').content
+      }
     };
   },
 
   methods: {
-    getPlayer: function getPlayer() {
+    handleSuccessVideoImg: function handleSuccessVideoImg(response, file, fileList) {
+      this.addForm.videoImg = response;
+      $("#uploadVideoImg>div").fadeOut();
+    },
+    handleRemoveVideo: function handleRemoveVideo(file, fileList) {
+      this.addForm.video = "";
+      this.addVideoDisabled = false;
+    },
+    handleSuccessVideo: function handleSuccessVideo(response, file, fileList) {
+      if (this.addForm.video != '') {
+        this.handleRemoveVideo(this.addForm.video, fileList);
+      }
+      this.addForm.video = file.name;
+      this.addVideoDisabled = true;
+    },
+    handleSizeChange: function handleSizeChange(val) {
+      console.log('\u6BCF\u9875 ' + val + ' \u6761');
+    },
+    handleCurrentChange: function handleCurrentChange(val) {
+      this.page = val;
+      this.getTable();
+      console.log('\u5F53\u524D\u9875: ' + val);
+    },
+
+
+    selsChange: function selsChange(sels) {
+      this.sels = sels;
+    },
+    selectChange: function selectChange(value) {
+      this.addForm.stage_id = value;
+      console.log(this.addForm.name);
+    },
+    handleSelect: function handleSelect(key, keyPath) {
+      console.log(key, keyPath);
+    },
+    handleRemoveImage: function handleRemoveImage(file, fileList) {
+      this.addForm.image = "";
+      $("#uploadImage>div").fadeIn();
+    },
+    handleSuccessImage: function handleSuccessImage(response, file, fileList) {
+      this.addForm.image = response;
+      $("#uploadImage>div").fadeOut();
+    },
+    handleRemoveVideoImg: function handleRemoveVideoImg(file, fileList) {
+      this.addForm.videoImg = "";
+      $("#uploadVideoImg>div").fadeIn();
+    },
+    cencel: function cencel() {
+      javascript: history.back(-1);
+    },
+    imageBeforeAvatarUpload: function imageBeforeAvatarUpload(file) {
+      var isIMAGE = file.type.indexOf("image") >= 0;
+      var isLt2M = file.size / 1024 / 1024 < 2;
+
+      if (!isIMAGE) {
+        this.$message.error('只能上传图片格式文件!');
+      }
+      if (!isLt2M) {
+        this.$message.error('图片大小不能超过 2MB!');
+      }
+      return isIMAGE && isLt2M;
+    },
+    videoBeforeAvatarUpload: function videoBeforeAvatarUpload(file) {
+      var isVIDEO = file.type.indexOf("video") >= 0;
+      var isLt2M = file.size / 1024 / 1024 < 100;
+
+      if (!isVIDEO) {
+        this.$message.error('只能上传视频格式文件!');
+      }
+      if (!isLt2M) {
+        this.$message.error('上传头像图片大小不能超过 100MB!');
+      }
+      return isVIDEO && isLt2M;
+    },
+
+
+    addSubmit: function addSubmit(formName) {
+      var _this = this;
+
       var vue = this;
-      axios.post('/home/getPlayer', {}).then(function (response) {
-        vue.playList = response.data.result;
-      }).catch(function (response) {
-        console.log(response);
+      this.$refs[formName].validate(function (valid) {
+        if (valid) {
+          _this.$nextTick(function () {
+            axios.post('/home/addPlayer', {
+              player: vue.addForm
+            }).then(function (response) {
+              if (response.data.code == 1) {
+                vue.$message({
+                  type: "success",
+                  message: response.data.msg
+                });
+              } else {
+                vue.$message.error(response.data.msg);
+              }
+              vue.addForm.id = response.data.id;;
+              var player = JSON.parse((0, _stringify2.default)(vue.addForm));
+              vue.tableData.push(player);
+            }).catch(function (response) {});
+          });
+        } else {
+          console.log('error submit!!');
+          return false;
+        }
       });
     }
   },
-  mounted: function mounted() {
-    this.getPlayer();
-  }
+  components: {
+    Group: _index2.default,
+    Cell: _index4.default
+  },
+  mounted: function mounted() {}
 };
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(52)))
 
 /***/ }),
 
-/***/ 393:
+/***/ 404:
 /***/ (function(module, exports) {
 
-module.exports = "\n<div>\n  <group title=\"我添加的所有选手\">\n      <div class=\"player\" v-for=\"v in playList\">\n          <img :src=\"v.image\" alt=\"\">\n          <span class=\"id\">编号：{{ v.id }}</span>\n          <h4 class=\"name\">{{ v.name }}</h4>\n          <span class=\"ticket\"><strong>{{ v.ticket }}</strong>票</span>  \n          <video\n              id=\"my-player\"\n              class=\"video-js\"\n              controls\n              preload=\"auto\"\n              :poster=\"v.videoImg\"\n              data-setup='{}'>\n            <source :src=\"v.video\" type=\"video/mp4\"></source>\n          </video>      \n      </div>\n  </group>\n</div>\n";
+module.exports = "\n\t<div>\n        <group title=\"添加选手\" style=\"margin-bottom:20px;\">\n\n        </group>\n\t\t<el-form :model=\"addForm\" label-width=\"80px\" :rules=\"addFormRules\" ref=\"addForm\">\n            <el-form-item label=\"姓名\" prop=\"name\">\n              <el-input v-model=\"addForm.name\" auto-complete=\"off\"></el-input>\n            </el-form-item>\n            <el-form-item label=\"头像\" prop=\"image\">\n                <el-upload\n                  id=\"uploadImage\"\n                  action=\"/file/upload\"\n                  list-type=\"picture-card\"\n                  :headers=\"header\"\n                  :on-remove=\"handleRemoveImage\"\n                  :on-success=\"handleSuccessImage\"\n                  :before-upload=\"imageBeforeAvatarUpload\"\n                  :data=\"{type:'images'}\"\n                  name=\"file\"         \n                  >\n                  <i class=\"el-icon-plus\"></i>\n                </el-upload>\n            </el-form-item>\n            <el-form-item label=\"视频\" prop=\"video\">\n                <el-upload\n                  id=\"uploadVideo\"\n                  action=\"/file/upload\"\n                  :headers=\"header\"\n                  :before-upload=\"videoBeforeAvatarUpload\"\n                  :on-remove=\"handleRemoveVideo\"\n                  :on-success=\"handleSuccessVideo\"\n                  :data=\"{type:'video'}\"\n                  name=\"file\"\n                  >\n                  <el-button size=\"small\" type=\"primary\" :disabled=\"addVideoDisabled\">点击上传</el-button>\n                  <div slot=\"tip\" class=\"el-upload__tip\">只能上传视频文件，且不超过50M</div>\n                </el-upload>\n            </el-form-item>\n            <el-form-item label=\"封面\" prop=\"videoImg\">\n                <el-upload\n                  id=\"uploadVideoImg\"\n                  action=\"/file/upload\"\n                  list-type=\"picture-card\"\n                  :headers=\"header\"\n                  :on-remove=\"handleRemoveVideoImg\"\n                  :on-success=\"handleSuccessVideoImg\"\n                  :before-upload=\"imageBeforeAvatarUpload\"\n                  :data=\"{type:'videoImg'}\"\n                  name=\"file\"         \n                  >\n                  <i class=\"el-icon-plus\"></i>\n                </el-upload>\n            </el-form-item>\n          </el-form>\n        <div slot=\"footer\" class=\"dialog-footer\" style=\"text-align:center;\">\n            <el-button @click.native=\"cencel();\">取消</el-button>\n            <el-button type=\"primary\" @click.native=\"addSubmit('addForm')\">提交</el-button>\n        </div>\n\t</div>\n";
 
 /***/ })
 

@@ -54,7 +54,7 @@
             </el-form-item>
           </el-form>
         <div slot="footer" class="dialog-footer" style="text-align:center;">
-            <el-button @click.native="addFormVisible = false">取消</el-button>
+            <el-button @click.native="cencel();">取消</el-button>
             <el-button type="primary" @click.native="addSubmit('addForm')">提交</el-button>
         </div>
 	</div>
@@ -154,6 +154,9 @@
             this.addForm.videoImg = "";
             $("#uploadVideoImg>div").fadeIn();
           },
+          cencel(){
+            javascript :history.back(-1);
+          },
           //上传图片限制
           imageBeforeAvatarUpload(file) {
             const isIMAGE = file.type.indexOf("image")>=0;
@@ -198,7 +201,6 @@
                         }else{
                             vue.$message.error(response.data.msg);
                         }
-                        vue.addFormVisible=false;
                         vue.addForm.id=response.data.id;;
                         var player = JSON.parse(JSON.stringify(vue.addForm)) ;
                         vue.tableData.push(player);
@@ -233,7 +235,7 @@
   margin-bottom: 22px;
 }
 .el-form-item__label{
-  font-size:16px;
+  font-size:18px;
   color:black;
 }
 </style>

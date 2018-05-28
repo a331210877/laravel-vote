@@ -49,5 +49,9 @@
         Route::post('/admin/updateTop','Admin\CarouselController@updateTop');
 
         Route::post('/admin/addCarousel','Admin\CarouselController@addCarousel');
+
+        Route::post('/admin/updateCarousel','Admin\CarouselController@updateCarousel');
+
+        Route::get('/admin/test','Admin\CarouselController@test');
     });
 

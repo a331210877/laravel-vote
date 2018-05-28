@@ -21,7 +21,10 @@ class IndexController extends Controller
         $select_row=DB::table('page')
         ->join('user','page.open_id','=','user.open_id')
         ->where('page.status',0)
-        ->where('title','like','%'.$search.'%')->get();
+        ->where('title','like','%'.$search.'%')
+        ->select('page.*','user.nick_name')
+        ->orderBy('end_time','desc')
+        ->get();
         return responseToJson(1,"查询成功",$select_row);
     }
 

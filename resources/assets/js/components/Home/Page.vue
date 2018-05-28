@@ -4,7 +4,7 @@
         <group-title style="border-bottom: 1px solid #D9D9D9;
     padding-bottom: 5px;">{{ stage }}</group-title>
         <toast v-model="show" :type="showMesType">{{ message }}</toast>
-        <div class="player" v-for="v in videoList">
+        <div class="player" v-for="(v,index) in videoList" :key="index">
             <img :src="v.image" alt="">
             <span class="id">编号：{{ v.id }}</span>
             <h4 class="name">{{ v.name }}</h4>

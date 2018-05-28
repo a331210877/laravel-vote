@@ -14,7 +14,7 @@
     <group title="请输入选手姓名">
       <x-input title="姓名" name="username" text-align="right" placeholder="请输入姓名" is-type="china-name"></x-input>
     </group>
-    <!-- <uploader
+    <uploader
         :max="1"
         title="上传头像"
         :upload-url="uploadUrl"
@@ -22,7 +22,7 @@
         name="file"
         :params="{type:'images'}"
         @preview="previewMethod"
-    ></uploader> -->
+    ></uploader>
     <!-- <uploader
         :max="1"
         :images="images"

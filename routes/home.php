@@ -14,6 +14,8 @@ Route::group(['middleware' => ['web', 'wechat.oauth']],function(){
     Route::post('/home/vote','Home\PageController@vote');
     
     Route::post('/home/page','Home\PageController@page');
+
+    Route::post('/home/addPage','Home\PageController@addPage');
     
     Route::post('/home/getUserInfo','Home\IndexController@getUserInfo');
 

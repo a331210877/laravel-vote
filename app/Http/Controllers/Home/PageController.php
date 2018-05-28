@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use DB;
 use Illuminate\Http\Request;
 use Storage;
+use App\Models\Home\Page;
 
 class PageController extends Controller
 {
@@ -23,11 +24,11 @@ class PageController extends Controller
 			'status' => 0,
 			'id' => $id
 		])->first();
-		$page->figure="/storage/app/uploads/images/".$page->figure;
+		$page->figure="/storage/uploads/images/".$page->figure;
         foreach($select_rows as $k => $v) {
-        	$v->image="/storage/app/uploads/images/".$v->image;
-        	$v->videoImg="/storage/app/uploads/videoImg/".$v->videoImg;
-        	$v->video="/storage/app/uploads/video/".$v->video;
+        	$v->image="/storage/uploads/images/".$v->image;
+        	$v->videoImg="/storage/uploads/videoImg/".$v->videoImg;
+        	$v->video="/storage/uploads/video/".$v->video;
         	$v->isLoading=false;
         	$v->disabled=true;
 		}
@@ -48,5 +49,14 @@ class PageController extends Controller
         	$res['code']= 0;
 		}
 		return response()->json($res);
+	}
+
+	public function addPage(Request $request){
+		$page=$request->page;
+		$addRes=Page::addPage($page);
+		if($addRes){
+			return responseToJson(1,"发起投票成功",$addRes);			
+		}
+		return responseToJson(1,"发起投票失败",$addRes);					
 	}
 }

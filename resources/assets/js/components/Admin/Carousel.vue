@@ -1,24 +1,45 @@
 <template>
   <div>
     <el-dialog
-      title="提示"
-      :visible.sync="centerDialogVisible"
+      title="添加轮播"
+      :visible.sync="addDialogVisible"
       width="30%"
       center>
       <el-form :model="carousel">
-        <el-form-item label="轮播配文" :label-width="formLabelWidth">
+        <el-form-item label="轮播配文" label-width="70px">
           <el-input v-model="carousel.title" auto-complete="off"></el-input>
         </el-form-item>
-        <el-form-item label="图片地址" :label-width="formLabelWidth">
+        <el-form-item label="图片地址" label-width="70px">
           <el-input v-model="carousel.img" auto-complete="off"></el-input>
         </el-form-item>
-        <el-form-item label="跳转链接" :label-width="formLabelWidth">
+        <el-form-item label="跳转链接" label-width="70px">
           <el-input v-model="carousel.url" auto-complete="off"></el-input>
         </el-form-item>
       </el-form>
       <span slot="footer" class="dialog-footer">
-        <el-button @click="centerDialogVisible = false">取 消</el-button>
-        <el-button type="primary" @click="addCarousel">确 定</el-button>
+        <el-button @click="addDialogVisible = false">取 消</el-button>
+        <el-button type="primary" @click="addCarousel()">确 定</el-button>
+      </span>
+    </el-dialog>
+    <el-dialog
+      title="修改轮播"
+      :visible.sync="editDialogVisible"
+      width="30%"
+      center>
+      <el-form :model="editCarousel">
+        <el-form-item label="轮播配文" label-width="70px">
+          <el-input v-model="editCarousel.title" auto-complete="off"></el-input>
+        </el-form-item>
+        <el-form-item label="图片地址" label-width="70px">
+          <el-input v-model="editCarousel.img" auto-complete="off"></el-input>
+        </el-form-item>
+        <el-form-item label="跳转链接" label-width="70px">
+          <el-input v-model="editCarousel.url" auto-complete="off"></el-input>
+        </el-form-item>
+      </el-form>
+      <span slot="footer" class="dialog-footer">
+        <el-button @click="eidtDialogVisible = false">取 消</el-button>
+        <el-button type="primary" @click="updateCarousel()">确 定</el-button>
       </span>
     </el-dialog>
     <el-form :inline="true" style="margin-top:15px;">
@@ -29,7 +50,7 @@
             <el-button type="primary" icon="search" @click="searchCarousel()">查询</el-button>
         </el-form-item>
         <el-form-item>
-            <el-button type="success" icon="el-icon-plus" @click="centerDialogVisible = true">添加</el-button>
+            <el-button type="success" icon="el-icon-plus" @click="addDialogVisible = true">添加</el-button>
         </el-form-item>
         <el-form-item style="float:right">
             <el-button type="primary" @click="exportCarousel()">导出</el-button>
@@ -72,7 +93,7 @@
               icon="el-icon-delete"
               circle
               @click="delCarousel(scope.$index,scope.row)"></el-button>
-            <el-button type="primary" icon="el-icon-edit" circle></el-button>
+            <el-button type="primary" icon="el-icon-edit" circle @click="editCarouselModel(scope.$index,scope.row);"></el-button>
             <el-button type="success" icon="el-icon-caret-top" @click="updateTop(scope.$index,scope.row)" circle></el-button>
           </template>
         </el-table-column>
@@ -86,7 +107,7 @@
           :page-size="pageSize"
           layout="total, sizes, prev, pager, next, jumper"
           :total="total">
-          </el-pagination>
+          </el-pagination>     
     </div>
   </div>
 </template>
@@ -100,7 +121,9 @@
         currentPage: 1,
         pageSize: 10,
         total:0,
-        centerDialogVisible:false,
+        addDialogVisible:false,
+        editDialogVisible:false,
+        operationIndex:0,
         carousel: {
           id:0,
           title: '',
@@ -109,7 +132,12 @@
           status:0,
           top:0
         },
-        formLabelWidth: '70px'
+        editCarousel:{
+          id:0,
+          title: '',
+          img: '',
+          url: '',
+        },
       }
     },
     methods: {
@@ -127,19 +155,49 @@
       openUrl(row){
         window.open(row.url);
       },
+      editCarouselModel(index,row){
+        this.editCarousel.id=row.id;
+        this.editDialogVisible = true;
+        this.editCarousel.title=row.title;
+        this.editCarousel.img=row.img;
+        this.editCarousel.url=row.url;
+        this.operationIndex=index;
+      },
+      updateCarousel(){
+        var vue=this;
+        axios.post('admin/updateCarousel',{
+          'carousel':vue.editCarousel
+        }).then(function(response){
+          vue.editDialogVisible = false;
+          if(response.data.code==1){
+            vue.$message({
+                type:"success",
+                message: response.data.msg,
+            });
+            var carousel=JSON.parse(JSON.stringify(vue.editCarousel));
+            vue.carouselList.splice(vue.operationIndex,1,carousel);
+          }else{
+            vue.$message({
+                type:"error",
+                message: response.data.msg,
+            });
+          }
+        })
+      },
       addCarousel(){
         var vue=this;
         axios.post('admin/addCarousel',{
           'carousel':vue.carousel
         }).then(function(response){
-          vue.centerDialogVisible = false;
+          vue.addDialogVisible = false;
           if(response.data.code==1){
             vue.$message({
                 type:"success",
                 message: response.data.msg,
             });
             vue.carousel.id=response.data.result;
-            vue.carouselList.push( vue.carousel);
+            var carousel=JSON.parse(JSON.stringify(vue.carousel));
+            vue.carouselList.push(carousel);
             vue.total++;
           }else{
             vue.$message({
@@ -236,7 +294,7 @@
           vue.total=response.data.result.count;
         })
         .catch(function (response) {
-            console.log(response);
+
         });
       })
     },

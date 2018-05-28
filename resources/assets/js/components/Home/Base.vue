@@ -7,12 +7,12 @@
 		</section>
 		<div style="line-height:40px;"></div>
 		<tabbar on-index-change="itemChange()" style="position: fixed;">
-			<tabbar-item selected link="/index">
+			<tabbar-item :selected="selIndex" link="/index">
 				<img slot="icon" src="/images/home.png">
 				<img slot="icon-active" src="/images/home_fill.png">
 				<span slot="label">首页</span>
 			</tabbar-item>
-			<tabbar-item show-dot  icon-active="/images/me_fill.png" link="/me">
+			<tabbar-item :selected="selMe" link="/me">
 				<img slot="icon" src="/images/me.png">
 				<img slot="icon-active" src="/images/me_fill.png">
 				<span slot="label">我</span>
@@ -27,11 +27,13 @@
 	export default {
 		data() {
 			return {
+				selIndex:false,
+				selMe:false
 			}
 		},
 		methods: {
 			itemChange : function(){
-				console.log("dasjkdhnasjk");
+				console.log("切换了");
 			}
 		},
 		components: {
@@ -41,7 +43,11 @@
 			Cell
 		},
 		mounted() {
-		
+			if(this.$route.path=="/index"){
+				this.selIndex=true;
+			}else if(this.$route.path=="/me"){
+				this.selMe=true;
+			}
 		},
 	}
 </script>

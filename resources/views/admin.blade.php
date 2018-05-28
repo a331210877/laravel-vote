@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta name="X-CSRF-TOKEN" content="{{csrf_token()}}">
-    <meta name="description" content="三月小组十二周年啦！,随个份子吧！">
-    <title></title>
+    <meta name="description" content="ffffddd">
+    <title>王琦投票系统</title>
 </head>
 <body>
     <div id="app"></div>

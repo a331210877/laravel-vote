@@ -19,6 +19,7 @@ Route::get('/login', function () {
 
 Route::post('/file/upload','FileController@upload');
 Route::get('/file/upload','FileController@upload');
+Route::any('/file/uploadVux','FileController@uploadVux');
 Route::post('/check','Auth\LoginController@check');
 Route::get('/captcha/get','Auth\LoginController@get_captcha');
 Route::post('/logout','Auth\LoginController@logout');

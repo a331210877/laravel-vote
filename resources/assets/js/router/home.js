@@ -52,6 +52,7 @@ export default new VueRouter({
             component: HomeBase,
             children: [
                 { path: '/addPlayer',name:'addPlayer',component: resolve =>void(require(['../components/Home/AddPlayer2.vue'], resolve))},
+                { path: '/addPage',name:'addPage',component: resolve =>void(require(['../components/Home/AddPage.vue'], resolve))},                
             ]
         },
     ],

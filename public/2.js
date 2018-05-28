@@ -5,11 +5,11 @@ webpackJsonp([2],{
 
 var __vue_script__, __vue_template__
 var __vue_styles__ = {}
-__webpack_require__(370)
-__vue_script__ = __webpack_require__(372)
+__webpack_require__(373)
+__vue_script__ = __webpack_require__(375)
 if (Object.keys(__vue_script__).some(function (key) { return key !== "default" && key !== "__esModule" })) {
   console.warn("[vue-loader] resources\\assets\\js\\components\\Home\\Page.vue: named exports in *.vue files are ignored.")}
-__vue_template__ = __webpack_require__(385)
+__vue_template__ = __webpack_require__(388)
 module.exports = __vue_script__ || {}
 if (module.exports.__esModule) module.exports = module.exports.default
 var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -35,16 +35,35 @@ if (false) {(function () {  module.hot.accept()
 
 /***/ }),
 
-/***/ 284:
+/***/ 285:
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = { "default": __webpack_require__(286), __esModule: true };
+
+/***/ }),
+
+/***/ 286:
+/***/ (function(module, exports, __webpack_require__) {
+
+var core = __webpack_require__(16);
+var $JSON = core.JSON || (core.JSON = { stringify: JSON.stringify });
+module.exports = function stringify(it) { // eslint-disable-line no-unused-vars
+  return $JSON.stringify.apply($JSON, arguments);
+};
+
+
+/***/ }),
+
+/***/ 287:
 /***/ (function(module, exports, __webpack_require__) {
 
 var __vue_script__, __vue_template__
 var __vue_styles__ = {}
-__webpack_require__(285)
-__vue_script__ = __webpack_require__(287)
+__webpack_require__(288)
+__vue_script__ = __webpack_require__(290)
 if (Object.keys(__vue_script__).some(function (key) { return key !== "default" && key !== "__esModule" })) {
   console.warn("[vue-loader] node_modules\\_vux@2.9.1@vux\\src\\components\\x-button\\index.vue: named exports in *.vue files are ignored.")}
-__vue_template__ = __webpack_require__(288)
+__vue_template__ = __webpack_require__(291)
 module.exports = __vue_script__ || {}
 if (module.exports.__esModule) module.exports = module.exports.default
 var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -70,13 +89,13 @@ if (false) {(function () {  module.hot.accept()
 
 /***/ }),
 
-/***/ 285:
+/***/ 288:
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(286);
+var content = __webpack_require__(289);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
@@ -97,7 +116,7 @@ if(false) {
 
 /***/ }),
 
-/***/ 286:
+/***/ 289:
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(15)();
@@ -112,7 +131,7 @@ exports.push([module.i, "/**\n* actionsheet\n*/\n/**\n* en: primary type text co
 
 /***/ }),
 
-/***/ 287:
+/***/ 290:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -198,7 +217,7 @@ exports.default = {
 
 /***/ }),
 
-/***/ 288:
+/***/ 291:
 /***/ (function(module, exports) {
 
 module.exports = "\n<button\n  :style=\"buttonStyle\"\n  class=\"weui-btn\"\n  :class=\"classes\"\n  :disabled=\"disabled\"\n  :type=\"actionType\"\n  @click=\"onClick\">\n  <i class=\"weui-loading\" v-if=\"showLoading\"></i>\n  <slot>{{ text }}</slot>\n</button>\n";
@@ -208,32 +227,65 @@ module.exports = "\n<button\n  :style=\"buttonStyle\"\n  class=\"weui-btn\"\n  :
 /***/ 292:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = { "default": __webpack_require__(293), __esModule: true };
+"use strict";
 
-/***/ }),
 
-/***/ 293:
-/***/ (function(module, exports, __webpack_require__) {
-
-var core = __webpack_require__(16);
-var $JSON = core.JSON || (core.JSON = { stringify: JSON.stringify });
-module.exports = function stringify(it) { // eslint-disable-line no-unused-vars
-  return $JSON.stringify.apply($JSON, arguments);
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = {
+  created: function created() {
+    this.uuid = Math.random().toString(36).substring(3, 8);
+  }
 };
 
-
 /***/ }),
 
-/***/ 294:
+/***/ 295:
 /***/ (function(module, exports, __webpack_require__) {
 
 var __vue_script__, __vue_template__
 var __vue_styles__ = {}
-__webpack_require__(295)
-__vue_script__ = __webpack_require__(297)
+__webpack_require__(322)
+__vue_script__ = __webpack_require__(324)
+if (Object.keys(__vue_script__).some(function (key) { return key !== "default" && key !== "__esModule" })) {
+  console.warn("[vue-loader] node_modules\\_vux@2.9.1@vux\\src\\components\\toast\\index.vue: named exports in *.vue files are ignored.")}
+__vue_template__ = __webpack_require__(326)
+module.exports = __vue_script__ || {}
+if (module.exports.__esModule) module.exports = module.exports.default
+var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
+if (__vue_template__) {
+__vue_options__.template = __vue_template__
+}
+if (!__vue_options__.computed) __vue_options__.computed = {}
+Object.keys(__vue_styles__).forEach(function (key) {
+var module = __vue_styles__[key]
+__vue_options__.computed[key] = function () { return module }
+})
+if (false) {(function () {  module.hot.accept()
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  var id = "_v-0f21f496/index.vue"
+  if (!module.hot.data) {
+    hotAPI.createRecord(id, module.exports)
+  } else {
+    hotAPI.update(id, module.exports, __vue_template__)
+  }
+})()}
+
+/***/ }),
+
+/***/ 306:
+/***/ (function(module, exports, __webpack_require__) {
+
+var __vue_script__, __vue_template__
+var __vue_styles__ = {}
+__webpack_require__(307)
+__vue_script__ = __webpack_require__(309)
 if (Object.keys(__vue_script__).some(function (key) { return key !== "default" && key !== "__esModule" })) {
   console.warn("[vue-loader] node_modules\\_vux@2.9.1@vux\\src\\components\\group-title\\index.vue: named exports in *.vue files are ignored.")}
-__vue_template__ = __webpack_require__(298)
+__vue_template__ = __webpack_require__(310)
 module.exports = __vue_script__ || {}
 if (module.exports.__esModule) module.exports = module.exports.default
 var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -259,13 +311,13 @@ if (false) {(function () {  module.hot.accept()
 
 /***/ }),
 
-/***/ 295:
+/***/ 307:
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(296);
+var content = __webpack_require__(308);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
@@ -286,7 +338,7 @@ if(false) {
 
 /***/ }),
 
-/***/ 296:
+/***/ 308:
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(15)();
@@ -301,7 +353,7 @@ exports.push([module.i, "/**\n* actionsheet\n*/\n/**\n* en: primary type text co
 
 /***/ }),
 
-/***/ 297:
+/***/ 309:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -330,23 +382,23 @@ exports.default = {
 
 /***/ }),
 
-/***/ 298:
+/***/ 310:
 /***/ (function(module, exports) {
 
 module.exports = "\n<div class=\"weui-cells__title\">\n  <slot></slot>\n</div>\n";
 
 /***/ }),
 
-/***/ 299:
+/***/ 311:
 /***/ (function(module, exports, __webpack_require__) {
 
 var __vue_script__, __vue_template__
 var __vue_styles__ = {}
-__webpack_require__(300)
-__vue_script__ = __webpack_require__(302)
+__webpack_require__(312)
+__vue_script__ = __webpack_require__(314)
 if (Object.keys(__vue_script__).some(function (key) { return key !== "default" && key !== "__esModule" })) {
   console.warn("[vue-loader] node_modules\\_vux@2.9.1@vux\\src\\components\\search\\index.vue: named exports in *.vue files are ignored.")}
-__vue_template__ = __webpack_require__(304)
+__vue_template__ = __webpack_require__(315)
 module.exports = __vue_script__ || {}
 if (module.exports.__esModule) module.exports = module.exports.default
 var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -372,13 +424,13 @@ if (false) {(function () {  module.hot.accept()
 
 /***/ }),
 
-/***/ 300:
+/***/ 312:
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(301);
+var content = __webpack_require__(313);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
@@ -399,7 +451,7 @@ if(false) {
 
 /***/ }),
 
-/***/ 301:
+/***/ 313:
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(15)();
@@ -414,7 +466,7 @@ exports.push([module.i, "@font-face {\n  font-weight: normal;\n  font-style: nor
 
 /***/ }),
 
-/***/ 302:
+/***/ 314:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -424,7 +476,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _uuid = __webpack_require__(303);
+var _uuid = __webpack_require__(292);
 
 var _uuid2 = _interopRequireDefault(_uuid);
 
@@ -701,31 +753,14 @@ exports.default = {
 
 /***/ }),
 
-/***/ 303:
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = {
-  created: function created() {
-    this.uuid = Math.random().toString(36).substring(3, 8);
-  }
-};
-
-/***/ }),
-
-/***/ 304:
+/***/ 315:
 /***/ (function(module, exports) {
 
 module.exports = "\n<div\n  class=\"vux-search-box\"\n  :class=\"{ 'vux-search-fixed':isFixed }\"\n  :style=\"{ top: isFixed ? top : '', position: fixPosition }\">\n  <div\n    class=\"weui-search-bar\"\n    :class=\"{'weui-search-bar_focusing': !isCancel || currentValue}\">\n    <slot name=\"left\"></slot>\n    <form class=\"weui-search-bar__form\" @submit.prevent=\"$emit('on-submit', value)\" action=\".\">\n      <label\n        :for=\"`search_input_${uuid}`\"\n        class=\"vux-search-mask\"\n        @click=\"touch\"\n        v-show=\"!isFixed && autoFixed\"></label>\n      <div class=\"weui-search-bar__box\">\n        <i class=\"weui-icon-search\"></i>\n        <input\n          v-model=\"currentValue\"\n          ref=\"input\"\n          type=\"search\"\n          autocomplete=\"off\"\n          class=\"weui-search-bar__input\"\n          :id=\"`search_input_${uuid}`\"\n          :placeholder=\"placeholder\"\n          :required=\"required\"\n          @focus=\"onFocus\"\n          @blur=\"onBlur\"\n          @compositionstart=\"onComposition($event, 'start')\"\n          @compositionend=\"onComposition($event, 'end')\"\n          @input=\"onComposition($event, 'input')\"/>\n        <a\n          href=\"javascript:\"\n          class=\"weui-icon-clear\"\n          @click=\"clear\"\n          v-show=\"currentValue\"></a>\n      </div>\n      <label\n        :for=\"`search_input_${uuid}`\"\n        class=\"weui-search-bar__label\"\n        v-show=\"!isFocus && !value\">\n        <i class=\"weui-icon-search\"></i>\n        <span>{{ placeholder || '搜索' }}</span>\n      </label>\n    </form>\n    <a\n      href=\"javascript:\"\n      class=\"weui-search-bar__cancel-btn\"\n      @click=\"cancel\">{{ cancelText || '取消' }}\n    </a>\n    <slot name=\"right\"></slot>\n  </div>\n  <div class=\"weui-cells vux-search_show\" v-show=\"isFixed\">\n    <slot></slot>\n    <div\n      class=\"weui-cell weui-cell_access\"\n      v-for=\"item in results\"\n      @click=\"handleResultClick(item)\">\n      <div class=\"weui-cell__bd weui-cell_primary\">\n        <p>{{item.title}}</p>\n      </div>\n    </div>\n  </div>\n</div>\n";
 
 /***/ }),
 
-/***/ 310:
+/***/ 321:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -760,48 +795,13 @@ function createId() {
 
 /***/ }),
 
-/***/ 311:
-/***/ (function(module, exports, __webpack_require__) {
-
-var __vue_script__, __vue_template__
-var __vue_styles__ = {}
-__webpack_require__(312)
-__vue_script__ = __webpack_require__(314)
-if (Object.keys(__vue_script__).some(function (key) { return key !== "default" && key !== "__esModule" })) {
-  console.warn("[vue-loader] node_modules\\_vux@2.9.1@vux\\src\\components\\toast\\index.vue: named exports in *.vue files are ignored.")}
-__vue_template__ = __webpack_require__(316)
-module.exports = __vue_script__ || {}
-if (module.exports.__esModule) module.exports = module.exports.default
-var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
-if (__vue_template__) {
-__vue_options__.template = __vue_template__
-}
-if (!__vue_options__.computed) __vue_options__.computed = {}
-Object.keys(__vue_styles__).forEach(function (key) {
-var module = __vue_styles__[key]
-__vue_options__.computed[key] = function () { return module }
-})
-if (false) {(function () {  module.hot.accept()
-  var hotAPI = require("vue-hot-reload-api")
-  hotAPI.install(require("vue"), false)
-  if (!hotAPI.compatible) return
-  var id = "_v-0f21f496/index.vue"
-  if (!module.hot.data) {
-    hotAPI.createRecord(id, module.exports)
-  } else {
-    hotAPI.update(id, module.exports, __vue_template__)
-  }
-})()}
-
-/***/ }),
-
-/***/ 312:
+/***/ 322:
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(313);
+var content = __webpack_require__(323);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
@@ -822,7 +822,7 @@ if(false) {
 
 /***/ }),
 
-/***/ 313:
+/***/ 323:
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(15)();
@@ -837,7 +837,7 @@ exports.push([module.i, ".vux-fade-enter-active,\n.vux-fade-leave-active {\n  op
 
 /***/ }),
 
-/***/ 314:
+/***/ 324:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -847,7 +847,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _safariFix = __webpack_require__(315);
+var _safariFix = __webpack_require__(325);
 
 var _safariFix2 = _interopRequireDefault(_safariFix);
 
@@ -1031,7 +1031,7 @@ exports.default = {
 
 /***/ }),
 
-/***/ 315:
+/***/ 325:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1058,20 +1058,20 @@ exports.default = {
 
 /***/ }),
 
-/***/ 316:
+/***/ 326:
 /***/ (function(module, exports) {
 
 module.exports = "\n<div class=\"vux-toast\">\n  <div class=\"weui-mask_transparent\" v-show=\"isShowMask && show\"></div>\n  <transition :name=\"currentTransition\">\n    <div class=\"weui-toast\" :style=\"{width: width}\" :class=\"toastClass\" v-show=\"show\">\n      <i class=\"weui-icon-success-no-circle weui-icon_toast\" v-show=\"type !== 'text'\"></i>\n      <p class=\"weui-toast__content\" v-if=\"text\" :style=\"style\" v-html=\"text\"></p>\n      <p class=\"weui-toast__content\" v-else :style=\"style\">\n        <slot></slot>\n      </p>\n    </div>\n  </transition>\n</div>\n";
 
 /***/ }),
 
-/***/ 370:
+/***/ 373:
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(371);
+var content = __webpack_require__(374);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
@@ -1092,7 +1092,7 @@ if(false) {
 
 /***/ }),
 
-/***/ 371:
+/***/ 374:
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(15)();
@@ -1107,7 +1107,7 @@ exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\
 
 /***/ }),
 
-/***/ 372:
+/***/ 375:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1117,27 +1117,27 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _index = __webpack_require__(299);
+var _index = __webpack_require__(311);
 
 var _index2 = _interopRequireDefault(_index);
 
-var _index3 = __webpack_require__(294);
+var _index3 = __webpack_require__(306);
 
 var _index4 = _interopRequireDefault(_index3);
 
-var _index5 = __webpack_require__(373);
+var _index5 = __webpack_require__(376);
 
 var _index6 = _interopRequireDefault(_index5);
 
-var _index7 = __webpack_require__(380);
+var _index7 = __webpack_require__(383);
 
 var _index8 = _interopRequireDefault(_index7);
 
-var _index9 = __webpack_require__(284);
+var _index9 = __webpack_require__(287);
 
 var _index10 = _interopRequireDefault(_index9);
 
-var _index11 = __webpack_require__(311);
+var _index11 = __webpack_require__(295);
 
 var _index12 = _interopRequireDefault(_index11);
 
@@ -1208,16 +1208,16 @@ exports.default = {
 
 /***/ }),
 
-/***/ 373:
+/***/ 376:
 /***/ (function(module, exports, __webpack_require__) {
 
 var __vue_script__, __vue_template__
 var __vue_styles__ = {}
-__webpack_require__(374)
-__vue_script__ = __webpack_require__(376)
+__webpack_require__(377)
+__vue_script__ = __webpack_require__(379)
 if (Object.keys(__vue_script__).some(function (key) { return key !== "default" && key !== "__esModule" })) {
   console.warn("[vue-loader] node_modules\\_vux@2.9.1@vux\\src\\components\\x-img\\index.vue: named exports in *.vue files are ignored.")}
-__vue_template__ = __webpack_require__(379)
+__vue_template__ = __webpack_require__(382)
 module.exports = __vue_script__ || {}
 if (module.exports.__esModule) module.exports = module.exports.default
 var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -1243,13 +1243,13 @@ if (false) {(function () {  module.hot.accept()
 
 /***/ }),
 
-/***/ 374:
+/***/ 377:
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(375);
+var content = __webpack_require__(378);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
@@ -1270,7 +1270,7 @@ if(false) {
 
 /***/ }),
 
-/***/ 375:
+/***/ 378:
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(15)();
@@ -1285,7 +1285,7 @@ exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\
 
 /***/ }),
 
-/***/ 376:
+/***/ 379:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1295,13 +1295,13 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _vuxBlazy = __webpack_require__(377);
+var _vuxBlazy = __webpack_require__(380);
 
 var _vuxBlazy2 = _interopRequireDefault(_vuxBlazy);
 
-var _webpSupport = __webpack_require__(378);
+var _webpSupport = __webpack_require__(381);
 
-var _mixin_uuid = __webpack_require__(310);
+var _mixin_uuid = __webpack_require__(321);
 
 var _mixin_uuid2 = _interopRequireDefault(_mixin_uuid);
 
@@ -1412,7 +1412,7 @@ exports.default = {
 
 /***/ }),
 
-/***/ 377:
+/***/ 380:
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -1756,7 +1756,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
 
 /***/ }),
 
-/***/ 378:
+/***/ 381:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1810,23 +1810,23 @@ function isSupported() {
 
 /***/ }),
 
-/***/ 379:
+/***/ 382:
 /***/ (function(module, exports) {
 
 module.exports = "\n<img :src=\"defaultSrc\" :data-src=\"currentSrc\" class=\"vux-x-img\"/>\n";
 
 /***/ }),
 
-/***/ 380:
+/***/ 383:
 /***/ (function(module, exports, __webpack_require__) {
 
 var __vue_script__, __vue_template__
 var __vue_styles__ = {}
-__webpack_require__(381)
-__vue_script__ = __webpack_require__(383)
+__webpack_require__(384)
+__vue_script__ = __webpack_require__(386)
 if (Object.keys(__vue_script__).some(function (key) { return key !== "default" && key !== "__esModule" })) {
   console.warn("[vue-loader] node_modules\\_vux@2.9.1@vux\\src\\components\\panel\\index.vue: named exports in *.vue files are ignored.")}
-__vue_template__ = __webpack_require__(384)
+__vue_template__ = __webpack_require__(387)
 module.exports = __vue_script__ || {}
 if (module.exports.__esModule) module.exports = module.exports.default
 var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -1852,13 +1852,13 @@ if (false) {(function () {  module.hot.accept()
 
 /***/ }),
 
-/***/ 381:
+/***/ 384:
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(382);
+var content = __webpack_require__(385);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
@@ -1879,7 +1879,7 @@ if(false) {
 
 /***/ }),
 
-/***/ 382:
+/***/ 385:
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(15)();
@@ -1894,7 +1894,7 @@ exports.push([module.i, "/**\n* actionsheet\n*/\n/**\n* en: primary type text co
 
 /***/ }),
 
-/***/ 383:
+/***/ 386:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1904,7 +1904,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _stringify = __webpack_require__(292);
+var _stringify = __webpack_require__(285);
 
 var _stringify2 = _interopRequireDefault(_stringify);
 
@@ -2045,17 +2045,17 @@ exports.default = {
 
 /***/ }),
 
-/***/ 384:
+/***/ 387:
 /***/ (function(module, exports) {
 
 module.exports = "\n<div class=\"weui-panel weui-panel_access\">\n  <div class=\"weui-panel__hd\" v-if=\"header\" @click=\"onClickHeader\" v-html=\"header\">\n    <slot name=\"header\"></slot>\n  </div>\n  <div class=\"weui-panel__bd\">\n    <slot name=\"body\">\n      <!--type==='1'-->\n      <template v-if=\"type === '1'\">\n        <a :href=\"getUrl(item.url)\" v-for=\"item in list\" @click.prevent=\"onItemClick(item)\" class=\"weui-media-box weui-media-box_appmsg\">\n          <div class=\"weui-media-box__hd\" v-if=\"item.src\">\n            <img class=\"weui-media-box__thumb\" :src=\"item.src\" @error=\"onImgError(item, $event)\" alt=\"\">\n          </div>\n          <div class=\"weui-media-box__bd\">\n            <h4 class=\"weui-media-box__title\" v-html=\"item.title\"></h4>\n            <p class=\"weui-media-box__desc\" v-html=\"item.desc\"></p>\n          </div>\n        </a>\n      </template>\n      <!--type==='2'-->\n      <template v-if=\"type === '2'\">\n        <div class=\"weui-media-box weui-media-box_text\" v-for=\"item in list\" @click.prevent=\"onItemClick(item)\">\n          <h4 class=\"weui-media-box__title\" v-html=\"item.title\"></h4>\n          <p class=\"weui-media-box__desc\" v-html=\"item.desc\"></p>\n        </div>\n      </template>\n      <!--type==='3'-->\n      <template v-if=\"type === '3'\">\n        <div class=\"weui-media-box weui-media-box_small-appmsg\">\n          <div class=\"weui-cells\">\n            <a class=\"weui-cell weui-cell_access\" :href=\"getUrl(item.url)\" v-for=\"item in list\" @click.prevent=\"onItemClick(item)\">\n              <div class=\"weui-cell__hd\">\n                <img :src=\"item.src\" alt=\"\" @error=\"onImgError(item, $event)\" style=\"width:20px;margin-right:5px;display:block\">\n              </div>\n              <div class=\"weui-cell__bd\">\n                <p v-html=\"item.title\"></p>\n              </div>\n              <span class=\"weui-cell__ft\"></span>\n            </a>\n            </div>\n        </div>\n      </template>\n      <!--type==='4'-->\n      <template v-if=\"type === '4'\">\n        <div class=\"weui-media-box weui-media-box_text\" v-for=\"item in list\" @click.prevent=\"onItemClick(item)\">\n          <h4 class=\"weui-media-box__title\" v-html=\"item.title\"></h4>\n          <p class=\"weui-media-box__desc\" v-html=\"item.desc\"></p>\n          <ul class=\"weui-media-box__info\" v-if=\"item.meta\">\n            <li class=\"weui-media-box__info__meta\" v-html=\"item.meta.source\"></li>\n            <li class=\"weui-media-box__info__meta\" v-html=\"item.meta.date\"></li>\n            <li class=\"weui-media-box__info__meta weui-media-box__info__meta_extra\" v-html=\"item.meta.other\"></li>\n          </ul>\n        </div>\n      </template>\n      <!--type==='5'-->\n      <template v-if=\"type === '5'\">\n        <div class=\"weui-media-box weui-media-box_text\" v-for=\"item in list\" @click.prevent=\"onItemClick(item)\">\n          <div class=\"weui-media-box_appmsg\">\n            <div class=\"weui-media-box__hd\" v-if=\"item.src\">\n              <img class=\"weui-media-box__thumb\" @error=\"onImgError(item, $event)\" :src=\"item.src\" alt=\"\">\n            </div>\n            <div class=\"weui-media-box__bd\">\n              <h4 class=\"weui-media-box__title\" v-html=\"item.title\"></h4>\n              <p class=\"weui-media-box__desc\" v-html=\"item.desc\"></p>\n            </div>\n          </div>\n          <ul class=\"weui-media-box__info\" v-if=\"item.meta\">\n            <li class=\"weui-media-box__info__meta\" v-html=\"item.meta.source\"></li>\n            <li class=\"weui-media-box__info__meta\" v-html=\"item.meta.date\"></li>\n            <li class=\"weui-media-box__info__meta weui-media-box__info__meta_extra\" v-html=\"item.meta.other\"></li>\n          </ul>\n        </div>\n      </template>\n    </slot>\n  </div>\n  <div class=\"weui-panel__ft\">\n    <a\n      class=\"weui-cell weui-cell_access weui-cell_link\"\n      :href=\"getUrl(footer.url)\"\n      v-if=\"footer && footer.title && type !== '3'\"\n      @click.prevent=\"onClickFooter\">\n      <div class=\"weui-cell__bd\" v-html=\"footer.title\"></div>\n    </a>\n  </div>\n</div>\n";
 
 /***/ }),
 
-/***/ 385:
+/***/ 388:
 /***/ (function(module, exports) {
 
-module.exports = "\n<div _v-09712727=\"\">\n    <x-img :default-src=\"topImg\" style=\"width: 100%\" _v-09712727=\"\"></x-img> \n    <group-title style=\"border-bottom: 1px solid #D9D9D9;\npadding-bottom: 5px;\" _v-09712727=\"\">{{ stage }}</group-title>\n    <toast v-model=\"show\" :type=\"showMesType\" _v-09712727=\"\">{{ message }}</toast>\n    <div class=\"player\" v-for=\"v in videoList\" _v-09712727=\"\">\n        <img :src=\"v.image\" alt=\"\" _v-09712727=\"\">\n        <span class=\"id\" _v-09712727=\"\">编号：{{ v.id }}</span>\n        <h4 class=\"name\" _v-09712727=\"\">{{ v.name }}</h4>\n        <span class=\"ticket\" _v-09712727=\"\"><strong _v-09712727=\"\">{{ v.ticket }}</strong>票</span>        \n        <video id=\"my-player\" class=\"video-js\" controls=\"\" preload=\"auto\" :poster=\"v.videoImg\" data-setup=\"{}\" _v-09712727=\"\">\n          <source :src=\"v.video\" type=\"video/mp4\" _v-09712727=\"\">\n        </video>\n        <x-button id=\"submit\" :playerid=\"v.id\" class=\"vote\" type=\"primary\" @click.native=\"showMes(v)\" :show-loading=\"v.isLoading\" :disabled=\"disabled\" _v-09712727=\"\"> 投票 </x-button>\n    </div>\n</div>\n";
+module.exports = "\n<div _v-09712727=\"\">\n    <x-img :default-src=\"topImg\" style=\"width: 100%\" _v-09712727=\"\"></x-img> \n    <group-title style=\"border-bottom: 1px solid #D9D9D9;\npadding-bottom: 5px;\" _v-09712727=\"\">{{ stage }}</group-title>\n    <toast v-model=\"show\" :type=\"showMesType\" _v-09712727=\"\">{{ message }}</toast>\n    <div class=\"player\" v-for=\"(v,index) in videoList\" :key=\"index\" _v-09712727=\"\">\n        <img :src=\"v.image\" alt=\"\" _v-09712727=\"\">\n        <span class=\"id\" _v-09712727=\"\">编号：{{ v.id }}</span>\n        <h4 class=\"name\" _v-09712727=\"\">{{ v.name }}</h4>\n        <span class=\"ticket\" _v-09712727=\"\"><strong _v-09712727=\"\">{{ v.ticket }}</strong>票</span>        \n        <video id=\"my-player\" class=\"video-js\" controls=\"\" preload=\"auto\" :poster=\"v.videoImg\" data-setup=\"{}\" _v-09712727=\"\">\n          <source :src=\"v.video\" type=\"video/mp4\" _v-09712727=\"\">\n        </video>\n        <x-button id=\"submit\" :playerid=\"v.id\" class=\"vote\" type=\"primary\" @click.native=\"showMes(v)\" :show-loading=\"v.isLoading\" :disabled=\"disabled\" _v-09712727=\"\"> 投票 </x-button>\n    </div>\n</div>\n";
 
 /***/ })
 
