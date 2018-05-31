@@ -12,7 +12,7 @@
           <x-button :gradients="['#FF5E3A', '#FF9500']" @click.native="showPage(page.page_id)">查看</x-button>
         </div>
         <load-more v-if="loadingMore==true" :show-loading="loadingIcon" :tip="loadingTip" style="margin:auto;background:rgba(239, 239, 244, 0.3);width:100%;padding-bottom: 20px;"></load-more>
-        <load-more v-else-if="loadingMore==false" :show-loading="false" tip="正在加载" style="margin:auto;background:rgba(239, 239, 244, 0.3);width:100%;padding-bottom: 20px;"></load-more>
+        <load-more v-else-if="loadingMore==false" :show-loading="true" tip="正在加载" style="margin:auto;background:rgba(239, 239, 244, 0.3);width:100%;padding-bottom: 20px;"></load-more>
     </div>
 </template>
 

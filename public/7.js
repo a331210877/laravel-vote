@@ -234,7 +234,7 @@ exports.default = {
   },
   mounted: function mounted() {}
 };
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(52)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(51)))
 
 /***/ }),
 

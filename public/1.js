@@ -1164,7 +1164,7 @@ $(window).scroll(function () {
     }
   }
 });
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(52)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(51)))
 
 /***/ }),
 
@@ -2394,7 +2394,7 @@ module.exports = "\n<div class=\"vux-loadmore weui-loadmore\" :class=\"{'weui-lo
 /***/ 381:
 /***/ (function(module, exports) {
 
-module.exports = "\n<div>\n    <swiper loop auto :list=\"carouselList\" :index=\"curCarouseIndex\" @on-index-change=\"carouselChange\"></swiper>\n    <search\n      :results=\"results\"\n      v-model=\"searchValue\"\n      @on-submit=\"onSubmit()\"\n      ref=\"search\">\n    </search>\n    <div v-for=\"(page,index) in list\" :key=\"index\" style=\"padding-bottom:35px;background:rgba(239, 239, 244, 0.3);\">\n      <form-preview header-label=\"活动\" :header-value=\"page.title\" :body-items=\"page.list\"></form-preview>\n      <x-button :gradients=\"['#FF5E3A', '#FF9500']\" @click.native=\"showPage(page.page_id)\">查看</x-button>\n    </div>\n    <load-more v-if=\"loadingMore==true\" :show-loading=\"loadingIcon\" :tip=\"loadingTip\" style=\"margin:auto;background:rgba(239, 239, 244, 0.3);width:100%;padding-bottom: 20px;\"></load-more>\n    <load-more v-else-if=\"loadingMore==false\" :show-loading=\"false\" tip=\"正在加载\" style=\"margin:auto;background:rgba(239, 239, 244, 0.3);width:100%;padding-bottom: 20px;\"></load-more>\n</div>\n";
+module.exports = "\n<div>\n    <swiper loop auto :list=\"carouselList\" :index=\"curCarouseIndex\" @on-index-change=\"carouselChange\"></swiper>\n    <search\n      :results=\"results\"\n      v-model=\"searchValue\"\n      @on-submit=\"onSubmit()\"\n      ref=\"search\">\n    </search>\n    <div v-for=\"(page,index) in list\" :key=\"index\" style=\"padding-bottom:35px;background:rgba(239, 239, 244, 0.3);\">\n      <form-preview header-label=\"活动\" :header-value=\"page.title\" :body-items=\"page.list\"></form-preview>\n      <x-button :gradients=\"['#FF5E3A', '#FF9500']\" @click.native=\"showPage(page.page_id)\">查看</x-button>\n    </div>\n    <load-more v-if=\"loadingMore==true\" :show-loading=\"loadingIcon\" :tip=\"loadingTip\" style=\"margin:auto;background:rgba(239, 239, 244, 0.3);width:100%;padding-bottom: 20px;\"></load-more>\n    <load-more v-else-if=\"loadingMore==false\" :show-loading=\"true\" tip=\"正在加载\" style=\"margin:auto;background:rgba(239, 239, 244, 0.3);width:100%;padding-bottom: 20px;\"></load-more>\n</div>\n";
 
 /***/ })
 
