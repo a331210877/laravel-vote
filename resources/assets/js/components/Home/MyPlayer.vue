@@ -1,7 +1,7 @@
 <template>
   <div>
     <group title="我添加的所有选手">
-        <div class="player" v-for="v in playList">
+        <div class="player" v-for="(v,index) in playList" :key="index">
             <img :src="v.image" alt="">
             <span class="id">编号：{{ v.id }}</span>
             <h4 class="name">{{ v.name }}</h4>

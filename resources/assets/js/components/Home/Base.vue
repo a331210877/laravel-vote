@@ -43,9 +43,9 @@
 			Cell
 		},
 		mounted() {
-			if(this.$route.path=="/index"){
+			if(this.$route.path.indexOf("/index")!=-1){
 				this.selIndex=true;
-			}else if(this.$route.path=="/me"){
+			}else if(this.$route.path.indexOf("/me")!=-1){
 				this.selMe=true;
 			}
 		},

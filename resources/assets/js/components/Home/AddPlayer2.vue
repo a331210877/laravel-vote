@@ -66,36 +66,36 @@
 	export default {
 		data() {
 			return {
-                addVideoDisabled: false,
-                addForm: {
-                    id: '',
-                    name: '',
-                    image: '',
-                    video: '',
-                    videoImg: '',
-                    ticket: 0
-                },
-                addFormRules: {
-                    name: [
-                        { required: true, message: '请输入选手名称', trigger: 'blur' },
-                        { min: 2, max: 7, message: '长度在 2 到 7 个字符', trigger: 'blur' }
-                    ],
-                    stage_id: [
-                        { required: true, message: '请选择所属期数', trigger: 'change' }
-                    ],
-                    image: [
-                        { required: true, message: '请选手头像', trigger: 'change' }
-                    ],
-                    video: [
-                        { required: true, message: '请上传视频', trigger: 'change' }
-                    ],
-                    videoImg: [
-                        { required: true, message: '请上传视频封面图', trigger: 'change' }
-                    ],
-                },
-                header: {
-                    'X-CSRF-TOKEN': document.querySelector('meta[name="X-CSRF-TOKEN"]').content,
-                },
+        addVideoDisabled: false,
+        addForm: {
+            id: '',
+            name: '',
+            image: '',
+            video: '',
+            videoImg: '',
+            ticket: 0
+        },
+        addFormRules: {
+            name: [
+                { required: true, message: '请输入选手名称', trigger: 'blur' },
+                { min: 2, max: 7, message: '长度在 2 到 7 个字符', trigger: 'blur' }
+            ],
+            stage_id: [
+                { required: true, message: '请选择所属期数', trigger: 'change' }
+            ],
+            image: [
+                { required: true, message: '请选手头像', trigger: 'change' }
+            ],
+            video: [
+                { required: true, message: '请上传视频', trigger: 'change' }
+            ],
+            videoImg: [
+                { required: true, message: '请上传视频封面图', trigger: 'change' }
+            ],
+        },
+        header: {
+            'X-CSRF-TOKEN': document.querySelector('meta[name="X-CSRF-TOKEN"]').content,
+        },
 			}
 		},
 		methods: {
@@ -201,9 +201,8 @@
                         }else{
                             vue.$message.error(response.data.msg);
                         }
-                        vue.addForm.id=response.data.id;;
-                        var player = JSON.parse(JSON.stringify(vue.addForm)) ;
-                        vue.tableData.push(player);
+                        console.log('dasdmlkasjmdlkmjas');
+                        vue.$router.push("/me/myPlayer");
                     })
                     .catch(function (response) {
 

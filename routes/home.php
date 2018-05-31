@@ -23,4 +23,5 @@ Route::group(['middleware' => ['web', 'wechat.oauth']],function(){
 
     Route::post('/home/getPlayer','Home\VideoController@getPlayer');
    
+    Route::post('/home/getMyPlayer','Home\VideoController@getMyPlayer');
 });

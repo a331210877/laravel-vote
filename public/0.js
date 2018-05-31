@@ -5,11 +5,11 @@ webpackJsonp([0],{
 
 var __vue_script__, __vue_template__
 var __vue_styles__ = {}
-__webpack_require__(405)
-__vue_script__ = __webpack_require__(407)
+__webpack_require__(414)
+__vue_script__ = __webpack_require__(416)
 if (Object.keys(__vue_script__).some(function (key) { return key !== "default" && key !== "__esModule" })) {
   console.warn("[vue-loader] resources\\assets\\js\\components\\Home\\AddPage.vue: named exports in *.vue files are ignored.")}
-__vue_template__ = __webpack_require__(463)
+__vue_template__ = __webpack_require__(486)
 module.exports = __vue_script__ || {}
 if (module.exports.__esModule) module.exports = module.exports.default
 var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -224,7 +224,7 @@ module.exports = "\n<button\n  :style=\"buttonStyle\"\n  class=\"weui-btn\"\n  :
 
 /***/ }),
 
-/***/ 292:
+/***/ 294:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -246,11 +246,11 @@ exports.default = {
 
 var __vue_script__, __vue_template__
 var __vue_styles__ = {}
-__webpack_require__(322)
-__vue_script__ = __webpack_require__(324)
+__webpack_require__(323)
+__vue_script__ = __webpack_require__(325)
 if (Object.keys(__vue_script__).some(function (key) { return key !== "default" && key !== "__esModule" })) {
   console.warn("[vue-loader] node_modules\\_vux@2.9.1@vux\\src\\components\\toast\\index.vue: named exports in *.vue files are ignored.")}
-__vue_template__ = __webpack_require__(326)
+__vue_template__ = __webpack_require__(327)
 module.exports = __vue_script__ || {}
 if (module.exports.__esModule) module.exports = module.exports.default
 var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -279,6 +279,13 @@ if (false) {(function () {  module.hot.accept()
 /***/ 296:
 /***/ (function(module, exports, __webpack_require__) {
 
+module.exports = { "default": __webpack_require__(430), __esModule: true };
+
+/***/ }),
+
+/***/ 297:
+/***/ (function(module, exports, __webpack_require__) {
+
 "use strict";
 
 
@@ -297,7 +304,7 @@ module.exports = exports['default'];
 
 /***/ }),
 
-/***/ 305:
+/***/ 306:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -395,7 +402,7 @@ module.exports = shouldUseNative() ? Object.assign : function (target, source) {
 
 /***/ }),
 
-/***/ 321:
+/***/ 322:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -430,13 +437,13 @@ function createId() {
 
 /***/ }),
 
-/***/ 322:
+/***/ 323:
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(323);
+var content = __webpack_require__(324);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
@@ -457,7 +464,7 @@ if(false) {
 
 /***/ }),
 
-/***/ 323:
+/***/ 324:
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(15)();
@@ -472,7 +479,7 @@ exports.push([module.i, ".vux-fade-enter-active,\n.vux-fade-leave-active {\n  op
 
 /***/ }),
 
-/***/ 324:
+/***/ 325:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -482,7 +489,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _safariFix = __webpack_require__(325);
+var _safariFix = __webpack_require__(326);
 
 var _safariFix2 = _interopRequireDefault(_safariFix);
 
@@ -666,7 +673,7 @@ exports.default = {
 
 /***/ }),
 
-/***/ 325:
+/***/ 326:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -693,30 +700,23 @@ exports.default = {
 
 /***/ }),
 
-/***/ 326:
+/***/ 327:
 /***/ (function(module, exports) {
 
 module.exports = "\n<div class=\"vux-toast\">\n  <div class=\"weui-mask_transparent\" v-show=\"isShowMask && show\"></div>\n  <transition :name=\"currentTransition\">\n    <div class=\"weui-toast\" :style=\"{width: width}\" :class=\"toastClass\" v-show=\"show\">\n      <i class=\"weui-icon-success-no-circle weui-icon_toast\" v-show=\"type !== 'text'\"></i>\n      <p class=\"weui-toast__content\" v-if=\"text\" :style=\"style\" v-html=\"text\"></p>\n      <p class=\"weui-toast__content\" v-else :style=\"style\">\n        <slot></slot>\n      </p>\n    </div>\n  </transition>\n</div>\n";
 
 /***/ }),
 
-/***/ 329:
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = { "default": __webpack_require__(421), __esModule: true };
-
-/***/ }),
-
-/***/ 330:
+/***/ 328:
 /***/ (function(module, exports, __webpack_require__) {
 
 var __vue_script__, __vue_template__
 var __vue_styles__ = {}
-__webpack_require__(425)
-__vue_script__ = __webpack_require__(427)
+__webpack_require__(433)
+__vue_script__ = __webpack_require__(435)
 if (Object.keys(__vue_script__).some(function (key) { return key !== "default" && key !== "__esModule" })) {
   console.warn("[vue-loader] node_modules\\_vux@2.9.1@vux\\src\\components\\icon\\index.vue: named exports in *.vue files are ignored.")}
-__vue_template__ = __webpack_require__(428)
+__vue_template__ = __webpack_require__(436)
 module.exports = __vue_script__ || {}
 if (module.exports.__esModule) module.exports = module.exports.default
 var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -751,6 +751,74 @@ if (false) {(function () {  module.hot.accept()
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+
+var _mixin_uuid = __webpack_require__(322);
+
+var _mixin_uuid2 = _interopRequireDefault(_mixin_uuid);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.default = {
+  mixins: [_mixin_uuid2.default],
+  props: {
+    required: {
+      type: Boolean,
+      default: false
+    }
+  },
+  created: function created() {
+    this.handleChangeEvent = false;
+  },
+
+  computed: {
+    dirty: {
+      get: function get() {
+        return !this.pristine;
+      },
+      set: function set(newValue) {
+        this.pristine = !newValue;
+      }
+    },
+    invalid: function invalid() {
+      return !this.valid;
+    }
+  },
+  methods: {
+    setTouched: function setTouched() {
+      this.touched = true;
+    }
+  },
+  watch: {
+    value: function value(newVal) {
+      if (this.pristine === true) {
+        this.pristine = false;
+      }
+      if (!this.handleChangeEvent) {
+        this.$emit('on-change', newVal);
+        this.$emit('input', newVal);
+      }
+    }
+  },
+  data: function data() {
+    return {
+      errors: {},
+      pristine: true,
+      touched: false
+    };
+  }
+};
+
+/***/ }),
+
+/***/ 332:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
 exports.default = merge;
 function merge() {
   var obj = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
@@ -767,13 +835,86 @@ module.exports = exports['default'];
 
 /***/ }),
 
-/***/ 405:
+/***/ 333:
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(15)();
+// imports
+
+
+// module
+exports.push([module.i, ".vux-modal-open {\n  overflow: hidden;\n  position: fixed;\n  width: 100%;\n}\n.vux-modal-open-for-container {\n  overflow: hidden!important;\n}\n", ""]);
+
+// exports
+
+
+/***/ }),
+
+/***/ 334:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = {
+  hasClass: function hasClass(el, token) {
+    return new RegExp('(\\s|^)' + token + '(\\s|$)').test(el.className);
+  },
+  addClass: function addClass(el, token) {
+    if (!el) {
+      return;
+    }
+    if (el.classList) {
+      el.classList.add(token);
+    } else if (!this.hasClass(el, token)) {
+      el.className += '' + token;
+    }
+  },
+  removeClass: function removeClass(el, token) {
+    if (!el) {
+      return;
+    }
+    if (el.classList) {
+      el.classList.remove(token);
+    } else if (this.hasClass(el, token)) {
+      el.className = el.className.replace(new RegExp('(\\s|^)' + token + '(\\s|$)'), ' ').replace(/^\s+|\s+$/g, '');
+    }
+  }
+};
+
+/***/ }),
+
+/***/ 335:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var passiveSupported = false;
+
+try {
+  var options = Object.defineProperty({}, 'passive', {
+    get: function get() {
+      passiveSupported = true;
+    }
+  });
+  window.addEventListener('test', null, options);
+} catch (err) {}
+
+module.exports = passiveSupported;
+
+/***/ }),
+
+/***/ 414:
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(406);
+var content = __webpack_require__(415);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
@@ -794,7 +935,7 @@ if(false) {
 
 /***/ }),
 
-/***/ 406:
+/***/ 415:
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(15)();
@@ -802,14 +943,14 @@ exports = module.exports = __webpack_require__(15)();
 
 
 // module
-exports.push([module.i, ".vux-close[_v-17377fe8] {\n  position: relative;\n  display: inline-block;\n  vertical-align: middle;\n  color: #999;\n  width: 24px;\n  height: 24px;\n}\n.vux-close[_v-17377fe8]:before,\n.vux-close[_v-17377fe8]:after {\n  content: '';\n  position: absolute;\n  left: 0;\n  top: 11px;\n  width: 24px;\n  height: 1px;\n  background-color: currentColor;\n  transform: rotate(-45deg);\n}\n.vux-close[_v-17377fe8]:after {\n  transform: rotate(45deg);\n}\n.dialog-demo .weui-dialog[_v-17377fe8] {\n  border-radius: 8px;\n  padding-bottom: 8px;\n}\n.dialog-demo .dialog-title[_v-17377fe8] {\n  line-height: 30px;\n  color: #666;\n}\n.dialog-demo .img-box[_v-17377fe8] {\n  height: 350px;\n  overflow: hidden;\n}\n.dialog-demo .vux-close[_v-17377fe8] {\n  margin-top: 8px;\n  margin-bottom: 8px;\n}\n.center[_v-17377fe8] {\n  padding-top: 10px;\n  padding-left: 15px;\n  color: green;\n}\n", ""]);
+exports.push([module.i, ".vux-close[_v-17377fe8] {\n  position: relative;\n  display: inline-block;\n  vertical-align: middle;\n  color: #999;\n  width: 24px;\n  height: 24px;\n}\n.vux-close[_v-17377fe8]:before,\n.vux-close[_v-17377fe8]:after {\n  content: '';\n  position: absolute;\n  left: 0;\n  top: 11px;\n  width: 24px;\n  height: 1px;\n  background-color: currentColor;\n  transform: rotate(-45deg);\n}\n.vux-close[_v-17377fe8]:after {\n  transform: rotate(45deg);\n}\n.dialog-demo .weui-dialog[_v-17377fe8] {\n  border-radius: 8px;\n  padding-bottom: 8px;\n}\n.dialog-demo .dialog-title[_v-17377fe8] {\n  line-height: 30px;\n  color: #666;\n}\n.dialog-demo .img-box[_v-17377fe8] {\n  height: 350px;\n  overflow: hidden;\n}\n.dialog-demo .vux-close[_v-17377fe8] {\n  margin-top: 8px;\n  margin-bottom: 8px;\n}\n.center[_v-17377fe8] {\n  padding-top: 10px;\n  padding-left: 15px;\n  color: green;\n}\n.vux-popup-dialog[_v-17377fe8] {\n  background: white;\n}\n", ""]);
 
 // exports
 
 
 /***/ }),
 
-/***/ 407:
+/***/ 416:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -819,7 +960,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _vuxUploader = __webpack_require__(408);
+var _vuxUploader = __webpack_require__(417);
 
 var _vuxUploader2 = _interopRequireDefault(_vuxUploader);
 
@@ -827,7 +968,7 @@ var _index = __webpack_require__(207);
 
 var _index2 = _interopRequireDefault(_index);
 
-var _index3 = __webpack_require__(417);
+var _index3 = __webpack_require__(426);
 
 var _index4 = _interopRequireDefault(_index3);
 
@@ -835,25 +976,37 @@ var _index5 = __webpack_require__(295);
 
 var _index6 = _interopRequireDefault(_index5);
 
-var _index7 = __webpack_require__(437);
+var _index7 = __webpack_require__(445);
 
 var _index8 = _interopRequireDefault(_index7);
 
-var _index9 = __webpack_require__(445);
+var _index9 = __webpack_require__(451);
 
 var _index10 = _interopRequireDefault(_index9);
 
-var _index11 = __webpack_require__(446);
+var _index11 = __webpack_require__(452);
 
 var _index12 = _interopRequireDefault(_index11);
 
-var _index13 = __webpack_require__(460);
+var _index13 = __webpack_require__(465);
 
 var _index14 = _interopRequireDefault(_index13);
 
 var _index15 = __webpack_require__(287);
 
 var _index16 = _interopRequireDefault(_index15);
+
+var _index17 = __webpack_require__(468);
+
+var _index18 = _interopRequireDefault(_index17);
+
+var _index19 = __webpack_require__(208);
+
+var _index20 = _interopRequireDefault(_index19);
+
+var _index21 = __webpack_require__(474);
+
+var _index22 = _interopRequireDefault(_index21);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -866,7 +1019,10 @@ exports.default = {
     XDialog: _index8.default,
     Datetime: _index12.default,
     Box: _index14.default,
-    XButton: _index16.default
+    XButton: _index16.default,
+    Popup: _index18.default,
+    Cell: _index20.default,
+    Checklist: _index22.default
   },
   data: function data() {
     return {
@@ -881,36 +1037,84 @@ exports.default = {
         images: [],
         endTime: '',
         image: ''
-      }
+      },
+      showPlayer: false,
+      commonList: [],
+      checklistIndex: [],
+      selPlayerList: [],
+      loading: false
     };
   },
 
   methods: {
+    change: function change(val, label) {
+      if (this.loading) {
+        console.log(val);
+        this.selPlayerList = label;
+      }
+    },
     previewMethod: function previewMethod() {
       this.showHideOnBlur = true;
       console.log(this.image);
     },
+    alert: function alert($msg) {
+      this.msg = $msg;
+      this.showPositionValue = true;
+    },
     submit: function submit() {
+      if (this.page.title == '') {
+        this.alert("请输入活动名称");
+      } else if (this.page.time == '') {
+        this.alert("请选择截止时间");
+      } else if (this.page.images.length == 0) {
+        this.alert("请上传活动海报");
+      } else if (this.checklistIndex.length == 0) {
+        this.alert("请添加视频");
+      } else {
+        var vue = this;
+        vue.page.endTime = new Date(vue.page.time) / 1000;
+        var arr = vue.page.images[0].url.split('\/');
+        vue.page.image = arr[arr.length - 1];
+        axios.post('/home/addPage', {
+          page: vue.page,
+          idList: vue.checklistIndex
+        }).then(function (response) {
+          if (response.data.code == 1) {
+            vue.$message({
+              type: "success",
+              message: response.data.msg
+            });
+            vue.$router.push("/index");
+          } else {
+            vue.$message.error(response.data.msg);
+          }
+        }).catch(function (response) {});
+      }
+    },
+    getMyPlayer: function getMyPlayer() {
       var vue = this;
-      vue.page.endTime = new Date(vue.page.time) / 1000;
-      var arr = vue.page.images[0].url.split('\/');
-      vue.page.image = arr[arr.length - 1];
-      axios.post('/home/addPage', {
-        page: vue.page
-      }).then(function (response) {
-        if (response.data.code == 1) {
-          vue.$message({
-            type: "success",
-            message: response.data.msg
-          });
-          vue.$router.push("/index");
-        } else {
-          vue.$message.error(response.data.msg);
-        }
-      }).catch(function (response) {});
+      this.$nextTick(function () {
+        axios.post('home/getMyPlayer', {}).then(function (response) {
+          var commonList = [];
+          var listIndex = [];
+          for (var i = 0; i < response.data.length; i++) {
+            var obj = {
+              'key': response.data[i].id,
+              'value': response.data[i].name
+            };
+            commonList.push(obj);
+          }
+          vue.commonList = commonList;
+          vue.loading = true;
+        }).catch(function (response) {
+          console.log(response);
+        });
+      });
     }
   },
-  mounted: function mounted() {},
+  mounted: function mounted() {
+    this.getMyPlayer();
+  },
 
   directives: {
     TransferDom: _index10.default
@@ -919,24 +1123,24 @@ exports.default = {
 
 /***/ }),
 
-/***/ 408:
+/***/ 417:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(409)
+module.exports = __webpack_require__(418)
 
 
 /***/ }),
 
-/***/ 409:
+/***/ 418:
 /***/ (function(module, exports, __webpack_require__) {
 
 var __vue_script__, __vue_template__
 var __vue_styles__ = {}
-__webpack_require__(410)
-__vue_script__ = __webpack_require__(412)
+__webpack_require__(419)
+__vue_script__ = __webpack_require__(421)
 if (Object.keys(__vue_script__).some(function (key) { return key !== "default" && key !== "__esModule" })) {
   console.warn("[vue-loader] node_modules\\_vux-uploader@0.1.9@vux-uploader\\src\\components\\uploader.vue: named exports in *.vue files are ignored.")}
-__vue_template__ = __webpack_require__(416)
+__vue_template__ = __webpack_require__(425)
 module.exports = __vue_script__ || {}
 if (module.exports.__esModule) module.exports = module.exports.default
 var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -962,13 +1166,13 @@ if (false) {(function () {  module.hot.accept()
 
 /***/ }),
 
-/***/ 410:
+/***/ 419:
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(411);
+var content = __webpack_require__(420);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
@@ -989,7 +1193,7 @@ if(false) {
 
 /***/ }),
 
-/***/ 411:
+/***/ 420:
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(15)();
@@ -1004,7 +1208,7 @@ exports.push([module.i, "/**\n* actionsheet\n*/\n/**\n* en: primary type text co
 
 /***/ }),
 
-/***/ 412:
+/***/ 421:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1014,7 +1218,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _uploaderItem = __webpack_require__(413);
+var _uploaderItem = __webpack_require__(422);
 
 var _uploaderItem2 = _interopRequireDefault(_uploaderItem);
 
@@ -1147,15 +1351,15 @@ exports.default = {
 
 /***/ }),
 
-/***/ 413:
+/***/ 422:
 /***/ (function(module, exports, __webpack_require__) {
 
 var __vue_script__, __vue_template__
 var __vue_styles__ = {}
-__vue_script__ = __webpack_require__(414)
+__vue_script__ = __webpack_require__(423)
 if (Object.keys(__vue_script__).some(function (key) { return key !== "default" && key !== "__esModule" })) {
   console.warn("[vue-loader] node_modules\\_vux-uploader@0.1.9@vux-uploader\\src\\components\\uploader-item.vue: named exports in *.vue files are ignored.")}
-__vue_template__ = __webpack_require__(415)
+__vue_template__ = __webpack_require__(424)
 module.exports = __vue_script__ || {}
 if (module.exports.__esModule) module.exports = module.exports.default
 var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -1181,7 +1385,7 @@ if (false) {(function () {  module.hot.accept()
 
 /***/ }),
 
-/***/ 414:
+/***/ 423:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1208,30 +1412,30 @@ exports.default = {
 
 /***/ }),
 
-/***/ 415:
+/***/ 424:
 /***/ (function(module, exports) {
 
 module.exports = "\n<li class=\"weui-uploader__file\" :style=\"style\">\n</li>\n";
 
 /***/ }),
 
-/***/ 416:
+/***/ 425:
 /***/ (function(module, exports) {
 
 module.exports = "\n<div class=\"weui-cell\" _v-2d03f256=\"\">\n  <div class=\"weui-cell__bd\" _v-2d03f256=\"\">\n    <div class=\"weui-uploader\" _v-2d03f256=\"\">\n      <div v-show=\"showHeader\" class=\"weui-uploader__hd\" _v-2d03f256=\"\">\n        <p class=\"weui-uploader__title\" _v-2d03f256=\"\"> {{ title }} </p>\n        <div v-show=\"showHeader &amp;&amp; showTip\" class=\"weui-uploader__info\" _v-2d03f256=\"\">\n          {{ images.length }} / {{ max }}\n        </div>\n      </div>\n\n      <div class=\"weui-uploader__bd\" :class=\"{small: size === 'small'}\" _v-2d03f256=\"\">\n        <div v-show=\"!readonly &amp;&amp; images.length > 0\" class=\"weui-uploader__input-box remove\" @click=\"remove\" _v-2d03f256=\"\">\n        </div>\n\n        <ul class=\"weui-uploader__files\" _v-2d03f256=\"\">\n          <uploader-item v-for=\"image in images\" :background-image=\"image.url\" :key=\"image.url\" @click.native=\"preview(image)\" _v-2d03f256=\"\"></uploader-item>\n        </ul>\n        \n        <div v-show=\"!readonly &amp;&amp; images.length < max\" class=\"weui-uploader__input-box\" @click=\"add\" _v-2d03f256=\"\">\n          <input v-if=\"!handleClick\" ref=\"input\" class=\"weui-uploader__input\" type=\"file\" accept=\"image/*\" :capture=\"showCapture\" @change=\"change\" _v-2d03f256=\"\">\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n";
 
 /***/ }),
 
-/***/ 417:
+/***/ 426:
 /***/ (function(module, exports, __webpack_require__) {
 
 var __vue_script__, __vue_template__
 var __vue_styles__ = {}
-__webpack_require__(418)
-__vue_script__ = __webpack_require__(420)
+__webpack_require__(427)
+__vue_script__ = __webpack_require__(429)
 if (Object.keys(__vue_script__).some(function (key) { return key !== "default" && key !== "__esModule" })) {
   console.warn("[vue-loader] node_modules\\_vux@2.9.1@vux\\src\\components\\x-input\\index.vue: named exports in *.vue files are ignored.")}
-__vue_template__ = __webpack_require__(436)
+__vue_template__ = __webpack_require__(444)
 module.exports = __vue_script__ || {}
 if (module.exports.__esModule) module.exports = module.exports.default
 var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -1257,13 +1461,13 @@ if (false) {(function () {  module.hot.accept()
 
 /***/ }),
 
-/***/ 418:
+/***/ 427:
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(419);
+var content = __webpack_require__(428);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
@@ -1284,7 +1488,7 @@ if(false) {
 
 /***/ }),
 
-/***/ 419:
+/***/ 428:
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(15)();
@@ -1299,7 +1503,7 @@ exports.push([module.i, "/**\n* actionsheet\n*/\n/**\n* en: primary type text co
 
 /***/ }),
 
-/***/ 420:
+/***/ 429:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1309,15 +1513,15 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _keys = __webpack_require__(329);
+var _keys = __webpack_require__(296);
 
 var _keys2 = _interopRequireDefault(_keys);
 
-var _base = __webpack_require__(424);
+var _base = __webpack_require__(331);
 
 var _base2 = _interopRequireDefault(_base);
 
-var _icon = __webpack_require__(330);
+var _icon = __webpack_require__(328);
 
 var _icon2 = _interopRequireDefault(_icon);
 
@@ -1329,19 +1533,19 @@ var _inlineDesc = __webpack_require__(209);
 
 var _inlineDesc2 = _interopRequireDefault(_inlineDesc);
 
-var _isEmail = __webpack_require__(429);
+var _isEmail = __webpack_require__(437);
 
 var _isEmail2 = _interopRequireDefault(_isEmail);
 
-var _isMobilePhone = __webpack_require__(432);
+var _isMobilePhone = __webpack_require__(440);
 
 var _isMobilePhone2 = _interopRequireDefault(_isMobilePhone);
 
-var _debounce = __webpack_require__(433);
+var _debounce = __webpack_require__(441);
 
 var _debounce2 = _interopRequireDefault(_debounce);
 
-var _vanillaMasker = __webpack_require__(435);
+var _vanillaMasker = __webpack_require__(443);
 
 var _vanillaMasker2 = _interopRequireDefault(_vanillaMasker);
 
@@ -1945,23 +2149,23 @@ exports.default = {
 
 /***/ }),
 
-/***/ 421:
+/***/ 430:
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(422);
+__webpack_require__(431);
 module.exports = __webpack_require__(16).Object.keys;
 
 
 /***/ }),
 
-/***/ 422:
+/***/ 431:
 /***/ (function(module, exports, __webpack_require__) {
 
 // 19.1.2.14 Object.keys(O)
 var toObject = __webpack_require__(51);
 var $keys = __webpack_require__(22);
 
-__webpack_require__(423)('keys', function () {
+__webpack_require__(432)('keys', function () {
   return function keys(it) {
     return $keys(toObject(it));
   };
@@ -1970,7 +2174,7 @@ __webpack_require__(423)('keys', function () {
 
 /***/ }),
 
-/***/ 423:
+/***/ 432:
 /***/ (function(module, exports, __webpack_require__) {
 
 // most Object methods by ES6 should accept primitives
@@ -1987,81 +2191,13 @@ module.exports = function (KEY, exec) {
 
 /***/ }),
 
-/***/ 424:
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _mixin_uuid = __webpack_require__(321);
-
-var _mixin_uuid2 = _interopRequireDefault(_mixin_uuid);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-exports.default = {
-  mixins: [_mixin_uuid2.default],
-  props: {
-    required: {
-      type: Boolean,
-      default: false
-    }
-  },
-  created: function created() {
-    this.handleChangeEvent = false;
-  },
-
-  computed: {
-    dirty: {
-      get: function get() {
-        return !this.pristine;
-      },
-      set: function set(newValue) {
-        this.pristine = !newValue;
-      }
-    },
-    invalid: function invalid() {
-      return !this.valid;
-    }
-  },
-  methods: {
-    setTouched: function setTouched() {
-      this.touched = true;
-    }
-  },
-  watch: {
-    value: function value(newVal) {
-      if (this.pristine === true) {
-        this.pristine = false;
-      }
-      if (!this.handleChangeEvent) {
-        this.$emit('on-change', newVal);
-        this.$emit('input', newVal);
-      }
-    }
-  },
-  data: function data() {
-    return {
-      errors: {},
-      pristine: true,
-      touched: false
-    };
-  }
-};
-
-/***/ }),
-
-/***/ 425:
+/***/ 433:
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(426);
+var content = __webpack_require__(434);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
@@ -2082,7 +2218,7 @@ if(false) {
 
 /***/ }),
 
-/***/ 426:
+/***/ 434:
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(15)();
@@ -2097,7 +2233,7 @@ exports.push([module.i, "@font-face {\n  font-weight: normal;\n  font-style: nor
 
 /***/ }),
 
-/***/ 427:
+/***/ 435:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2140,14 +2276,14 @@ exports.default = {
 
 /***/ }),
 
-/***/ 428:
+/***/ 436:
 /***/ (function(module, exports) {
 
 module.exports = "\n<i :class=\"[className, isMsg ? 'weui-icon_msg' : '']\"></i>\n";
 
 /***/ }),
 
-/***/ 429:
+/***/ 437:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2158,19 +2294,19 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = isEmail;
 
-var _assertString = __webpack_require__(296);
+var _assertString = __webpack_require__(297);
 
 var _assertString2 = _interopRequireDefault(_assertString);
 
-var _merge = __webpack_require__(331);
+var _merge = __webpack_require__(332);
 
 var _merge2 = _interopRequireDefault(_merge);
 
-var _isByteLength = __webpack_require__(430);
+var _isByteLength = __webpack_require__(438);
 
 var _isByteLength2 = _interopRequireDefault(_isByteLength);
 
-var _isFQDN = __webpack_require__(431);
+var _isFQDN = __webpack_require__(439);
 
 var _isFQDN2 = _interopRequireDefault(_isFQDN);
 
@@ -2243,7 +2379,7 @@ module.exports = exports['default'];
 
 /***/ }),
 
-/***/ 430:
+/***/ 438:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2257,7 +2393,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
 exports.default = isByteLength;
 
-var _assertString = __webpack_require__(296);
+var _assertString = __webpack_require__(297);
 
 var _assertString2 = _interopRequireDefault(_assertString);
 
@@ -2283,7 +2419,7 @@ module.exports = exports['default'];
 
 /***/ }),
 
-/***/ 431:
+/***/ 439:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2294,11 +2430,11 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = isFQDN;
 
-var _assertString = __webpack_require__(296);
+var _assertString = __webpack_require__(297);
 
 var _assertString2 = _interopRequireDefault(_assertString);
 
-var _merge = __webpack_require__(331);
+var _merge = __webpack_require__(332);
 
 var _merge2 = _interopRequireDefault(_merge);
 
@@ -2351,7 +2487,7 @@ module.exports = exports['default'];
 
 /***/ }),
 
-/***/ 432:
+/***/ 440:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2362,7 +2498,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = isMobilePhone;
 
-var _assertString = __webpack_require__(296);
+var _assertString = __webpack_require__(297);
 
 var _assertString2 = _interopRequireDefault(_assertString);
 
@@ -2461,7 +2597,7 @@ module.exports = exports['default'];
 
 /***/ }),
 
-/***/ 433:
+/***/ 441:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2471,7 +2607,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _lodash = __webpack_require__(434);
+var _lodash = __webpack_require__(442);
 
 var _lodash2 = _interopRequireDefault(_lodash);
 
@@ -2481,7 +2617,7 @@ exports.default = _lodash2.default;
 
 /***/ }),
 
-/***/ 434:
+/***/ 442:
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global) {/**
@@ -2866,7 +3002,7 @@ module.exports = debounce;
 
 /***/ }),
 
-/***/ 435:
+/***/ 443:
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;(function(root, factory) {
@@ -3099,23 +3235,23 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;(function(root
 
 /***/ }),
 
-/***/ 436:
+/***/ 444:
 /***/ (function(module, exports) {
 
 module.exports = "\n\t<div class=\"vux-x-input weui-cell\"\n\t\t:class=\"{\n\t\t\t'weui-cell_warn': showWarn,\n\t\t\t'disabled': disabled,\n\t\t\t'vux-x-input-has-right-full': hasRightFullHeightSlot\n\t\t}\">\n    <div class=\"weui-cell__hd\">\n      <div :style=\"labelStyles\" v-if=\"hasRestrictedLabel\">\n        <slot name=\"restricted-label\"></slot>\n      </div>\n      <slot name=\"label\">\n        <label class=\"weui-label\" :class=\"labelClass\" :style=\"{width: labelWidth || $parent.labelWidth || labelWidthComputed, textAlign: $parent.labelAlign, marginRight: $parent.labelMarginRight}\" v-if=\"title\" v-html=\"title\" :for=\"`vux-x-input-${uuid}`\"></label>\n        <inline-desc v-if=\"inlineDesc\">{{ inlineDesc }}</inline-desc>\n      </slot>\n    </div>\n    <div class=\"weui-cell__bd weui-cell__primary\" :class=\"placeholderAlign ? `vux-x-input-placeholder-${placeholderAlign}` : ''\">\n      <input\n      :id=\"`vux-x-input-${uuid}`\"\n      v-if=\"!type || type === 'text'\"\n      class=\"weui-input\"\n      :maxlength=\"max\"\n      :autocomplete=\"autocomplete\"\n      :autocapitalize=\"autocapitalize\"\n      :autocorrect=\"autocorrect\"\n      :spellcheck=\"spellcheck\"\n      :style=\"inputStyle\"\n      type=\"text\"\n      :name=\"name\"\n      :pattern=\"pattern\"\n      :placeholder=\"placeholder\"\n      :readonly=\"readonly\"\n      :disabled=\"disabled\"\n      v-model=\"currentValue\"\n      @focus=\"focusHandler\"\n      @blur=\"onBlur\"\n      @keyup=\"onKeyUp\"\n      ref=\"input\"/>\n      <input\n      :id=\"`vux-x-input-${uuid}`\"\n      v-if=\"type === 'number'\"\n      class=\"weui-input\"\n      :maxlength=\"max\"\n      :autocomplete=\"autocomplete\"\n      :autocapitalize=\"autocapitalize\"\n      :autocorrect=\"autocorrect\"\n      :spellcheck=\"spellcheck\"\n      :style=\"inputStyle\"\n      type=\"number\"\n      :name=\"name\"\n      :pattern=\"pattern\"\n      :placeholder=\"placeholder\"\n      :readonly=\"readonly\"\n      :disabled=\"disabled\"\n      v-model=\"currentValue\"\n      @focus=\"focusHandler\"\n      @blur=\"onBlur\"\n      @keyup=\"onKeyUp\"\n      ref=\"input\"/>\n      <input\n      :id=\"`vux-x-input-${uuid}`\"\n      v-if=\"type === 'email'\"\n      class=\"weui-input\"\n      :maxlength=\"max\"\n      :autocomplete=\"autocomplete\"\n      :autocapitalize=\"autocapitalize\"\n      :autocorrect=\"autocorrect\"\n      :spellcheck=\"spellcheck\"\n      :style=\"inputStyle\"\n      type=\"email\"\n      :name=\"name\"\n      :pattern=\"pattern\"\n      :placeholder=\"placeholder\"\n      :readonly=\"readonly\"\n      :disabled=\"disabled\"\n      v-model=\"currentValue\"\n      @focus=\"focusHandler\"\n      @blur=\"onBlur\"\n      @keyup=\"onKeyUp\"\n      ref=\"input\"/>\n      <input\n      :id=\"`vux-x-input-${uuid}`\"\n      v-if=\"type === 'password'\"\n      class=\"weui-input\"\n      :maxlength=\"max\"\n      :autocomplete=\"autocomplete\"\n      :autocapitalize=\"autocapitalize\"\n      :autocorrect=\"autocorrect\"\n      :spellcheck=\"spellcheck\"\n      :style=\"inputStyle\"\n      type=\"password\"\n      :name=\"name\"\n      :pattern=\"pattern\"\n      :placeholder=\"placeholder\"\n      :readonly=\"readonly\"\n      :disabled=\"disabled\"\n      v-model=\"currentValue\"\n      @focus=\"focusHandler\"\n      @blur=\"onBlur\"\n      @keyup=\"onKeyUp\"\n      ref=\"input\"/>\n      <input\n      :id=\"`vux-x-input-${uuid}`\"\n      v-if=\"type === 'tel'\"\n      class=\"weui-input\"\n      :maxlength=\"max\"\n      :autocomplete=\"autocomplete\"\n      :autocapitalize=\"autocapitalize\"\n      :autocorrect=\"autocorrect\"\n      :spellcheck=\"spellcheck\"\n      :style=\"inputStyle\"\n      type=\"tel\"\n      :name=\"name\"\n      :pattern=\"pattern\"\n      :placeholder=\"placeholder\"\n      :readonly=\"readonly\"\n      :disabled=\"disabled\"\n      v-model=\"currentValue\"\n      @focus=\"focusHandler\"\n      @blur=\"onBlur\"\n      @keyup=\"onKeyUp\"\n      ref=\"input\"/>\n    </div>\n    <div class=\"weui-cell__ft\">\n      <icon type=\"clear\" v-show=\"!hasRightFullHeightSlot && !equalWith && showClear && currentValue !== '' && !readonly && !disabled && isFocus\" @click.native=\"clear\"></icon>\n\n      <icon @click.native=\"onClickErrorIcon\" class=\"vux-input-icon\" type=\"warn\" :title=\"!valid ? firstError : ''\" v-show=\"showWarn\"></icon>\n      <icon @click.native=\"onClickErrorIcon\" class=\"vux-input-icon\" type=\"warn\" v-if=\"!novalidate && hasLengthEqual && dirty && equalWith && !valid\"></icon>\n\n      <icon type=\"success\" v-show=\"!novalidate && equalWith && equalWith === currentValue && valid\"></icon>\n\n      <icon type=\"success\" class=\"vux-input-icon\" v-show=\"novalidate && iconType === 'success'\"></icon>\n      <icon type=\"warn\" class=\"vux-input-icon\" v-show=\"novalidate && iconType === 'error'\"></icon>\n\n      <slot name=\"right\"></slot>\n      <div v-if=\"hasRightFullHeightSlot\" class=\"vux-x-input-right-full\">\n        <slot name=\"right-full-height\"></slot>\n      </div>\n    </div>\n\n    <toast\n    v-model=\"showErrorToast\"\n    type=\"text\"\n    width=\"auto\"\n    :time=\"600\">{{ firstError }}</toast>\n  </div>\n";
 
 /***/ }),
 
-/***/ 437:
+/***/ 445:
 /***/ (function(module, exports, __webpack_require__) {
 
 var __vue_script__, __vue_template__
 var __vue_styles__ = {}
-__webpack_require__(438)
-__vue_script__ = __webpack_require__(441)
+__webpack_require__(446)
+__vue_script__ = __webpack_require__(448)
 if (Object.keys(__vue_script__).some(function (key) { return key !== "default" && key !== "__esModule" })) {
   console.warn("[vue-loader] node_modules\\_vux@2.9.1@vux\\src\\components\\x-dialog\\index.vue: named exports in *.vue files are ignored.")}
-__vue_template__ = __webpack_require__(444)
+__vue_template__ = __webpack_require__(450)
 module.exports = __vue_script__ || {}
 if (module.exports.__esModule) module.exports = module.exports.default
 var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -3141,13 +3277,13 @@ if (false) {(function () {  module.hot.accept()
 
 /***/ }),
 
-/***/ 438:
+/***/ 446:
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(439);
+var content = __webpack_require__(447);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
@@ -3168,12 +3304,12 @@ if(false) {
 
 /***/ }),
 
-/***/ 439:
+/***/ 447:
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(15)();
 // imports
-exports.i(__webpack_require__(440), "");
+exports.i(__webpack_require__(333), "");
 
 // module
 exports.push([module.i, ".vux-fade-enter-active,\n.vux-fade-leave-active {\n  opacity: 1;\n  transition: opacity linear 0.2s;\n}\n.vux-fade-enter,\n.vux-fade-leave-to {\n  opacity: 0;\n}\n.vux-dialog-enter-active {\n  animation: vux-dialog-in 0.5s;\n}\n.vux-dialog-leave-active {\n  animation: vux-dialog-out 0.3s;\n}\n@keyframes vux-dialog-in {\n  0% {\n    transform: scale(1.185);\n    opacity: 0;\n  }\n  100% {\n    transform: scale(1);\n    opacity: 1;\n  }\n}\n@keyframes vux-dialog-out {\n  0% {\n    transform: scale(1);\n    opacity: 1;\n  }\n  100% {\n    transform: scale(0.85);\n    opacity: 0;\n  }\n}\n.vux-mask-enter,\n.vux-mask-leave-active {\n  opacity: 0;\n}\n.vux-mask-leave-active,\n.vux-mask-enter-active {\n  transition: opacity 300ms;\n}\n/**\n* actionsheet\n*/\n/**\n* en: primary type text color of menu item\n* zh-CN: 菜单项primary类型的文本颜色\n*/\n/**\n* en: warn type text color of menu item\n* zh-CN: 菜单项warn类型的文本颜色\n*/\n/**\n* en: default type text color of menu item\n* zh-CN: 菜单项default类型的文本颜色\n*/\n/**\n* en: disabled type text color of menu item\n* zh-CN: 菜单项disabled类型的文本颜色\n*/\n/**\n* datetime\n*/\n/**\n* tabbar\n*/\n/**\n* tab\n*/\n/**\n* dialog\n*/\n/**\n* en: title and content's padding-left and padding-right\n* zh-CN: 标题及内容区域的 padding-left 和 padding-right\n*/\n/**\n* x-number\n*/\n/**\n* checkbox\n*/\n/**\n* check-icon\n*/\n/**\n* Cell\n*/\n/**\n* Mask\n*/\n/**\n* Range\n*/\n/**\n* Tabbar\n*/\n/**\n* Header\n*/\n/**\n* Timeline\n*/\n/**\n* Switch\n*/\n/**\n* Button\n*/\n/**\n* en: margin-top value between previous button, not works when there is only one button\n* zh-CN: 与相邻按钮的 margin-top 间隙，只有一个按钮时不生效\n*/\n/**\n* swipeout\n*/\n/**\n* Cell\n*/\n/**\n* Badge\n*/\n/**\n* en: badge background color\n* zh-CN: badge的背景颜色\n*/\n/**\n* Popover\n*/\n/**\n* Button tab\n*/\n/**\n* en: not used\n* zh-CN: 未被使用\n*/\n/**\n* en: border radius color\n* zh-CN: 圆角边框的半径\n*/\n/**\n* en: border color\n* zh-CN: 边框的颜色\n*/\n/**\n* en: not used\n* zh-CN: 默认状态下圆角边框的颜色\n*/\n/**\n* en: not used\n* zh-CN: 未被使用\n*/\n/**\n* en: default background color\n* zh-CN: 默认状态下的背景颜色\n*/\n/**\n* en: selected background color\n* zh-CN: 选中状态下的背景颜色\n*/\n/**\n* en: not used\n* zh-CN: 未被使用\n*/\n/* alias */\n/**\n* en: not used\n* zh-CN: 未被使用\n*/\n/**\n* en: default text color\n* zh-CN: 默认状态下的文本颜色\n*/\n/**\n* en: height\n* zh-CN: 元素高度\n*/\n/**\n* en: line height\n* zh-CN: 元素行高\n*/\n/**\n* Swiper\n*/\n/**\n* checklist\n*/\n/**\n* popup-picker\n*/\n/**\n* popup\n*/\n/**\n* popup-header\n*/\n/**\n* form-preview\n*/\n/**\n* sticky\n*/\n/**\n* group\n*/\n/**\n* en: margin-top of title\n* zh-CN: 标题的margin-top\n*/\n/**\n* en: margin-bottom of title\n* zh-CN: 标题的margin-bottom\n*/\n/**\n* en: margin-top of footer title\n* zh-CN: 底部标题的margin-top\n*/\n/**\n* en: margin-bottom of footer title\n* zh-CN: 底部标题的margin-bottom\n*/\n/**\n* toast\n*/\n/**\n* en: text color of content\n* zh-CN: 内容文本颜色\n*/\n/**\n* en: default top\n* zh-CN: 默认状态下距离顶部的高度\n*/\n/**\n* en: position top\n* zh-CN: 顶部显示的高度\n*/\n/**\n* en: position bottom\n* zh-CN: 底部显示的高度\n*/\n/**\n* en: z-index\n* zh-CN: z-index\n*/\n/**\n* icon\n*/\n/**\n* calendar\n*/\n/**\n* en: forward and backward arrows color\n* zh-CN: 前进后退的箭头颜色\n*/\n/**\n* en: text color of week highlight\n* zh-CN: 周末高亮的文本颜色\n*/\n/**\n* en: background color when selected\n* zh-CN: 选中时的背景颜色\n*/\n/**\n* en: text color when disabled\n* zh-CN: 禁用时的文本颜色\n*/\n/**\n* en: text color of today\n* zh-CN: 今天的文本颜色\n*/\n/**\n* en: font size of cell\n* zh-CN: 单元格的字号\n*/\n/**\n* en: background color\n* zh-CN: 背景颜色\n*/\n/**\n* en: size of date cell\n* zh-CN: 日期单元格尺寸大小\n*/\n/**\n* en: line height of date cell\n* zh-CN: 日期单元格的行高\n*/\n/**\n* en: text color of header\n* zh-CN: 头部的文本颜色\n*/\n/**\n* week-calendar\n*/\n/**\n* search\n*/\n/**\n* en: text color of cancel button\n* zh-CN: 取消按钮文本颜色\n*/\n/**\n* en: background color\n* zh-CN: 背景颜色\n*/\n/**\n* en: text color of placeholder\n* zh-CN: placeholder文本颜色\n*/\n/**\n* radio\n*/\n/**\n* en: checked icon color\n* zh-CN: 选中状态的图标颜色\n*/\n/**\n* loadmore\n*/\n/**\n* en: not used\n* zh-CN: 未被使用\n*/\n/**\n* loading\n*/\n/**\n* en: z-index\n* zh-CN: z-index\n*/\n.weui-mask {\n  position: fixed;\n  z-index: 1000;\n  top: 0;\n  right: 0;\n  left: 0;\n  bottom: 0;\n  background: rgba(0, 0, 0, 0.6);\n}\n.weui-mask_transparent {\n  position: fixed;\n  z-index: 1000;\n  top: 0;\n  right: 0;\n  left: 0;\n  bottom: 0;\n}\n.weui-dialog {\n  position: fixed;\n  display: table;\n  z-index: 5000;\n  width: 80%;\n  max-width: 300px;\n  top: 0;\n  right: 0;\n  bottom: 0;\n  left: 0;\n  margin: auto;\n  background-color: #FFFFFF;\n  text-align: center;\n  border-radius: 3px;\n  overflow: hidden;\n}\n.weui-dialog__hd {\n  padding: 1.3em 1.6em 0.5em;\n}\n.weui-dialog__hd.with-no-content {\n  padding: 1.7em 1.6em;\n}\n.weui-dialog__title {\n  font-weight: 400;\n  font-size: 18px;\n}\n.weui-dialog__bd {\n  padding: 0 1.6em 0.8em;\n  min-height: 40px;\n  font-size: 15px;\n  line-height: 1.3;\n  word-wrap: break-word;\n  word-break: break-all;\n  color: #999999;\n}\n.weui-dialog__bd:first-child {\n  padding: 2.7em 20px 1.7em;\n  color: #353535;\n}\n.weui-dialog__ft {\n  position: relative;\n  line-height: 48px;\n  font-size: 18px;\n  display: -ms-flexbox;\n  display: flex;\n}\n.weui-dialog__ft:after {\n  content: \" \";\n  position: absolute;\n  left: 0;\n  top: 0;\n  right: 0;\n  height: 1px;\n  border-top: 1px solid #D5D5D6;\n  color: #D5D5D6;\n  transform-origin: 0 0;\n  transform: scaleY(0.5);\n}\n.weui-dialog__btn {\n  display: block;\n  -ms-flex: 1;\n      flex: 1;\n  color: #3CC51F;\n  text-decoration: none;\n  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);\n  position: relative;\n}\n.weui-dialog__btn:active {\n  background-color: #EEEEEE;\n}\n.weui-dialog__btn:after {\n  content: \" \";\n  position: absolute;\n  left: 0;\n  top: 0;\n  width: 1px;\n  bottom: 0;\n  border-left: 1px solid #D5D5D6;\n  color: #D5D5D6;\n  transform-origin: 0 0;\n  transform: scaleX(0.5);\n}\n.weui-dialog__btn:first-child:after {\n  display: none;\n}\n.weui-dialog__btn_default {\n  color: #353535;\n}\n.weui-dialog__btn_primary {\n  color: #0BB20C;\n}\n.weui-dialog__btn_warn {\n  color: #E64340;\n}\n.weui-skin_android .weui-dialog {\n  text-align: left;\n  box-shadow: 0 6px 30px 0 rgba(0, 0, 0, 0.1);\n}\n.weui-skin_android .weui-dialog__title {\n  font-size: 21px;\n}\n.weui-skin_android .weui-dialog__hd {\n  text-align: left;\n}\n.weui-skin_android .weui-dialog__bd {\n  color: #999999;\n  padding: 0.25em 1.6em 2em;\n  font-size: 17px;\n  text-align: left;\n}\n.weui-skin_android .weui-dialog__bd:first-child {\n  padding: 1.6em 1.6em 2em;\n  color: #353535;\n}\n.weui-skin_android .weui-dialog__ft {\n  display: block;\n  text-align: right;\n  line-height: 42px;\n  font-size: 16px;\n  padding: 0 1.6em 0.7em;\n}\n.weui-skin_android .weui-dialog__ft:after {\n  display: none;\n}\n.weui-skin_android .weui-dialog__btn {\n  display: inline-block;\n  vertical-align: top;\n  padding: 0 .8em;\n}\n.weui-skin_android .weui-dialog__btn:after {\n  display: none;\n}\n.weui-skin_android .weui-dialog__btn:active {\n  background-color: rgba(0, 0, 0, 0.06);\n}\n.weui-skin_android .weui-dialog__btn:visited {\n  background-color: rgba(0, 0, 0, 0.06);\n}\n.weui-skin_android .weui-dialog__btn:last-child {\n  margin-right: -0.8em;\n}\n.weui-skin_android .weui-dialog__btn_default {\n  color: #808080;\n}\n@media screen and (min-width: 1024px) {\n  .weui-dialog {\n    width: 35%;\n  }\n}\n.vux-x-dialog-absolute .weui-dialog {\n  position: absolute;\n}\n", ""]);
@@ -3183,22 +3319,7 @@ exports.push([module.i, ".vux-fade-enter-active,\n.vux-fade-leave-active {\n  op
 
 /***/ }),
 
-/***/ 440:
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(15)();
-// imports
-
-
-// module
-exports.push([module.i, ".vux-modal-open {\n  overflow: hidden;\n  position: fixed;\n  width: 100%;\n}\n.vux-modal-open-for-container {\n  overflow: hidden!important;\n}\n", ""]);
-
-// exports
-
-
-/***/ }),
-
-/***/ 441:
+/***/ 448:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3208,7 +3329,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _preventBodyScroll = __webpack_require__(442);
+var _preventBodyScroll = __webpack_require__(449);
 
 var _preventBodyScroll2 = _interopRequireDefault(_preventBodyScroll);
 
@@ -3336,7 +3457,7 @@ exports.default = {
 
 /***/ }),
 
-/***/ 442:
+/***/ 449:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3346,7 +3467,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _dom = __webpack_require__(443);
+var _dom = __webpack_require__(334);
 
 var _dom2 = _interopRequireDefault(_dom);
 
@@ -3393,51 +3514,14 @@ exports.default = {
 
 /***/ }),
 
-/***/ 443:
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = {
-  hasClass: function hasClass(el, token) {
-    return new RegExp('(\\s|^)' + token + '(\\s|$)').test(el.className);
-  },
-  addClass: function addClass(el, token) {
-    if (!el) {
-      return;
-    }
-    if (el.classList) {
-      el.classList.add(token);
-    } else if (!this.hasClass(el, token)) {
-      el.className += '' + token;
-    }
-  },
-  removeClass: function removeClass(el, token) {
-    if (!el) {
-      return;
-    }
-    if (el.classList) {
-      el.classList.remove(token);
-    } else if (this.hasClass(el, token)) {
-      el.className = el.className.replace(new RegExp('(\\s|^)' + token + '(\\s|$)'), ' ').replace(/^\s+|\s+$/g, '');
-    }
-  }
-};
-
-/***/ }),
-
-/***/ 444:
+/***/ 450:
 /***/ (function(module, exports) {
 
 module.exports = "\n<div\n  class=\"vux-x-dialog\"\n  :class=\"{'vux-x-dialog-absolute': layout === 'VIEW_BOX'}\">\n  <transition :name=\"maskTransition\">\n    <div class=\"weui-mask\" @click=\"hide\" v-show=\"show\" :style=\"maskStyle\"></div>\n  </transition>\n  <transition :name=\"dialogTransition\">\n    <div :class=\"dialogClass\" v-show=\"show\" :style=\"dialogStyle\">\n      <slot></slot>\n    </div>\n  </transition>\n</div>\n";
 
 /***/ }),
 
-/***/ 445:
+/***/ 451:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3448,7 +3532,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 // Thanks to: https://github.com/calebroseland/vue-dom-portal
 
-var objectAssign = __webpack_require__(305);
+var objectAssign = __webpack_require__(306);
 /**
  * Get target DOM Node
  * @param {(Node|string|Boolean)} [node=document.body] DOM Node, CSS selector, or Boolean
@@ -3554,16 +3638,16 @@ exports.default = directive;
 
 /***/ }),
 
-/***/ 446:
+/***/ 452:
 /***/ (function(module, exports, __webpack_require__) {
 
 var __vue_script__, __vue_template__
 var __vue_styles__ = {}
-__webpack_require__(447)
-__vue_script__ = __webpack_require__(449)
+__webpack_require__(453)
+__vue_script__ = __webpack_require__(455)
 if (Object.keys(__vue_script__).some(function (key) { return key !== "default" && key !== "__esModule" })) {
   console.warn("[vue-loader] node_modules\\_vux@2.9.1@vux\\src\\components\\datetime\\index.vue: named exports in *.vue files are ignored.")}
-__vue_template__ = __webpack_require__(459)
+__vue_template__ = __webpack_require__(464)
 module.exports = __vue_script__ || {}
 if (module.exports.__esModule) module.exports = module.exports.default
 var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -3589,13 +3673,13 @@ if (false) {(function () {  module.hot.accept()
 
 /***/ }),
 
-/***/ 447:
+/***/ 453:
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(448);
+var content = __webpack_require__(454);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
@@ -3616,7 +3700,7 @@ if(false) {
 
 /***/ }),
 
-/***/ 448:
+/***/ 454:
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(15)();
@@ -3631,7 +3715,7 @@ exports.push([module.i, "/**\n* actionsheet\n*/\n/**\n* en: primary type text co
 
 /***/ }),
 
-/***/ 449:
+/***/ 455:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3641,15 +3725,15 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _keys = __webpack_require__(329);
+var _keys = __webpack_require__(296);
 
 var _keys2 = _interopRequireDefault(_keys);
 
-var _icon = __webpack_require__(330);
+var _icon = __webpack_require__(328);
 
 var _icon2 = _interopRequireDefault(_icon);
 
-var _datetimepicker = __webpack_require__(450);
+var _datetimepicker = __webpack_require__(456);
 
 var _datetimepicker2 = _interopRequireDefault(_datetimepicker);
 
@@ -3661,11 +3745,11 @@ var _inlineDesc = __webpack_require__(209);
 
 var _inlineDesc2 = _interopRequireDefault(_inlineDesc);
 
-var _uuid = __webpack_require__(292);
+var _uuid = __webpack_require__(294);
 
 var _uuid2 = _interopRequireDefault(_uuid);
 
-var _format2 = __webpack_require__(458);
+var _format2 = __webpack_require__(463);
 
 var _format3 = _interopRequireDefault(_format2);
 
@@ -4025,7 +4109,7 @@ exports.default = {
 
 /***/ }),
 
-/***/ 450:
+/***/ 456:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4039,13 +4123,13 @@ var _typeof2 = __webpack_require__(21);
 
 var _typeof3 = _interopRequireDefault(_typeof2);
 
-var _scroller = __webpack_require__(451);
+var _scroller = __webpack_require__(457);
 
 var _scroller2 = _interopRequireDefault(_scroller);
 
-var _util = __webpack_require__(455);
+var _util = __webpack_require__(460);
 
-var _makeData2 = __webpack_require__(457);
+var _makeData2 = __webpack_require__(462);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -4615,7 +4699,7 @@ exports.default = DatetimePicker;
 
 /***/ }),
 
-/***/ 451:
+/***/ 457:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4647,15 +4731,15 @@ var isBrowser = (typeof window === 'undefined' ? 'undefined' : (0, _typeof3.defa
 
 var TEMPLATE = '\n<div class="scroller-component" data-role="component">\n  <div class="scroller-mask" data-role="mask"></div>\n  <div class="scroller-indicator" data-role="indicator"></div>\n  <div class="scroller-content" data-role="content"></div>\n</div>\n';
 
-var Animate = __webpack_require__(452);
+var Animate = __webpack_require__(458);
 
-var _require = __webpack_require__(453),
+var _require = __webpack_require__(459),
     getElement = _require.getElement,
     getComputedStyle = _require.getComputedStyle,
     easeOutCubic = _require.easeOutCubic,
     easeInOutCubic = _require.easeInOutCubic;
 
-var passiveSupported = __webpack_require__(454);
+var passiveSupported = __webpack_require__(335);
 
 var getDpr = function getDpr() {
   var dpr = 1;
@@ -5204,7 +5288,7 @@ exports.default = Scroller;
 
 /***/ }),
 
-/***/ 452:
+/***/ 458:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5356,7 +5440,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 453:
+/***/ 459:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5393,28 +5477,7 @@ function easeInOutCubic(pos) {
 
 /***/ }),
 
-/***/ 454:
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var passiveSupported = false;
-
-try {
-  var options = Object.defineProperty({}, 'passive', {
-    get: function get() {
-      passiveSupported = true;
-    }
-  });
-  window.addEventListener('test', null, options);
-} catch (err) {}
-
-module.exports = passiveSupported;
-
-/***/ }),
-
-/***/ 455:
+/***/ 460:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5436,7 +5499,7 @@ exports.getElement = getElement;
 exports.toElement = toElement;
 exports.removeElement = removeElement;
 
-var _format = __webpack_require__(456);
+var _format = __webpack_require__(461);
 
 var _format2 = _interopRequireDefault(_format);
 
@@ -5533,7 +5596,7 @@ function removeElement(el) {
 
 /***/ }),
 
-/***/ 456:
+/***/ 461:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5581,7 +5644,7 @@ exports.default = function (date) {
 
 /***/ }),
 
-/***/ 457:
+/***/ 462:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5665,7 +5728,7 @@ exports.getDays = getDays;
 
 /***/ }),
 
-/***/ 458:
+/***/ 463:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5722,22 +5785,22 @@ exports.default = function (date) {
 
 /***/ }),
 
-/***/ 459:
+/***/ 464:
 /***/ (function(module, exports) {
 
 module.exports = "\n<a\n  class=\"vux-datetime weui-cell\"\n  :class=\"{'weui-cell_access': !readonly}\"\n  :data-cancel-text=\"'取消'\"\n  :data-confirm-text=\"'确定'\"\n  href=\"javascript:\">\n  <slot>\n    <div>\n      <slot name=\"title\">\n        <p\n          :style=\"styles\"\n          :class=\"labelClass\"\n          v-html=\"title\"></p>\n      </slot>\n      <inline-desc v-if=\"inlineDesc\">{{ inlineDesc }}</inline-desc>\n    </div>\n    <div\n      class=\"weui-cell__ft vux-cell-primary vux-datetime-value\"\n      :style=\"{\n        textAlign: valueTextAlign\n      }\">\n      <span\n        class=\"vux-cell-placeholder\"\n        v-if=\"!currentValue && placeholder\">{{ placeholder }}</span>\n      <span\n        class=\"vux-cell-value\"\n        v-if=\"currentValue\">{{ displayFormat ? displayFormat(currentValue) : currentValue }}</span>\n      <icon\n        class=\"vux-input-icon\"\n        type=\"warn\"\n        v-show=\"!valid\"\n        :title=\"firstError\"></icon>\n    </div>\n  </slot>\n</a>\n";
 
 /***/ }),
 
-/***/ 460:
+/***/ 465:
 /***/ (function(module, exports, __webpack_require__) {
 
 var __vue_script__, __vue_template__
 var __vue_styles__ = {}
-__vue_script__ = __webpack_require__(461)
+__vue_script__ = __webpack_require__(466)
 if (Object.keys(__vue_script__).some(function (key) { return key !== "default" && key !== "__esModule" })) {
   console.warn("[vue-loader] node_modules\\_vux@2.9.1@vux\\src\\components\\box\\index.vue: named exports in *.vue files are ignored.")}
-__vue_template__ = __webpack_require__(462)
+__vue_template__ = __webpack_require__(467)
 module.exports = __vue_script__ || {}
 if (module.exports.__esModule) module.exports = module.exports.default
 var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -5763,7 +5826,7 @@ if (false) {(function () {  module.hot.accept()
 
 /***/ }),
 
-/***/ 461:
+/***/ 466:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5788,17 +5851,1147 @@ exports.default = {
 
 /***/ }),
 
-/***/ 462:
+/***/ 467:
 /***/ (function(module, exports) {
 
 module.exports = "\n<div :style=\"{margin:gap}\"><slot></slot></div>\n";
 
 /***/ }),
 
-/***/ 463:
+/***/ 468:
+/***/ (function(module, exports, __webpack_require__) {
+
+var __vue_script__, __vue_template__
+var __vue_styles__ = {}
+__webpack_require__(469)
+__vue_script__ = __webpack_require__(471)
+if (Object.keys(__vue_script__).some(function (key) { return key !== "default" && key !== "__esModule" })) {
+  console.warn("[vue-loader] node_modules\\_vux@2.9.1@vux\\src\\components\\popup\\index.vue: named exports in *.vue files are ignored.")}
+__vue_template__ = __webpack_require__(473)
+module.exports = __vue_script__ || {}
+if (module.exports.__esModule) module.exports = module.exports.default
+var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
+if (__vue_template__) {
+__vue_options__.template = __vue_template__
+}
+if (!__vue_options__.computed) __vue_options__.computed = {}
+Object.keys(__vue_styles__).forEach(function (key) {
+var module = __vue_styles__[key]
+__vue_options__.computed[key] = function () { return module }
+})
+if (false) {(function () {  module.hot.accept()
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  var id = "_v-5d322cdb/index.vue"
+  if (!module.hot.data) {
+    hotAPI.createRecord(id, module.exports)
+  } else {
+    hotAPI.update(id, module.exports, __vue_template__)
+  }
+})()}
+
+/***/ }),
+
+/***/ 469:
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(470);
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var update = __webpack_require__(20)("65295ea4", content, false);
+// Hot Module Replacement
+if(false) {
+ // When the styles change, update the <style> tags
+ if(!content.locals) {
+   module.hot.accept("!!../../../../_css-loader@0.23.1@css-loader/index.js!../../../../_vue-loader@8.7.1@vue-loader/lib/style-rewriter.js!../../../../_vux-loader@1.2.9@vux-loader/src/after-less-loader.js!../../../../_less-loader@2.2.3@less-loader/index.js!../../../../_vux-loader@1.2.9@vux-loader/src/style-loader.js!../../../../_vue-loader@8.7.1@vue-loader/lib/selector.js?type=style&index=0!./index.vue", function() {
+     var newContent = require("!!../../../../_css-loader@0.23.1@css-loader/index.js!../../../../_vue-loader@8.7.1@vue-loader/lib/style-rewriter.js!../../../../_vux-loader@1.2.9@vux-loader/src/after-less-loader.js!../../../../_less-loader@2.2.3@less-loader/index.js!../../../../_vux-loader@1.2.9@vux-loader/src/style-loader.js!../../../../_vue-loader@8.7.1@vue-loader/lib/selector.js?type=style&index=0!./index.vue");
+     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+     update(newContent);
+   });
+ }
+ // When the module is disposed, remove the <style> tags
+ module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+
+/***/ 470:
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(15)();
+// imports
+exports.i(__webpack_require__(333), "");
+
+// module
+exports.push([module.i, "/**\n* actionsheet\n*/\n/**\n* en: primary type text color of menu item\n* zh-CN: 菜单项primary类型的文本颜色\n*/\n/**\n* en: warn type text color of menu item\n* zh-CN: 菜单项warn类型的文本颜色\n*/\n/**\n* en: default type text color of menu item\n* zh-CN: 菜单项default类型的文本颜色\n*/\n/**\n* en: disabled type text color of menu item\n* zh-CN: 菜单项disabled类型的文本颜色\n*/\n/**\n* datetime\n*/\n/**\n* tabbar\n*/\n/**\n* tab\n*/\n/**\n* dialog\n*/\n/**\n* en: title and content's padding-left and padding-right\n* zh-CN: 标题及内容区域的 padding-left 和 padding-right\n*/\n/**\n* x-number\n*/\n/**\n* checkbox\n*/\n/**\n* check-icon\n*/\n/**\n* Cell\n*/\n/**\n* Mask\n*/\n/**\n* Range\n*/\n/**\n* Tabbar\n*/\n/**\n* Header\n*/\n/**\n* Timeline\n*/\n/**\n* Switch\n*/\n/**\n* Button\n*/\n/**\n* en: margin-top value between previous button, not works when there is only one button\n* zh-CN: 与相邻按钮的 margin-top 间隙，只有一个按钮时不生效\n*/\n/**\n* swipeout\n*/\n/**\n* Cell\n*/\n/**\n* Badge\n*/\n/**\n* en: badge background color\n* zh-CN: badge的背景颜色\n*/\n/**\n* Popover\n*/\n/**\n* Button tab\n*/\n/**\n* en: not used\n* zh-CN: 未被使用\n*/\n/**\n* en: border radius color\n* zh-CN: 圆角边框的半径\n*/\n/**\n* en: border color\n* zh-CN: 边框的颜色\n*/\n/**\n* en: not used\n* zh-CN: 默认状态下圆角边框的颜色\n*/\n/**\n* en: not used\n* zh-CN: 未被使用\n*/\n/**\n* en: default background color\n* zh-CN: 默认状态下的背景颜色\n*/\n/**\n* en: selected background color\n* zh-CN: 选中状态下的背景颜色\n*/\n/**\n* en: not used\n* zh-CN: 未被使用\n*/\n/* alias */\n/**\n* en: not used\n* zh-CN: 未被使用\n*/\n/**\n* en: default text color\n* zh-CN: 默认状态下的文本颜色\n*/\n/**\n* en: height\n* zh-CN: 元素高度\n*/\n/**\n* en: line height\n* zh-CN: 元素行高\n*/\n/**\n* Swiper\n*/\n/**\n* checklist\n*/\n/**\n* popup-picker\n*/\n/**\n* popup\n*/\n/**\n* popup-header\n*/\n/**\n* form-preview\n*/\n/**\n* sticky\n*/\n/**\n* group\n*/\n/**\n* en: margin-top of title\n* zh-CN: 标题的margin-top\n*/\n/**\n* en: margin-bottom of title\n* zh-CN: 标题的margin-bottom\n*/\n/**\n* en: margin-top of footer title\n* zh-CN: 底部标题的margin-top\n*/\n/**\n* en: margin-bottom of footer title\n* zh-CN: 底部标题的margin-bottom\n*/\n/**\n* toast\n*/\n/**\n* en: text color of content\n* zh-CN: 内容文本颜色\n*/\n/**\n* en: default top\n* zh-CN: 默认状态下距离顶部的高度\n*/\n/**\n* en: position top\n* zh-CN: 顶部显示的高度\n*/\n/**\n* en: position bottom\n* zh-CN: 底部显示的高度\n*/\n/**\n* en: z-index\n* zh-CN: z-index\n*/\n/**\n* icon\n*/\n/**\n* calendar\n*/\n/**\n* en: forward and backward arrows color\n* zh-CN: 前进后退的箭头颜色\n*/\n/**\n* en: text color of week highlight\n* zh-CN: 周末高亮的文本颜色\n*/\n/**\n* en: background color when selected\n* zh-CN: 选中时的背景颜色\n*/\n/**\n* en: text color when disabled\n* zh-CN: 禁用时的文本颜色\n*/\n/**\n* en: text color of today\n* zh-CN: 今天的文本颜色\n*/\n/**\n* en: font size of cell\n* zh-CN: 单元格的字号\n*/\n/**\n* en: background color\n* zh-CN: 背景颜色\n*/\n/**\n* en: size of date cell\n* zh-CN: 日期单元格尺寸大小\n*/\n/**\n* en: line height of date cell\n* zh-CN: 日期单元格的行高\n*/\n/**\n* en: text color of header\n* zh-CN: 头部的文本颜色\n*/\n/**\n* week-calendar\n*/\n/**\n* search\n*/\n/**\n* en: text color of cancel button\n* zh-CN: 取消按钮文本颜色\n*/\n/**\n* en: background color\n* zh-CN: 背景颜色\n*/\n/**\n* en: text color of placeholder\n* zh-CN: placeholder文本颜色\n*/\n/**\n* radio\n*/\n/**\n* en: checked icon color\n* zh-CN: 选中状态的图标颜色\n*/\n/**\n* loadmore\n*/\n/**\n* en: not used\n* zh-CN: 未被使用\n*/\n/**\n* loading\n*/\n/**\n* en: z-index\n* zh-CN: z-index\n*/\n.vux-popup-dialog {\n  position: fixed;\n  left: 0;\n  bottom: 0;\n  width: 100%;\n  background: #eee;\n  z-index: 501;\n  transition-property: transform;\n  transition-duration: 300ms;\n  max-height: 100%;\n  overflow-y: auto;\n  -webkit-overflow-scrolling: touch;\n}\n.vux-popup-dialog.vux-popup-left {\n  width: auto;\n  height: 100%;\n  top: 0;\n  right: auto;\n  bottom: auto;\n  left: 0;\n}\n.vux-popup-dialog.vux-popup-right {\n  width: auto;\n  height: 100%;\n  top: 0;\n  right: 0;\n  bottom: auto;\n  left: auto;\n}\n.vux-popup-dialog.vux-popup-top {\n  width: 100%;\n  top: 0;\n  right: auto;\n  bottom: auto;\n  left: 0;\n}\n.vux-popup-mask {\n  display: block;\n  position: fixed;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 100%;\n  background: rgba(0, 0, 0, 0.5);\n  opacity: 0;\n  tap-highlight-color: rgba(0, 0, 0, 0);\n  z-index: -1;\n  transition: opacity 400ms;\n}\n.vux-popup-mask.vux-popup-show {\n  opacity: 1;\n}\n.vux-popup-animate-bottom-enter,\n.vux-popup-animate-bottom-leave-active {\n  transform: translate3d(0, 100%, 0);\n}\n.vux-popup-animate-left-enter,\n.vux-popup-animate-left-leave-active {\n  transform: translate3d(-100%, 0, 0);\n}\n.vux-popup-animate-right-enter,\n.vux-popup-animate-right-leave-active {\n  transform: translate3d(100%, 0, 0);\n}\n.vux-popup-animate-top-enter,\n.vux-popup-animate-top-leave-active {\n  transform: translate3d(0, -100%, 0);\n}\n", ""]);
+
+// exports
+
+
+/***/ }),
+
+/***/ 471:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _keys = __webpack_require__(296);
+
+var _keys2 = _interopRequireDefault(_keys);
+
+var _popup = __webpack_require__(472);
+
+var _popup2 = _interopRequireDefault(_popup);
+
+var _dom = __webpack_require__(334);
+
+var _dom2 = _interopRequireDefault(_dom);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+// <template>
+//   <transition
+//     :name="`vux-popup-animate-${position}`">
+//     <div
+//       v-show="show && !initialShow"
+//       :style="styles"
+//       class="vux-popup-dialog"
+//       :class="[`vux-popup-${position}`, show ? 'vux-popup-show' : '']">
+//         <slot v-if="shouldRenderBody"></slot>
+//       </div>
+//     </div>
+//   </transition>
+// </template>
+//
+// <script>
+exports.default = {
+  name: 'popup',
+  props: {
+    value: Boolean,
+    height: {
+      type: String,
+      default: 'auto'
+    },
+    width: {
+      type: String,
+      default: 'auto'
+    },
+    showMask: {
+      type: Boolean,
+      default: true
+    },
+    isTransparent: Boolean,
+    hideOnBlur: {
+      type: Boolean,
+      default: true
+    },
+    position: {
+      type: String,
+      default: 'bottom'
+    },
+    maxHeight: String,
+    popupStyle: Object,
+    hideOnDeactivated: {
+      type: Boolean,
+      default: true
+    },
+    shouldRerenderOnShow: {
+      type: Boolean,
+      default: false
+    },
+    shouldScrollTopOnShow: {
+      type: Boolean,
+      default: false
+    }
+  },
+  created: function created() {
+    // get global layout config
+    if (this.$vux && this.$vux.config && this.$vux.config.$layout === 'VIEW_BOX') {
+      this.layout = 'VIEW_BOX';
+    }
+  },
+  mounted: function mounted() {
+    var _this2 = this;
+
+    this.$overflowScrollingList = document.querySelectorAll('.vux-fix-safari-overflow-scrolling');
+    this.$nextTick(function () {
+      var _this = _this2;
+      _this2.popup = new _popup2.default({
+        showMask: _this.showMask,
+        container: _this.$el,
+        hideOnBlur: _this.hideOnBlur,
+        onOpen: function onOpen() {
+          _this.fixSafariOverflowScrolling('auto');
+          _this.show = true;
+        },
+        onClose: function onClose() {
+          _this.show = false;
+          if (window.__$vuxPopups && (0, _keys2.default)(window.__$vuxPopups).length > 1) return;
+          if (document.querySelector('.vux-popup-dialog.vux-popup-mask-disabled')) return;
+          setTimeout(function () {
+            _this.fixSafariOverflowScrolling('touch');
+          }, 300);
+        }
+      });
+      if (_this2.value) {
+        _this2.popup.show();
+      }
+      _this2.initialShow = false;
+    });
+  },
+  deactivated: function deactivated() {
+    if (this.hideOnDeactivated) {
+      this.show = false;
+    }
+    this.removeModalClassName();
+  },
+
+  methods: {
+    /**
+    * https://github.com/airyland/vux/issues/311
+    * https://benfrain.com/z-index-stacking-contexts-experimental-css-and-ios-safari/
+    */
+    fixSafariOverflowScrolling: function fixSafariOverflowScrolling(type) {
+      if (!this.$overflowScrollingList.length) return;
+      // if (!/iphone/i.test(navigator.userAgent)) return
+      for (var i = 0; i < this.$overflowScrollingList.length; i++) {
+        this.$overflowScrollingList[i].style.webkitOverflowScrolling = type;
+      }
+    },
+    removeModalClassName: function removeModalClassName() {
+      this.layout === 'VIEW_BOX' && _dom2.default.removeClass(document.body, 'vux-modal-open');
+    },
+    doShow: function doShow() {
+      this.popup && this.popup.show();
+      this.$emit('on-show');
+      this.fixSafariOverflowScrolling('auto');
+      this.layout === 'VIEW_BOX' && _dom2.default.addClass(document.body, 'vux-modal-open');
+      if (!this.hasFirstShow) {
+        this.$emit('on-first-show');
+        this.hasFirstShow = true;
+      }
+    },
+    scrollTop: function scrollTop() {
+      var _this3 = this;
+
+      this.$nextTick(function () {
+        _this3.$el.scrollTop = 0;
+        var box = _this3.$el.querySelectorAll('.vux-scrollable');
+        if (box.length) {
+          for (var i = 0; i < box.length; i++) {
+            box[i].scrollTop = 0;
+          }
+        }
+      });
+    }
+  },
+  data: function data() {
+    return {
+      layout: '',
+      initialShow: true,
+      hasFirstShow: false,
+      shouldRenderBody: true,
+      show: this.value
+    };
+  },
+
+  computed: {
+    styles: function styles() {
+      var styles = {};
+      if (!this.position || this.position === 'bottom' || this.position === 'top') {
+        styles.height = this.height;
+      } else {
+        styles.width = this.width;
+      }
+
+      if (this.maxHeight) {
+        styles['max-height'] = this.maxHeight;
+      }
+
+      this.isTransparent && (styles['background'] = 'transparent');
+      if (this.popupStyle) {
+        for (var i in this.popupStyle) {
+          styles[i] = this.popupStyle[i];
+        }
+      }
+      return styles;
+    }
+  },
+  watch: {
+    value: function value(val) {
+      this.show = val;
+    },
+    show: function show(val) {
+      var _this4 = this;
+
+      this.$emit('input', val);
+      if (val) {
+        // rerender body
+        if (this.shouldRerenderOnShow) {
+          this.shouldRenderBody = false;
+          this.$nextTick(function () {
+            _this4.scrollTop();
+            _this4.shouldRenderBody = true;
+            _this4.doShow();
+          });
+        } else {
+          if (this.shouldScrollTopOnShow) {
+            this.scrollTop();
+          }
+          this.doShow();
+        }
+      } else {
+        this.$emit('on-hide');
+        this.show = false;
+        this.popup.hide(false);
+        setTimeout(function () {
+          if (!document.querySelector('.vux-popup-dialog.vux-popup-show')) {
+            _this4.fixSafariOverflowScrolling('touch');
+          }
+          _this4.removeModalClassName();
+        }, 200);
+      }
+    }
+  },
+  beforeDestroy: function beforeDestroy() {
+    this.popup && this.popup.destroy();
+    this.fixSafariOverflowScrolling('touch');
+    this.removeModalClassName();
+  }
+};
+// </script>
+//
+// <style lang="less">
+// @import '../../styles/variable.less';
+// @import '../../styles/vux-modal.css';
+//
+// .vux-popup-dialog {
+//   position: fixed;
+//   left: 0;
+//   bottom: 0;
+//   width: 100%;
+//   background: @popup-background-color;
+//   z-index: 501;
+//   transition-property: transform;
+//   transition-duration: 300ms;
+//   max-height: 100%;
+//   overflow-y: auto;
+//   -webkit-overflow-scrolling: touch;
+// }
+// .vux-popup-dialog.vux-popup-left {
+//   width: auto;
+//   height: 100%;
+//   top: 0;
+//   right: auto;
+//   bottom: auto;
+//   left: 0;
+// }
+// .vux-popup-dialog.vux-popup-right {
+//   width: auto;
+//   height: 100%;
+//   top: 0;
+//   right: 0;
+//   bottom: auto;
+//   left: auto;
+// }
+// .vux-popup-dialog.vux-popup-top {
+//   width: 100%;
+//   top: 0;
+//   right: auto;
+//   bottom: auto;
+//   left: 0;
+// }
+// .vux-popup-mask {
+//   display: block;
+//   position: fixed;
+//   top: 0;
+//   left: 0;
+//   width: 100%;
+//   height: 100%;
+//   background: rgba(0, 0, 0, 0.5);
+//   opacity: 0;
+//   tap-highlight-color: rgba(0,0,0,0);
+//   z-index: -1;
+//   transition: opacity 400ms;
+// }
+// .vux-popup-mask.vux-popup-show {
+//   opacity: 1;
+// }
+//
+// .vux-popup-animate-bottom-enter, .vux-popup-animate-bottom-leave-active {
+//   transform: translate3d(0, 100%, 0);
+// }
+//
+// .vux-popup-animate-left-enter, .vux-popup-animate-left-leave-active {
+//   transform: translate3d(-100%, 0, 0);
+// }
+//
+// .vux-popup-animate-right-enter, .vux-popup-animate-right-leave-active {
+//   transform: translate3d(100%, 0, 0);
+// }
+//
+// .vux-popup-animate-top-enter, .vux-popup-animate-top-leave-active {
+//   transform: translate3d(0, -100%, 0);
+// }
+// </style>
+
+/***/ }),
+
+/***/ 472:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _typeof2 = __webpack_require__(21);
+
+var _typeof3 = _interopRequireDefault(_typeof2);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var passiveSupported = __webpack_require__(335);
+var isBrowser = (typeof window === 'undefined' ? 'undefined' : (0, _typeof3.default)(window)) === 'object';
+
+// not a good way but works well
+if (isBrowser) {
+  window.__$vuxPopups = window.__$vuxPopups || {};
+}
+
+var popupDialog = function popupDialog(option) {
+  var _this = this;
+
+  if (!isBrowser) {
+    return;
+  }
+  this.uuid = Math.random().toString(36).substring(3, 8);
+  this.params = {};
+  if (Object.prototype.toString.call(option) === '[object Object]') {
+    this.params = {
+      hideOnBlur: option.hideOnBlur,
+      onOpen: option.onOpen || function () {},
+      onClose: option.onClose || function () {},
+      showMask: option.showMask
+    };
+  }
+  if (!!document.querySelectorAll('.vux-popup-mask').length <= 0) {
+    this.divMask = document.createElement('a');
+    this.divMask.className = 'vux-popup-mask';
+    this.divMask.dataset.uuid = '';
+    this.divMask.href = 'javascript:void(0)';
+    document.body.appendChild(this.divMask);
+  }
+  var div = void 0;
+  if (!option.container) {
+    div = document.createElement('div');
+  } else {
+    div = option.container;
+  }
+
+  div.className += ' vux-popup-dialog vux-popup-dialog-' + this.uuid;
+  if (!this.params.hideOnBlur) {
+    div.className += ' vux-popup-mask-disabled';
+  }
+
+  this.div = div;
+
+  if (!option.container) {
+    document.body.appendChild(div);
+  }
+  this.container = document.querySelector('.vux-popup-dialog-' + this.uuid);
+  this.mask = document.querySelector('.vux-popup-mask');
+  this.mask.dataset.uuid += ',' + this.uuid;
+  this._bindEvents();
+  option = null;
+  this.containerHandler = function () {
+    _this.mask && !/show/.test(_this.mask.className) && setTimeout(function () {
+      !/show/.test(_this.mask.className) && (_this.mask.style['zIndex'] = -1);
+    }, 200);
+  };
+
+  this.container && this.container.addEventListener('webkitTransitionEnd', this.containerHandler);
+  this.container && this.container.addEventListener('transitionend', this.containerHandler);
+};
+
+popupDialog.prototype.onClickMask = function () {
+  this.params.hideOnBlur && this.params.onClose();
+};
+
+popupDialog.prototype._bindEvents = function () {
+  if (this.params.hideOnBlur) {
+    this.mask.addEventListener('click', this.onClickMask.bind(this), false);
+    this.mask.addEventListener('touchmove', function (e) {
+      return e.preventDefault();
+    }, passiveSupported ? { passive: false } : false);
+  }
+};
+
+popupDialog.prototype.show = function () {
+  if (this.params.showMask) {
+    this.mask.classList.add('vux-popup-show');
+    this.mask.style['zIndex'] = 500;
+  }
+  this.container.classList.add('vux-popup-show');
+  this.params.onOpen && this.params.onOpen(this);
+  if (isBrowser) {
+    window.__$vuxPopups[this.uuid] = 1;
+  }
+};
+
+popupDialog.prototype.hide = function () {
+  var _this2 = this;
+
+  var shouldCallback = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : true;
+
+  this.container.classList.remove('vux-popup-show');
+  if (!document.querySelector('.vux-popup-dialog.vux-popup-show')) {
+    this.mask.classList.remove('vux-popup-show');
+    setTimeout(function () {
+      _this2.mask && !/show/.test(_this2.mask.className) && (_this2.mask.style['zIndex'] = -1);
+    }, 400);
+  }
+  shouldCallback === false && this.params.onClose && this.params.hideOnBlur && this.params.onClose(this);
+  this.isShow = false;
+  if (isBrowser) {
+    delete window.__$vuxPopups[this.uuid];
+  }
+};
+
+popupDialog.prototype.destroy = function () {
+  this.mask.dataset.uuid = this.mask.dataset.uuid.replace(new RegExp(',' + this.uuid, 'g'), '');
+  if (!this.mask.dataset.uuid) {
+    this.mask.removeEventListener('click', this.onClickMask.bind(this), false);
+    this.mask && this.mask.parentNode && this.mask.parentNode.removeChild(this.mask);
+  } else {
+    this.hide();
+  }
+  this.container.removeEventListener('webkitTransitionEnd', this.containerHandler);
+  this.container.removeEventListener('transitionend', this.containerHandler);
+  if (isBrowser) {
+    delete window.__$vuxPopups[this.uuid];
+  }
+};
+
+exports.default = popupDialog;
+
+/***/ }),
+
+/***/ 473:
 /***/ (function(module, exports) {
 
-module.exports = "\n<div _v-17377fe8=\"\">\n  <toast v-model=\"showPositionValue\" type=\"text\" :time=\"800\" is-show-mask=\"\" :text=\"msg\" position=\"top\" _v-17377fe8=\"\"></toast>\n  <div v-transfer-dom=\"\" _v-17377fe8=\"\">\n    <x-dialog v-model=\"showHideOnBlur\" class=\"dialog-demo\" hide-on-blur=\"\" _v-17377fe8=\"\">\n      <div class=\"img-box\" _v-17377fe8=\"\">\n        <img src=\"https://ws1.sinaimg.cn/large/663d3650gy1fq6824ur1dj20ia0pydlm.jpg\" style=\"max-width:100%\" _v-17377fe8=\"\">\n      </div>\n      <div @click=\"showHideOnBlur=false\" _v-17377fe8=\"\">\n        <span class=\"vux-close\" _v-17377fe8=\"\"></span>\n      </div>\n    </x-dialog>\n  </div>\n  <group title=\"发起投票\" _v-17377fe8=\"\">\n    <x-input title=\"活动主题\" placeholder=\"请输入活动主题名称\" v-model=\"page.title\" novalidate=\"\" :show-clear=\"false\" text-align=\"right\" placeholder-align=\"right\" _v-17377fe8=\"\"></x-input>\n    <datetime v-model=\"page.time\" format=\"YYYY-MM-DD HH:mm\" title=\"截止时间\" _v-17377fe8=\"\"></datetime>\n    <uploader :max=\"1\" title=\"上传头像\" :upload-url=\"uploadUrl\" :images=\"page.images\" name=\"file\" :params=\"{type:'images'}\" @preview=\"previewMethod\" _v-17377fe8=\"\"></uploader>\n  </group>\n  <box gap=\"10px 10px\" _v-17377fe8=\"\">\n    <x-button :gradients=\"['#1D62F0', '#19D5FD']\" @click.native=\"submit()\" _v-17377fe8=\"\">发布投票</x-button>\n  </box>\n</div>\n";
+module.exports = "\n<transition\n  :name=\"`vux-popup-animate-${position}`\">\n  <div\n    v-show=\"show && !initialShow\"\n    :style=\"styles\"\n    class=\"vux-popup-dialog\"\n    :class=\"[`vux-popup-${position}`, show ? 'vux-popup-show' : '']\">\n      <slot v-if=\"shouldRenderBody\"></slot>\n    </div>\n  </div>\n</transition>\n";
+
+/***/ }),
+
+/***/ 474:
+/***/ (function(module, exports, __webpack_require__) {
+
+var __vue_script__, __vue_template__
+var __vue_styles__ = {}
+__webpack_require__(475)
+__vue_script__ = __webpack_require__(477)
+if (Object.keys(__vue_script__).some(function (key) { return key !== "default" && key !== "__esModule" })) {
+  console.warn("[vue-loader] node_modules\\_vux@2.9.1@vux\\src\\components\\checklist\\index.vue: named exports in *.vue files are ignored.")}
+__vue_template__ = __webpack_require__(485)
+module.exports = __vue_script__ || {}
+if (module.exports.__esModule) module.exports = module.exports.default
+var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
+if (__vue_template__) {
+__vue_options__.template = __vue_template__
+}
+if (!__vue_options__.computed) __vue_options__.computed = {}
+Object.keys(__vue_styles__).forEach(function (key) {
+var module = __vue_styles__[key]
+__vue_options__.computed[key] = function () { return module }
+})
+if (false) {(function () {  module.hot.accept()
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  var id = "_v-77c764d5/index.vue"
+  if (!module.hot.data) {
+    hotAPI.createRecord(id, module.exports)
+  } else {
+    hotAPI.update(id, module.exports, __vue_template__)
+  }
+})()}
+
+/***/ }),
+
+/***/ 475:
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(476);
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var update = __webpack_require__(20)("65295ea4", content, false);
+// Hot Module Replacement
+if(false) {
+ // When the styles change, update the <style> tags
+ if(!content.locals) {
+   module.hot.accept("!!../../../../_css-loader@0.23.1@css-loader/index.js!../../../../_vue-loader@8.7.1@vue-loader/lib/style-rewriter.js!../../../../_vux-loader@1.2.9@vux-loader/src/after-less-loader.js!../../../../_less-loader@2.2.3@less-loader/index.js!../../../../_vux-loader@1.2.9@vux-loader/src/style-loader.js!../../../../_vue-loader@8.7.1@vue-loader/lib/selector.js?type=style&index=0!./index.vue", function() {
+     var newContent = require("!!../../../../_css-loader@0.23.1@css-loader/index.js!../../../../_vue-loader@8.7.1@vue-loader/lib/style-rewriter.js!../../../../_vux-loader@1.2.9@vux-loader/src/after-less-loader.js!../../../../_less-loader@2.2.3@less-loader/index.js!../../../../_vux-loader@1.2.9@vux-loader/src/style-loader.js!../../../../_vue-loader@8.7.1@vue-loader/lib/selector.js?type=style&index=0!./index.vue");
+     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+     update(newContent);
+   });
+ }
+ // When the module is disposed, remove the <style> tags
+ module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+
+/***/ 476:
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(15)();
+// imports
+
+
+// module
+exports.push([module.i, "/**\n* actionsheet\n*/\n/**\n* en: primary type text color of menu item\n* zh-CN: 菜单项primary类型的文本颜色\n*/\n/**\n* en: warn type text color of menu item\n* zh-CN: 菜单项warn类型的文本颜色\n*/\n/**\n* en: default type text color of menu item\n* zh-CN: 菜单项default类型的文本颜色\n*/\n/**\n* en: disabled type text color of menu item\n* zh-CN: 菜单项disabled类型的文本颜色\n*/\n/**\n* datetime\n*/\n/**\n* tabbar\n*/\n/**\n* tab\n*/\n/**\n* dialog\n*/\n/**\n* en: title and content's padding-left and padding-right\n* zh-CN: 标题及内容区域的 padding-left 和 padding-right\n*/\n/**\n* x-number\n*/\n/**\n* checkbox\n*/\n/**\n* check-icon\n*/\n/**\n* Cell\n*/\n/**\n* Mask\n*/\n/**\n* Range\n*/\n/**\n* Tabbar\n*/\n/**\n* Header\n*/\n/**\n* Timeline\n*/\n/**\n* Switch\n*/\n/**\n* Button\n*/\n/**\n* en: margin-top value between previous button, not works when there is only one button\n* zh-CN: 与相邻按钮的 margin-top 间隙，只有一个按钮时不生效\n*/\n/**\n* swipeout\n*/\n/**\n* Cell\n*/\n/**\n* Badge\n*/\n/**\n* en: badge background color\n* zh-CN: badge的背景颜色\n*/\n/**\n* Popover\n*/\n/**\n* Button tab\n*/\n/**\n* en: not used\n* zh-CN: 未被使用\n*/\n/**\n* en: border radius color\n* zh-CN: 圆角边框的半径\n*/\n/**\n* en: border color\n* zh-CN: 边框的颜色\n*/\n/**\n* en: not used\n* zh-CN: 默认状态下圆角边框的颜色\n*/\n/**\n* en: not used\n* zh-CN: 未被使用\n*/\n/**\n* en: default background color\n* zh-CN: 默认状态下的背景颜色\n*/\n/**\n* en: selected background color\n* zh-CN: 选中状态下的背景颜色\n*/\n/**\n* en: not used\n* zh-CN: 未被使用\n*/\n/* alias */\n/**\n* en: not used\n* zh-CN: 未被使用\n*/\n/**\n* en: default text color\n* zh-CN: 默认状态下的文本颜色\n*/\n/**\n* en: height\n* zh-CN: 元素高度\n*/\n/**\n* en: line height\n* zh-CN: 元素行高\n*/\n/**\n* Swiper\n*/\n/**\n* checklist\n*/\n/**\n* popup-picker\n*/\n/**\n* popup\n*/\n/**\n* popup-header\n*/\n/**\n* form-preview\n*/\n/**\n* sticky\n*/\n/**\n* group\n*/\n/**\n* en: margin-top of title\n* zh-CN: 标题的margin-top\n*/\n/**\n* en: margin-bottom of title\n* zh-CN: 标题的margin-bottom\n*/\n/**\n* en: margin-top of footer title\n* zh-CN: 底部标题的margin-top\n*/\n/**\n* en: margin-bottom of footer title\n* zh-CN: 底部标题的margin-bottom\n*/\n/**\n* toast\n*/\n/**\n* en: text color of content\n* zh-CN: 内容文本颜色\n*/\n/**\n* en: default top\n* zh-CN: 默认状态下距离顶部的高度\n*/\n/**\n* en: position top\n* zh-CN: 顶部显示的高度\n*/\n/**\n* en: position bottom\n* zh-CN: 底部显示的高度\n*/\n/**\n* en: z-index\n* zh-CN: z-index\n*/\n/**\n* icon\n*/\n/**\n* calendar\n*/\n/**\n* en: forward and backward arrows color\n* zh-CN: 前进后退的箭头颜色\n*/\n/**\n* en: text color of week highlight\n* zh-CN: 周末高亮的文本颜色\n*/\n/**\n* en: background color when selected\n* zh-CN: 选中时的背景颜色\n*/\n/**\n* en: text color when disabled\n* zh-CN: 禁用时的文本颜色\n*/\n/**\n* en: text color of today\n* zh-CN: 今天的文本颜色\n*/\n/**\n* en: font size of cell\n* zh-CN: 单元格的字号\n*/\n/**\n* en: background color\n* zh-CN: 背景颜色\n*/\n/**\n* en: size of date cell\n* zh-CN: 日期单元格尺寸大小\n*/\n/**\n* en: line height of date cell\n* zh-CN: 日期单元格的行高\n*/\n/**\n* en: text color of header\n* zh-CN: 头部的文本颜色\n*/\n/**\n* week-calendar\n*/\n/**\n* search\n*/\n/**\n* en: text color of cancel button\n* zh-CN: 取消按钮文本颜色\n*/\n/**\n* en: background color\n* zh-CN: 背景颜色\n*/\n/**\n* en: text color of placeholder\n* zh-CN: placeholder文本颜色\n*/\n/**\n* radio\n*/\n/**\n* en: checked icon color\n* zh-CN: 选中状态的图标颜色\n*/\n/**\n* loadmore\n*/\n/**\n* en: not used\n* zh-CN: 未被使用\n*/\n/**\n* loading\n*/\n/**\n* en: z-index\n* zh-CN: z-index\n*/\n.weui-cells {\n  margin-top: 1.17647059em;\n  background-color: #FFFFFF;\n  line-height: 1.41176471;\n  font-size: 17px;\n  overflow: hidden;\n  position: relative;\n}\n.weui-cells:before {\n  content: \" \";\n  position: absolute;\n  left: 0;\n  top: 0;\n  right: 0;\n  height: 1px;\n  border-top: 1px solid #D9D9D9;\n  color: #D9D9D9;\n  transform-origin: 0 0;\n  transform: scaleY(0.5);\n}\n.weui-cells:after {\n  content: \" \";\n  position: absolute;\n  left: 0;\n  bottom: 0;\n  right: 0;\n  height: 1px;\n  border-bottom: 1px solid #D9D9D9;\n  color: #D9D9D9;\n  transform-origin: 0 100%;\n  transform: scaleY(0.5);\n}\n.weui-cells__title {\n  margin-top: 0.77em;\n  margin-bottom: 0.3em;\n  padding-left: 15px;\n  padding-right: 15px;\n  color: #999999;\n  font-size: 14px;\n}\n.weui-cells__title + .weui-cells {\n  margin-top: 0;\n}\n.weui-cells__tips {\n  margin-top: .3em;\n  color: #999999;\n  padding-left: 15px;\n  padding-right: 15px;\n  font-size: 14px;\n}\n.weui-cell {\n  padding: 10px 15px;\n  position: relative;\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-align: center;\n      align-items: center;\n}\n.weui-cell:before {\n  content: \" \";\n  position: absolute;\n  left: 0;\n  top: 0;\n  right: 0;\n  height: 1px;\n  border-top: 1px solid #D9D9D9;\n  color: #D9D9D9;\n  transform-origin: 0 0;\n  transform: scaleY(0.5);\n  left: 15px;\n}\n.weui-cell:first-child:before {\n  display: none;\n}\n.weui-cell_primary {\n  -ms-flex-align: start;\n      align-items: flex-start;\n}\n.weui-cell__bd {\n  -ms-flex: 1;\n      flex: 1;\n}\n.weui-cell__ft {\n  text-align: right;\n  color: #999999;\n}\n.vux-cell-justify {\n  height: 1.41176471em;\n}\n.vux-cell-justify.vux-cell-justify:after {\n  content: \".\";\n  display: inline-block;\n  width: 100%;\n  overflow: hidden;\n  height: 0;\n}\n.weui-check__label {\n  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);\n}\n.weui-check__label:active {\n  background-color: #ECECEC;\n}\n.weui-check {\n  position: absolute;\n  left: -9999em;\n}\n.weui-cells_radio .weui-cell__ft {\n  padding-left: 0.35em;\n}\n.weui-cells_radio .weui-check:checked + .weui-icon-checked:before {\n  display: block;\n  content: '\\EA08';\n  color: #09BB07;\n  font-size: 16px;\n}\n.weui-cells_checkbox .weui-cell__hd {\n  padding-right: 0.35em;\n}\n.weui-cells_checkbox .weui-icon-checked:before {\n  content: '\\EA01';\n  color: #C9C9C9;\n  font-size: 23px;\n  display: block;\n}\n.weui-cells_checkbox .weui-check:checked + .weui-icon-checked:before {\n  content: '\\EA06';\n  color: #09BB07;\n}\n@font-face {\n  font-weight: normal;\n  font-style: normal;\n  font-family: \"weui\";\n  src: url('data:application/octet-stream;base64,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') format('truetype');\n}\n[class^=\"weui-icon-\"],\n[class*=\" weui-icon-\"] {\n  display: inline-block;\n  vertical-align: middle;\n  font: normal normal normal 14px/1 \"weui\";\n  font-size: inherit;\n  text-rendering: auto;\n  -webkit-font-smoothing: antialiased;\n}\n[class^=\"weui-icon-\"]:before,\n[class*=\" weui-icon-\"]:before {\n  display: inline-block;\n  margin-left: .2em;\n  margin-right: .2em;\n}\n.weui-icon-circle:before {\n  content: \"\\EA01\";\n}\n/* '' */\n.weui-icon-download:before {\n  content: \"\\EA02\";\n}\n/* '' */\n.weui-icon-info:before {\n  content: \"\\EA03\";\n}\n/* '' */\n.weui-icon-safe-success:before {\n  content: \"\\EA04\";\n}\n/* '' */\n.weui-icon-safe-warn:before {\n  content: \"\\EA05\";\n}\n/* '' */\n.weui-icon-success:before {\n  content: \"\\EA06\";\n}\n/* '' */\n.weui-icon-success-circle:before {\n  content: \"\\EA07\";\n}\n/* '' */\n.weui-icon-success-no-circle:before {\n  content: \"\\EA08\";\n}\n/* '' */\n.weui-icon-waiting:before {\n  content: \"\\EA09\";\n}\n/* '' */\n.weui-icon-waiting-circle:before {\n  content: \"\\EA0A\";\n}\n/* '' */\n.weui-icon-warn:before {\n  content: \"\\EA0B\";\n}\n/* '' */\n.weui-icon-info-circle:before {\n  content: \"\\EA0C\";\n}\n/* '' */\n.weui-icon-cancel:before {\n  content: \"\\EA0D\";\n}\n/* '' */\n.weui-icon-search:before {\n  content: \"\\EA0E\";\n}\n/* '' */\n.weui-icon-clear:before {\n  content: \"\\EA0F\";\n}\n/* '' */\n.weui-icon-back:before {\n  content: \"\\EA10\";\n}\n/* '' */\n.weui-icon-delete:before {\n  content: \"\\EA11\";\n}\n/* '' */\n[class^=\"weui-icon_\"]:before,\n[class*=\" weui-icon_\"]:before {\n  margin: 0;\n}\n.weui-icon-success {\n  font-size: 23px;\n  color: #09BB07;\n}\n.weui-icon-waiting {\n  font-size: 23px;\n  color: #10AEFF;\n}\n.weui-icon-warn {\n  font-size: 23px;\n  color: #F43530;\n}\n.weui-icon-info {\n  font-size: 23px;\n  color: #10AEFF;\n}\n.weui-icon-success-circle {\n  font-size: 23px;\n  color: #09BB07;\n}\n.weui-icon-success-no-circle {\n  font-size: 23px;\n  color: #09BB07;\n}\n.weui-icon-waiting-circle {\n  font-size: 23px;\n  color: #10AEFF;\n}\n.weui-icon-circle {\n  font-size: 23px;\n  color: #C9C9C9;\n}\n.weui-icon-download {\n  font-size: 23px;\n  color: #09BB07;\n}\n.weui-icon-info-circle {\n  font-size: 23px;\n  color: #09BB07;\n}\n.weui-icon-safe-success {\n  color: #09BB07;\n}\n.weui-icon-safe-warn {\n  color: #FFBE00;\n}\n.weui-icon-cancel {\n  color: #F43530;\n  font-size: 22px;\n}\n.weui-icon-search {\n  color: #B2B2B2;\n  font-size: 14px;\n}\n.weui-icon-clear {\n  color: #B2B2B2;\n  font-size: 14px;\n}\n.weui-icon-delete.weui-icon_gallery-delete {\n  color: #FFFFFF;\n  font-size: 22px;\n}\n.weui-icon_msg {\n  font-size: 93px;\n}\n.weui-icon_msg.weui-icon-warn {\n  color: #F76260;\n}\n.weui-icon_msg-primary {\n  font-size: 93px;\n}\n.weui-icon_msg-primary.weui-icon-warn {\n  color: #FFBE00;\n}\n.weui-cells_checkbox .weui-check:checked + .vux-checklist-icon-checked:before {\n  color: #09BB07;\n}\n.weui-cells_checkbox > label > * {\n  pointer-events: none;\n}\n.vux-checklist-disabled .vux-checklist-icon-checked:before {\n  opacity: 0.5;\n}\n.vux-checklist-label-left {\n  -ms-flex-direction: row-reverse;\n      flex-direction: row-reverse;\n}\n", ""]);
+
+// exports
+
+
+/***/ }),
+
+/***/ 477:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _keys = __webpack_require__(296);
+
+var _keys2 = _interopRequireDefault(_keys);
+
+var _stringify = __webpack_require__(285);
+
+var _stringify2 = _interopRequireDefault(_stringify);
+
+var _base = __webpack_require__(331);
+
+var _base2 = _interopRequireDefault(_base);
+
+var _tip = __webpack_require__(478);
+
+var _tip2 = _interopRequireDefault(_tip);
+
+var _icon = __webpack_require__(328);
+
+var _icon2 = _interopRequireDefault(_icon);
+
+var _inlineDesc = __webpack_require__(209);
+
+var _inlineDesc2 = _interopRequireDefault(_inlineDesc);
+
+var _objectFilter = __webpack_require__(483);
+
+var _arrayShuffle = __webpack_require__(484);
+
+var _arrayShuffle2 = _interopRequireDefault(_arrayShuffle);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+// <template>
+//   <div :class="disabled ? 'vux-checklist-disabled' : ''">
+//     <div
+//       v-show="title"
+//       class="weui-cells__title">{{ title }}</div>
+//     <slot name="after-title"></slot>
+//     <div class="weui-cells weui-cells_checkbox">
+//       <label
+//         class="weui-cell weui-check_label"
+//         :class="{
+//           'vux-checklist-label-left': labelPosition === 'left'
+//         }"
+//         :for="`checkbox_${uuid}_${index}`"
+//         v-for="(one, index) in currentOptions">
+//         <div class="weui-cell__hd">
+//           <input type="checkbox"
+//             class="weui-check"
+//             :name="`vux-checkbox-${uuid}`"
+//             :value="getKey(one)"
+//             v-model="currentValue"
+//             :id="disabled ? '' : `checkbox_${uuid}_${index}`"
+//             :disabled="isDisabled(getKey(one))">
+//           <i class="weui-icon-checked vux-checklist-icon-checked"></i>
+//         </div>
+//         <div class="weui-cell__bd">
+//           <p v-html="getValue(one)"></p>
+//           <inline-desc v-if="getInlineDesc(one)">{{ getInlineDesc(one) }}</inline-desc>
+//         </div>
+//       </label>
+//     </div>
+//     <slot name="footer"></slot>
+//   </div>
+// </template>
+//
+// <script>
+exports.default = {
+  name: 'checklist',
+  components: {
+    Tip: _tip2.default,
+    Icon: _icon2.default,
+    InlineDesc: _inlineDesc2.default
+  },
+  filters: {
+    getValue: _objectFilter.getValue,
+    getKey: _objectFilter.getKey
+  },
+  mixins: [_base2.default],
+  props: {
+    name: String,
+    showError: Boolean,
+    title: String,
+    required: {
+      type: Boolean,
+      default: false
+    },
+    options: {
+      type: Array,
+      required: true
+    },
+    value: {
+      type: Array,
+      default: function _default() {
+        return [];
+      }
+    },
+    max: Number,
+    min: Number,
+    fillMode: Boolean,
+    randomOrder: Boolean,
+    checkDisabled: {
+      type: Boolean,
+      default: true
+    },
+    labelPosition: {
+      type: String,
+      default: 'right'
+    },
+    disabled: Boolean
+  },
+  data: function data() {
+    return {
+      currentValue: [],
+      currentOptions: this.options,
+      tempValue: '' // used only for radio mode
+    };
+  },
+  beforeUpdate: function beforeUpdate() {
+    if (this.isRadio) {
+      var length = this.currentValue.length;
+      if (length > 1) {
+        this.currentValue = [this.currentValue[length - 1]];
+      }
+      var val = pure(this.currentValue);
+      this.tempValue = val.length ? val[0] : '';
+    }
+  },
+  created: function created() {
+    this.handleChangeEvent = true;
+    if (this.value) {
+      this.currentValue = this.value;
+      if (this.isRadio) {
+        this.tempValue = this.isRadio ? this.value[0] : this.value;
+      }
+    }
+    if (this.randomOrder) {
+      this.currentOptions = (0, _arrayShuffle2.default)(this.options);
+    } else {
+      this.currentOptions = this.options;
+    }
+  },
+
+  methods: {
+    getValue: _objectFilter.getValue,
+    getKey: _objectFilter.getKey,
+    getInlineDesc: _objectFilter.getInlineDesc,
+    getFullValue: function getFullValue() {
+      var labels = (0, _objectFilter.getLabels)(this.options, this.value);
+      return this.currentValue.map(function (one, index) {
+        return {
+          value: one,
+          label: labels[index]
+        };
+      });
+    },
+    isDisabled: function isDisabled(key) {
+      if (!this.checkDisabled) {
+        return false;
+      }
+      if (this._max > 1) {
+        return this.currentValue.indexOf(key) === -1 && this.currentValue.length === this._max;
+      }
+      return false;
+    }
+  },
+  computed: {
+    isRadio: function isRadio() {
+      if (typeof this.max === 'undefined') {
+        return false;
+      } else {
+        return this.max === 1;
+      }
+    },
+    _total: function _total() {
+      return this.fillMode ? this.options.length + 1 : this.options.length;
+    },
+    _min: function _min() {
+      if (!this.required && !this.min) {
+        return 0;
+      }
+      if (!this.required && this.min) {
+        return Math.min(this._total, this.min);
+      }
+      if (this.required) {
+        if (this.min) {
+          var max = Math.max(1, this.min);
+          return Math.min(this._total, max);
+        } else {
+          return 1;
+        }
+      }
+    },
+    _max: function _max() {
+      if (!this.required && !this.max) {
+        return this._total;
+      }
+      if (this.max) {
+        if (this.max > this._total) {
+          return this._total;
+        }
+        return this.max;
+      } else {
+        return this._total;
+      }
+    },
+    valid: function valid() {
+      return this.currentValue.length >= this._min && this.currentValue.length <= this._max;
+    }
+  },
+  watch: {
+    tempValue: function tempValue(val) {
+      var _val = val ? [val] : [];
+      this.$emit('input', _val);
+      this.$emit('on-change', _val, (0, _objectFilter.getLabels)(this.options, _val));
+    },
+    value: function value(newVal) {
+      if ((0, _stringify2.default)(newVal) !== (0, _stringify2.default)(this.currentValue)) {
+        this.currentValue = newVal;
+      }
+    },
+    options: function options(val) {
+      this.currentOptions = val;
+    },
+    currentValue: function currentValue(newVal) {
+      var val = pure(newVal);
+
+      if (!this.isRadio) {
+        this.$emit('input', val);
+        this.$emit('on-change', val, (0, _objectFilter.getLabels)(this.options, val));
+        var err = {};
+        if (this._min) {
+          if (this.required) {
+            if (this.currentValue.length < this._min) {
+              err = {
+                min: this._min
+              };
+            }
+          } else {
+            if (this.currentValue.length && this.currentValue.length < this._min) {
+              err = {
+                min: this._min
+              };
+            }
+          }
+        }
+        if (!this.valid && this.dirty && (0, _keys2.default)(err).length) {
+          this.$emit('on-error', err);
+        } else {
+          this.$emit('on-clear-error');
+        }
+      }
+    }
+  }
+};
+
+function pure(obj) {
+  return JSON.parse((0, _stringify2.default)(obj));
+}
+// </script>
+//
+// <style lang="less">
+// @import '../../styles/weui/widget/weui_cell/weui_cell_global';
+// @import '../../styles/weui/widget/weui_cell/weui_check';
+// @import '../../styles/weui/icon/weui_icon_font';
+//
+// .weui-cells_checkbox .weui-check:checked + .vux-checklist-icon-checked:before {
+//   color: @checklist-icon-active-color;
+// }
+//
+// .weui-cells_checkbox > label > * {
+//   pointer-events: none;
+// }
+// .vux-checklist-disabled .vux-checklist-icon-checked:before {
+//   opacity: 0.5;
+// }
+// .vux-checklist-label-left {
+//   flex-direction: row-reverse;
+// }
+// </style>
+
+/***/ }),
+
+/***/ 478:
+/***/ (function(module, exports, __webpack_require__) {
+
+var __vue_script__, __vue_template__
+var __vue_styles__ = {}
+__webpack_require__(479)
+__vue_script__ = __webpack_require__(481)
+if (Object.keys(__vue_script__).some(function (key) { return key !== "default" && key !== "__esModule" })) {
+  console.warn("[vue-loader] node_modules\\_vux@2.9.1@vux\\src\\components\\tip\\index.vue: named exports in *.vue files are ignored.")}
+__vue_template__ = __webpack_require__(482)
+module.exports = __vue_script__ || {}
+if (module.exports.__esModule) module.exports = module.exports.default
+var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
+if (__vue_template__) {
+__vue_options__.template = __vue_template__
+}
+if (!__vue_options__.computed) __vue_options__.computed = {}
+Object.keys(__vue_styles__).forEach(function (key) {
+var module = __vue_styles__[key]
+__vue_options__.computed[key] = function () { return module }
+})
+if (false) {(function () {  module.hot.accept()
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  var id = "_v-54fd924a/index.vue"
+  if (!module.hot.data) {
+    hotAPI.createRecord(id, module.exports)
+  } else {
+    hotAPI.update(id, module.exports, __vue_template__)
+  }
+})()}
+
+/***/ }),
+
+/***/ 479:
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(480);
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var update = __webpack_require__(20)("631ed3cc", content, false);
+// Hot Module Replacement
+if(false) {
+ // When the styles change, update the <style> tags
+ if(!content.locals) {
+   module.hot.accept("!!../../../../_css-loader@0.23.1@css-loader/index.js!../../../../_vue-loader@8.7.1@vue-loader/lib/style-rewriter.js!../../../../_vux-loader@1.2.9@vux-loader/src/style-loader.js!../../../../_vue-loader@8.7.1@vue-loader/lib/selector.js?type=style&index=0!./index.vue", function() {
+     var newContent = require("!!../../../../_css-loader@0.23.1@css-loader/index.js!../../../../_vue-loader@8.7.1@vue-loader/lib/style-rewriter.js!../../../../_vux-loader@1.2.9@vux-loader/src/style-loader.js!../../../../_vue-loader@8.7.1@vue-loader/lib/selector.js?type=style&index=0!./index.vue");
+     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+     update(newContent);
+   });
+ }
+ // When the module is disposed, remove the <style> tags
+ module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+
+/***/ 480:
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(15)();
+// imports
+
+
+// module
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.vux-group-tip, .vux-group-tip p {\n  font-size:14px;\n  color:#888;\n  text-align:center;\n  padding-top:0.3em;\n  padding-left:10px;\n  padding-right:5px;\n}\n.vux-group-tip .weui-icon {\n  padding-right: 3px;\n}\n", ""]);
+
+// exports
+
+
+/***/ }),
+
+/***/ 481:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+// <template>
+//   <div class="vux-group-tip" :style="{'text-align':align}">
+//     <slot></slot>
+//   </div>
+// </template>
+//
+// <script>
+exports.default = {
+  name: 'tip',
+  props: {
+    align: {
+      type: String,
+      default: 'left'
+    }
+  }
+  // </script>
+  //
+  // <style>
+  // .vux-group-tip, .vux-group-tip p {
+  //   font-size:14px;
+  //   color:#888;
+  //   text-align:center;
+  //   padding-top:0.3em;
+  //   padding-left:10px;
+  //   padding-right:5px;
+  // }
+  // .vux-group-tip .weui-icon {
+  //   padding-right: 3px;
+  // }
+  // </style>
+
+};
+
+/***/ }),
+
+/***/ 482:
+/***/ (function(module, exports) {
+
+module.exports = "\n<div class=\"vux-group-tip\" :style=\"{'text-align':align}\">\n  <slot></slot>\n</div>\n";
+
+/***/ }),
+
+/***/ 483:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.getLabels = exports.getLabel = exports.getInlineDesc = exports.getKey = exports.getValue = undefined;
+
+var _typeof2 = __webpack_require__(21);
+
+var _typeof3 = _interopRequireDefault(_typeof2);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var getValue = exports.getValue = function getValue(item) {
+  return (typeof item === 'undefined' ? 'undefined' : (0, _typeof3.default)(item)) === 'object' ? item.value : item;
+};
+
+var getKey = exports.getKey = function getKey(item) {
+  return (typeof item === 'undefined' ? 'undefined' : (0, _typeof3.default)(item)) === 'object' ? item.key : item;
+};
+
+var getInlineDesc = exports.getInlineDesc = function getInlineDesc(item) {
+  return (typeof item === 'undefined' ? 'undefined' : (0, _typeof3.default)(item)) === 'object' ? item.inlineDesc : '';
+};
+
+var getLabel = exports.getLabel = function getLabel() {
+  var list = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : [];
+  var value = arguments[1];
+
+  if (!list.length) {
+    return value;
+  }
+  if (typeof list[0] === 'string') {
+    return value;
+  }
+  var match = list.filter(function (one) {
+    return one.key === value;
+  });
+  if (match.length) {
+    return match[0].value || match[0].label;
+  }
+  return value;
+};
+
+var getLabels = exports.getLabels = function getLabels() {
+  var list = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : [];
+  var values = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : [];
+
+  return values.map(function (value) {
+    return getLabel(list, value);
+  });
+};
+
+/***/ }),
+
+/***/ 484:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+module.exports = function (arr) {
+	if (!Array.isArray(arr)) {
+		throw new TypeError('Expected Array, got ' + typeof arr);
+	}
+
+	var rand;
+	var tmp;
+	var len = arr.length;
+	var ret = arr.slice();
+
+	while (len) {
+		rand = Math.floor(Math.random() * len--);
+		tmp = ret[len];
+		ret[len] = ret[rand];
+		ret[rand] = tmp;
+	}
+
+	return ret;
+};
+
+
+/***/ }),
+
+/***/ 485:
+/***/ (function(module, exports) {
+
+module.exports = "\n<div :class=\"disabled ? 'vux-checklist-disabled' : ''\">\n  <div\n    v-show=\"title\"\n    class=\"weui-cells__title\">{{ title }}</div>\n  <slot name=\"after-title\"></slot>\n  <div class=\"weui-cells weui-cells_checkbox\">\n    <label\n      class=\"weui-cell weui-check_label\"\n      :class=\"{\n        'vux-checklist-label-left': labelPosition === 'left'\n      }\"\n      :for=\"`checkbox_${uuid}_${index}`\"\n      v-for=\"(one, index) in currentOptions\">\n      <div class=\"weui-cell__hd\">\n        <input type=\"checkbox\"\n          class=\"weui-check\"\n          :name=\"`vux-checkbox-${uuid}`\"\n          :value=\"getKey(one)\"\n          v-model=\"currentValue\"\n          :id=\"disabled ? '' : `checkbox_${uuid}_${index}`\"\n          :disabled=\"isDisabled(getKey(one))\">\n        <i class=\"weui-icon-checked vux-checklist-icon-checked\"></i>\n      </div>\n      <div class=\"weui-cell__bd\">\n        <p v-html=\"getValue(one)\"></p>\n        <inline-desc v-if=\"getInlineDesc(one)\">{{ getInlineDesc(one) }}</inline-desc>\n      </div>\n    </label>\n  </div>\n  <slot name=\"footer\"></slot>\n</div>\n";
+
+/***/ }),
+
+/***/ 486:
+/***/ (function(module, exports) {
+
+module.exports = "\n<div _v-17377fe8=\"\">\n  <toast v-model=\"showPositionValue\" type=\"text\" :time=\"800\" is-show-mask=\"\" :text=\"msg\" position=\"top\" _v-17377fe8=\"\"></toast>\n   <div v-transfer-dom=\"\" _v-17377fe8=\"\">\n    <popup v-model=\"showPlayer\" position=\"bottom\" max-height=\"70%\" _v-17377fe8=\"\">\n      <group _v-17377fe8=\"\">\n        <!-- <cell v-for=\"i in 20\" :key=\"i\" :title=\"i\"></cell> -->\n        <checklist title=\"添加选手\" label-position=\"left\" required=\"\" :options=\"commonList\" v-model=\"checklistIndex\" @on-change=\"change\" _v-17377fe8=\"\"></checklist>\n      </group>\n      <div style=\"padding: 15px;\" _v-17377fe8=\"\">\n        <x-button @click.native=\"showPlayer = false\" plain=\"\" type=\"primary\" _v-17377fe8=\"\"> 完成 </x-button>\n      </div>\n    </popup>\n  </div>\n  <!-- <checklist :title=\"$t('Basic Usage')\" :label-position=\"labelPosition\" required :options=\"commonList\" v-model=\"checklist001\" @on-change=\"change\"></checklist> -->\n  <div v-transfer-dom=\"\" _v-17377fe8=\"\">\n    <x-dialog v-model=\"showHideOnBlur\" class=\"dialog-demo\" hide-on-blur=\"\" _v-17377fe8=\"\">\n      <div class=\"img-box\" _v-17377fe8=\"\">\n        <img src=\"https://ws1.sinaimg.cn/large/663d3650gy1fq6824ur1dj20ia0pydlm.jpg\" style=\"max-width:100%\" _v-17377fe8=\"\">\n      </div>\n      <div @click=\"showHideOnBlur=false\" _v-17377fe8=\"\">\n        <span class=\"vux-close\" _v-17377fe8=\"\"></span>\n      </div>\n    </x-dialog>\n  </div>\n  <group title=\"发起投票\" _v-17377fe8=\"\">\n    <x-input title=\"活动主题\" :max=\"10\" placeholder=\"请输入活动主题名称\" v-model=\"page.title\" novalidate=\"\" :show-clear=\"false\" text-align=\"right\" placeholder-align=\"right\" _v-17377fe8=\"\"></x-input>\n    <datetime v-model=\"page.time\" format=\"YYYY-MM-DD HH:mm\" title=\"截止时间\" _v-17377fe8=\"\"></datetime>\n    <uploader :max=\"1\" title=\"上传活动海报\" :upload-url=\"uploadUrl\" :images=\"page.images\" name=\"file\" :params=\"{type:'images'}\" @preview=\"previewMethod\" _v-17377fe8=\"\"></uploader>\n    <group _v-17377fe8=\"\">\n        <cell v-for=\"(v,k) in selPlayerList\" :key=\"k\" :title=\"v\" _v-17377fe8=\"\"></cell>\n    </group>\n  </group>\n  <box gap=\"10px 10px\" _v-17377fe8=\"\">\n    <x-button :gradients=\"['#6F1BFE', '#9479DF']\" @click.native=\"showPlayer=true;\" _v-17377fe8=\"\">添加视频</x-button>\n  </box>\n  \n  <box gap=\"10px 10px\" _v-17377fe8=\"\">\n    <x-button :gradients=\"['#1D62F0', '#19D5FD']\" @click.native=\"submit()\" _v-17377fe8=\"\">发布投票</x-button>\n  </box>\n</div>\n";
 
 /***/ })
 

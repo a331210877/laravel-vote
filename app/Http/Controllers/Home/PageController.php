@@ -53,10 +53,12 @@ class PageController extends Controller
 
 	public function addPage(Request $request){
 		$page=$request->page;
-		$addRes=Page::addPage($page);
-		if($addRes){
-			return responseToJson(1,"发起投票成功",$addRes);			
+		$idList=$request->idList;
+		$id=Page::addPage($page);
+		if($id){
+			$updateRes=Page::updatePlayerId($idList,$id);
+			return responseToJson(1,"发起投票成功",$id);			
 		}
-		return responseToJson(1,"发起投票失败",$addRes);					
+		return responseToJson(1,"发起投票失败",$id);					
 	}
 }

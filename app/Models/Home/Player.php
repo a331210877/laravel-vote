@@ -8,11 +8,11 @@ class Player extends Model
 {
     public static function getPlayer()
     {
-        $result= DB::table('player')->where('status',0)->get()->toarray();
+        $result= DB::table('player')->where('status',0)->orderBy('create_time','desc')->get()->toarray();
         foreach($result as $k => $v) {
-        	$v->image="/storage/app/uploads/images/".$v->image;
-        	$v->videoImg="/storage/app/uploads/videoImg/".$v->videoImg;
-        	$v->video="/storage/app/uploads/video/".$v->video;
+        	$v->image="/storage/uploads/images/".$v->image;
+        	$v->videoImg="/storage/uploads/videoImg/".$v->videoImg;
+        	$v->video="/storage/uploads/video/".$v->video;
         	$v->isLoading=false;
         	$v->disabled=true;
         }
@@ -21,5 +21,10 @@ class Player extends Model
         }else{
             return responseToJson(0,"查询失败",null);
         }
+    }
+
+    public static function getMyPlayer($userId){
+        $result=DB::table('player')->join('user','user.id','=','player.user_id')->where('player.status',0)->where('user.open_id',$userId)->where('player.page_id',0)->select('player.*')->get();
+        return $result;
     }
 }

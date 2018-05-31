@@ -35,24 +35,10 @@ export default new VueRouter({
             name: '投票',
             component: HomeBase,
             children: [
-                { path: '/myPlayer',name:'myPlayer',component: resolve =>void(require(['../components/Home/MyPlayer.vue'], resolve))},
-            ]
-        },
-        {
-            path: '/me', 
-            name: '投票',
-            component: HomeBase,
-            children: [
-                { path: '/myPage',name:'myPage',component: resolve =>void(require(['../components/Home/MyPage.vue'], resolve))},
-            ]
-        },
-        {
-            path: '/add', 
-            name: '添加选手',
-            component: HomeBase,
-            children: [
-                { path: '/addPlayer',name:'addPlayer',component: resolve =>void(require(['../components/Home/AddPlayer2.vue'], resolve))},
-                { path: '/addPage',name:'addPage',component: resolve =>void(require(['../components/Home/AddPage.vue'], resolve))},                
+                { path: '/me/myPlayer',name:'myPlayer',component: resolve =>void(require(['../components/Home/MyPlayer.vue'], resolve))},
+                { path: '/me/myPage',name:'myPage',component: resolve =>void(require(['../components/Home/MyPage.vue'], resolve))},
+                { path: '/me/addPlayer',name:'addPlayer',component: resolve =>void(require(['../components/Home/AddPlayer2.vue'], resolve))},
+                { path: '/me/addPage',name:'addPage',component: resolve =>void(require(['../components/Home/AddPage.vue'], resolve))},                
             ]
         },
     ],

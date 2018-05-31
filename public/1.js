@@ -5,11 +5,11 @@ webpackJsonp([1],{
 
 var __vue_script__, __vue_template__
 var __vue_styles__ = {}
-__webpack_require__(353)
-__vue_script__ = __webpack_require__(355)
+__webpack_require__(357)
+__vue_script__ = __webpack_require__(359)
 if (Object.keys(__vue_script__).some(function (key) { return key !== "default" && key !== "__esModule" })) {
   console.warn("[vue-loader] resources\\assets\\js\\components\\Home\\Index.vue: named exports in *.vue files are ignored.")}
-__vue_template__ = __webpack_require__(372)
+__vue_template__ = __webpack_require__(381)
 module.exports = __vue_script__ || {}
 if (module.exports.__esModule) module.exports = module.exports.default
 var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -224,7 +224,7 @@ module.exports = "\n<button\n  :style=\"buttonStyle\"\n  class=\"weui-btn\"\n  :
 
 /***/ }),
 
-/***/ 292:
+/***/ 294:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -241,7 +241,7 @@ exports.default = {
 
 /***/ }),
 
-/***/ 305:
+/***/ 306:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -339,16 +339,16 @@ module.exports = shouldUseNative() ? Object.assign : function (target, source) {
 
 /***/ }),
 
-/***/ 306:
+/***/ 307:
 /***/ (function(module, exports, __webpack_require__) {
 
 var __vue_script__, __vue_template__
 var __vue_styles__ = {}
-__webpack_require__(307)
-__vue_script__ = __webpack_require__(309)
+__webpack_require__(308)
+__vue_script__ = __webpack_require__(310)
 if (Object.keys(__vue_script__).some(function (key) { return key !== "default" && key !== "__esModule" })) {
   console.warn("[vue-loader] node_modules\\_vux@2.9.1@vux\\src\\components\\group-title\\index.vue: named exports in *.vue files are ignored.")}
-__vue_template__ = __webpack_require__(310)
+__vue_template__ = __webpack_require__(311)
 module.exports = __vue_script__ || {}
 if (module.exports.__esModule) module.exports = module.exports.default
 var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -374,13 +374,13 @@ if (false) {(function () {  module.hot.accept()
 
 /***/ }),
 
-/***/ 307:
+/***/ 308:
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(308);
+var content = __webpack_require__(309);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
@@ -401,7 +401,7 @@ if(false) {
 
 /***/ }),
 
-/***/ 308:
+/***/ 309:
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(15)();
@@ -416,7 +416,7 @@ exports.push([module.i, "/**\n* actionsheet\n*/\n/**\n* en: primary type text co
 
 /***/ }),
 
-/***/ 309:
+/***/ 310:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -445,23 +445,23 @@ exports.default = {
 
 /***/ }),
 
-/***/ 310:
+/***/ 311:
 /***/ (function(module, exports) {
 
 module.exports = "\n<div class=\"weui-cells__title\">\n  <slot></slot>\n</div>\n";
 
 /***/ }),
 
-/***/ 311:
+/***/ 312:
 /***/ (function(module, exports, __webpack_require__) {
 
 var __vue_script__, __vue_template__
 var __vue_styles__ = {}
-__webpack_require__(312)
-__vue_script__ = __webpack_require__(314)
+__webpack_require__(313)
+__vue_script__ = __webpack_require__(315)
 if (Object.keys(__vue_script__).some(function (key) { return key !== "default" && key !== "__esModule" })) {
   console.warn("[vue-loader] node_modules\\_vux@2.9.1@vux\\src\\components\\search\\index.vue: named exports in *.vue files are ignored.")}
-__vue_template__ = __webpack_require__(315)
+__vue_template__ = __webpack_require__(316)
 module.exports = __vue_script__ || {}
 if (module.exports.__esModule) module.exports = module.exports.default
 var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -487,13 +487,13 @@ if (false) {(function () {  module.hot.accept()
 
 /***/ }),
 
-/***/ 312:
+/***/ 313:
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(313);
+var content = __webpack_require__(314);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
@@ -514,7 +514,7 @@ if(false) {
 
 /***/ }),
 
-/***/ 313:
+/***/ 314:
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(15)();
@@ -529,7 +529,7 @@ exports.push([module.i, "@font-face {\n  font-weight: normal;\n  font-style: nor
 
 /***/ }),
 
-/***/ 314:
+/***/ 315:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -539,7 +539,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _uuid = __webpack_require__(292);
+var _uuid = __webpack_require__(294);
 
 var _uuid2 = _interopRequireDefault(_uuid);
 
@@ -816,23 +816,23 @@ exports.default = {
 
 /***/ }),
 
-/***/ 315:
+/***/ 316:
 /***/ (function(module, exports) {
 
 module.exports = "\n<div\n  class=\"vux-search-box\"\n  :class=\"{ 'vux-search-fixed':isFixed }\"\n  :style=\"{ top: isFixed ? top : '', position: fixPosition }\">\n  <div\n    class=\"weui-search-bar\"\n    :class=\"{'weui-search-bar_focusing': !isCancel || currentValue}\">\n    <slot name=\"left\"></slot>\n    <form class=\"weui-search-bar__form\" @submit.prevent=\"$emit('on-submit', value)\" action=\".\">\n      <label\n        :for=\"`search_input_${uuid}`\"\n        class=\"vux-search-mask\"\n        @click=\"touch\"\n        v-show=\"!isFixed && autoFixed\"></label>\n      <div class=\"weui-search-bar__box\">\n        <i class=\"weui-icon-search\"></i>\n        <input\n          v-model=\"currentValue\"\n          ref=\"input\"\n          type=\"search\"\n          autocomplete=\"off\"\n          class=\"weui-search-bar__input\"\n          :id=\"`search_input_${uuid}`\"\n          :placeholder=\"placeholder\"\n          :required=\"required\"\n          @focus=\"onFocus\"\n          @blur=\"onBlur\"\n          @compositionstart=\"onComposition($event, 'start')\"\n          @compositionend=\"onComposition($event, 'end')\"\n          @input=\"onComposition($event, 'input')\"/>\n        <a\n          href=\"javascript:\"\n          class=\"weui-icon-clear\"\n          @click=\"clear\"\n          v-show=\"currentValue\"></a>\n      </div>\n      <label\n        :for=\"`search_input_${uuid}`\"\n        class=\"weui-search-bar__label\"\n        v-show=\"!isFocus && !value\">\n        <i class=\"weui-icon-search\"></i>\n        <span>{{ placeholder || '搜索' }}</span>\n      </label>\n    </form>\n    <a\n      href=\"javascript:\"\n      class=\"weui-search-bar__cancel-btn\"\n      @click=\"cancel\">{{ cancelText || '取消' }}\n    </a>\n    <slot name=\"right\"></slot>\n  </div>\n  <div class=\"weui-cells vux-search_show\" v-show=\"isFixed\">\n    <slot></slot>\n    <div\n      class=\"weui-cell weui-cell_access\"\n      v-for=\"item in results\"\n      @click=\"handleResultClick(item)\">\n      <div class=\"weui-cell__bd weui-cell_primary\">\n        <p>{{item.title}}</p>\n      </div>\n    </div>\n  </div>\n</div>\n";
 
 /***/ }),
 
-/***/ 316:
+/***/ 317:
 /***/ (function(module, exports, __webpack_require__) {
 
 var __vue_script__, __vue_template__
 var __vue_styles__ = {}
-__webpack_require__(317)
-__vue_script__ = __webpack_require__(319)
+__webpack_require__(318)
+__vue_script__ = __webpack_require__(320)
 if (Object.keys(__vue_script__).some(function (key) { return key !== "default" && key !== "__esModule" })) {
   console.warn("[vue-loader] node_modules\\_vux@2.9.1@vux\\src\\components\\form-preview\\index.vue: named exports in *.vue files are ignored.")}
-__vue_template__ = __webpack_require__(320)
+__vue_template__ = __webpack_require__(321)
 module.exports = __vue_script__ || {}
 if (module.exports.__esModule) module.exports = module.exports.default
 var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -858,13 +858,13 @@ if (false) {(function () {  module.hot.accept()
 
 /***/ }),
 
-/***/ 317:
+/***/ 318:
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(318);
+var content = __webpack_require__(319);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
@@ -885,7 +885,7 @@ if(false) {
 
 /***/ }),
 
-/***/ 318:
+/***/ 319:
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(15)();
@@ -900,7 +900,7 @@ exports.push([module.i, "/**\n* actionsheet\n*/\n/**\n* en: primary type text co
 
 /***/ }),
 
-/***/ 319:
+/***/ 320:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -954,20 +954,20 @@ exports.default = {
 
 /***/ }),
 
-/***/ 320:
+/***/ 321:
 /***/ (function(module, exports) {
 
 module.exports = "\n<div class=\"vux-form-preview weui-form-preview\">\n  <div class=\"weui-form-preview__hd\">\n    <label class=\"weui-form-preview__label\" v-html=\"headerLabel\"></label>\n    <em class=\"weui-form-preview__value\" v-html=\"headerValue || '&nbsp;'\"></em>\n  </div>\n  <div class=\"weui-form-preview__bd\">\n    <div class=\"weui-form-preview__item\" v-for=\"item in bodyItems\">\n      <label class=\"weui-form-preview__label\">{{item.label}}</label>\n      <span class=\"weui-form-preview__value\">{{item.value}}</span>\n    </div>\n  </div>\n  <div class=\"weui-form-preview__ft\">\n    <a class=\"weui-form-preview__btn\" :class=\"{'weui-form-preview__btn_default': button.style==='default', 'weui-form-preview__btn_primary': button.style === 'primary'}\" href=\"javascript:\" v-for=\"button in footerButtons\" @click=\"onButtonClick(button.onButtonClick, button.link)\">{{button.text}}</a>\n  </div>\n</div>\n";
 
 /***/ }),
 
-/***/ 353:
+/***/ 357:
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(354);
+var content = __webpack_require__(358);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
@@ -988,7 +988,7 @@ if(false) {
 
 /***/ }),
 
-/***/ 354:
+/***/ 358:
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(15)();
@@ -996,32 +996,32 @@ exports = module.exports = __webpack_require__(15)();
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.weui-form-preview__btn_primary{\n  color:#FF9900 !important;\n}\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.weui-form-preview__btn_primary{\n  color:#FF9900 !important;\n}\n", ""]);
 
 // exports
 
 
 /***/ }),
 
-/***/ 355:
+/***/ 359:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-
+/* WEBPACK VAR INJECTION */(function($) {
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _swiper = __webpack_require__(356);
+var _swiper = __webpack_require__(360);
 
 var _swiper2 = _interopRequireDefault(_swiper);
 
-var _index = __webpack_require__(306);
+var _index = __webpack_require__(307);
 
 var _index2 = _interopRequireDefault(_index);
 
-var _swiperItem = __webpack_require__(364);
+var _swiperItem = __webpack_require__(368);
 
 var _swiperItem2 = _interopRequireDefault(_swiperItem);
 
@@ -1029,20 +1029,25 @@ var _index3 = __webpack_require__(287);
 
 var _index4 = _interopRequireDefault(_index3);
 
-var _index5 = __webpack_require__(367);
+var _index5 = __webpack_require__(371);
 
 var _index6 = _interopRequireDefault(_index5);
 
-var _index7 = __webpack_require__(311);
+var _index7 = __webpack_require__(312);
 
 var _index8 = _interopRequireDefault(_index7);
 
-var _index9 = __webpack_require__(316);
+var _index9 = __webpack_require__(317);
 
 var _index10 = _interopRequireDefault(_index9);
 
+var _index11 = __webpack_require__(376);
+
+var _index12 = _interopRequireDefault(_index11);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+var vue;
 exports.default = {
   data: function data() {
     return {
@@ -1050,7 +1055,12 @@ exports.default = {
       curCarouseIndex: 0, //当前轮播图下标
       results: [], //搜索结果
       searchValue: '', //搜索内容
-      list: []
+      list: [],
+      loadingMore: false,
+      cuListIndex: 0,
+      loadingTip: "正在加载",
+      loadingIcon: true,
+      ifEnd: false
     };
   },
 
@@ -1070,49 +1080,62 @@ exports.default = {
         });
       });
     },
-    getPage: function getPage(searchValue) {
+    getPage: function getPage(searchValue, index) {
       var vue = this;
-      this.$nextTick(function () {
-        axios.post('/home/getPage', {
-          'search': searchValue
-        }).then(function (response) {
-          var list = [];
-          for (var i = 0; i < response.data.result.length; i++) {
-            var obj = {
-              'page_id': response.data.result[i].id,
-              'title': response.data.result[i].title,
-              'list': [{
-                'label': "发起人",
-                'value': response.data.result[i].nick_name
-              }, {
-                'label': "开始时间",
-                'value': getLocalTime(response.data.result[i].start_time)
-              }, {
-                'label': "结束时间",
-                'value': getLocalTime(response.data.result[i].end_time)
-              }]
-            };
-            list.push(obj);
-          }
-          vue.list = list;
-        }).catch(function (response) {
-          console.log(response);
+      if (!vue.isEnd) {
+        this.$nextTick(function () {
+          axios.post('/home/getPage', {
+            'search': searchValue,
+            'index': index
+          }).then(function (response) {
+            if (response.data.result.length == 0) {
+              vue.loadingIcon = false;
+              vue.loadingTip = "暂无数据";
+              vue.isEnd = true;
+              vue.loadingMore = true;
+            }
+            for (var i = 0; i < response.data.result.length; i++) {
+              var obj = {
+                'page_id': response.data.result[i].id,
+                'title': response.data.result[i].title,
+                'list': [{
+                  'label': "发起人",
+                  'value': response.data.result[i].nick_name
+                }, {
+                  'label': "开始时间",
+                  'value': getLocalTime(response.data.result[i].start_time)
+                }, {
+                  'label': "结束时间",
+                  'value': getLocalTime(response.data.result[i].end_time)
+                }]
+              };
+              vue.list.push(obj);
+            }
+            vue.cuListIndex = vue.list.length;
+          }).catch(function (response) {
+            console.log(response);
+          });
         });
-      });
+      }
     },
     setFocus: function setFocus() {
       this.$refs.search.setFocus();
     },
     onSubmit: function onSubmit() {
-      this.getPage(this.searchValue);
+      this.cuListIndex = 0;
+      this.getPage(this.searchValue, this.cuListIndex);
     },
     showPage: function showPage($id) {
       this.$router.push("/page/" + $id);
+    },
+    test: function test() {
+      console.log("dasdaddddddddddddddd");
     }
   },
   mounted: function mounted() {
-    this.getCarouse();
-    this.getPage(this.searchValue);
+    this.getCarouse(this.cuListIndex);
+    this.getPage(this.searchValue, this.cuListIndex);
+    vue = this;
   },
   components: {
     Swiper: _swiper2.default,
@@ -1121,22 +1144,40 @@ exports.default = {
     XButton: _index4.default,
     Divider: _index6.default,
     Search: _index8.default,
-    FormPreview: _index10.default
+    FormPreview: _index10.default,
+    LoadMore: _index12.default
   }
 };
 
+
+$(window).scroll(function () {
+  var scrollTop = $(this).scrollTop();
+  var scrollHeight = $(document).height();
+  var windowHeight = $(this).height();
+  if (scrollHeight - (scrollTop + windowHeight) < 90) {
+    if (vue.loadingMore == false) {
+      vue.loadingMore = true;
+      setTimeout(function () {
+        vue.getPage(vue.searchValue, vue.cuListIndex);
+        vue.loadingMore = false;
+      }, 1000);
+    }
+  }
+});
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(52)))
+
 /***/ }),
 
-/***/ 356:
+/***/ 360:
 /***/ (function(module, exports, __webpack_require__) {
 
 var __vue_script__, __vue_template__
 var __vue_styles__ = {}
-__webpack_require__(357)
-__vue_script__ = __webpack_require__(359)
+__webpack_require__(361)
+__vue_script__ = __webpack_require__(363)
 if (Object.keys(__vue_script__).some(function (key) { return key !== "default" && key !== "__esModule" })) {
   console.warn("[vue-loader] node_modules\\_vux@2.9.1@vux\\src\\components\\swiper\\swiper.vue: named exports in *.vue files are ignored.")}
-__vue_template__ = __webpack_require__(363)
+__vue_template__ = __webpack_require__(367)
 module.exports = __vue_script__ || {}
 if (module.exports.__esModule) module.exports = module.exports.default
 var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -1162,13 +1203,13 @@ if (false) {(function () {  module.hot.accept()
 
 /***/ }),
 
-/***/ 357:
+/***/ 361:
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(358);
+var content = __webpack_require__(362);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
@@ -1189,7 +1230,7 @@ if(false) {
 
 /***/ }),
 
-/***/ 358:
+/***/ 362:
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(15)();
@@ -1204,7 +1245,7 @@ exports.push([module.i, "/**\n* actionsheet\n*/\n/**\n* en: primary type text co
 
 /***/ }),
 
-/***/ 359:
+/***/ 363:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1218,7 +1259,7 @@ var _stringify = __webpack_require__(285);
 
 var _stringify2 = _interopRequireDefault(_stringify);
 
-var _swiper = __webpack_require__(360);
+var _swiper = __webpack_require__(364);
 
 var _swiper2 = _interopRequireDefault(_swiper);
 
@@ -1547,7 +1588,7 @@ exports.default = {
 
 /***/ }),
 
-/***/ 360:
+/***/ 364:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1557,15 +1598,15 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _classCallCheck2 = __webpack_require__(361);
+var _classCallCheck2 = __webpack_require__(365);
 
 var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
 
-var _createClass2 = __webpack_require__(362);
+var _createClass2 = __webpack_require__(366);
 
 var _createClass3 = _interopRequireDefault(_createClass2);
 
-var _objectAssign = __webpack_require__(305);
+var _objectAssign = __webpack_require__(306);
 
 var _objectAssign2 = _interopRequireDefault(_objectAssign);
 
@@ -1941,7 +1982,7 @@ exports.default = Swiper;
 
 /***/ }),
 
-/***/ 361:
+/***/ 365:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1957,7 +1998,7 @@ exports.default = function (instance, Constructor) {
 
 /***/ }),
 
-/***/ 362:
+/***/ 366:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1991,22 +2032,22 @@ exports.default = function () {
 
 /***/ }),
 
-/***/ 363:
+/***/ 367:
 /***/ (function(module, exports) {
 
 module.exports = "\n<div class=\"vux-slider\">\n  <div class=\"vux-swiper\" :style=\"{height: xheight}\">\n    <slot></slot>\n\n    <div\n    class=\"vux-swiper-item\"\n    v-for=\"(item, index) in list\"\n    @click=\"clickListItem(item)\"\n    :data-index=\"index\">\n      <a href=\"javascript:\">\n        <div class=\"vux-img\" :style=\"{backgroundImage: buildBackgroundUrl(item)}\"></div>\n        <p class=\"vux-swiper-desc\" v-if=\"showDescMask\">{{ item.title }}</p>\n      </a>\n    </div>\n\n    <div\n    v-if=\"listTwoLoopItem.length > 0\"\n    class=\"vux-swiper-item vux-swiper-item-clone\"\n    v-for=\"(item, index) in listTwoLoopItem\"\n    @click=\"clickListItem(item)\"\n    :data-index=\"index\">\n      <a href=\"javascript:\">\n        <div class=\"vux-img\" :style=\"{backgroundImage: buildBackgroundUrl(item)}\"></div>\n        <p class=\"vux-swiper-desc\" v-if=\"showDescMask\">{{ item.title }}</p>\n      </a>\n    </div>\n\n  </div>\n  <div :class=\"[dotsClass, 'vux-indicator', `vux-indicator-${dotsPosition}`]\" v-show=\"showDots\">\n    <a href=\"javascript:\" v-for=\"key in length\">\n      <i class=\"vux-icon-dot\" :class=\"{'active': key - 1 === current}\"></i>\n    </a>\n  </div>\n</div>\n";
 
 /***/ }),
 
-/***/ 364:
+/***/ 368:
 /***/ (function(module, exports, __webpack_require__) {
 
 var __vue_script__, __vue_template__
 var __vue_styles__ = {}
-__vue_script__ = __webpack_require__(365)
+__vue_script__ = __webpack_require__(369)
 if (Object.keys(__vue_script__).some(function (key) { return key !== "default" && key !== "__esModule" })) {
   console.warn("[vue-loader] node_modules\\_vux@2.9.1@vux\\src\\components\\swiper\\swiper-item.vue: named exports in *.vue files are ignored.")}
-__vue_template__ = __webpack_require__(366)
+__vue_template__ = __webpack_require__(370)
 module.exports = __vue_script__ || {}
 if (module.exports.__esModule) module.exports = module.exports.default
 var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -2032,7 +2073,7 @@ if (false) {(function () {  module.hot.accept()
 
 /***/ }),
 
-/***/ 365:
+/***/ 369:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2066,23 +2107,23 @@ exports.default = {
 
 /***/ }),
 
-/***/ 366:
+/***/ 370:
 /***/ (function(module, exports) {
 
 module.exports = "\n<div class=\"vux-swiper-item\"><slot></slot></div>\n";
 
 /***/ }),
 
-/***/ 367:
+/***/ 371:
 /***/ (function(module, exports, __webpack_require__) {
 
 var __vue_script__, __vue_template__
 var __vue_styles__ = {}
-__webpack_require__(368)
-__vue_script__ = __webpack_require__(370)
+__webpack_require__(372)
+__vue_script__ = __webpack_require__(374)
 if (Object.keys(__vue_script__).some(function (key) { return key !== "default" && key !== "__esModule" })) {
   console.warn("[vue-loader] node_modules\\_vux@2.9.1@vux\\src\\components\\divider\\index.vue: named exports in *.vue files are ignored.")}
-__vue_template__ = __webpack_require__(371)
+__vue_template__ = __webpack_require__(375)
 module.exports = __vue_script__ || {}
 if (module.exports.__esModule) module.exports = module.exports.default
 var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -2108,13 +2149,13 @@ if (false) {(function () {  module.hot.accept()
 
 /***/ }),
 
-/***/ 368:
+/***/ 372:
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(369);
+var content = __webpack_require__(373);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
@@ -2135,7 +2176,7 @@ if(false) {
 
 /***/ }),
 
-/***/ 369:
+/***/ 373:
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(15)();
@@ -2150,7 +2191,7 @@ exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n.vux-divider {\n  display: ta
 
 /***/ }),
 
-/***/ 370:
+/***/ 374:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2205,17 +2246,155 @@ exports.default = {
 
 /***/ }),
 
-/***/ 371:
+/***/ 375:
 /***/ (function(module, exports) {
 
 module.exports = "\n<p class=\"vux-divider\">\n  <slot></slot>\n</p>\n";
 
 /***/ }),
 
-/***/ 372:
+/***/ 376:
+/***/ (function(module, exports, __webpack_require__) {
+
+var __vue_script__, __vue_template__
+var __vue_styles__ = {}
+__webpack_require__(377)
+__vue_script__ = __webpack_require__(379)
+if (Object.keys(__vue_script__).some(function (key) { return key !== "default" && key !== "__esModule" })) {
+  console.warn("[vue-loader] node_modules\\_vux@2.9.1@vux\\src\\components\\load-more\\index.vue: named exports in *.vue files are ignored.")}
+__vue_template__ = __webpack_require__(380)
+module.exports = __vue_script__ || {}
+if (module.exports.__esModule) module.exports = module.exports.default
+var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
+if (__vue_template__) {
+__vue_options__.template = __vue_template__
+}
+if (!__vue_options__.computed) __vue_options__.computed = {}
+Object.keys(__vue_styles__).forEach(function (key) {
+var module = __vue_styles__[key]
+__vue_options__.computed[key] = function () { return module }
+})
+if (false) {(function () {  module.hot.accept()
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  var id = "_v-b33f00ea/index.vue"
+  if (!module.hot.data) {
+    hotAPI.createRecord(id, module.exports)
+  } else {
+    hotAPI.update(id, module.exports, __vue_template__)
+  }
+})()}
+
+/***/ }),
+
+/***/ 377:
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(378);
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var update = __webpack_require__(20)("65295ea4", content, false);
+// Hot Module Replacement
+if(false) {
+ // When the styles change, update the <style> tags
+ if(!content.locals) {
+   module.hot.accept("!!../../../../_css-loader@0.23.1@css-loader/index.js!../../../../_vue-loader@8.7.1@vue-loader/lib/style-rewriter.js!../../../../_vux-loader@1.2.9@vux-loader/src/after-less-loader.js!../../../../_less-loader@2.2.3@less-loader/index.js!../../../../_vux-loader@1.2.9@vux-loader/src/style-loader.js!../../../../_vue-loader@8.7.1@vue-loader/lib/selector.js?type=style&index=0!./index.vue", function() {
+     var newContent = require("!!../../../../_css-loader@0.23.1@css-loader/index.js!../../../../_vue-loader@8.7.1@vue-loader/lib/style-rewriter.js!../../../../_vux-loader@1.2.9@vux-loader/src/after-less-loader.js!../../../../_less-loader@2.2.3@less-loader/index.js!../../../../_vux-loader@1.2.9@vux-loader/src/style-loader.js!../../../../_vue-loader@8.7.1@vue-loader/lib/selector.js?type=style&index=0!./index.vue");
+     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+     update(newContent);
+   });
+ }
+ // When the module is disposed, remove the <style> tags
+ module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+
+/***/ 378:
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(15)();
+// imports
+
+
+// module
+exports.push([module.i, "/**\n* actionsheet\n*/\n/**\n* en: primary type text color of menu item\n* zh-CN: 菜单项primary类型的文本颜色\n*/\n/**\n* en: warn type text color of menu item\n* zh-CN: 菜单项warn类型的文本颜色\n*/\n/**\n* en: default type text color of menu item\n* zh-CN: 菜单项default类型的文本颜色\n*/\n/**\n* en: disabled type text color of menu item\n* zh-CN: 菜单项disabled类型的文本颜色\n*/\n/**\n* datetime\n*/\n/**\n* tabbar\n*/\n/**\n* tab\n*/\n/**\n* dialog\n*/\n/**\n* en: title and content's padding-left and padding-right\n* zh-CN: 标题及内容区域的 padding-left 和 padding-right\n*/\n/**\n* x-number\n*/\n/**\n* checkbox\n*/\n/**\n* check-icon\n*/\n/**\n* Cell\n*/\n/**\n* Mask\n*/\n/**\n* Range\n*/\n/**\n* Tabbar\n*/\n/**\n* Header\n*/\n/**\n* Timeline\n*/\n/**\n* Switch\n*/\n/**\n* Button\n*/\n/**\n* en: margin-top value between previous button, not works when there is only one button\n* zh-CN: 与相邻按钮的 margin-top 间隙，只有一个按钮时不生效\n*/\n/**\n* swipeout\n*/\n/**\n* Cell\n*/\n/**\n* Badge\n*/\n/**\n* en: badge background color\n* zh-CN: badge的背景颜色\n*/\n/**\n* Popover\n*/\n/**\n* Button tab\n*/\n/**\n* en: not used\n* zh-CN: 未被使用\n*/\n/**\n* en: border radius color\n* zh-CN: 圆角边框的半径\n*/\n/**\n* en: border color\n* zh-CN: 边框的颜色\n*/\n/**\n* en: not used\n* zh-CN: 默认状态下圆角边框的颜色\n*/\n/**\n* en: not used\n* zh-CN: 未被使用\n*/\n/**\n* en: default background color\n* zh-CN: 默认状态下的背景颜色\n*/\n/**\n* en: selected background color\n* zh-CN: 选中状态下的背景颜色\n*/\n/**\n* en: not used\n* zh-CN: 未被使用\n*/\n/* alias */\n/**\n* en: not used\n* zh-CN: 未被使用\n*/\n/**\n* en: default text color\n* zh-CN: 默认状态下的文本颜色\n*/\n/**\n* en: height\n* zh-CN: 元素高度\n*/\n/**\n* en: line height\n* zh-CN: 元素行高\n*/\n/**\n* Swiper\n*/\n/**\n* checklist\n*/\n/**\n* popup-picker\n*/\n/**\n* popup\n*/\n/**\n* popup-header\n*/\n/**\n* form-preview\n*/\n/**\n* sticky\n*/\n/**\n* group\n*/\n/**\n* en: margin-top of title\n* zh-CN: 标题的margin-top\n*/\n/**\n* en: margin-bottom of title\n* zh-CN: 标题的margin-bottom\n*/\n/**\n* en: margin-top of footer title\n* zh-CN: 底部标题的margin-top\n*/\n/**\n* en: margin-bottom of footer title\n* zh-CN: 底部标题的margin-bottom\n*/\n/**\n* toast\n*/\n/**\n* en: text color of content\n* zh-CN: 内容文本颜色\n*/\n/**\n* en: default top\n* zh-CN: 默认状态下距离顶部的高度\n*/\n/**\n* en: position top\n* zh-CN: 顶部显示的高度\n*/\n/**\n* en: position bottom\n* zh-CN: 底部显示的高度\n*/\n/**\n* en: z-index\n* zh-CN: z-index\n*/\n/**\n* icon\n*/\n/**\n* calendar\n*/\n/**\n* en: forward and backward arrows color\n* zh-CN: 前进后退的箭头颜色\n*/\n/**\n* en: text color of week highlight\n* zh-CN: 周末高亮的文本颜色\n*/\n/**\n* en: background color when selected\n* zh-CN: 选中时的背景颜色\n*/\n/**\n* en: text color when disabled\n* zh-CN: 禁用时的文本颜色\n*/\n/**\n* en: text color of today\n* zh-CN: 今天的文本颜色\n*/\n/**\n* en: font size of cell\n* zh-CN: 单元格的字号\n*/\n/**\n* en: background color\n* zh-CN: 背景颜色\n*/\n/**\n* en: size of date cell\n* zh-CN: 日期单元格尺寸大小\n*/\n/**\n* en: line height of date cell\n* zh-CN: 日期单元格的行高\n*/\n/**\n* en: text color of header\n* zh-CN: 头部的文本颜色\n*/\n/**\n* week-calendar\n*/\n/**\n* search\n*/\n/**\n* en: text color of cancel button\n* zh-CN: 取消按钮文本颜色\n*/\n/**\n* en: background color\n* zh-CN: 背景颜色\n*/\n/**\n* en: text color of placeholder\n* zh-CN: placeholder文本颜色\n*/\n/**\n* radio\n*/\n/**\n* en: checked icon color\n* zh-CN: 选中状态的图标颜色\n*/\n/**\n* loadmore\n*/\n/**\n* en: not used\n* zh-CN: 未被使用\n*/\n/**\n* loading\n*/\n/**\n* en: z-index\n* zh-CN: z-index\n*/\n.weui-loading {\n  width: 20px;\n  height: 20px;\n  display: inline-block;\n  vertical-align: middle;\n  animation: weuiLoading 1s steps(12, end) infinite;\n  background: transparent url(\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMjAiIGhlaWdodD0iMTIwIiB2aWV3Qm94PSIwIDAgMTAwIDEwMCI+PHBhdGggZmlsbD0ibm9uZSIgZD0iTTAgMGgxMDB2MTAwSDB6Ii8+PHJlY3Qgd2lkdGg9IjciIGhlaWdodD0iMjAiIHg9IjQ2LjUiIHk9IjQwIiBmaWxsPSIjRTlFOUU5IiByeD0iNSIgcnk9IjUiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDAgLTMwKSIvPjxyZWN0IHdpZHRoPSI3IiBoZWlnaHQ9IjIwIiB4PSI0Ni41IiB5PSI0MCIgZmlsbD0iIzk4OTY5NyIgcng9IjUiIHJ5PSI1IiB0cmFuc2Zvcm09InJvdGF0ZSgzMCAxMDUuOTggNjUpIi8+PHJlY3Qgd2lkdGg9IjciIGhlaWdodD0iMjAiIHg9IjQ2LjUiIHk9IjQwIiBmaWxsPSIjOUI5OTlBIiByeD0iNSIgcnk9IjUiIHRyYW5zZm9ybT0icm90YXRlKDYwIDc1Ljk4IDY1KSIvPjxyZWN0IHdpZHRoPSI3IiBoZWlnaHQ9IjIwIiB4PSI0Ni41IiB5PSI0MCIgZmlsbD0iI0EzQTFBMiIgcng9IjUiIHJ5PSI1IiB0cmFuc2Zvcm09InJvdGF0ZSg5MCA2NSA2NSkiLz48cmVjdCB3aWR0aD0iNyIgaGVpZ2h0PSIyMCIgeD0iNDYuNSIgeT0iNDAiIGZpbGw9IiNBQkE5QUEiIHJ4PSI1IiByeT0iNSIgdHJhbnNmb3JtPSJyb3RhdGUoMTIwIDU4LjY2IDY1KSIvPjxyZWN0IHdpZHRoPSI3IiBoZWlnaHQ9IjIwIiB4PSI0Ni41IiB5PSI0MCIgZmlsbD0iI0IyQjJCMiIgcng9IjUiIHJ5PSI1IiB0cmFuc2Zvcm09InJvdGF0ZSgxNTAgNTQuMDIgNjUpIi8+PHJlY3Qgd2lkdGg9IjciIGhlaWdodD0iMjAiIHg9IjQ2LjUiIHk9IjQwIiBmaWxsPSIjQkFCOEI5IiByeD0iNSIgcnk9IjUiIHRyYW5zZm9ybT0icm90YXRlKDE4MCA1MCA2NSkiLz48cmVjdCB3aWR0aD0iNyIgaGVpZ2h0PSIyMCIgeD0iNDYuNSIgeT0iNDAiIGZpbGw9IiNDMkMwQzEiIHJ4PSI1IiByeT0iNSIgdHJhbnNmb3JtPSJyb3RhdGUoLTE1MCA0NS45OCA2NSkiLz48cmVjdCB3aWR0aD0iNyIgaGVpZ2h0PSIyMCIgeD0iNDYuNSIgeT0iNDAiIGZpbGw9IiNDQkNCQ0IiIHJ4PSI1IiByeT0iNSIgdHJhbnNmb3JtPSJyb3RhdGUoLTEyMCA0MS4zNCA2NSkiLz48cmVjdCB3aWR0aD0iNyIgaGVpZ2h0PSIyMCIgeD0iNDYuNSIgeT0iNDAiIGZpbGw9IiNEMkQyRDIiIHJ4PSI1IiByeT0iNSIgdHJhbnNmb3JtPSJyb3RhdGUoLTkwIDM1IDY1KSIvPjxyZWN0IHdpZHRoPSI3IiBoZWlnaHQ9IjIwIiB4PSI0Ni41IiB5PSI0MCIgZmlsbD0iI0RBREFEQSIgcng9IjUiIHJ5PSI1IiB0cmFuc2Zvcm09InJvdGF0ZSgtNjAgMjQuMDIgNjUpIi8+PHJlY3Qgd2lkdGg9IjciIGhlaWdodD0iMjAiIHg9IjQ2LjUiIHk9IjQwIiBmaWxsPSIjRTJFMkUyIiByeD0iNSIgcnk9IjUiIHRyYW5zZm9ybT0icm90YXRlKC0zMCAtNS45OCA2NSkiLz48L3N2Zz4=\") no-repeat;\n  background-size: 100%;\n}\n.weui-loading.weui-loading_transparent {\n  background-image: url(\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPScxMjAnIGhlaWdodD0nMTIwJyB2aWV3Qm94PScwIDAgMTAwIDEwMCc+PHBhdGggZmlsbD0nbm9uZScgZD0nTTAgMGgxMDB2MTAwSDB6Jy8+PHJlY3QgeG1sbnM9J2h0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnJyB3aWR0aD0nNycgaGVpZ2h0PScyMCcgeD0nNDYuNScgeT0nNDAnIGZpbGw9J3JnYmEoMjU1LDI1NSwyNTUsLjU2KScgcng9JzUnIHJ5PSc1JyB0cmFuc2Zvcm09J3RyYW5zbGF0ZSgwIC0zMCknLz48cmVjdCB3aWR0aD0nNycgaGVpZ2h0PScyMCcgeD0nNDYuNScgeT0nNDAnIGZpbGw9J3JnYmEoMjU1LDI1NSwyNTUsLjUpJyByeD0nNScgcnk9JzUnIHRyYW5zZm9ybT0ncm90YXRlKDMwIDEwNS45OCA2NSknLz48cmVjdCB3aWR0aD0nNycgaGVpZ2h0PScyMCcgeD0nNDYuNScgeT0nNDAnIGZpbGw9J3JnYmEoMjU1LDI1NSwyNTUsLjQzKScgcng9JzUnIHJ5PSc1JyB0cmFuc2Zvcm09J3JvdGF0ZSg2MCA3NS45OCA2NSknLz48cmVjdCB3aWR0aD0nNycgaGVpZ2h0PScyMCcgeD0nNDYuNScgeT0nNDAnIGZpbGw9J3JnYmEoMjU1LDI1NSwyNTUsLjM4KScgcng9JzUnIHJ5PSc1JyB0cmFuc2Zvcm09J3JvdGF0ZSg5MCA2NSA2NSknLz48cmVjdCB3aWR0aD0nNycgaGVpZ2h0PScyMCcgeD0nNDYuNScgeT0nNDAnIGZpbGw9J3JnYmEoMjU1LDI1NSwyNTUsLjMyKScgcng9JzUnIHJ5PSc1JyB0cmFuc2Zvcm09J3JvdGF0ZSgxMjAgNTguNjYgNjUpJy8+PHJlY3Qgd2lkdGg9JzcnIGhlaWdodD0nMjAnIHg9JzQ2LjUnIHk9JzQwJyBmaWxsPSdyZ2JhKDI1NSwyNTUsMjU1LC4yOCknIHJ4PSc1JyByeT0nNScgdHJhbnNmb3JtPSdyb3RhdGUoMTUwIDU0LjAyIDY1KScvPjxyZWN0IHdpZHRoPSc3JyBoZWlnaHQ9JzIwJyB4PSc0Ni41JyB5PSc0MCcgZmlsbD0ncmdiYSgyNTUsMjU1LDI1NSwuMjUpJyByeD0nNScgcnk9JzUnIHRyYW5zZm9ybT0ncm90YXRlKDE4MCA1MCA2NSknLz48cmVjdCB3aWR0aD0nNycgaGVpZ2h0PScyMCcgeD0nNDYuNScgeT0nNDAnIGZpbGw9J3JnYmEoMjU1LDI1NSwyNTUsLjIpJyByeD0nNScgcnk9JzUnIHRyYW5zZm9ybT0ncm90YXRlKC0xNTAgNDUuOTggNjUpJy8+PHJlY3Qgd2lkdGg9JzcnIGhlaWdodD0nMjAnIHg9JzQ2LjUnIHk9JzQwJyBmaWxsPSdyZ2JhKDI1NSwyNTUsMjU1LC4xNyknIHJ4PSc1JyByeT0nNScgdHJhbnNmb3JtPSdyb3RhdGUoLTEyMCA0MS4zNCA2NSknLz48cmVjdCB3aWR0aD0nNycgaGVpZ2h0PScyMCcgeD0nNDYuNScgeT0nNDAnIGZpbGw9J3JnYmEoMjU1LDI1NSwyNTUsLjE0KScgcng9JzUnIHJ5PSc1JyB0cmFuc2Zvcm09J3JvdGF0ZSgtOTAgMzUgNjUpJy8+PHJlY3Qgd2lkdGg9JzcnIGhlaWdodD0nMjAnIHg9JzQ2LjUnIHk9JzQwJyBmaWxsPSdyZ2JhKDI1NSwyNTUsMjU1LC4xKScgcng9JzUnIHJ5PSc1JyB0cmFuc2Zvcm09J3JvdGF0ZSgtNjAgMjQuMDIgNjUpJy8+PHJlY3Qgd2lkdGg9JzcnIGhlaWdodD0nMjAnIHg9JzQ2LjUnIHk9JzQwJyBmaWxsPSdyZ2JhKDI1NSwyNTUsMjU1LC4wMyknIHJ4PSc1JyByeT0nNScgdHJhbnNmb3JtPSdyb3RhdGUoLTMwIC01Ljk4IDY1KScvPjwvc3ZnPgo=\");\n}\n@keyframes weuiLoading {\n  0% {\n    transform: rotate3d(0, 0, 1, 0deg);\n  }\n  100% {\n    transform: rotate3d(0, 0, 1, 360deg);\n  }\n}\n.weui-loadmore {\n  width: 65%;\n  margin: 1.5em auto;\n  line-height: 1.6em;\n  font-size: 14px;\n  text-align: center;\n}\n.weui-loadmore__tips {\n  display: inline-block;\n  vertical-align: middle;\n}\n.weui-loadmore_line {\n  border-top: 1px solid #E5E5E5;\n  margin-top: 2.4em;\n}\n.weui-loadmore_line .weui-loadmore__tips {\n  position: relative;\n  top: -0.9em;\n  padding: 0 .55em;\n  color: #999999;\n}\n.weui-loadmore_dot .weui-loadmore__tips {\n  padding: 0 .16em;\n}\n.weui-loadmore_dot .weui-loadmore__tips:before {\n  content: \" \";\n  width: 4px;\n  height: 4px;\n  border-radius: 50%;\n  background-color: #E5E5E5;\n  display: inline-block;\n  position: relative;\n  vertical-align: 0;\n  top: -0.16em;\n}\n.vux-loadmore.weui-loadmore_line {\n  display: -ms-flexbox;\n  display: flex;\n  border-top: 0;\n}\n.vux-loadmore.weui-loadmore_line:before,\n.vux-loadmore.weui-loadmore_line:after {\n  position: relative;\n  top: -1px;\n  -ms-flex: 1;\n      flex: 1;\n  content: '';\n  border-top: 1px solid #E5E5E5;\n}\n", ""]);
+
+// exports
+
+
+/***/ }),
+
+/***/ 379:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+// <template>
+//   <div class="vux-loadmore weui-loadmore" :class="{'weui-loadmore_line':!showLoading, 'weui-loadmore_dot': !showLoading && !tip}">
+//     <i class="weui-loading" v-if="showLoading"></i>
+//     <span class="weui-loadmore__tips" v-show="tip || !showLoading">{{tip}}</span>
+//   </div>
+// </template>
+//
+// <script>
+exports.default = {
+  name: 'load-more',
+  props: {
+    showLoading: {
+      type: Boolean,
+      default: true
+    },
+    tip: String
+  }
+  // </script>
+  //
+  // <style lang="less">
+  // @import '../../styles/weui/widget/weui-loading/weui-loading.less';
+  // @import '../../styles/weui/widget/weui_tips/weui-loadmore.less';
+  //
+  // .vux-loadmore{
+  //
+  //   &.weui-loadmore_line{
+  //     display: flex;
+  //     border-top: 0;
+  //
+  //     &:before, &:after{
+  //       position: relative;
+  //       top: -1px;
+  //       flex: 1;
+  //       content: '';
+  //       border-top: 1px solid @weuiLineColorLight;
+  //     }
+  //
+  //   }
+  // }
+  // </style>
+
+};
+
+/***/ }),
+
+/***/ 380:
 /***/ (function(module, exports) {
 
-module.exports = "\n<div>\n    <swiper loop auto :list=\"carouselList\" :index=\"curCarouseIndex\" @on-index-change=\"carouselChange\"></swiper>\n    <search\n      :results=\"results\"\n      v-model=\"searchValue\"\n      @on-submit=\"onSubmit()\"\n      ref=\"search\">\n    </search>\n    <div v-for=\"(page,index) in list\" :key=\"index\" style=\"padding-bottom:35px;background:rgba(239, 239, 244, 0.3);\">\n      <form-preview header-label=\"活动\" :header-value=\"page.title\" :body-items=\"page.list\"></form-preview>\n      <x-button :gradients=\"['#FF5E3A', '#FF9500']\" @click.native=\"showPage(page.page_id)\">查看</x-button>\n    </div>\n</div>\n";
+module.exports = "\n<div class=\"vux-loadmore weui-loadmore\" :class=\"{'weui-loadmore_line':!showLoading, 'weui-loadmore_dot': !showLoading && !tip}\">\n  <i class=\"weui-loading\" v-if=\"showLoading\"></i>\n  <span class=\"weui-loadmore__tips\" v-show=\"tip || !showLoading\">{{tip}}</span>\n</div>\n";
+
+/***/ }),
+
+/***/ 381:
+/***/ (function(module, exports) {
+
+module.exports = "\n<div>\n    <swiper loop auto :list=\"carouselList\" :index=\"curCarouseIndex\" @on-index-change=\"carouselChange\"></swiper>\n    <search\n      :results=\"results\"\n      v-model=\"searchValue\"\n      @on-submit=\"onSubmit()\"\n      ref=\"search\">\n    </search>\n    <div v-for=\"(page,index) in list\" :key=\"index\" style=\"padding-bottom:35px;background:rgba(239, 239, 244, 0.3);\">\n      <form-preview header-label=\"活动\" :header-value=\"page.title\" :body-items=\"page.list\"></form-preview>\n      <x-button :gradients=\"['#FF5E3A', '#FF9500']\" @click.native=\"showPage(page.page_id)\">查看</x-button>\n    </div>\n    <load-more v-if=\"loadingMore==true\" :show-loading=\"loadingIcon\" :tip=\"loadingTip\" style=\"margin:auto;background:rgba(239, 239, 244, 0.3);width:100%;padding-bottom: 20px;\"></load-more>\n    <load-more v-else-if=\"loadingMore==false\" :show-loading=\"false\" tip=\"正在加载\" style=\"margin:auto;background:rgba(239, 239, 244, 0.3);width:100%;padding-bottom: 20px;\"></load-more>\n</div>\n";
 
 /***/ })
 

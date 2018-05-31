@@ -15,7 +15,11 @@ class Page extends Model
         $data['title']=$page['title'];
         $data['main_content']="";
         $data['status']=0;
-        $addRes=DB::table('page')->insert($data);
+        $addRes=DB::table('page')->insertGetId($data);
         return $addRes;
+    }
+
+    public static function updatePlayerId($arr,$id){
+        $result=DB::table('player')->where('status',0)->whereIn('id',$arr)->update(['page_id'=>$id]);
     }
 }

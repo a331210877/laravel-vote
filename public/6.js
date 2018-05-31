@@ -5,11 +5,11 @@ webpackJsonp([6],{
 
 var __vue_script__, __vue_template__
 var __vue_styles__ = {}
-__webpack_require__(389)
-__vue_script__ = __webpack_require__(391)
+__webpack_require__(398)
+__vue_script__ = __webpack_require__(400)
 if (Object.keys(__vue_script__).some(function (key) { return key !== "default" && key !== "__esModule" })) {
   console.warn("[vue-loader] resources\\assets\\js\\components\\Home\\Me.vue: named exports in *.vue files are ignored.")}
-__vue_template__ = __webpack_require__(392)
+__vue_template__ = __webpack_require__(401)
 module.exports = __vue_script__ || {}
 if (module.exports.__esModule) module.exports = module.exports.default
 var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -35,13 +35,13 @@ if (false) {(function () {  module.hot.accept()
 
 /***/ }),
 
-/***/ 389:
+/***/ 398:
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(390);
+var content = __webpack_require__(399);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
@@ -62,7 +62,7 @@ if(false) {
 
 /***/ }),
 
-/***/ 390:
+/***/ 399:
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(15)();
@@ -77,7 +77,7 @@ exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\
 
 /***/ }),
 
-/***/ 391:
+/***/ 400:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -127,10 +127,10 @@ exports.default = {
 
 /***/ }),
 
-/***/ 392:
+/***/ 401:
 /***/ (function(module, exports) {
 
-module.exports = "\n<div>\n  <group title=\"个人信息\">\n    <cell title=\"头像\" :value=\"userInfo.avatar\"> <img :src=\"userInfo.avatar\" alt=\"\" id=\"headimgurl\"></cell>\n    <cell title=\"昵称\" :value=\"userInfo.nickname\"></cell>\n    <cell title=\"国家\" :value=\"original.country\"></cell>\n    <cell title=\"省份\" :value=\"original.province\"></cell>\n    <cell title=\"城市\" :value=\"original.city\"></cell>\n  </group>\n\n  <group title=\"添加\">\n    <cell title=\"添加视频\" link=\"/addPlayer\"></cell>\n    <cell title=\"发起投票\" link=\"/addPage\"></cell>\n  </group>\n\n  <group title=\"数据中心\">\n    <cell title=\"查看选手\" link=\"/myPlayer\"></cell>\n    <cell title=\"查看投票\" link=\"/myPage\"></cell>\n  </group>\n</div>\n";
+module.exports = "\n<div>\n  <group title=\"个人信息\">\n    <cell title=\"头像\" :value=\"userInfo.avatar\"> <img :src=\"userInfo.avatar\" alt=\"\" id=\"headimgurl\"></cell>\n    <cell title=\"昵称\" :value=\"userInfo.nickname\"></cell>\n    <cell title=\"国家\" :value=\"original.country\"></cell>\n    <cell title=\"省份\" :value=\"original.province\"></cell>\n    <cell title=\"城市\" :value=\"original.city\"></cell>\n  </group>\n\n  <group title=\"添加\">\n    <cell title=\"添加视频\" link=\"/me/addPlayer\"></cell>\n    <cell title=\"发起投票\" link=\"/me/addPage\"></cell>\n  </group>\n\n  <group title=\"数据中心\">\n    <cell title=\"查看选手\" link=\"/me/myPlayer\"></cell>\n    <cell title=\"查看投票\" link=\"/me/myPage\"></cell>\n  </group>\n</div>\n";
 
 /***/ })
 

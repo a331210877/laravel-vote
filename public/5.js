@@ -5,11 +5,11 @@ webpackJsonp([5],{
 
 var __vue_script__, __vue_template__
 var __vue_styles__ = {}
-__webpack_require__(393)
-__vue_script__ = __webpack_require__(395)
+__webpack_require__(402)
+__vue_script__ = __webpack_require__(404)
 if (Object.keys(__vue_script__).some(function (key) { return key !== "default" && key !== "__esModule" })) {
   console.warn("[vue-loader] resources\\assets\\js\\components\\Home\\MyPlayer.vue: named exports in *.vue files are ignored.")}
-__vue_template__ = __webpack_require__(396)
+__vue_template__ = __webpack_require__(405)
 module.exports = __vue_script__ || {}
 if (module.exports.__esModule) module.exports = module.exports.default
 var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -35,13 +35,13 @@ if (false) {(function () {  module.hot.accept()
 
 /***/ }),
 
-/***/ 393:
+/***/ 402:
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(394);
+var content = __webpack_require__(403);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
@@ -62,7 +62,7 @@ if(false) {
 
 /***/ }),
 
-/***/ 394:
+/***/ 403:
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(15)();
@@ -77,7 +77,7 @@ exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\
 
 /***/ }),
 
-/***/ 395:
+/***/ 404:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -125,10 +125,10 @@ exports.default = {
 
 /***/ }),
 
-/***/ 396:
+/***/ 405:
 /***/ (function(module, exports) {
 
-module.exports = "\n<div>\n  <group title=\"我添加的所有选手\">\n      <div class=\"player\" v-for=\"v in playList\">\n          <img :src=\"v.image\" alt=\"\">\n          <span class=\"id\">编号：{{ v.id }}</span>\n          <h4 class=\"name\">{{ v.name }}</h4>\n          <span class=\"ticket\"><strong>{{ v.ticket }}</strong>票</span>  \n          <video\n              id=\"my-player\"\n              class=\"video-js\"\n              controls\n              preload=\"auto\"\n              :poster=\"v.videoImg\"\n              data-setup='{}'>\n            <source :src=\"v.video\" type=\"video/mp4\"></source>\n          </video>      \n      </div>\n  </group>\n</div>\n";
+module.exports = "\n<div>\n  <group title=\"我添加的所有选手\">\n      <div class=\"player\" v-for=\"(v,index) in playList\" :key=\"index\">\n          <img :src=\"v.image\" alt=\"\">\n          <span class=\"id\">编号：{{ v.id }}</span>\n          <h4 class=\"name\">{{ v.name }}</h4>\n          <span class=\"ticket\"><strong>{{ v.ticket }}</strong>票</span>  \n          <video\n              id=\"my-player\"\n              class=\"video-js\"\n              controls\n              preload=\"auto\"\n              :poster=\"v.videoImg\"\n              data-setup='{}'>\n            <source :src=\"v.video\" type=\"video/mp4\"></source>\n          </video>      \n      </div>\n  </group>\n</div>\n";
 
 /***/ })
 
