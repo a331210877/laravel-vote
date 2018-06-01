@@ -46,11 +46,12 @@ class IndexController extends Controller
         $data["province"]=$user['default']['original']['province'];
         $data["headimgurl"]=$user['default']['avatar'];
         $data["status"]=0;
-        $isHave=User::getUser($user['default']['id']);
-        if($isHave==true){
-            // $addRes=User::addUser($data);
+        $open_id=$user['default']['id'];
+        $isHave=User::getUser($open_id);
+        if($isHave=='true'){
+            $addRes=User::addUser($data);
             return redirect()->to('/home#/asdasda');
         }
-        return redirect()->to($isHave); //這時候已經拿到用戶資料了，跳轉到想要的路由                        
+        return redirect()->to('/home#/index'); //這時候已經拿到用戶資料了，跳轉到想要的路由                        
     }
 }
