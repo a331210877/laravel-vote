@@ -86,6 +86,9 @@
             image: [
                 { required: true, message: '请选手头像', trigger: 'change' }
             ],
+            video: [
+                { required: true, message: '请上传视频', trigger: 'change' }
+            ],
             videoImg: [
                 { required: true, message: '请上传视频封面图', trigger: 'change' }
             ],
