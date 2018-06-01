@@ -50,7 +50,6 @@ class IndexController extends Controller
         $isHave=User::getUser($open_id);
         if($isHave=='true'){
             $addRes=User::addUser($data);
-            return redirect()->to('/home#/asdasda');
         }
         return redirect()->to('/home#/index'); //這時候已經拿到用戶資料了，跳轉到想要的路由                        
     }
