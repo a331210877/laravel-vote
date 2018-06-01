@@ -70,7 +70,7 @@ exports = module.exports = __webpack_require__(15)();
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\r\n.el-input__inner{\r\n  width:90%;\r\n}\r\n.el-form{\r\n  border-bottom: 1px solid #e3dbdb;\r\n  margin-bottom: 22px;\r\n}\r\n.el-form-item__label{\r\n  font-size:18px;\r\n  color:black;\r\n}\r\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\r\n.el-input__inner{\r\n  width:90%;\r\n}\r\n.el-form{\r\n  border-bottom: 1px solid #e3dbdb;\r\n  margin-bottom: 22px;\r\n}\r\n.el-form-item__label{\r\n  font-size:18px;\r\n  color:black;\r\n}\r\n", ""]);
 
 // exports
 
@@ -113,7 +113,6 @@ exports.default = {
         name: [{ required: true, message: '请输入选手名称', trigger: 'blur' }, { min: 2, max: 7, message: '长度在 2 到 7 个字符', trigger: 'blur' }],
         stage_id: [{ required: true, message: '请选择所属期数', trigger: 'change' }],
         image: [{ required: true, message: '请选手头像', trigger: 'change' }],
-        video: [{ required: true, message: '请上传视频', trigger: 'change' }],
         videoImg: [{ required: true, message: '请上传视频封面图', trigger: 'change' }]
       },
       header: {
