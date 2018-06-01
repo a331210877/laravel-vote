@@ -13,7 +13,7 @@ class VideoController extends Controller
     public function addPlayer(Request $request){
         $player=$request->input('player');
         $userId=Player::getUserId(session('wechat.oauth_user.default.id'));
-        $player['user_id']= $userId['id'];
+        $player['user_id']= $userId->id;
         $player['page_id']= 0;
         $player['create_time']=time();
         unset($player['id']);

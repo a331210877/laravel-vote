@@ -16,9 +16,10 @@ Route::group(['middleware' => ['web', 'wechat.oauth']],function(){
     
     Route::post('/home/getUserInfo','Home\IndexController@getUserInfo');
 
-    Route::post('/home/addPlayer','Home\VideoController@addPlayer');
+   
 
     Route::post('/home/getPlayer','Home\VideoController@getPlayer');
    
     Route::post('/home/getMyPlayer','Home\VideoController@getMyPlayer');
 });
+Route::post('/home/addPlayer','Home\VideoController@addPlayer');
