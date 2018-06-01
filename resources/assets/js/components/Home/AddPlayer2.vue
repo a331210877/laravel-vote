@@ -114,7 +114,7 @@
             if(this.addForm.video!=''){
                 this.handleRemoveVideo(this.addForm.video,fileList);
             }
-            this.addForm.video = file.name;
+            this.addForm.video = response;
             this.addVideoDisabled=true;
           },
           //看log
