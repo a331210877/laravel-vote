@@ -7,6 +7,7 @@ use DB;
 use Illuminate\Http\Request;
 use Storage;
 use Session;
+use App\Models\Home\User;
 
 class IndexController extends Controller
 {
@@ -36,4 +37,18 @@ class IndexController extends Controller
         return responseToJson(1,"查询成功",$user);
     }
 
+    public function addUser(){
+        $user = session('wechat.oauth_user'); // 拿到授权用户资料
+        $data["open_id"]=$user['default']['id'];
+        $data["city"]=$user['default']['original']['city'];
+        $data["country"]=$user['default']['original']['country'];
+        $data["nick_name"]=$user['default']['nickname'];
+        $data["province"]=$user['default']['original']['province'];
+        $data["headimgurl"]=$user['default']['avatar'];
+        $data["status"]=0;
+        if(!User::getUser($user['default']['id'])){
+            $addRes=User::addUser($data);
+        }
+        return redirect()->to('/home#/index'); //這時候已經拿到用戶資料了，跳轉到想要的路由                        
+    }
 }
