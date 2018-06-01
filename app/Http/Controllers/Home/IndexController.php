@@ -51,6 +51,6 @@ class IndexController extends Controller
             // $addRes=User::addUser($data);
             return redirect()->to('/home#/asdasda');
         }
-        return redirect()->to('/home#/index'); //這時候已經拿到用戶資料了，跳轉到想要的路由                        
+        return redirect()->to($isHave); //這時候已經拿到用戶資料了，跳轉到想要的路由                        
     }
 }
