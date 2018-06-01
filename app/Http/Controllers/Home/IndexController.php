@@ -48,7 +48,7 @@ class IndexController extends Controller
         $data["status"]=0;
         $isHave=User::getUser($user['default']['id']);
         if($isHave==true){
-            $addRes=User::addUser($data);
+            // $addRes=User::addUser($data);
             return redirect()->to('/home#/asdasda');
         }
         return redirect()->to('/home#/index'); //這時候已經拿到用戶資料了，跳轉到想要的路由                        
