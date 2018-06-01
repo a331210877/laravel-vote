@@ -35,6 +35,6 @@ class VideoController extends Controller
 
     public function getMyPlayer(){
         $userId=session('wechat.oauth_user.default.id');
-        return $userId;
+        return Player::getMyPlayer($userId);
     }
 }

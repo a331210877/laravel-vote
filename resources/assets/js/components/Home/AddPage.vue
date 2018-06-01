@@ -143,18 +143,17 @@
 					axios.post('home/getMyPlayer', {
 					})
 					.then(function (response) {
-                        alert(response.data);
-						// var commonList=[];
-                        // var listIndex=[];
-						// for(var i=0;i<response.data.length;i++){
-                        //     var obj={
-                        //         'key':response.data[i].id,
-                        //         'value':response.data[i].name
-                        //     };
-						//     commonList.push(obj);
-                        // }
-                        // vue.commonList=commonList;
-                        // vue.loading=true;
+						var commonList=[];
+                        var listIndex=[];
+						for(var i=0;i<response.data.length;i++){
+                            var obj={
+                                'key':response.data[i].id,
+                                'value':response.data[i].name
+                            };
+						    commonList.push(obj);
+                        }
+                        vue.commonList=commonList;
+                        vue.loading=true;
 					})
 					.catch(function (response) {
 						console.log(response);

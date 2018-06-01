@@ -14,6 +14,9 @@ class User extends Model
 
     public static function getUser($id){
         $user=DB::table('user')->where('open_id',$id)->get();
-        return $user;
+        if($user){
+            return true;
+        }
+        return false;
     }
 }

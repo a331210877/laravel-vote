@@ -26,28 +26,6 @@ class VerifyCsrfToken extends Middleware
     
     public function handle($request,\Closure $next){
         //todo:需要在添加了登录验证之后,取消
-        $user=[
-            'openid' => "odh7zsgI75iT8FRh0fGlSoac9PWO",
-            'nickname' => 'wq',
-            'headimgurl'=> 'http://img0.imgtn.bdimg.com/it/u=2459788677,704860311&fm=11&gp=0.jpg',
-            'original' => [
-                'country' => '中国啊',
-                'province' => '河南啊',
-                'city' => '郑州啊',
-            ],
-        ];
-        
-        $user = new SocialiteUser([
-            'id' => array_get($user, 'openid'),
-            'name' => array_get($user, 'nickname'),
-            'nickname' => array_get($user, 'nickname'),
-            'avatar' => array_get($user, 'headimgurl'),
-            'email' => null,
-            'original' => array_get($user, 'original'),
-            'provider' => 'WeChat',
-        ]);
-        session(['wechat.oauth_user.default' => $user]);
-
         if($request->method() == 'POST')
         {
             return $next($request);
