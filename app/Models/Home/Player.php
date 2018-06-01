@@ -27,4 +27,9 @@ class Player extends Model
         $result=DB::table('player')->join('user','user.id','=','player.user_id')->where('player.status',0)->where('user.open_id',$userId)->where('player.page_id',0)->select('player.*')->get();
         return $result;
     }
+
+    public static function getUserId($openId){
+        $result=DB::table('user')->where('open_id',$openId)->select('id')->first();
+        return $result;
+    }
 }

@@ -26,7 +26,6 @@ Route::post('/logout','Auth\LoginController@logout');
 Route::any('/wechat','WechatController@serve');
 Route::any('/addMenu','WechatController@add_menu');
 Route::get('/phpinfo','WechatController@phpinfo');
-
 Route::get('/home',function(){
     return view('home');
 });
