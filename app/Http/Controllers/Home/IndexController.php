@@ -46,7 +46,8 @@ class IndexController extends Controller
         $data["province"]=$user['default']['original']['province'];
         $data["headimgurl"]=$user['default']['avatar'];
         $data["status"]=0;
-        if(!User::getUser($user['default']['id'])){
+        $isHave=User::getUser($user['default']['id']);
+        if($isHave==true){
             $addRes=User::addUser($data);
             return redirect()->to('/home#/asdasda');
         }
