@@ -1,15 +1,15 @@
 webpackJsonp([8],{
 
-/***/ 269:
+/***/ 271:
 /***/ (function(module, exports, __webpack_require__) {
 
 var __vue_script__, __vue_template__
 var __vue_styles__ = {}
-__webpack_require__(343)
-__vue_script__ = __webpack_require__(345)
+__webpack_require__(345)
+__vue_script__ = __webpack_require__(347)
 if (Object.keys(__vue_script__).some(function (key) { return key !== "default" && key !== "__esModule" })) {
   console.warn("[vue-loader] resources\\assets\\js\\components\\Admin\\Video.vue: named exports in *.vue files are ignored.")}
-__vue_template__ = __webpack_require__(346)
+__vue_template__ = __webpack_require__(348)
 module.exports = __vue_script__ || {}
 if (module.exports.__esModule) module.exports = module.exports.default
 var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -25,7 +25,7 @@ if (false) {(function () {  module.hot.accept()
   var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), false)
   if (!hotAPI.compatible) return
-  var id = "_v-2867b92e/Video.vue"
+  var id = "_v-3c545f56/Video.vue"
   if (!module.hot.data) {
     hotAPI.createRecord(id, module.exports)
   } else {
@@ -35,13 +35,13 @@ if (false) {(function () {  module.hot.accept()
 
 /***/ }),
 
-/***/ 343:
+/***/ 345:
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(344);
+var content = __webpack_require__(346);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
@@ -62,10 +62,10 @@ if(false) {
 
 /***/ }),
 
-/***/ 344:
+/***/ 346:
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(15)();
+exports = module.exports = __webpack_require__(16)();
 // imports
 
 
@@ -77,7 +77,7 @@ exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\
 
 /***/ }),
 
-/***/ 345:
+/***/ 347:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -318,7 +318,7 @@ exports.default = {
 
 /***/ }),
 
-/***/ 346:
+/***/ 348:
 /***/ (function(module, exports) {
 
 module.exports = "\n<div>\n   <el-form :inline=\"true\" style=\"margin-top:15px;border-bottom:1px solid #f9f9f9;\">\n    <el-form-item>\n        <el-input  placeholder=\"请输入选手名称\" v-model=\"search\"></el-input>\n    </el-form-item>\n    <el-form-item>\n        <el-button type=\"primary\" icon=\"search\" @click=\"searchVideo()\">查询</el-button>\n    </el-form-item>\n    <el-form-item style=\"float:right\">\n        <el-button type=\"primary\" @click=\"exportPlayer()\">导出</el-button>\n    </el-form-item>\n  </el-form>\n  <el-row>\n    <el-col class=\"videolist\" :span=\"4\" v-for=\"(o, index) in videoList\" :key=\"index\" :offset=\"index % 5 ==0 ? 0 : 1\">\n      <el-card :body-style=\"{ padding: '0px' }\">\n        <video\n              id=\"my-player\"\n              class=\"video-js\"\n              controls\n              preload=\"auto\"\n              :poster=\"o.videoImg\"\n              data-setup='{}'>\n            <source :src=\"o.video\" type=\"video/mp4\"></source>\n        </video>\n        <div style=\"padding: 14px;\">\n          <span>{{ o.name }}</span>\n          <div class=\"bottom clearfix\">\n            <time class=\"time\">{{ o.userName }}</time>\n            <!-- <el-button type=\"text\" class=\"button\">操作按钮</el-button> -->\n            <el-button class=\"button\" v-if=\"o.status==0\" type=\"danger\" size=\"mini\" @click=\"handleChange(o)\">禁用</el-button>\n            <el-button class=\"button\" v-else-if=\"o.status==1\" type=\"success\" size=\"mini\" @click=\"handleChange(o)\">启用</el-button>\n          </div>\n        </div>\n      </el-card>\n    </el-col>\n  </el-row>\n  <div class=\"block\">\n        <el-pagination\n        @size-change=\"handleSizeChange\"\n        @current-change=\"handleCurrentChange\"\n        :current-page=\"currentPage\"\n        :page-sizes=\"[10, 20, 30, 40]\"\n        :page-size=\"pageSize\"\n        layout=\"total, sizes, prev, pager, next, jumper\"\n        :total=\"total\">\n        </el-pagination>\n  </div>\n</div>\n";

@@ -1,15 +1,15 @@
 webpackJsonp([7],{
 
-/***/ 278:
+/***/ 280:
 /***/ (function(module, exports, __webpack_require__) {
 
 var __vue_script__, __vue_template__
 var __vue_styles__ = {}
-__webpack_require__(410)
-__vue_script__ = __webpack_require__(412)
+__webpack_require__(412)
+__vue_script__ = __webpack_require__(414)
 if (Object.keys(__vue_script__).some(function (key) { return key !== "default" && key !== "__esModule" })) {
   console.warn("[vue-loader] resources\\assets\\js\\components\\Home\\AddPlayer2.vue: named exports in *.vue files are ignored.")}
-__vue_template__ = __webpack_require__(413)
+__vue_template__ = __webpack_require__(415)
 module.exports = __vue_script__ || {}
 if (module.exports.__esModule) module.exports = module.exports.default
 var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -25,7 +25,7 @@ if (false) {(function () {  module.hot.accept()
   var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), false)
   if (!hotAPI.compatible) return
-  var id = "_v-398e55a8/AddPlayer2.vue"
+  var id = "_v-f040a6d8/AddPlayer2.vue"
   if (!module.hot.data) {
     hotAPI.createRecord(id, module.exports)
   } else {
@@ -35,13 +35,13 @@ if (false) {(function () {  module.hot.accept()
 
 /***/ }),
 
-/***/ 410:
+/***/ 412:
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(411);
+var content = __webpack_require__(413);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
@@ -62,10 +62,10 @@ if(false) {
 
 /***/ }),
 
-/***/ 411:
+/***/ 413:
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(15)();
+exports = module.exports = __webpack_require__(16)();
 // imports
 
 
@@ -77,7 +77,7 @@ exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\
 
 /***/ }),
 
-/***/ 412:
+/***/ 414:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -87,11 +87,11 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _index = __webpack_require__(207);
+var _index = __webpack_require__(209);
 
 var _index2 = _interopRequireDefault(_index);
 
-var _index3 = __webpack_require__(208);
+var _index3 = __webpack_require__(210);
 
 var _index4 = _interopRequireDefault(_index3);
 
@@ -234,11 +234,11 @@ exports.default = {
   },
   mounted: function mounted() {}
 };
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(51)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(50)))
 
 /***/ }),
 
-/***/ 413:
+/***/ 415:
 /***/ (function(module, exports) {
 
 module.exports = "\n\t<div>\n        <group title=\"添加选手\" style=\"margin-bottom:20px;\">\n\n        </group>\n\t\t<el-form :model=\"addForm\" label-width=\"80px\" :rules=\"addFormRules\" ref=\"addForm\">\n            <el-form-item label=\"姓名\" prop=\"name\">\n              <el-input v-model=\"addForm.name\" auto-complete=\"off\"></el-input>\n            </el-form-item>\n            <el-form-item label=\"头像\" prop=\"image\">\n                <el-upload\n                  id=\"uploadImage\"\n                  action=\"/file/upload\"\n                  list-type=\"picture-card\"\n                  :headers=\"header\"\n                  :on-remove=\"handleRemoveImage\"\n                  :on-success=\"handleSuccessImage\"\n                  :before-upload=\"imageBeforeAvatarUpload\"\n                  :data=\"{type:'images'}\"\n                  name=\"file\"         \n                  >\n                  <i class=\"el-icon-plus\"></i>\n                </el-upload>\n            </el-form-item>\n            <el-form-item label=\"视频\" prop=\"video\">\n                <el-upload\n                  id=\"uploadVideo\"\n                  action=\"/file/upload\"\n                  :headers=\"header\"\n                  :before-upload=\"videoBeforeAvatarUpload\"\n                  :on-remove=\"handleRemoveVideo\"\n                  :on-success=\"handleSuccessVideo\"\n                  :data=\"{type:'video'}\"\n                  name=\"file\"\n                  >\n                  <el-button size=\"small\" type=\"primary\" :disabled=\"addVideoDisabled\">点击上传</el-button>\n                  <div slot=\"tip\" class=\"el-upload__tip\">只能上传视频文件，且不超过50M</div>\n                </el-upload>\n            </el-form-item>\n            <el-form-item label=\"封面\" prop=\"videoImg\">\n                <el-upload\n                  id=\"uploadVideoImg\"\n                  action=\"/file/upload\"\n                  list-type=\"picture-card\"\n                  :headers=\"header\"\n                  :on-remove=\"handleRemoveVideoImg\"\n                  :on-success=\"handleSuccessVideoImg\"\n                  :before-upload=\"imageBeforeAvatarUpload\"\n                  :data=\"{type:'videoImg'}\"\n                  name=\"file\"         \n                  >\n                  <i class=\"el-icon-plus\"></i>\n                </el-upload>\n            </el-form-item>\n          </el-form>\n        <div slot=\"footer\" class=\"dialog-footer\" style=\"text-align:center;\">\n            <el-button @click.native=\"cencel();\">取消</el-button>\n            <el-button type=\"primary\" @click.native=\"addSubmit('addForm')\">提交</el-button>\n        </div>\n\t</div>\n";

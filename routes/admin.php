@@ -37,6 +37,7 @@
         Route::post('/admin/searchPage','Admin\PageController@searchPage');
 
         Route::get('/admin/exportPage','Admin\PageController@exportPage');
+
         //carousel
         Route::post('/admin/getCarousel','Admin\CarouselController@getCarousel');
 

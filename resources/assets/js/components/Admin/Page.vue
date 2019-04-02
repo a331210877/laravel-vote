@@ -2,7 +2,7 @@
     <div>
       <el-form :inline="true" style="margin-top:15px;">
         <el-form-item>
-            <el-input  placeholder="请输入活动名称" v-model="search"></el-input>
+            <el-input  placeholder="请输入活动名称111" v-model="search"></el-input>
         </el-form-item>
         <el-form-item>
             <el-button type="primary" icon="search" @click="searchPage()">查询</el-button>
