@@ -996,7 +996,7 @@ exports = module.exports = __webpack_require__(16)();
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.weui-form-preview__btn_primary{\n  color:#FF9900 !important;\n}\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.weui-form-preview__btn_primary{\n  color:#FF9900 !important;\n}\n", ""]);
 
 // exports
 
@@ -1056,11 +1056,11 @@ exports.default = {
       results: [], //搜索结果
       searchValue: '', //搜索内容
       list: [],
-      loadingMore: false,
+      loadingMore: true,
       cuListIndex: 0,
       loadingTip: "正在加载",
       loadingIcon: true,
-      ifEnd: false
+      isEnd: false
     };
   },
 
@@ -1088,30 +1088,31 @@ exports.default = {
             'search': searchValue,
             'index': index
           }).then(function (response) {
-            if (response.data.result.length == 0) {
+            if (response.data.result.pageCount.length == 0 || response.data.result.select_row.length == 0) {
               vue.loadingIcon = false;
               vue.loadingTip = "暂无数据";
               vue.isEnd = true;
               vue.loadingMore = true;
+            } else {
+              for (var i = 0; i < response.data.result.select_row.length; i++) {
+                var obj = {
+                  'page_id': response.data.result.select_row[i].id,
+                  'title': response.data.result.select_row[i].title,
+                  'list': [{
+                    'label': "发起人",
+                    'value': response.data.result.select_row[i].nick_name
+                  }, {
+                    'label': "开始时间",
+                    'value': getLocalTime(response.data.result.select_row[i].start_time)
+                  }, {
+                    'label': "结束时间",
+                    'value': getLocalTime(response.data.result.select_row[i].end_time)
+                  }]
+                };
+                vue.list.push(obj);
+              }
+              vue.cuListIndex = vue.list.length;
             }
-            for (var i = 0; i < response.data.result.length; i++) {
-              var obj = {
-                'page_id': response.data.result[i].id,
-                'title': response.data.result[i].title,
-                'list': [{
-                  'label': "发起人",
-                  'value': response.data.result[i].nick_name
-                }, {
-                  'label': "开始时间",
-                  'value': getLocalTime(response.data.result[i].start_time)
-                }, {
-                  'label': "结束时间",
-                  'value': getLocalTime(response.data.result[i].end_time)
-                }]
-              };
-              vue.list.push(obj);
-            }
-            vue.cuListIndex = vue.list.length;
           }).catch(function (response) {
             console.log(response);
           });
@@ -1127,9 +1128,6 @@ exports.default = {
     },
     showPage: function showPage($id) {
       this.$router.push("/page/" + $id);
-    },
-    test: function test() {
-      console.log("dasdaddddddddddddddd");
     }
   },
   mounted: function mounted() {
@@ -1149,19 +1147,24 @@ exports.default = {
   }
 };
 
-
+var flag = false;
 $(window).scroll(function () {
   var scrollTop = $(this).scrollTop();
   var scrollHeight = $(document).height();
   var windowHeight = $(this).height();
-  if (scrollHeight - (scrollTop + windowHeight) < 90) {
-    if (vue.loadingMore == false) {
+  if (scrollHeight - (scrollTop + windowHeight) < 10 && !flag) {
+    flag = true;
+    if (!vue.isEnd) {
       vue.loadingMore = true;
+      vue.loadingTip = "正在加载";
+      vue.loadingIcon = true;
       setTimeout(function () {
         vue.getPage(vue.searchValue, vue.cuListIndex);
         vue.loadingMore = false;
+        vue.loadingIcon = false;
       }, 1000);
     }
+    flag = false;
   }
 });
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(50)))
@@ -2399,7 +2402,7 @@ module.exports = "\n<div class=\"vux-loadmore weui-loadmore\" :class=\"{'weui-lo
 /***/ 383:
 /***/ (function(module, exports) {
 
-module.exports = "\n<div>\n    <swiper loop auto :list=\"carouselList\" :index=\"curCarouseIndex\" @on-index-change=\"carouselChange\"></swiper>\n    <search\n      :results=\"results\"\n      v-model=\"searchValue\"\n      @on-submit=\"onSubmit()\"\n      ref=\"search\">\n    </search>\n    <div v-for=\"(page,index) in list\" :key=\"index\" style=\"padding-bottom:35px;background:rgba(239, 239, 244, 0.3);\">\n      <form-preview header-label=\"活动\" :header-value=\"page.title\" :body-items=\"page.list\"></form-preview>\n      <x-button :gradients=\"['#FF5E3A', '#FF9500']\" @click.native=\"showPage(page.page_id)\">查看</x-button>\n    </div>\n    <load-more v-if=\"loadingMore==true\" :show-loading=\"loadingIcon\" :tip=\"loadingTip\" style=\"margin:auto;background:rgba(239, 239, 244, 0.3);width:100%;padding-bottom: 20px;\"></load-more>\n    <load-more v-else-if=\"loadingMore==false\" :show-loading=\"true\" tip=\"正在加载\" style=\"margin:auto;background:rgba(239, 239, 244, 0.3);width:100%;padding-bottom: 20px;\"></load-more>\n</div>\n";
+module.exports = "\n<div>\n    <swiper loop auto :list=\"carouselList\" :index=\"curCarouseIndex\" @on-index-change=\"carouselChange\"></swiper>\n    <search\n      :results=\"results\"\n      v-model=\"searchValue\"\n      @on-submit=\"onSubmit()\"\n      ref=\"search\">\n    </search>\n    <div v-for=\"(page,index) in list\" :key=\"index\" style=\"padding-bottom:35px;background:rgba(239, 239, 244, 0.3);\">\n      <form-preview header-label=\"活动\" :header-value=\"page.title\" :body-items=\"page.list\"></form-preview>\n      <x-button :gradients=\"['#FF5E3A', '#FF9500']\" @click.native=\"showPage(page.page_id)\">查看</x-button>\n    </div>\n    <load-more v-if=\"loadingMore==true\" :show-loading=\"loadingIcon\" :tip=\"loadingTip\" style=\"margin:auto;background:rgba(239, 239, 244, 0.3);width:100%;padding-bottom: 20px;\"></load-more>\n    <load-more v-else-if=\"loadingMore==false\" :show-loading=\"false\" tip=\"暂无数据\" style=\"margin:auto;background:rgba(239, 239, 244, 0.3);width:100%;padding-bottom: 20px;\"></load-more>\n</div>\n";
 
 /***/ })
 

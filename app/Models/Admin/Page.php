@@ -8,7 +8,7 @@ class Page extends Model
 {
     public static function getPage()
     {
-        $result=DB::table('page')->join('user','page.open_id','=','user.open_id')->where('page.status',0)->get();
+        $result=DB::table('page')->join('user','page.open_id','=','user.open_id')->where('page.status',0)->select('page.id', 'user.nick_name', 'page.title', 'page.start_time', 'page.end_time')->get();
         $count=DB::table('page')->join('user','page.open_id','=','user.open_id')->where('page.status',0)->count();
         $res=[
             'result'=>$result,

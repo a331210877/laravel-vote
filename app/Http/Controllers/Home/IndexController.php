@@ -29,7 +29,21 @@ class IndexController extends Controller
         ->select('page.*','user.nick_name')
         ->orderBy('start_time','desc')
         ->get();
-        return responseToJson(1,"查询成功",$select_row);
+
+        $pageCount = DB::table('page')
+        ->join('user','page.open_id','=','user.open_id')
+        ->where('page.status',0)
+        ->where('title','like','%'.$search.'%')
+        ->select('page.*','user.nick_name')
+        ->orderBy('start_time','desc')
+        ->get();
+
+        $result = [
+            'select_row' => $select_row,
+            'pageCount' => $pageCount
+        ];
+
+        return responseToJson(1,"查询成功",$result);
     }
 
     public function getUserInfo(){

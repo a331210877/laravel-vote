@@ -7,6 +7,7 @@ use DB;
 use Illuminate\Http\Request;
 use Storage;
 use App\Models\Home\Page;
+use Log;
 
 class PageController extends Controller
 {
@@ -34,7 +35,6 @@ class PageController extends Controller
 				$v->disabled=true;
 			}
 		}
-
 		return  response()->json([
             'select_row' => $select_rows,
             'page' => $page

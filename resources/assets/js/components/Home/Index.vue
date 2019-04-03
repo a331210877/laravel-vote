@@ -12,7 +12,7 @@
           <x-button :gradients="['#FF5E3A', '#FF9500']" @click.native="showPage(page.page_id)">查看</x-button>
         </div>
         <load-more v-if="loadingMore==true" :show-loading="loadingIcon" :tip="loadingTip" style="margin:auto;background:rgba(239, 239, 244, 0.3);width:100%;padding-bottom: 20px;"></load-more>
-        <load-more v-else-if="loadingMore==false" :show-loading="true" tip="正在加载" style="margin:auto;background:rgba(239, 239, 244, 0.3);width:100%;padding-bottom: 20px;"></load-more>
+        <load-more v-else-if="loadingMore==false" :show-loading="false" tip="暂无数据" style="margin:auto;background:rgba(239, 239, 244, 0.3);width:100%;padding-bottom: 20px;"></load-more>
     </div>
 </template>
 
@@ -27,11 +27,11 @@
         results: [],            //搜索结果
         searchValue: '',        //搜索内容
         list: [],
-        loadingMore:false,
+        loadingMore:true,
         cuListIndex:0,
         loadingTip:"正在加载",
         loadingIcon:true,
-        ifEnd:false
+        isEnd:false
       }
     },
     methods :{
@@ -60,30 +60,31 @@
                 'index': index
               })
               .then(function (response) {
-                  if(response.data.result.length==0){
+                  if(response.data.result.pageCount.length==0 || response.data.result.select_row.length==0){
                     vue.loadingIcon=false;
                     vue.loadingTip="暂无数据";
                     vue.isEnd=true;
                     vue.loadingMore=true;
+                  } else {
+                    for(var i=0;i<response.data.result.select_row.length;i++){
+                      var obj={
+                        'page_id' : response.data.result.select_row[i].id,
+                        'title' : response.data.result.select_row[i].title,
+                        'list' : [{
+                          'label' : "发起人",
+                          'value' : response.data.result.select_row[i].nick_name
+                        },{
+                          'label' : "开始时间",
+                          'value' : getLocalTime(response.data.result.select_row[i].start_time)
+                        },{
+                          'label' : "结束时间",
+                          'value' : getLocalTime(response.data.result.select_row[i].end_time)
+                        }]
+                      };
+                      vue.list.push(obj);
+                    }
+                    vue.cuListIndex=vue.list.length;
                   }
-                  for(var i=0;i<response.data.result.length;i++){
-                    var obj={
-                      'page_id' : response.data.result[i].id,
-                      'title' : response.data.result[i].title,
-                      'list' : [{
-                        'label' : "发起人",
-                        'value' : response.data.result[i].nick_name
-                      },{
-                        'label' : "开始时间",
-                        'value' : getLocalTime(response.data.result[i].start_time)
-                      },{
-                        'label' : "结束时间",
-                        'value' : getLocalTime(response.data.result[i].end_time)
-                      }]
-                    };
-                    vue.list.push(obj);
-                  }
-                  vue.cuListIndex=vue.list.length;
               })
               .catch(function (response) {
                   console.log(response);
@@ -101,9 +102,6 @@
       showPage ($id) {
         this.$router.push("/page/"+$id);
       },
-      test(){
-        console.log("dasdaddddddddddddddd");
-      }
     },
     mounted: function() {
       this.getCarouse(this.cuListIndex);
@@ -121,19 +119,24 @@
       LoadMore
     },
   }
-
+  var flag = false;
   $(window).scroll(function(){
   　　var scrollTop = $(this).scrollTop();
   　　var scrollHeight = $(document).height();
   　　var windowHeight = $(this).height();
-  　　if(scrollHeight-(scrollTop + windowHeight) <90){
-        if(vue.loadingMore==false){
+  　　if(scrollHeight-(scrollTop + windowHeight) <10 && !flag){
+        flag = true;
+        if(!vue.isEnd){
           vue.loadingMore=true;
+          vue.loadingTip="正在加载";
+          vue.loadingIcon=true;
           setTimeout(function() {
             vue.getPage(vue.searchValue,vue.cuListIndex);
             vue.loadingMore=false;
+            vue.loadingIcon=false;
           }, 1000)
         }
+        flag = false;
   　　}
   });
 </script>
