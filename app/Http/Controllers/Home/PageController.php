@@ -24,13 +24,15 @@ class PageController extends Controller
 			'status' => 0,
 			'id' => $id
 		])->first();
-		$page->figure="/storage/uploads/images/".$page->figure;
-        foreach($select_rows as $k => $v) {
-        	$v->image="/storage/uploads/images/".$v->image;
-        	$v->videoImg="/storage/uploads/videoImg/".$v->videoImg;
-        	$v->video="/storage/uploads/video/".$v->video;
-        	$v->isLoading=false;
-        	$v->disabled=true;
+		if ($page) {
+			$page->figure="/storage/uploads/images/".$page->figure;
+			foreach($select_rows as $k => $v) {
+				$v->image="/storage/uploads/images/".$v->image;
+				$v->videoImg="/storage/uploads/videoImg/".$v->videoImg;
+				$v->video="/storage/uploads/video/".$v->video;
+				$v->isLoading=false;
+				$v->disabled=true;
+			}
 		}
 
 		return  response()->json([
