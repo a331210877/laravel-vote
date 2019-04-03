@@ -60,7 +60,7 @@
                 'index': index
               })
               .then(function (response) {
-                  if(response.data.result.pageCount.length==0 || response.data.result.select_row.length==0){
+                  if(response.data.result.pageCount==0 || response.data.result.select_row.length==0){
                     vue.loadingIcon=false;
                     vue.loadingTip="暂无数据";
                     vue.isEnd=true;

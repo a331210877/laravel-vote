@@ -36,7 +36,7 @@ class IndexController extends Controller
         ->where('title','like','%'.$search.'%')
         ->select('page.*','user.nick_name')
         ->orderBy('start_time','desc')
-        ->get();
+        ->count();
 
         $result = [
             'select_row' => $select_row,
