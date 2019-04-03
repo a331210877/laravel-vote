@@ -84,6 +84,8 @@
                       vue.list.push(obj);
                     }
                     vue.cuListIndex=vue.list.length;
+                    vue.loadingMore=false;
+                    vue.loadingIcon=false;
                   }
               })
               .catch(function (response) {
@@ -132,8 +134,6 @@
           vue.loadingIcon=true;
           setTimeout(function() {
             vue.getPage(vue.searchValue,vue.cuListIndex);
-            vue.loadingMore=false;
-            vue.loadingIcon=false;
           }, 1000)
         }
         flag = false;
