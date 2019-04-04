@@ -13,3 +13,4 @@ npm-debug.log
 yarn-error.log
 .env
 composer.lock
+/routes/home.php
