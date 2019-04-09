@@ -24,8 +24,20 @@ Vue.use(ElementUI);
 
 import router from './router/home.js';
 
+Vue.prototype.formatDate = function (now) {
+    var year=now.getFullYear(); 
+    var month=now.getMonth()+1; 
+    var date=now.getDate(); 
+    var hour=now.getHours(); 
+    var minute=now.getMinutes(); 
+    var second=now.getSeconds(); 
+    return year+"-"+month+"-"+date+" "+hour+":"+minute+":"+second; 
+}
+
 const app = new Vue({
     el: '#app',
     router,
     render: h => h(App)
 });
+
+

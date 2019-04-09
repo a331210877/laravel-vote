@@ -40,18 +40,6 @@ class PageController extends Controller
             'page' => $page
 		]);
 	}
-	public function vote(Request $request){
-		$id=$request->input('id');
-		$result=DB::table('player')->where('id',$id)->increment('ticket');
-		if($result){
-			$res['msg']="投票成功";
-        	$res['code']= 1;
-		}else{
-			$res['msg']="投票失败,请重试";
-        	$res['code']= 0;
-		}
-		return response()->json($res);
-	}
 
 	public function addPage(Request $request){
 		$page=$request->page;
@@ -63,4 +51,38 @@ class PageController extends Controller
 		}
 		return responseToJson(1,"发起投票失败",$id);					
 	}
+
+	public function getMyPage(Request $request) {
+		$open_id = session('wechat.oauth_user.default.id');
+		$search = $request->search;
+		$myPageRes =  Page::getMyPage($open_id, $search);
+		if ($myPageRes) {
+			$time = time();
+			foreach($myPageRes as $k => $v) {
+				if ($v->end_time < $time || $v->status == 2) {
+					$v->statusPng = 1;
+				}
+			}
+			return responseToJson(1, "查询成功", $myPageRes);
+		}
+		return responseToJson(0, "查询失败", []);
+	}
+
+	public function endVote(Request $request) {
+		$pageId = $request->page_id;
+		$endRes = Page::endVote($pageId);
+		if ($endRes) {
+			return responseToJson(1, "投票已截止", $endRes);
+		}
+		return responseToJson(0, "出错，请重试", []);
+	}
+
+	public function delPage(Request $request){
+        $page_id=$request->input('page_id');
+		$result=Page::delPage($page_id);
+		if ($result) {
+			return responseToJson(1, "刪除成功", $result);
+		}
+		return responseToJson(0, "出错，请重试", []);
+    }
 }

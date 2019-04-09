@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta name="X-CSRF-TOKEN" content="{{csrf_token()}}">
-    <link href="//vjs.zencdn.net/5.19/video-js.min.css" rel="stylesheet">
+    <link href="/css/video-js.min.css" rel="stylesheet">
     <link href="/images/vote.ico" rel="shortcut icon">
     <title>王琦投票系统</title>
 </head>

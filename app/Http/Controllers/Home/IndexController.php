@@ -20,10 +20,12 @@ class IndexController extends Controller
     public function getPage(Request $request){
         $search=$request->input('search');
         $index=$request->index;
+        $time = time();
         $select_row=DB::table('page')
         ->join('user','page.open_id','=','user.open_id')
         ->where('page.status',0)
         ->where('title','like','%'.$search.'%')
+        ->where('end_time', '>', $time)
         ->skip($index)
         ->take(2)
         ->select('page.*','user.nick_name')
@@ -34,6 +36,7 @@ class IndexController extends Controller
         ->join('user','page.open_id','=','user.open_id')
         ->where('page.status',0)
         ->where('title','like','%'.$search.'%')
+        ->where('end_time', '>', $time)
         ->select('page.*','user.nick_name')
         ->orderBy('start_time','desc')
         ->count();

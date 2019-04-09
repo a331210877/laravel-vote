@@ -32,4 +32,19 @@ class Player extends Model
         $result=DB::table('user')->where('open_id',$openId)->select('id')->first();
         return $result;
     }
+
+    public static function getPageId($playerId) {
+        $page_id = DB::table('player')->where('id', $playerId)->select('page_id')->first();
+        return $page_id;
+    }
+
+    public static function getRankList($pageId) {
+        $result = DB::table('player')->where('status', 0)->where('page_id', $pageId)->orderBy('ticket','desc')->get()->toArray();
+        return $result;
+    }
+
+    public static function getPlayerId($pageId) {
+        $result = DB::table('player')->where('page_id', $pageId)->select('id')->get()->toArray();
+        return $result;
+    }
 }

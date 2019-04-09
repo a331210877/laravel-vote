@@ -39,6 +39,7 @@ export default new VueRouter({
                 { path: '/me/myPage',name:'myPage',component: resolve =>void(require(['../components/Home/MyPage.vue'], resolve))},
                 { path: '/me/addPlayer',name:'addPlayer',component: resolve =>void(require(['../components/Home/AddPlayer2.vue'], resolve))},
                 { path: '/me/addPage',name:'addPage',component: resolve =>void(require(['../components/Home/AddPage.vue'], resolve))},                
+                { path: '/me/pageInfo/:id',name:'pageInfo',component: resolve =>void(require(['../components/Home/PageInfo.vue'], resolve))},                                
             ]
         },
     ],

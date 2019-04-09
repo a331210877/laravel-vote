@@ -52,7 +52,6 @@
                     'id' : this.$route.params.id
                 })
                 .then(function (response) {
-                    console.log(response.data.page);
                     vue.videoList=response.data.select_row;
                     vue.topImg=response.data.page.figure;
                     vue.stage=response.data.page.title;
